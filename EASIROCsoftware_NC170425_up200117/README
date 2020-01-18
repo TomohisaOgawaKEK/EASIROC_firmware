@@ -30,38 +30,3 @@ DefaultRegisterValue.
 
 
 
-- 19/12/08 by me
-Add a function for handling TestChargeSetting and 
-definition of an address to TestChargeSetting in VME-EASIROC.rb 
-
-VME-EASIROC.rb:
-   # add 19/12/08
-   def sendTestChargeSetting
-      $logger.debug "VmeEasiroc::sendTestChargeSetting is called"
-      # get constand address 
-      address = testChargeAddress
-      # get test charge level/pattern
-      setting = @configLoader.toTestChargeSetting
-      $logger.debug "VmeEasiroc::sendTestChargeSetting setting: #{setting}"
-      # ten, tell them to EASIROC through rbcp
-      @rbcp.write(address, setting)
-   end
-
-    # add 19/12/08
-    def testChargeAddress
-        0x00020000 # this must be consistent with the one written in RTL
-    end
-
-and, put a function to load TestChargeSetting in ConfigLoader.rb
-
-ConfigLoader.rb:
-   # add 19/12/08
-   def toTestChargeSetting
-      coeff = @calibration['TestChargeSetting']
-   end
-
-and, put a parameter of TestChargeSetting in yaml/Calibration.yml 
-
-yaml/Calibration.yml:
-TestChargeSetting: 3 #1
-
