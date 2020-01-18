@@ -14,9 +14,14 @@ git push -u origin master
 git remote add origin https://github.com/TomohisaOgawa/EASIROC_firmware.git  
 git push -u origin master  
 
+<<<<<<< HEAD
 if you remove .git  
 git pull origin master
 
 
 -2020/01/01 EASIROCfirmware_NC150923  
 the original version by Naruhiro Chikuma  
+=======
+-2020/01/01 EASIROCfirmware_NC150923  
+the first version by Naruhiro Chikuma  
+>>>>>>> origin/master
