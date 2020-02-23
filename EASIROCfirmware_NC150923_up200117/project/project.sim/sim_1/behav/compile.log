@@ -1,7 +1,0 @@
-Determining compilation order of HDL files.
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/owner/Downloads/sfgd_vivadofpga/EASIROC_FPGA/EASIROCfirmware_NC150923_work191222/rtl/RBCP_Receiver.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity RBCP_Receiver
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/owner/Downloads/sfgd_vivadofpga/EASIROC_FPGA/EASIROCfirmware_NC150923_work191222/rtl/UsrClkOut.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity UsrClkOut
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/owner/Downloads/sfgd_vivadofpga/EASIROC_FPGA/EASIROCfirmware_NC150923_work191222/project/project.srcs/sim_1/imports/sim/UsrClkOut_test.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity UsrClkOut_test
