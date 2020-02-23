@@ -18,5 +18,46 @@ if you remove .git
 git pull origin master
 
 
--2020/01/01 EASIROCfirmware_NC150923  
+
+----- 2020/01/01 EASIROCfirmware_NC150923  
 the first version by Naruhiro Chikuma  
+
+----- EASIROCfirmware_NC150923_viva14.3_up200117   
+injection pattern of test charge is added   
+
+        when "001" =>  1   
+           CAL1 <= 'Z'; -- High Impedance    
+           CAL2 <= test_palse;   
+        when "010" =>  2   
+           CAL1 <= test_palse;   
+           CAL2 <= test_palse;  
+        when others => 0   
+           CAL1 <= test_palse;   
+           CAL2 <= 'Z'; -- High Impedance   
+
+this is controlled from RegisterValue.yml  
+# calibartion pulse combination   
+TestChargeSetting: 2  
+
+
+----- EASIROCfirmware_NC150923_viva14.3_up200222   
+internal generation of stop and accept are added  
+  
+        if(TriggerMode = 2) then -- 2 => this works 02/22     
+           Hold_tmp <= HOLD;    
+           L1_tmp   <= L1_delayed; -- stop ~ delayed hold     
+           L2_tmp   <= L2_delayed; -- accept ~ delayed hold   
+
+        elsif(TriggerMode = 1) then -- 1        
+            Hold_tmp <= HOLD;    
+            L1_tmp   <= L1_TRIGGER; -- stop    
+            L2_tmp   <= L2_TRIGGER; -- accpt   
+        end if;
+ 
+this is controlled from RegisterValue.yml
+Trigger: # parameters below are read one by one   
+         # 1: input hold, stop, & accept    
+         # 2: input hold, stop & accept are internally generated    
+         #     after fixed 200 & 1000 nsec from hold, confirmed with calib pulse @ 20/02/22    
+        Mode: 1   
+

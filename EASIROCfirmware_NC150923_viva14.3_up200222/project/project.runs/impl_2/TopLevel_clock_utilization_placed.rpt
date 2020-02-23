@@ -1,0 +1,938 @@
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.3.1 (win64) Build 1056140 Thu Oct 30 17:03:40 MDT 2014
+| Date         : Sun Feb 23 18:32:12 2020
+| Host         : ishiiPC11 running 64-bit major release  (build 9200)
+| Command      : report_clock_utilization -file TopLevel_clock_utilization_placed.rpt
+| Design       : TopLevel
+| Device       : xc7a100t
+--------------------------------------------------------------------------------------
+
+Clock Utilization Report
+
+Table of Contents
+-----------------
+1. Clock Primitive Utilization
+2. Details of Global Clocks
+3. Details of Regional Clocks
+4. Details of Multi-Regional Clocks
+5. Details of I/O Clocks
+6. Details of Local Clocks
+7. Clock Regions : Key Resource Utilization
+8. Net wise resources used in clock region X0Y0
+9. Net wise resources used in clock region X1Y0
+10. Net wise resources used in clock region X0Y1
+11. Net wise resources used in clock region X1Y1
+12. Net wise resources used in clock region X0Y2
+13. Net wise resources used in clock region X1Y2
+14. Net wise resources used in clock region X0Y3
+15. Net wise resources used in clock region X1Y3
+
+1. Clock Primitive Utilization
+------------------------------
+
++-------+------+-----------+-----------+
+| Type  | Used | Available | Num Fixed |
++-------+------+-----------+-----------+
+| BUFG  |   12 |        32 |         0 |
+| BUFH  |    0 |        96 |         0 |
+| BUFIO |    0 |        24 |         0 |
+| MMCM  |    2 |         6 |         0 |
+| PLL   |    0 |         6 |         0 |
+| BUFR  |    0 |        24 |         0 |
+| BUFMR |    0 |        12 |         0 |
++-------+------+-----------+-----------+
+
+
+2. Details of Global Clocks
+---------------------------
+
++-------+-----------------------------------------+-----------------------------------------+---------------+-------+---------------+-----------+
+|       |                                         |                                         |   Num Loads   |       |               |           |
++-------+-----------------------------------------+-----------------------------------------+-------+-------+-------+---------------+-----------+
+| Index | BUFG Cell                               | Net Name                                |  BELs | Sites | Fixed | MaxDelay (ns) | Skew (ns) |
++-------+-----------------------------------------+-----------------------------------------+-------+-------+-------+---------------+-----------+
+|     1 | ClockManager_0/MMCM_0/BUFG_CLK_FB_0     | ClockManager_0/MMCM_0/n_0_BUFG_CLK_FB_0 |     1 |     1 |    no |         1.598 |     0.080 |
+|     2 | ClockManager_0/BUFG_AD9220_CLK_OUT      | ClockManager_0/EASIROC2_ADC_CLK_LG_OBUF |     4 |     4 |    no |         2.404 |     0.139 |
+|     3 | ClockManager_0/BUFG_AD9220_CLK          | ClockManager_0/AD9220_CLK               |    34 |    14 |    no |         1.624 |     0.272 |
+|     4 | ClockManager_0/MMCM_0/BUFG_CLK_500M     | ClockManager_0/MMCM_0/FAST_CLK          |    81 |    43 |    no |         1.891 |     0.495 |
+|     5 | ClockManager_0/MMCM_0/BUFG_CLK_66M      | ClockManager_0/MMCM_0/CLK               |    86 |    36 |    no |         2.079 |     0.759 |
+|     6 | ClockManager_0/MMCM_0/BUFG_CLK_250M_180 | ClockManager_0/MMCM_0/CLK_180           |   129 |    99 |    no |         1.593 |     0.242 |
+|     7 | ClockManager_0/MMCM_0/BUFG_CLK_250M_270 | ClockManager_0/MMCM_0/CLK_270           |   129 |    87 |    no |         1.594 |     0.243 |
+|     8 | ClockManager_0/MMCM_0/BUFG_CLK_250M_90  | ClockManager_0/MMCM_0/CLK_90            |   129 |   102 |    no |         1.595 |     0.245 |
+|     9 | ClockManager_0/MMCM_0/BUFG_CLK_6M       | ClockManager_0/MMCM_0/I                 |   329 |   163 |    no |         2.065 |     0.754 |
+|    10 | ClockManager_0/MMCM_0/BUFG_CLK_250M_0   | ClockManager_0/MMCM_0/CLK_0             |  1548 |   415 |    no |         1.595 |     0.245 |
+|    11 | ClockManager_0/MMCM_0/BUFG_CLK_25M      | ClockManager_0/MMCM_0/SCK_DAC_OBUF      |  4837 |  1469 |    no |         2.423 |     1.112 |
+|    12 | ClockManager_0/MMCM_0/BUFG_CLK_125M     | ClockManager_0/MMCM_0/SCALER_CLK        | 25963 |  5495 |    no |         1.735 |     0.414 |
++-------+-----------------------------------------+-----------------------------------------+-------+-------+-------+---------------+-----------+
+
+
++-------+------------------------------+-----------------------------------+--------------+-------+---------------+-----------+
+|       |                              |                                   |   Num Loads  |       |               |           |
++-------+------------------------------+-----------------------------------+------+-------+-------+---------------+-----------+
+| Index | MMCM Cell                    | Net Name                          | BELs | Sites | Fixed | MaxDelay (ns) | Skew (ns) |
++-------+------------------------------+-----------------------------------+------+-------+-------+---------------+-----------+
+|     1 | ClockManager_0/MMCM_0/MMCM_1 | ClockManager_0/MMCM_0/CLKFBIN     |    1 |     1 |    no |         0.012 |     0.001 |
+|     2 | ClockManager_0/MMCM_0/MMCM_0 | ClockManager_0/MMCM_0/CLKIN1      |    1 |     1 |    no |         0.903 |     0.045 |
+|     3 | ClockManager_0/MMCM_0/MMCM_0 | ClockManager_0/MMCM_0/I_0         |    1 |     1 |    no |         1.507 |     0.075 |
+|     4 | ClockManager_0/MMCM_0/MMCM_0 | ClockManager_0/MMCM_0/n_10_MMCM_0 |    1 |     1 |    no |         1.507 |     0.075 |
+|     5 | ClockManager_0/MMCM_0/MMCM_0 | ClockManager_0/MMCM_0/n_11_MMCM_0 |    1 |     1 |    no |         1.507 |     0.075 |
+|     6 | ClockManager_0/MMCM_0/MMCM_0 | ClockManager_0/MMCM_0/n_12_MMCM_0 |    1 |     1 |    no |         1.507 |     0.075 |
+|     7 | ClockManager_0/MMCM_0/MMCM_1 | ClockManager_0/MMCM_0/n_2_MMCM_1  |    1 |     1 |    no |         1.441 |     0.072 |
+|     8 | ClockManager_0/MMCM_0/MMCM_0 | ClockManager_0/MMCM_0/n_4_MMCM_0  |    1 |     1 |    no |         1.507 |     0.075 |
+|     9 | ClockManager_0/MMCM_0/MMCM_1 | ClockManager_0/MMCM_0/n_4_MMCM_1  |    1 |     1 |    no |         1.441 |     0.072 |
+|    10 | ClockManager_0/MMCM_0/MMCM_0 | ClockManager_0/MMCM_0/n_6_MMCM_0  |    1 |     1 |    no |         1.507 |     0.075 |
+|    11 | ClockManager_0/MMCM_0/MMCM_1 | ClockManager_0/MMCM_0/n_6_MMCM_1  |    1 |     1 |    no |         1.441 |     0.072 |
+|    12 | ClockManager_0/MMCM_0/MMCM_0 | ClockManager_0/MMCM_0/n_8_MMCM_0  |    1 |     1 |    no |         1.507 |     0.075 |
++-------+------------------------------+-----------------------------------+------+-------+-------+---------------+-----------+
+
+
+3. Details of Regional Clocks
+-----------------------------
+
+4. Details of Multi-Regional Clocks
+-----------------------------------
+
+5. Details of I/O Clocks
+------------------------
+
+6. Details of Local Clocks
+--------------------------
+
++-------+-------------------------------------------------------------------------------------------+---------------------------------------------------------------------------+--------------+-------+---------------+-----------+
+|       |                                                                                           |                                                                           |   Num Loads  |       |               |           |
++-------+-------------------------------------------------------------------------------------------+---------------------------------------------------------------------------+------+-------+-------+---------------+-----------+
+| Index | Local Clk Src                                                                             | Net Name                                                                  | BELs | Sites | Fixed | MaxDelay (ns) | Skew (ns) |
++-------+-------------------------------------------------------------------------------------------+---------------------------------------------------------------------------+------+-------+-------+---------------+-----------+
+|     1 | TriggerManager_0/L1_Delayer/trigger_s_reg_i_2                                             | TriggerManager_0/L1_Delayer/n_0_trigger_s_reg_i_2                         |    1 |     1 |    no |         0.669 |     0.071 |
+|     2 | TriggerManager_0/L2_Delayer/trigger_s_reg_i_2__0                                          | TriggerManager_0/L2_Delayer/n_0_trigger_s_reg_i_2__0                      |    1 |     1 |    no |         0.775 |     0.079 |
+|     3 | TriggerManager_0/L1_tmp_reg_i_2                                                           | TriggerManager_0/n_0_L1_tmp_reg_i_2                                       |    3 |     3 |    no |         0.880 |     0.229 |
+|     4 | TriggerWidth_0/WidthAdjuster_GENERATE[0].Width_Adjuster_0/Delayer_0/delay_reg[0]_i_1      | TriggerWidth_0/WidthAdjuster_GENERATE[0].Width_Adjuster_0/Delayer_0/D[0]  |    3 |     3 |    no |         0.838 |     0.766 |
+|     5 | TriggerWidth_0/WidthAdjuster_GENERATE[0].Width_Adjuster_1/Delayer_0/delay_reg[0]_i_1__0   | TriggerWidth_0/WidthAdjuster_GENERATE[0].Width_Adjuster_1/Delayer_0/D[0]  |    3 |     3 |    no |         0.739 |     0.667 |
+|     6 | TriggerWidth_0/WidthAdjuster_GENERATE[10].Width_Adjuster_0/Delayer_0/delay_reg[0]_i_1__19 | TriggerWidth_0/WidthAdjuster_GENERATE[10].Width_Adjuster_0/Delayer_0/D[0] |    3 |     3 |    no |         0.596 |     0.523 |
+|     7 | TriggerWidth_0/WidthAdjuster_GENERATE[10].Width_Adjuster_1/Delayer_0/delay_reg[0]_i_1__20 | TriggerWidth_0/WidthAdjuster_GENERATE[10].Width_Adjuster_1/Delayer_0/D[0] |    3 |     3 |    no |         0.507 |     0.434 |
+|     8 | TriggerWidth_0/WidthAdjuster_GENERATE[11].Width_Adjuster_0/Delayer_0/delay_reg[0]_i_1__21 | TriggerWidth_0/WidthAdjuster_GENERATE[11].Width_Adjuster_0/Delayer_0/D[0] |    3 |     3 |    no |         0.563 |     0.490 |
+|     9 | TriggerWidth_0/WidthAdjuster_GENERATE[11].Width_Adjuster_1/Delayer_0/delay_reg[0]_i_1__22 | TriggerWidth_0/WidthAdjuster_GENERATE[11].Width_Adjuster_1/Delayer_0/D[0] |    3 |     3 |    no |         0.481 |     0.409 |
+|    10 | TriggerWidth_0/WidthAdjuster_GENERATE[12].Width_Adjuster_0/Delayer_0/delay_reg[0]_i_1__23 | TriggerWidth_0/WidthAdjuster_GENERATE[12].Width_Adjuster_0/Delayer_0/D[0] |    3 |     3 |    no |         0.658 |     0.585 |
+|    11 | TriggerWidth_0/WidthAdjuster_GENERATE[12].Width_Adjuster_1/Delayer_0/delay_reg[0]_i_1__24 | TriggerWidth_0/WidthAdjuster_GENERATE[12].Width_Adjuster_1/Delayer_0/D[0] |    3 |     3 |    no |         0.722 |     0.649 |
+|    12 | TriggerWidth_0/WidthAdjuster_GENERATE[13].Width_Adjuster_0/Delayer_0/delay_reg[0]_i_1__25 | TriggerWidth_0/WidthAdjuster_GENERATE[13].Width_Adjuster_0/Delayer_0/D[0] |    3 |     3 |    no |         0.728 |     0.656 |
+|    13 | TriggerWidth_0/WidthAdjuster_GENERATE[13].Width_Adjuster_1/Delayer_0/delay_reg[0]_i_1__26 | TriggerWidth_0/WidthAdjuster_GENERATE[13].Width_Adjuster_1/Delayer_0/D[0] |    3 |     3 |    no |         0.739 |     0.667 |
+|    14 | TriggerWidth_0/WidthAdjuster_GENERATE[14].Width_Adjuster_0/Delayer_0/delay_reg[0]_i_1__27 | TriggerWidth_0/WidthAdjuster_GENERATE[14].Width_Adjuster_0/Delayer_0/D[0] |    3 |     3 |    no |         0.673 |     0.601 |
+|    15 | TriggerWidth_0/WidthAdjuster_GENERATE[14].Width_Adjuster_1/Delayer_0/delay_reg[0]_i_1__28 | TriggerWidth_0/WidthAdjuster_GENERATE[14].Width_Adjuster_1/Delayer_0/D[0] |    3 |     3 |    no |         0.637 |     0.565 |
+|    16 | TriggerWidth_0/WidthAdjuster_GENERATE[15].Width_Adjuster_0/Delayer_0/delay_reg[0]_i_1__29 | TriggerWidth_0/WidthAdjuster_GENERATE[15].Width_Adjuster_0/Delayer_0/D[0] |    3 |     3 |    no |         0.587 |     0.514 |
+|    17 | TriggerWidth_0/WidthAdjuster_GENERATE[15].Width_Adjuster_1/Delayer_0/delay_reg[0]_i_1__30 | TriggerWidth_0/WidthAdjuster_GENERATE[15].Width_Adjuster_1/Delayer_0/D[0] |    3 |     3 |    no |         0.621 |     0.549 |
+|    18 | TriggerWidth_0/WidthAdjuster_GENERATE[16].Width_Adjuster_0/Delayer_0/delay_reg[0]_i_1__31 | TriggerWidth_0/WidthAdjuster_GENERATE[16].Width_Adjuster_0/Delayer_0/D[0] |    3 |     3 |    no |         0.585 |     0.513 |
+|    19 | TriggerWidth_0/WidthAdjuster_GENERATE[16].Width_Adjuster_1/Delayer_0/delay_reg[0]_i_1__32 | TriggerWidth_0/WidthAdjuster_GENERATE[16].Width_Adjuster_1/Delayer_0/D[0] |    3 |     3 |    no |         0.487 |     0.414 |
+|    20 | TriggerWidth_0/WidthAdjuster_GENERATE[17].Width_Adjuster_0/Delayer_0/delay_reg[0]_i_1__33 | TriggerWidth_0/WidthAdjuster_GENERATE[17].Width_Adjuster_0/Delayer_0/D[0] |    3 |     3 |    no |         0.643 |     0.571 |
+|    21 | TriggerWidth_0/WidthAdjuster_GENERATE[17].Width_Adjuster_1/Delayer_0/delay_reg[0]_i_1__34 | TriggerWidth_0/WidthAdjuster_GENERATE[17].Width_Adjuster_1/Delayer_0/D[0] |    3 |     3 |    no |         0.672 |     0.600 |
+|    22 | TriggerWidth_0/WidthAdjuster_GENERATE[18].Width_Adjuster_0/Delayer_0/delay_reg[0]_i_1__35 | TriggerWidth_0/WidthAdjuster_GENERATE[18].Width_Adjuster_0/Delayer_0/D[0] |    3 |     3 |    no |         0.739 |     0.666 |
+|    23 | TriggerWidth_0/WidthAdjuster_GENERATE[18].Width_Adjuster_1/Delayer_0/delay_reg[0]_i_1__36 | TriggerWidth_0/WidthAdjuster_GENERATE[18].Width_Adjuster_1/Delayer_0/D[0] |    3 |     3 |    no |         0.561 |     0.489 |
+|    24 | TriggerWidth_0/WidthAdjuster_GENERATE[19].Width_Adjuster_0/Delayer_0/delay_reg[0]_i_1__37 | TriggerWidth_0/WidthAdjuster_GENERATE[19].Width_Adjuster_0/Delayer_0/D[0] |    3 |     3 |    no |         0.582 |     0.509 |
+|    25 | TriggerWidth_0/WidthAdjuster_GENERATE[19].Width_Adjuster_1/Delayer_0/delay_reg[0]_i_1__38 | TriggerWidth_0/WidthAdjuster_GENERATE[19].Width_Adjuster_1/Delayer_0/D[0] |    3 |     3 |    no |         0.668 |     0.596 |
+|    26 | TriggerWidth_0/WidthAdjuster_GENERATE[1].Width_Adjuster_0/Delayer_0/delay_reg[0]_i_1__1   | TriggerWidth_0/WidthAdjuster_GENERATE[1].Width_Adjuster_0/Delayer_0/D[0]  |    3 |     3 |    no |         0.502 |     0.430 |
+|    27 | TriggerWidth_0/WidthAdjuster_GENERATE[1].Width_Adjuster_1/Delayer_0/delay_reg[0]_i_1__2   | TriggerWidth_0/WidthAdjuster_GENERATE[1].Width_Adjuster_1/Delayer_0/D[0]  |    3 |     3 |    no |         0.538 |     0.466 |
+|    28 | TriggerWidth_0/WidthAdjuster_GENERATE[20].Width_Adjuster_0/Delayer_0/delay_reg[0]_i_1__39 | TriggerWidth_0/WidthAdjuster_GENERATE[20].Width_Adjuster_0/Delayer_0/D[0] |    3 |     3 |    no |         0.671 |     0.599 |
+|    29 | TriggerWidth_0/WidthAdjuster_GENERATE[20].Width_Adjuster_1/Delayer_0/delay_reg[0]_i_1__40 | TriggerWidth_0/WidthAdjuster_GENERATE[20].Width_Adjuster_1/Delayer_0/D[0] |    3 |     3 |    no |         0.601 |     0.529 |
+|    30 | TriggerWidth_0/WidthAdjuster_GENERATE[21].Width_Adjuster_0/Delayer_0/delay_reg[0]_i_1__41 | TriggerWidth_0/WidthAdjuster_GENERATE[21].Width_Adjuster_0/Delayer_0/D[0] |    3 |     3 |    no |         0.572 |     0.500 |
+|    31 | TriggerWidth_0/WidthAdjuster_GENERATE[21].Width_Adjuster_1/Delayer_0/delay_reg[0]_i_1__42 | TriggerWidth_0/WidthAdjuster_GENERATE[21].Width_Adjuster_1/Delayer_0/D[0] |    3 |     3 |    no |         0.587 |     0.515 |
+|    32 | TriggerWidth_0/WidthAdjuster_GENERATE[22].Width_Adjuster_0/Delayer_0/delay_reg[0]_i_1__43 | TriggerWidth_0/WidthAdjuster_GENERATE[22].Width_Adjuster_0/Delayer_0/D[0] |    3 |     3 |    no |         0.565 |     0.493 |
+|    33 | TriggerWidth_0/WidthAdjuster_GENERATE[22].Width_Adjuster_1/Delayer_0/delay_reg[0]_i_1__44 | TriggerWidth_0/WidthAdjuster_GENERATE[22].Width_Adjuster_1/Delayer_0/D[0] |    3 |     3 |    no |         0.574 |     0.501 |
+|    34 | TriggerWidth_0/WidthAdjuster_GENERATE[23].Width_Adjuster_0/Delayer_0/delay_reg[0]_i_1__45 | TriggerWidth_0/WidthAdjuster_GENERATE[23].Width_Adjuster_0/Delayer_0/D[0] |    3 |     3 |    no |         0.607 |     0.537 |
+|    35 | TriggerWidth_0/WidthAdjuster_GENERATE[23].Width_Adjuster_1/Delayer_0/delay_reg[0]_i_1__46 | TriggerWidth_0/WidthAdjuster_GENERATE[23].Width_Adjuster_1/Delayer_0/D[0] |    3 |     3 |    no |         0.566 |     0.494 |
+|    36 | TriggerWidth_0/WidthAdjuster_GENERATE[24].Width_Adjuster_0/Delayer_0/delay_reg[0]_i_1__47 | TriggerWidth_0/WidthAdjuster_GENERATE[24].Width_Adjuster_0/Delayer_0/D[0] |    3 |     3 |    no |         0.673 |     0.601 |
+|    37 | TriggerWidth_0/WidthAdjuster_GENERATE[24].Width_Adjuster_1/Delayer_0/delay_reg[0]_i_1__48 | TriggerWidth_0/WidthAdjuster_GENERATE[24].Width_Adjuster_1/Delayer_0/D[0] |    3 |     3 |    no |         0.600 |     0.528 |
+|    38 | TriggerWidth_0/WidthAdjuster_GENERATE[25].Width_Adjuster_0/Delayer_0/delay_reg[0]_i_1__49 | TriggerWidth_0/WidthAdjuster_GENERATE[25].Width_Adjuster_0/Delayer_0/D[0] |    3 |     3 |    no |         0.680 |     0.608 |
+|    39 | TriggerWidth_0/WidthAdjuster_GENERATE[25].Width_Adjuster_1/Delayer_0/delay_reg[0]_i_1__50 | TriggerWidth_0/WidthAdjuster_GENERATE[25].Width_Adjuster_1/Delayer_0/D[0] |    3 |     3 |    no |         0.490 |     0.420 |
+|    40 | TriggerWidth_0/WidthAdjuster_GENERATE[26].Width_Adjuster_0/Delayer_0/delay_reg[0]_i_1__51 | TriggerWidth_0/WidthAdjuster_GENERATE[26].Width_Adjuster_0/Delayer_0/D[0] |    3 |     3 |    no |         0.589 |     0.517 |
+|    41 | TriggerWidth_0/WidthAdjuster_GENERATE[26].Width_Adjuster_1/Delayer_0/delay_reg[0]_i_1__52 | TriggerWidth_0/WidthAdjuster_GENERATE[26].Width_Adjuster_1/Delayer_0/D[0] |    3 |     3 |    no |         0.519 |     0.447 |
+|    42 | TriggerWidth_0/WidthAdjuster_GENERATE[27].Width_Adjuster_0/Delayer_0/delay_reg[0]_i_1__53 | TriggerWidth_0/WidthAdjuster_GENERATE[27].Width_Adjuster_0/Delayer_0/D[0] |    3 |     3 |    no |         0.732 |     0.659 |
+|    43 | TriggerWidth_0/WidthAdjuster_GENERATE[27].Width_Adjuster_1/Delayer_0/delay_reg[0]_i_1__54 | TriggerWidth_0/WidthAdjuster_GENERATE[27].Width_Adjuster_1/Delayer_0/D[0] |    3 |     3 |    no |         0.505 |     0.433 |
+|    44 | TriggerWidth_0/WidthAdjuster_GENERATE[28].Width_Adjuster_0/Delayer_0/delay_reg[0]_i_1__55 | TriggerWidth_0/WidthAdjuster_GENERATE[28].Width_Adjuster_0/Delayer_0/D[0] |    3 |     3 |    no |         0.680 |     0.608 |
+|    45 | TriggerWidth_0/WidthAdjuster_GENERATE[28].Width_Adjuster_1/Delayer_0/delay_reg[0]_i_1__56 | TriggerWidth_0/WidthAdjuster_GENERATE[28].Width_Adjuster_1/Delayer_0/D[0] |    3 |     3 |    no |         0.462 |     0.390 |
+|    46 | TriggerWidth_0/WidthAdjuster_GENERATE[29].Width_Adjuster_0/Delayer_0/delay_reg[0]_i_1__57 | TriggerWidth_0/WidthAdjuster_GENERATE[29].Width_Adjuster_0/Delayer_0/D[0] |    3 |     3 |    no |         0.681 |     0.608 |
+|    47 | TriggerWidth_0/WidthAdjuster_GENERATE[29].Width_Adjuster_1/Delayer_0/delay_reg[0]_i_1__58 | TriggerWidth_0/WidthAdjuster_GENERATE[29].Width_Adjuster_1/Delayer_0/D[0] |    3 |     3 |    no |         1.495 |     1.426 |
+|    48 | TriggerWidth_0/WidthAdjuster_GENERATE[2].Width_Adjuster_0/Delayer_0/delay_reg[0]_i_1__3   | TriggerWidth_0/WidthAdjuster_GENERATE[2].Width_Adjuster_0/Delayer_0/D[0]  |    3 |     3 |    no |         0.585 |     0.513 |
+|    49 | TriggerWidth_0/WidthAdjuster_GENERATE[2].Width_Adjuster_1/Delayer_0/delay_reg[0]_i_1__4   | TriggerWidth_0/WidthAdjuster_GENERATE[2].Width_Adjuster_1/Delayer_0/D[0]  |    3 |     3 |    no |         0.635 |     0.563 |
+|    50 | TriggerWidth_0/WidthAdjuster_GENERATE[30].Width_Adjuster_0/Delayer_0/delay_reg[0]_i_1__59 | TriggerWidth_0/WidthAdjuster_GENERATE[30].Width_Adjuster_0/Delayer_0/D[0] |    3 |     3 |    no |         1.316 |     1.246 |
+|    51 | TriggerWidth_0/WidthAdjuster_GENERATE[30].Width_Adjuster_1/Delayer_0/delay_reg[0]_i_1__60 | TriggerWidth_0/WidthAdjuster_GENERATE[30].Width_Adjuster_1/Delayer_0/D[0] |    3 |     3 |    no |         0.496 |     0.423 |
+|    52 | TriggerWidth_0/WidthAdjuster_GENERATE[31].Width_Adjuster_0/Delayer_0/delay_reg[0]_i_1__61 | TriggerWidth_0/WidthAdjuster_GENERATE[31].Width_Adjuster_0/Delayer_0/D[0] |    3 |     3 |    no |         0.480 |     0.408 |
+|    53 | TriggerWidth_0/WidthAdjuster_GENERATE[31].Width_Adjuster_1/Delayer_0/delay_reg[0]_i_1__62 | TriggerWidth_0/WidthAdjuster_GENERATE[31].Width_Adjuster_1/Delayer_0/D[0] |    3 |     3 |    no |         0.483 |     0.411 |
+|    54 | TriggerWidth_0/WidthAdjuster_GENERATE[3].Width_Adjuster_0/Delayer_0/delay_reg[0]_i_1__5   | TriggerWidth_0/WidthAdjuster_GENERATE[3].Width_Adjuster_0/Delayer_0/D[0]  |    3 |     3 |    no |         0.594 |     0.522 |
+|    55 | TriggerWidth_0/WidthAdjuster_GENERATE[3].Width_Adjuster_1/Delayer_0/delay_reg[0]_i_1__6   | TriggerWidth_0/WidthAdjuster_GENERATE[3].Width_Adjuster_1/Delayer_0/D[0]  |    3 |     3 |    no |         0.621 |     0.549 |
+|    56 | TriggerWidth_0/WidthAdjuster_GENERATE[4].Width_Adjuster_0/Delayer_0/delay_reg[0]_i_1__7   | TriggerWidth_0/WidthAdjuster_GENERATE[4].Width_Adjuster_0/Delayer_0/D[0]  |    3 |     3 |    no |         0.621 |     0.549 |
+|    57 | TriggerWidth_0/WidthAdjuster_GENERATE[4].Width_Adjuster_1/Delayer_0/delay_reg[0]_i_1__8   | TriggerWidth_0/WidthAdjuster_GENERATE[4].Width_Adjuster_1/Delayer_0/D[0]  |    3 |     3 |    no |         0.565 |     0.493 |
+|    58 | TriggerWidth_0/WidthAdjuster_GENERATE[5].Width_Adjuster_0/Delayer_0/delay_reg[0]_i_1__9   | TriggerWidth_0/WidthAdjuster_GENERATE[5].Width_Adjuster_0/Delayer_0/D[0]  |    3 |     3 |    no |         0.661 |     0.591 |
+|    59 | TriggerWidth_0/WidthAdjuster_GENERATE[5].Width_Adjuster_1/Delayer_0/delay_reg[0]_i_1__10  | TriggerWidth_0/WidthAdjuster_GENERATE[5].Width_Adjuster_1/Delayer_0/D[0]  |    3 |     3 |    no |         0.824 |     0.752 |
+|    60 | TriggerWidth_0/WidthAdjuster_GENERATE[6].Width_Adjuster_0/Delayer_0/delay_reg[0]_i_1__11  | TriggerWidth_0/WidthAdjuster_GENERATE[6].Width_Adjuster_0/Delayer_0/D[0]  |    3 |     3 |    no |         0.576 |     0.503 |
+|    61 | TriggerWidth_0/WidthAdjuster_GENERATE[6].Width_Adjuster_1/Delayer_0/delay_reg[0]_i_1__12  | TriggerWidth_0/WidthAdjuster_GENERATE[6].Width_Adjuster_1/Delayer_0/D[0]  |    3 |     3 |    no |         0.600 |     0.528 |
+|    62 | TriggerWidth_0/WidthAdjuster_GENERATE[7].Width_Adjuster_0/Delayer_0/delay_reg[0]_i_1__13  | TriggerWidth_0/WidthAdjuster_GENERATE[7].Width_Adjuster_0/Delayer_0/D[0]  |    3 |     3 |    no |         0.502 |     0.430 |
+|    63 | TriggerWidth_0/WidthAdjuster_GENERATE[7].Width_Adjuster_1/Delayer_0/delay_reg[0]_i_1__14  | TriggerWidth_0/WidthAdjuster_GENERATE[7].Width_Adjuster_1/Delayer_0/D[0]  |    3 |     3 |    no |         0.645 |     0.573 |
+|    64 | TriggerWidth_0/WidthAdjuster_GENERATE[8].Width_Adjuster_0/Delayer_0/delay_reg[0]_i_1__15  | TriggerWidth_0/WidthAdjuster_GENERATE[8].Width_Adjuster_0/Delayer_0/D[0]  |    3 |     3 |    no |         0.678 |     0.605 |
+|    65 | TriggerWidth_0/WidthAdjuster_GENERATE[8].Width_Adjuster_1/Delayer_0/delay_reg[0]_i_1__16  | TriggerWidth_0/WidthAdjuster_GENERATE[8].Width_Adjuster_1/Delayer_0/D[0]  |    3 |     3 |    no |         0.464 |     0.391 |
+|    66 | TriggerWidth_0/WidthAdjuster_GENERATE[9].Width_Adjuster_0/Delayer_0/delay_reg[0]_i_1__17  | TriggerWidth_0/WidthAdjuster_GENERATE[9].Width_Adjuster_0/Delayer_0/D[0]  |    3 |     3 |    no |         0.573 |     0.501 |
+|    67 | TriggerWidth_0/WidthAdjuster_GENERATE[9].Width_Adjuster_1/Delayer_0/delay_reg[0]_i_1__18  | TriggerWidth_0/WidthAdjuster_GENERATE[9].Width_Adjuster_1/Delayer_0/D[0]  |    3 |     3 |    no |         0.684 |     0.612 |
+|    68 | TriggerManager_0/L1_Delayer/state_reg[1]                                                  | TriggerManager_0/L1_Delayer/state[1]                                      |   18 |     7 |    no |         0.600 |     0.402 |
+|    69 | TriggerManager_0/L2_Delayer/state_reg[1]                                                  | TriggerManager_0/L2_Delayer/state[1]                                      |   18 |     5 |    no |         0.656 |     0.343 |
+|    70 | TriggerManager_0/L1_Delayer/state_reg[0]                                                  | TriggerManager_0/L1_Delayer/state[0]                                      |   20 |     6 |    no |         0.649 |     0.435 |
+|    71 | TriggerManager_0/L2_Delayer/state_reg[0]                                                  | TriggerManager_0/L2_Delayer/state[0]                                      |   20 |     5 |    no |         0.511 |     0.306 |
+|    72 | ETH_TX_CLK_IBUF_inst                                                                      | ETH_TX_CLK_IBUF                                                           |  272 |    81 |   yes |         2.163 |     1.110 |
+|    73 | ETH_RX_CLK_IBUF_inst                                                                      | ETH_RX_CLK_IBUF                                                           |  333 |   100 |   yes |         2.575 |     1.379 |
++-------+-------------------------------------------------------------------------------------------+---------------------------------------------------------------------------+------+-------+-------+---------------+-----------+
+
+
+7. Clock Regions : Key Resource Utilization
+-------------------------------------------
+
++-------------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
+|                   | Global Clock |     BUFRs    |    BUFMRs    |    BUFIOs    |     MMCM     |      PLL     |      GT      |      PCI     |    ILOGIC    |    OLOGIC    |      FF      |     LUTM     |    RAMB18    |    RAMB36    |    DSP48E1   |
++-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
+| Clock Region Name | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail |
++-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
+| X0Y0              |    5 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 | 2388 | 20800 |   40 |  2400 |    0 |    20 |    0 |    10 |    0 |    20 |
+| X1Y0              |    1 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     5 |    0 |     0 |    0 |     0 |    0 |     0 |  957 | 12000 |    0 |  2200 |    0 |    40 |    0 |    20 |    0 |    40 |
+| X0Y1              |   10 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    1 |    50 |    4 |    50 | 6100 | 16000 | 2675 |  2400 |    4 |    20 |    3 |    10 |    0 |    20 |
+| X1Y1              |    7 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 | 4762 | 15200 | 2958 |  2600 |    1 |    60 |    0 |    30 |    0 |    40 |
+| X0Y2              |   10 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |   26 |    50 |    0 |    50 | 4811 | 16000 | 1628 |  2400 |    4 |    20 |    5 |    10 |    0 |    20 |
+| X1Y2              |    9 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |   26 |    50 |    0 |    50 | 5610 | 15200 | 1533 |  2600 |   11 |    60 |   11 |    30 |    0 |    40 |
+| X0Y3              |    4 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  144 | 20800 |    0 |  2400 |    0 |    20 |    0 |    10 |    0 |    20 |
+| X1Y3              |    1 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     5 |    0 |     1 |    0 |     0 |    0 |     0 |  239 | 10800 |    0 |  2000 |    0 |    30 |    0 |    15 |    0 |    40 |
++-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
+* RAMB36 site can be used as two RAMB18/FIFO18 sites
+
+
+8. Net wise resources used in clock region X0Y0
+-----------------------------------------------
+
++-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+------------------------------------+
+| Source Type | BUFHCE Site | Fixed | MMCM Pins | PLL Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs |  FFs | LUTMs | DSP48E1s |           Clock Net Name           |
++-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+------------------------------------+
+| BUFG        |     ---     |   no  |         0 |        0 |       0 |         0 |       0 |       0 |    2 |     0 |        0 | ClockManager_0/AD9220_CLK          |
+| BUFG        |     ---     |   no  |         0 |        0 |       0 |         0 |       0 |       0 |    2 |     0 |        0 | ClockManager_0/MMCM_0/I            |
+| BUFG        |     ---     |   no  |         0 |        0 |       0 |         0 |       0 |       0 |   44 |    32 |        0 | ClockManager_0/MMCM_0/FAST_CLK     |
+| BUFG        |     ---     |   no  |         0 |        0 |       0 |         0 |       0 |       0 |   47 |     0 |        0 | ClockManager_0/MMCM_0/SCK_DAC_OBUF |
+| BUFG        |     ---     |   no  |         0 |        0 |       0 |         0 |       0 |       0 | 2249 |     8 |        0 | ClockManager_0/MMCM_0/SCALER_CLK   |
++-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+------------------------------------+
+
+
+9. Net wise resources used in clock region X1Y0
+-----------------------------------------------
+
++-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+----------------------------------+
+| Source Type | BUFHCE Site | Fixed | MMCM Pins | PLL Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs | FFs | LUTMs | DSP48E1s |          Clock Net Name          |
++-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+----------------------------------+
+| BUFG        |     ---     |   no  |         0 |        0 |       0 |         0 |       0 |       0 | 952 |     0 |        0 | ClockManager_0/MMCM_0/SCALER_CLK |
++-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+----------------------------------+
+
+
+10. Net wise resources used in clock region X0Y1
+------------------------------------------------
+
++-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+------------------------------------+
+| Source Type | BUFHCE Site | Fixed | MMCM Pins | PLL Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs |  FFs | LUTMs | DSP48E1s |           Clock Net Name           |
++-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+------------------------------------+
+| BUFG        |     ---     |   no  |         0 |        0 |       0 |         0 |       1 |       3 |    0 |     0 |        0 | ClockManager_0/MMCM_0/CLK          |
+| BUFG        |     ---     |   no  |         0 |        0 |       0 |         0 |       0 |       0 |    2 |     0 |        0 | ClockManager_0/AD9220_CLK          |
+| BUFG        |     ---     |   no  |         0 |        0 |       0 |         0 |       0 |       0 |    3 |     0 |        0 | ClockManager_0/MMCM_0/I            |
+| BUFG        |     ---     |   no  |         0 |        0 |       0 |         0 |       0 |       0 |    4 |     0 |        0 | ClockManager_0/MMCM_0/FAST_CLK     |
+| BUFG        |     ---     |   no  |         0 |        0 |       0 |         0 |       0 |       0 |   28 |     0 |        0 | ClockManager_0/MMCM_0/CLK_180      |
+| BUFG        |     ---     |   no  |         0 |        0 |       0 |         0 |       0 |       0 |   28 |     0 |        0 | ClockManager_0/MMCM_0/CLK_270      |
+| BUFG        |     ---     |   no  |         0 |        0 |       0 |         0 |       0 |       0 |   28 |     0 |        0 | ClockManager_0/MMCM_0/CLK_90       |
+| BUFG        |     ---     |   no  |         0 |        0 |       0 |         7 |       0 |       1 |  212 |     0 |        0 | ClockManager_0/MMCM_0/SCK_DAC_OBUF |
+| BUFG        |     ---     |   no  |         0 |        0 |       0 |         0 |       0 |       0 |  259 |    83 |        0 | ClockManager_0/MMCM_0/CLK_0        |
+| BUFG        |     ---     |   no  |         0 |        0 |       0 |         7 |       0 |       0 | 5488 |  2592 |        0 | ClockManager_0/MMCM_0/SCALER_CLK   |
++-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+------------------------------------+
+
+
+11. Net wise resources used in clock region X1Y1
+------------------------------------------------
+
++-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+------------------------------------+
+| Source Type | BUFHCE Site | Fixed | MMCM Pins | PLL Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs |  FFs | LUTMs | DSP48E1s |           Clock Net Name           |
++-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+------------------------------------+
+| BUFG        |     ---     |   no  |         0 |        0 |       0 |         0 |       0 |       0 |   25 |     0 |        0 | ClockManager_0/AD9220_CLK          |
+| BUFG        |     ---     |   no  |         0 |        0 |       0 |         0 |       0 |       0 |   52 |     0 |        0 | ClockManager_0/MMCM_0/CLK_180      |
+| BUFG        |     ---     |   no  |         0 |        0 |       0 |         0 |       0 |       0 |   52 |     0 |        0 | ClockManager_0/MMCM_0/CLK_90       |
+| BUFG        |     ---     |   no  |         0 |        0 |       0 |         0 |       0 |       0 |   53 |     0 |        0 | ClockManager_0/MMCM_0/CLK_270      |
+| BUFG        |     ---     |   no  |         0 |        0 |       0 |         0 |       0 |       0 |  114 |     1 |        0 | ClockManager_0/MMCM_0/SCK_DAC_OBUF |
+| BUFG        |     ---     |   no  |         0 |        0 |       0 |         0 |       0 |       0 |  465 |   156 |        0 | ClockManager_0/MMCM_0/CLK_0        |
+| BUFG        |     ---     |   no  |         0 |        0 |       0 |         0 |       0 |       0 | 3915 |  2800 |        0 | ClockManager_0/MMCM_0/SCALER_CLK   |
++-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+------------------------------------+
+
+
+12. Net wise resources used in clock region X0Y2
+------------------------------------------------
+
++-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+------------------------------------+
+| Source Type | BUFHCE Site | Fixed | MMCM Pins | PLL Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs |  FFs | LUTMs | DSP48E1s |           Clock Net Name           |
++-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+------------------------------------+
+| BUFG        |     ---     |   no  |         0 |        0 |       0 |         0 |       0 |       0 |    4 |     0 |        0 | ClockManager_0/AD9220_CLK          |
+| BUFG        |     ---     |   no  |         0 |        0 |       0 |         0 |       0 |       0 |   27 |     0 |        0 | ClockManager_0/MMCM_0/CLK_270      |
+| BUFG        |     ---     |   no  |         0 |        0 |       0 |         0 |       0 |       0 |   28 |     0 |        0 | ClockManager_0/MMCM_0/CLK_180      |
+| BUFG        |     ---     |   no  |         0 |        0 |       0 |         0 |       0 |       0 |   28 |     0 |        0 | ClockManager_0/MMCM_0/CLK_90       |
+| BUFG        |     ---     |   no  |         0 |        0 |       0 |         0 |       0 |       0 |   43 |     0 |        0 | ClockManager_0/MMCM_0/CLK          |
+| BUFG        |     ---     |   no  |         0 |        0 |       0 |         2 |      26 |       0 |  204 |     0 |        0 | ClockManager_0/MMCM_0/I            |
+| BUFG        |     ---     |   no  |         0 |        0 |       0 |         0 |       0 |       0 |  251 |    84 |        0 | ClockManager_0/MMCM_0/CLK_0        |
+| BUFG        |     ---     |   no  |         0 |        0 |       0 |        13 |       0 |       0 |  613 |   120 |        0 | ClockManager_0/MMCM_0/SCK_DAC_OBUF |
+| BUFG        |     ---     |   no  |         0 |        0 |       0 |         3 |       0 |       0 | 3613 |  1424 |        0 | ClockManager_0/MMCM_0/SCALER_CLK   |
++-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+------------------------------------+
+
+
+13. Net wise resources used in clock region X1Y2
+------------------------------------------------
+
++-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+------------------------------------+
+| Source Type | BUFHCE Site | Fixed | MMCM Pins | PLL Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs |  FFs | LUTMs | DSP48E1s |           Clock Net Name           |
++-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+------------------------------------+
+| BUFG        |     ---     |   no  |         0 |        0 |       0 |         0 |       0 |       0 |   21 |     0 |        0 | ClockManager_0/MMCM_0/CLK_180      |
+| BUFG        |     ---     |   no  |         0 |        0 |       0 |         0 |       0 |       0 |   21 |     0 |        0 | ClockManager_0/MMCM_0/CLK_270      |
+| BUFG        |     ---     |   no  |         0 |        0 |       0 |         0 |       0 |       0 |   21 |     0 |        0 | ClockManager_0/MMCM_0/CLK_90       |
+| BUFG        |     ---     |   no  |         0 |        0 |       0 |         3 |       0 |       0 |   36 |     0 |        0 | ClockManager_0/MMCM_0/CLK          |
+| BUFG        |     ---     |   no  |         0 |        0 |       0 |         6 |      26 |       0 |   45 |     0 |        0 | ClockManager_0/MMCM_0/I            |
+| BUFG        |     ---     |   no  |         0 |        0 |       0 |         0 |       0 |       0 |  186 |    64 |        0 | ClockManager_0/MMCM_0/CLK_0        |
+| BUFG        |     ---     |   no  |         0 |        0 |       0 |         0 |       0 |       0 | 1464 |  1368 |        0 | ClockManager_0/MMCM_0/SCALER_CLK   |
+| BUFG        |     ---     |   no  |         0 |        0 |       0 |        32 |       0 |       0 | 3298 |   101 |        0 | ClockManager_0/MMCM_0/SCK_DAC_OBUF |
++-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+------------------------------------+
+
+
+14. Net wise resources used in clock region X0Y3
+------------------------------------------------
+
++-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+-----------------------------------------+
+| Source Type | BUFHCE Site | Fixed | MMCM Pins | PLL Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs | FFs | LUTMs | DSP48E1s |              Clock Net Name             |
++-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+-----------------------------------------+
+| BUFG        |     ---     |   no  |         1 |        0 |       0 |         0 |       0 |       0 |   0 |     0 |        0 | ClockManager_0/MMCM_0/n_0_BUFG_CLK_FB_0 |
+| BUFG        |     ---     |   no  |         0 |        0 |       0 |         0 |       0 |       0 |  15 |     0 |        0 | ClockManager_0/MMCM_0/I                 |
+| BUFG        |     ---     |   no  |         0 |        0 |       0 |         0 |       0 |       0 |  50 |     0 |        0 | ClockManager_0/MMCM_0/SCK_DAC_OBUF      |
+| BUFG        |     ---     |   no  |         0 |        0 |       0 |         0 |       0 |       0 |  79 |     0 |        0 | ClockManager_0/MMCM_0/SCALER_CLK        |
++-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+-----------------------------------------+
+
+
+15. Net wise resources used in clock region X1Y3
+------------------------------------------------
+
++-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+------------------------------------+
+| Source Type | BUFHCE Site | Fixed | MMCM Pins | PLL Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs | FFs | LUTMs | DSP48E1s |           Clock Net Name           |
++-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+------------------------------------+
+| BUFG        |     ---     |   no  |         0 |        0 |       0 |         0 |       0 |       0 | 239 |     0 |        0 | ClockManager_0/MMCM_0/SCK_DAC_OBUF |
++-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+------------------------------------+
+
+
+
+# Location of BUFG Primitives 
+set_property LOC BUFGCTRL_X0Y4 [get_cells ClockManager_0/BUFG_AD9220_CLK]
+set_property LOC BUFGCTRL_X0Y3 [get_cells ClockManager_0/BUFG_AD9220_CLK_OUT]
+set_property LOC BUFGCTRL_X0Y22 [get_cells ClockManager_0/MMCM_0/BUFG_CLK_66M]
+set_property LOC BUFGCTRL_X0Y30 [get_cells ClockManager_0/MMCM_0/BUFG_CLK_250M_0]
+set_property LOC BUFGCTRL_X0Y28 [get_cells ClockManager_0/MMCM_0/BUFG_CLK_250M_180]
+set_property LOC BUFGCTRL_X0Y27 [get_cells ClockManager_0/MMCM_0/BUFG_CLK_250M_270]
+set_property LOC BUFGCTRL_X0Y29 [get_cells ClockManager_0/MMCM_0/BUFG_CLK_250M_90]
+set_property LOC BUFGCTRL_X0Y25 [get_cells ClockManager_0/MMCM_0/BUFG_CLK_500M]
+set_property LOC BUFGCTRL_X0Y23 [get_cells ClockManager_0/MMCM_0/BUFG_CLK_6M]
+set_property LOC BUFGCTRL_X0Y26 [get_cells ClockManager_0/MMCM_0/BUFG_CLK_125M]
+set_property LOC BUFGCTRL_X0Y24 [get_cells ClockManager_0/MMCM_0/BUFG_CLK_25M]
+set_property LOC BUFGCTRL_X0Y31 [get_cells ClockManager_0/MMCM_0/BUFG_CLK_FB_0]
+
+# Location of IO Clock Primitives
+
+# Location of MMCM Clock Primitives
+set_property LOC MMCME2_ADV_X0Y2 [get_cells ClockManager_0/MMCM_0/MMCM_1]
+set_property LOC MMCME2_ADV_X0Y3 [get_cells ClockManager_0/MMCM_0/MMCM_0]
+
+# Location of BUFH Clock Primitives
+
+# Location of BUFR Clock Primitives
+
+# Location of BUFMR Clock Primitives
+
+# Location of PLL Clock Primitives
+
+# Location of IO Primitives which is load of clock spine
+set_property LOC IOB_X0Y101 [get_cells EASIROC1_ADC_CLK_HG_OBUF_inst]
+set_property LOC IOB_X0Y128 [get_cells EASIROC1_ADC_CLK_LG_OBUF_inst]
+set_property LOC IOB_X1Y119 [get_cells EASIROC2_ADC_CLK_HG_OBUF_inst]
+set_property LOC IOB_X1Y103 [get_cells EASIROC2_ADC_CLK_LG_OBUF_inst]
+set_property LOC IOB_X1Y96 [get_cells SCK_DAC_OBUF_inst]
+
+# Location of clock ports
+set_property LOC IOB_X0Y176 [get_ports EXTCLK50M]
+
+# Clock net "ClockManager_0/AD9220_CLK" driven by instance "ClockManager_0/BUFG_AD9220_CLK" located at site "BUFGCTRL_X0Y4"
+#startgroup
+create_pblock CLKAG_ClockManager_0/AD9220_CLK
+add_cells_to_pblock [get_pblocks  CLKAG_ClockManager_0/AD9220_CLK] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="ClockManager_0/AD9220_CLK"}]]]
+resize_pblock [get_pblocks CLKAG_ClockManager_0/AD9220_CLK] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "ClockManager_0/MMCM_0/CLK" driven by instance "ClockManager_0/MMCM_0/BUFG_CLK_66M" located at site "BUFGCTRL_X0Y22"
+#startgroup
+create_pblock CLKAG_ClockManager_0/MMCM_0/CLK
+add_cells_to_pblock [get_pblocks  CLKAG_ClockManager_0/MMCM_0/CLK] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="ClockManager_0/MMCM_0/CLK"}]]]
+resize_pblock [get_pblocks CLKAG_ClockManager_0/MMCM_0/CLK] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "ClockManager_0/MMCM_0/CLK_0" driven by instance "ClockManager_0/MMCM_0/BUFG_CLK_250M_0" located at site "BUFGCTRL_X0Y30"
+#startgroup
+create_pblock CLKAG_ClockManager_0/MMCM_0/CLK_0
+add_cells_to_pblock [get_pblocks  CLKAG_ClockManager_0/MMCM_0/CLK_0] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="ClockManager_0/MMCM_0/CLK_0"}]]]
+resize_pblock [get_pblocks CLKAG_ClockManager_0/MMCM_0/CLK_0] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "ClockManager_0/MMCM_0/CLK_180" driven by instance "ClockManager_0/MMCM_0/BUFG_CLK_250M_180" located at site "BUFGCTRL_X0Y28"
+#startgroup
+create_pblock CLKAG_ClockManager_0/MMCM_0/CLK_180
+add_cells_to_pblock [get_pblocks  CLKAG_ClockManager_0/MMCM_0/CLK_180] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="ClockManager_0/MMCM_0/CLK_180"}]]]
+resize_pblock [get_pblocks CLKAG_ClockManager_0/MMCM_0/CLK_180] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "ClockManager_0/MMCM_0/CLK_270" driven by instance "ClockManager_0/MMCM_0/BUFG_CLK_250M_270" located at site "BUFGCTRL_X0Y27"
+#startgroup
+create_pblock CLKAG_ClockManager_0/MMCM_0/CLK_270
+add_cells_to_pblock [get_pblocks  CLKAG_ClockManager_0/MMCM_0/CLK_270] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="ClockManager_0/MMCM_0/CLK_270"}]]]
+resize_pblock [get_pblocks CLKAG_ClockManager_0/MMCM_0/CLK_270] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "ClockManager_0/MMCM_0/CLK_90" driven by instance "ClockManager_0/MMCM_0/BUFG_CLK_250M_90" located at site "BUFGCTRL_X0Y29"
+#startgroup
+create_pblock CLKAG_ClockManager_0/MMCM_0/CLK_90
+add_cells_to_pblock [get_pblocks  CLKAG_ClockManager_0/MMCM_0/CLK_90] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="ClockManager_0/MMCM_0/CLK_90"}]]]
+resize_pblock [get_pblocks CLKAG_ClockManager_0/MMCM_0/CLK_90] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "ClockManager_0/MMCM_0/FAST_CLK" driven by instance "ClockManager_0/MMCM_0/BUFG_CLK_500M" located at site "BUFGCTRL_X0Y25"
+#startgroup
+create_pblock CLKAG_ClockManager_0/MMCM_0/FAST_CLK
+add_cells_to_pblock [get_pblocks  CLKAG_ClockManager_0/MMCM_0/FAST_CLK] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="ClockManager_0/MMCM_0/FAST_CLK"}]]]
+resize_pblock [get_pblocks CLKAG_ClockManager_0/MMCM_0/FAST_CLK] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "ClockManager_0/MMCM_0/I" driven by instance "ClockManager_0/MMCM_0/BUFG_CLK_6M" located at site "BUFGCTRL_X0Y23"
+#startgroup
+create_pblock CLKAG_ClockManager_0/MMCM_0/I
+add_cells_to_pblock [get_pblocks  CLKAG_ClockManager_0/MMCM_0/I] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="ClockManager_0/MMCM_0/I"}]]]
+resize_pblock [get_pblocks CLKAG_ClockManager_0/MMCM_0/I] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "ClockManager_0/MMCM_0/SCALER_CLK" driven by instance "ClockManager_0/MMCM_0/BUFG_CLK_125M" located at site "BUFGCTRL_X0Y26"
+#startgroup
+create_pblock CLKAG_ClockManager_0/MMCM_0/SCALER_CLK
+add_cells_to_pblock [get_pblocks  CLKAG_ClockManager_0/MMCM_0/SCALER_CLK] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="ClockManager_0/MMCM_0/SCALER_CLK"}]]]
+resize_pblock [get_pblocks CLKAG_ClockManager_0/MMCM_0/SCALER_CLK] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "ClockManager_0/MMCM_0/SCK_DAC_OBUF" driven by instance "ClockManager_0/MMCM_0/BUFG_CLK_25M" located at site "BUFGCTRL_X0Y24"
+#startgroup
+create_pblock CLKAG_ClockManager_0/MMCM_0/SCK_DAC_OBUF
+add_cells_to_pblock [get_pblocks  CLKAG_ClockManager_0/MMCM_0/SCK_DAC_OBUF] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL && NAME!=SCK_DAC_OBUF_inst} -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="ClockManager_0/MMCM_0/SCK_DAC_OBUF"}]]]
+resize_pblock [get_pblocks CLKAG_ClockManager_0/MMCM_0/SCK_DAC_OBUF] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "ETH_RX_CLK_IBUF" driven by instance "ETH_RX_CLK_IBUF_inst" located at site "IOB_X1Y74"
+#startgroup
+create_pblock CLKAG_ETH_RX_CLK_IBUF
+add_cells_to_pblock [get_pblocks  CLKAG_ETH_RX_CLK_IBUF] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="ETH_RX_CLK_IBUF"}]]]
+resize_pblock [get_pblocks CLKAG_ETH_RX_CLK_IBUF] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "ETH_TX_CLK_IBUF" driven by instance "ETH_TX_CLK_IBUF_inst" located at site "IOB_X1Y76"
+#startgroup
+create_pblock CLKAG_ETH_TX_CLK_IBUF
+add_cells_to_pblock [get_pblocks  CLKAG_ETH_TX_CLK_IBUF] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="ETH_TX_CLK_IBUF"}]]]
+resize_pblock [get_pblocks CLKAG_ETH_TX_CLK_IBUF] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "TriggerManager_0/L1_Delayer/n_0_trigger_s_reg_i_2" driven by instance "TriggerManager_0/L1_Delayer/trigger_s_reg_i_2" located at site "SLICE_X0Y51"
+#startgroup
+create_pblock CLKAG_TriggerManager_0/L1_Delayer/n_0_trigger_s_reg_i_2
+add_cells_to_pblock [get_pblocks  CLKAG_TriggerManager_0/L1_Delayer/n_0_trigger_s_reg_i_2] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="TriggerManager_0/L1_Delayer/n_0_trigger_s_reg_i_2"}]]]
+resize_pblock [get_pblocks CLKAG_TriggerManager_0/L1_Delayer/n_0_trigger_s_reg_i_2] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "TriggerManager_0/L1_Delayer/state[0]" driven by instance "TriggerManager_0/L1_Delayer/state_reg[0]" located at site "SLICE_X0Y49"
+#startgroup
+create_pblock CLKAG_TriggerManager_0/L1_Delayer/state[0]
+add_cells_to_pblock [get_pblocks  CLKAG_TriggerManager_0/L1_Delayer/state[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="TriggerManager_0/L1_Delayer/state[0]"}]]]
+resize_pblock [get_pblocks CLKAG_TriggerManager_0/L1_Delayer/state[0]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "TriggerManager_0/L1_Delayer/state[1]" driven by instance "TriggerManager_0/L1_Delayer/state_reg[1]" located at site "SLICE_X0Y51"
+#startgroup
+create_pblock CLKAG_TriggerManager_0/L1_Delayer/state[1]
+add_cells_to_pblock [get_pblocks  CLKAG_TriggerManager_0/L1_Delayer/state[1]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="TriggerManager_0/L1_Delayer/state[1]"}]]]
+resize_pblock [get_pblocks CLKAG_TriggerManager_0/L1_Delayer/state[1]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "TriggerManager_0/L2_Delayer/n_0_trigger_s_reg_i_2__0" driven by instance "TriggerManager_0/L2_Delayer/trigger_s_reg_i_2__0" located at site "SLICE_X1Y44"
+#startgroup
+create_pblock CLKAG_TriggerManager_0/L2_Delayer/n_0_trigger_s_reg_i_2__0
+add_cells_to_pblock [get_pblocks  CLKAG_TriggerManager_0/L2_Delayer/n_0_trigger_s_reg_i_2__0] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="TriggerManager_0/L2_Delayer/n_0_trigger_s_reg_i_2__0"}]]]
+resize_pblock [get_pblocks CLKAG_TriggerManager_0/L2_Delayer/n_0_trigger_s_reg_i_2__0] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "TriggerManager_0/L2_Delayer/state[0]" driven by instance "TriggerManager_0/L2_Delayer/state_reg[0]" located at site "SLICE_X1Y44"
+#startgroup
+create_pblock CLKAG_TriggerManager_0/L2_Delayer/state[0]
+add_cells_to_pblock [get_pblocks  CLKAG_TriggerManager_0/L2_Delayer/state[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="TriggerManager_0/L2_Delayer/state[0]"}]]]
+resize_pblock [get_pblocks CLKAG_TriggerManager_0/L2_Delayer/state[0]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "TriggerManager_0/L2_Delayer/state[1]" driven by instance "TriggerManager_0/L2_Delayer/state_reg[1]" located at site "SLICE_X1Y44"
+#startgroup
+create_pblock CLKAG_TriggerManager_0/L2_Delayer/state[1]
+add_cells_to_pblock [get_pblocks  CLKAG_TriggerManager_0/L2_Delayer/state[1]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="TriggerManager_0/L2_Delayer/state[1]"}]]]
+resize_pblock [get_pblocks CLKAG_TriggerManager_0/L2_Delayer/state[1]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "TriggerManager_0/n_0_L1_tmp_reg_i_2" driven by instance "TriggerManager_0/L1_tmp_reg_i_2" located at site "SLICE_X5Y63"
+#startgroup
+create_pblock CLKAG_TriggerManager_0/n_0_L1_tmp_reg_i_2
+add_cells_to_pblock [get_pblocks  CLKAG_TriggerManager_0/n_0_L1_tmp_reg_i_2] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="TriggerManager_0/n_0_L1_tmp_reg_i_2"}]]]
+resize_pblock [get_pblocks CLKAG_TriggerManager_0/n_0_L1_tmp_reg_i_2] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "TriggerWidth_0/WidthAdjuster_GENERATE[0].Width_Adjuster_0/Delayer_0/D[0]" driven by instance "TriggerWidth_0/WidthAdjuster_GENERATE[0].Width_Adjuster_0/Delayer_0/delay_reg[0]_i_1" located at site "SLICE_X15Y49"
+#startgroup
+create_pblock CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[0].Width_Adjuster_0/Delayer_0/D[0]
+add_cells_to_pblock [get_pblocks  CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[0].Width_Adjuster_0/Delayer_0/D[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="TriggerWidth_0/WidthAdjuster_GENERATE[0].Width_Adjuster_0/Delayer_0/D[0]"}]]]
+resize_pblock [get_pblocks CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[0].Width_Adjuster_0/Delayer_0/D[0]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "TriggerWidth_0/WidthAdjuster_GENERATE[0].Width_Adjuster_1/Delayer_0/D[0]" driven by instance "TriggerWidth_0/WidthAdjuster_GENERATE[0].Width_Adjuster_1/Delayer_0/delay_reg[0]_i_1__0" located at site "SLICE_X7Y49"
+#startgroup
+create_pblock CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[0].Width_Adjuster_1/Delayer_0/D[0]
+add_cells_to_pblock [get_pblocks  CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[0].Width_Adjuster_1/Delayer_0/D[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="TriggerWidth_0/WidthAdjuster_GENERATE[0].Width_Adjuster_1/Delayer_0/D[0]"}]]]
+resize_pblock [get_pblocks CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[0].Width_Adjuster_1/Delayer_0/D[0]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "TriggerWidth_0/WidthAdjuster_GENERATE[10].Width_Adjuster_0/Delayer_0/D[0]" driven by instance "TriggerWidth_0/WidthAdjuster_GENERATE[10].Width_Adjuster_0/Delayer_0/delay_reg[0]_i_1__19" located at site "SLICE_X2Y72"
+#startgroup
+create_pblock CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[10].Width_Adjuster_0/Delayer_0/D[0]
+add_cells_to_pblock [get_pblocks  CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[10].Width_Adjuster_0/Delayer_0/D[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="TriggerWidth_0/WidthAdjuster_GENERATE[10].Width_Adjuster_0/Delayer_0/D[0]"}]]]
+resize_pblock [get_pblocks CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[10].Width_Adjuster_0/Delayer_0/D[0]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "TriggerWidth_0/WidthAdjuster_GENERATE[10].Width_Adjuster_1/Delayer_0/D[0]" driven by instance "TriggerWidth_0/WidthAdjuster_GENERATE[10].Width_Adjuster_1/Delayer_0/delay_reg[0]_i_1__20" located at site "SLICE_X12Y54"
+#startgroup
+create_pblock CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[10].Width_Adjuster_1/Delayer_0/D[0]
+add_cells_to_pblock [get_pblocks  CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[10].Width_Adjuster_1/Delayer_0/D[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="TriggerWidth_0/WidthAdjuster_GENERATE[10].Width_Adjuster_1/Delayer_0/D[0]"}]]]
+resize_pblock [get_pblocks CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[10].Width_Adjuster_1/Delayer_0/D[0]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "TriggerWidth_0/WidthAdjuster_GENERATE[11].Width_Adjuster_0/Delayer_0/D[0]" driven by instance "TriggerWidth_0/WidthAdjuster_GENERATE[11].Width_Adjuster_0/Delayer_0/delay_reg[0]_i_1__21" located at site "SLICE_X14Y49"
+#startgroup
+create_pblock CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[11].Width_Adjuster_0/Delayer_0/D[0]
+add_cells_to_pblock [get_pblocks  CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[11].Width_Adjuster_0/Delayer_0/D[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="TriggerWidth_0/WidthAdjuster_GENERATE[11].Width_Adjuster_0/Delayer_0/D[0]"}]]]
+resize_pblock [get_pblocks CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[11].Width_Adjuster_0/Delayer_0/D[0]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "TriggerWidth_0/WidthAdjuster_GENERATE[11].Width_Adjuster_1/Delayer_0/D[0]" driven by instance "TriggerWidth_0/WidthAdjuster_GENERATE[11].Width_Adjuster_1/Delayer_0/delay_reg[0]_i_1__22" located at site "SLICE_X13Y62"
+#startgroup
+create_pblock CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[11].Width_Adjuster_1/Delayer_0/D[0]
+add_cells_to_pblock [get_pblocks  CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[11].Width_Adjuster_1/Delayer_0/D[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="TriggerWidth_0/WidthAdjuster_GENERATE[11].Width_Adjuster_1/Delayer_0/D[0]"}]]]
+resize_pblock [get_pblocks CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[11].Width_Adjuster_1/Delayer_0/D[0]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "TriggerWidth_0/WidthAdjuster_GENERATE[12].Width_Adjuster_0/Delayer_0/D[0]" driven by instance "TriggerWidth_0/WidthAdjuster_GENERATE[12].Width_Adjuster_0/Delayer_0/delay_reg[0]_i_1__23" located at site "SLICE_X62Y46"
+#startgroup
+create_pblock CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[12].Width_Adjuster_0/Delayer_0/D[0]
+add_cells_to_pblock [get_pblocks  CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[12].Width_Adjuster_0/Delayer_0/D[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="TriggerWidth_0/WidthAdjuster_GENERATE[12].Width_Adjuster_0/Delayer_0/D[0]"}]]]
+resize_pblock [get_pblocks CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[12].Width_Adjuster_0/Delayer_0/D[0]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "TriggerWidth_0/WidthAdjuster_GENERATE[12].Width_Adjuster_1/Delayer_0/D[0]" driven by instance "TriggerWidth_0/WidthAdjuster_GENERATE[12].Width_Adjuster_1/Delayer_0/delay_reg[0]_i_1__24" located at site "SLICE_X74Y50"
+#startgroup
+create_pblock CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[12].Width_Adjuster_1/Delayer_0/D[0]
+add_cells_to_pblock [get_pblocks  CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[12].Width_Adjuster_1/Delayer_0/D[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="TriggerWidth_0/WidthAdjuster_GENERATE[12].Width_Adjuster_1/Delayer_0/D[0]"}]]]
+resize_pblock [get_pblocks CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[12].Width_Adjuster_1/Delayer_0/D[0]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "TriggerWidth_0/WidthAdjuster_GENERATE[13].Width_Adjuster_0/Delayer_0/D[0]" driven by instance "TriggerWidth_0/WidthAdjuster_GENERATE[13].Width_Adjuster_0/Delayer_0/delay_reg[0]_i_1__25" located at site "SLICE_X72Y44"
+#startgroup
+create_pblock CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[13].Width_Adjuster_0/Delayer_0/D[0]
+add_cells_to_pblock [get_pblocks  CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[13].Width_Adjuster_0/Delayer_0/D[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="TriggerWidth_0/WidthAdjuster_GENERATE[13].Width_Adjuster_0/Delayer_0/D[0]"}]]]
+resize_pblock [get_pblocks CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[13].Width_Adjuster_0/Delayer_0/D[0]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "TriggerWidth_0/WidthAdjuster_GENERATE[13].Width_Adjuster_1/Delayer_0/D[0]" driven by instance "TriggerWidth_0/WidthAdjuster_GENERATE[13].Width_Adjuster_1/Delayer_0/delay_reg[0]_i_1__26" located at site "SLICE_X73Y46"
+#startgroup
+create_pblock CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[13].Width_Adjuster_1/Delayer_0/D[0]
+add_cells_to_pblock [get_pblocks  CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[13].Width_Adjuster_1/Delayer_0/D[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="TriggerWidth_0/WidthAdjuster_GENERATE[13].Width_Adjuster_1/Delayer_0/D[0]"}]]]
+resize_pblock [get_pblocks CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[13].Width_Adjuster_1/Delayer_0/D[0]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "TriggerWidth_0/WidthAdjuster_GENERATE[14].Width_Adjuster_0/Delayer_0/D[0]" driven by instance "TriggerWidth_0/WidthAdjuster_GENERATE[14].Width_Adjuster_0/Delayer_0/delay_reg[0]_i_1__27" located at site "SLICE_X67Y50"
+#startgroup
+create_pblock CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[14].Width_Adjuster_0/Delayer_0/D[0]
+add_cells_to_pblock [get_pblocks  CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[14].Width_Adjuster_0/Delayer_0/D[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="TriggerWidth_0/WidthAdjuster_GENERATE[14].Width_Adjuster_0/Delayer_0/D[0]"}]]]
+resize_pblock [get_pblocks CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[14].Width_Adjuster_0/Delayer_0/D[0]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "TriggerWidth_0/WidthAdjuster_GENERATE[14].Width_Adjuster_1/Delayer_0/D[0]" driven by instance "TriggerWidth_0/WidthAdjuster_GENERATE[14].Width_Adjuster_1/Delayer_0/delay_reg[0]_i_1__28" located at site "SLICE_X43Y49"
+#startgroup
+create_pblock CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[14].Width_Adjuster_1/Delayer_0/D[0]
+add_cells_to_pblock [get_pblocks  CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[14].Width_Adjuster_1/Delayer_0/D[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="TriggerWidth_0/WidthAdjuster_GENERATE[14].Width_Adjuster_1/Delayer_0/D[0]"}]]]
+resize_pblock [get_pblocks CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[14].Width_Adjuster_1/Delayer_0/D[0]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "TriggerWidth_0/WidthAdjuster_GENERATE[15].Width_Adjuster_0/Delayer_0/D[0]" driven by instance "TriggerWidth_0/WidthAdjuster_GENERATE[15].Width_Adjuster_0/Delayer_0/delay_reg[0]_i_1__29" located at site "SLICE_X46Y48"
+#startgroup
+create_pblock CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[15].Width_Adjuster_0/Delayer_0/D[0]
+add_cells_to_pblock [get_pblocks  CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[15].Width_Adjuster_0/Delayer_0/D[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="TriggerWidth_0/WidthAdjuster_GENERATE[15].Width_Adjuster_0/Delayer_0/D[0]"}]]]
+resize_pblock [get_pblocks CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[15].Width_Adjuster_0/Delayer_0/D[0]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "TriggerWidth_0/WidthAdjuster_GENERATE[15].Width_Adjuster_1/Delayer_0/D[0]" driven by instance "TriggerWidth_0/WidthAdjuster_GENERATE[15].Width_Adjuster_1/Delayer_0/delay_reg[0]_i_1__30" located at site "SLICE_X49Y37"
+#startgroup
+create_pblock CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[15].Width_Adjuster_1/Delayer_0/D[0]
+add_cells_to_pblock [get_pblocks  CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[15].Width_Adjuster_1/Delayer_0/D[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="TriggerWidth_0/WidthAdjuster_GENERATE[15].Width_Adjuster_1/Delayer_0/D[0]"}]]]
+resize_pblock [get_pblocks CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[15].Width_Adjuster_1/Delayer_0/D[0]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "TriggerWidth_0/WidthAdjuster_GENERATE[16].Width_Adjuster_0/Delayer_0/D[0]" driven by instance "TriggerWidth_0/WidthAdjuster_GENERATE[16].Width_Adjuster_0/Delayer_0/delay_reg[0]_i_1__31" located at site "SLICE_X48Y42"
+#startgroup
+create_pblock CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[16].Width_Adjuster_0/Delayer_0/D[0]
+add_cells_to_pblock [get_pblocks  CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[16].Width_Adjuster_0/Delayer_0/D[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="TriggerWidth_0/WidthAdjuster_GENERATE[16].Width_Adjuster_0/Delayer_0/D[0]"}]]]
+resize_pblock [get_pblocks CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[16].Width_Adjuster_0/Delayer_0/D[0]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "TriggerWidth_0/WidthAdjuster_GENERATE[16].Width_Adjuster_1/Delayer_0/D[0]" driven by instance "TriggerWidth_0/WidthAdjuster_GENERATE[16].Width_Adjuster_1/Delayer_0/delay_reg[0]_i_1__32" located at site "SLICE_X38Y49"
+#startgroup
+create_pblock CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[16].Width_Adjuster_1/Delayer_0/D[0]
+add_cells_to_pblock [get_pblocks  CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[16].Width_Adjuster_1/Delayer_0/D[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="TriggerWidth_0/WidthAdjuster_GENERATE[16].Width_Adjuster_1/Delayer_0/D[0]"}]]]
+resize_pblock [get_pblocks CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[16].Width_Adjuster_1/Delayer_0/D[0]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "TriggerWidth_0/WidthAdjuster_GENERATE[17].Width_Adjuster_0/Delayer_0/D[0]" driven by instance "TriggerWidth_0/WidthAdjuster_GENERATE[17].Width_Adjuster_0/Delayer_0/delay_reg[0]_i_1__33" located at site "SLICE_X48Y47"
+#startgroup
+create_pblock CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[17].Width_Adjuster_0/Delayer_0/D[0]
+add_cells_to_pblock [get_pblocks  CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[17].Width_Adjuster_0/Delayer_0/D[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="TriggerWidth_0/WidthAdjuster_GENERATE[17].Width_Adjuster_0/Delayer_0/D[0]"}]]]
+resize_pblock [get_pblocks CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[17].Width_Adjuster_0/Delayer_0/D[0]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "TriggerWidth_0/WidthAdjuster_GENERATE[17].Width_Adjuster_1/Delayer_0/D[0]" driven by instance "TriggerWidth_0/WidthAdjuster_GENERATE[17].Width_Adjuster_1/Delayer_0/delay_reg[0]_i_1__34" located at site "SLICE_X53Y40"
+#startgroup
+create_pblock CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[17].Width_Adjuster_1/Delayer_0/D[0]
+add_cells_to_pblock [get_pblocks  CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[17].Width_Adjuster_1/Delayer_0/D[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="TriggerWidth_0/WidthAdjuster_GENERATE[17].Width_Adjuster_1/Delayer_0/D[0]"}]]]
+resize_pblock [get_pblocks CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[17].Width_Adjuster_1/Delayer_0/D[0]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "TriggerWidth_0/WidthAdjuster_GENERATE[18].Width_Adjuster_0/Delayer_0/D[0]" driven by instance "TriggerWidth_0/WidthAdjuster_GENERATE[18].Width_Adjuster_0/Delayer_0/delay_reg[0]_i_1__35" located at site "SLICE_X62Y49"
+#startgroup
+create_pblock CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[18].Width_Adjuster_0/Delayer_0/D[0]
+add_cells_to_pblock [get_pblocks  CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[18].Width_Adjuster_0/Delayer_0/D[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="TriggerWidth_0/WidthAdjuster_GENERATE[18].Width_Adjuster_0/Delayer_0/D[0]"}]]]
+resize_pblock [get_pblocks CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[18].Width_Adjuster_0/Delayer_0/D[0]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "TriggerWidth_0/WidthAdjuster_GENERATE[18].Width_Adjuster_1/Delayer_0/D[0]" driven by instance "TriggerWidth_0/WidthAdjuster_GENERATE[18].Width_Adjuster_1/Delayer_0/delay_reg[0]_i_1__36" located at site "SLICE_X44Y48"
+#startgroup
+create_pblock CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[18].Width_Adjuster_1/Delayer_0/D[0]
+add_cells_to_pblock [get_pblocks  CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[18].Width_Adjuster_1/Delayer_0/D[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="TriggerWidth_0/WidthAdjuster_GENERATE[18].Width_Adjuster_1/Delayer_0/D[0]"}]]]
+resize_pblock [get_pblocks CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[18].Width_Adjuster_1/Delayer_0/D[0]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "TriggerWidth_0/WidthAdjuster_GENERATE[19].Width_Adjuster_0/Delayer_0/D[0]" driven by instance "TriggerWidth_0/WidthAdjuster_GENERATE[19].Width_Adjuster_0/Delayer_0/delay_reg[0]_i_1__37" located at site "SLICE_X58Y48"
+#startgroup
+create_pblock CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[19].Width_Adjuster_0/Delayer_0/D[0]
+add_cells_to_pblock [get_pblocks  CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[19].Width_Adjuster_0/Delayer_0/D[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="TriggerWidth_0/WidthAdjuster_GENERATE[19].Width_Adjuster_0/Delayer_0/D[0]"}]]]
+resize_pblock [get_pblocks CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[19].Width_Adjuster_0/Delayer_0/D[0]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "TriggerWidth_0/WidthAdjuster_GENERATE[19].Width_Adjuster_1/Delayer_0/D[0]" driven by instance "TriggerWidth_0/WidthAdjuster_GENERATE[19].Width_Adjuster_1/Delayer_0/delay_reg[0]_i_1__38" located at site "SLICE_X37Y49"
+#startgroup
+create_pblock CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[19].Width_Adjuster_1/Delayer_0/D[0]
+add_cells_to_pblock [get_pblocks  CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[19].Width_Adjuster_1/Delayer_0/D[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="TriggerWidth_0/WidthAdjuster_GENERATE[19].Width_Adjuster_1/Delayer_0/D[0]"}]]]
+resize_pblock [get_pblocks CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[19].Width_Adjuster_1/Delayer_0/D[0]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "TriggerWidth_0/WidthAdjuster_GENERATE[1].Width_Adjuster_0/Delayer_0/D[0]" driven by instance "TriggerWidth_0/WidthAdjuster_GENERATE[1].Width_Adjuster_0/Delayer_0/delay_reg[0]_i_1__1" located at site "SLICE_X4Y53"
+#startgroup
+create_pblock CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[1].Width_Adjuster_0/Delayer_0/D[0]
+add_cells_to_pblock [get_pblocks  CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[1].Width_Adjuster_0/Delayer_0/D[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="TriggerWidth_0/WidthAdjuster_GENERATE[1].Width_Adjuster_0/Delayer_0/D[0]"}]]]
+resize_pblock [get_pblocks CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[1].Width_Adjuster_0/Delayer_0/D[0]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "TriggerWidth_0/WidthAdjuster_GENERATE[1].Width_Adjuster_1/Delayer_0/D[0]" driven by instance "TriggerWidth_0/WidthAdjuster_GENERATE[1].Width_Adjuster_1/Delayer_0/delay_reg[0]_i_1__2" located at site "SLICE_X13Y55"
+#startgroup
+create_pblock CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[1].Width_Adjuster_1/Delayer_0/D[0]
+add_cells_to_pblock [get_pblocks  CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[1].Width_Adjuster_1/Delayer_0/D[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="TriggerWidth_0/WidthAdjuster_GENERATE[1].Width_Adjuster_1/Delayer_0/D[0]"}]]]
+resize_pblock [get_pblocks CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[1].Width_Adjuster_1/Delayer_0/D[0]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "TriggerWidth_0/WidthAdjuster_GENERATE[20].Width_Adjuster_0/Delayer_0/D[0]" driven by instance "TriggerWidth_0/WidthAdjuster_GENERATE[20].Width_Adjuster_0/Delayer_0/delay_reg[0]_i_1__39" located at site "SLICE_X39Y50"
+#startgroup
+create_pblock CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[20].Width_Adjuster_0/Delayer_0/D[0]
+add_cells_to_pblock [get_pblocks  CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[20].Width_Adjuster_0/Delayer_0/D[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="TriggerWidth_0/WidthAdjuster_GENERATE[20].Width_Adjuster_0/Delayer_0/D[0]"}]]]
+resize_pblock [get_pblocks CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[20].Width_Adjuster_0/Delayer_0/D[0]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "TriggerWidth_0/WidthAdjuster_GENERATE[20].Width_Adjuster_1/Delayer_0/D[0]" driven by instance "TriggerWidth_0/WidthAdjuster_GENERATE[20].Width_Adjuster_1/Delayer_0/delay_reg[0]_i_1__40" located at site "SLICE_X40Y48"
+#startgroup
+create_pblock CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[20].Width_Adjuster_1/Delayer_0/D[0]
+add_cells_to_pblock [get_pblocks  CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[20].Width_Adjuster_1/Delayer_0/D[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="TriggerWidth_0/WidthAdjuster_GENERATE[20].Width_Adjuster_1/Delayer_0/D[0]"}]]]
+resize_pblock [get_pblocks CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[20].Width_Adjuster_1/Delayer_0/D[0]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "TriggerWidth_0/WidthAdjuster_GENERATE[21].Width_Adjuster_0/Delayer_0/D[0]" driven by instance "TriggerWidth_0/WidthAdjuster_GENERATE[21].Width_Adjuster_0/Delayer_0/delay_reg[0]_i_1__41" located at site "SLICE_X37Y51"
+#startgroup
+create_pblock CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[21].Width_Adjuster_0/Delayer_0/D[0]
+add_cells_to_pblock [get_pblocks  CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[21].Width_Adjuster_0/Delayer_0/D[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="TriggerWidth_0/WidthAdjuster_GENERATE[21].Width_Adjuster_0/Delayer_0/D[0]"}]]]
+resize_pblock [get_pblocks CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[21].Width_Adjuster_0/Delayer_0/D[0]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "TriggerWidth_0/WidthAdjuster_GENERATE[21].Width_Adjuster_1/Delayer_0/D[0]" driven by instance "TriggerWidth_0/WidthAdjuster_GENERATE[21].Width_Adjuster_1/Delayer_0/delay_reg[0]_i_1__42" located at site "SLICE_X33Y44"
+#startgroup
+create_pblock CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[21].Width_Adjuster_1/Delayer_0/D[0]
+add_cells_to_pblock [get_pblocks  CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[21].Width_Adjuster_1/Delayer_0/D[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="TriggerWidth_0/WidthAdjuster_GENERATE[21].Width_Adjuster_1/Delayer_0/D[0]"}]]]
+resize_pblock [get_pblocks CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[21].Width_Adjuster_1/Delayer_0/D[0]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "TriggerWidth_0/WidthAdjuster_GENERATE[22].Width_Adjuster_0/Delayer_0/D[0]" driven by instance "TriggerWidth_0/WidthAdjuster_GENERATE[22].Width_Adjuster_0/Delayer_0/delay_reg[0]_i_1__43" located at site "SLICE_X40Y55"
+#startgroup
+create_pblock CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[22].Width_Adjuster_0/Delayer_0/D[0]
+add_cells_to_pblock [get_pblocks  CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[22].Width_Adjuster_0/Delayer_0/D[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="TriggerWidth_0/WidthAdjuster_GENERATE[22].Width_Adjuster_0/Delayer_0/D[0]"}]]]
+resize_pblock [get_pblocks CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[22].Width_Adjuster_0/Delayer_0/D[0]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "TriggerWidth_0/WidthAdjuster_GENERATE[22].Width_Adjuster_1/Delayer_0/D[0]" driven by instance "TriggerWidth_0/WidthAdjuster_GENERATE[22].Width_Adjuster_1/Delayer_0/delay_reg[0]_i_1__44" located at site "SLICE_X46Y55"
+#startgroup
+create_pblock CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[22].Width_Adjuster_1/Delayer_0/D[0]
+add_cells_to_pblock [get_pblocks  CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[22].Width_Adjuster_1/Delayer_0/D[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="TriggerWidth_0/WidthAdjuster_GENERATE[22].Width_Adjuster_1/Delayer_0/D[0]"}]]]
+resize_pblock [get_pblocks CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[22].Width_Adjuster_1/Delayer_0/D[0]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "TriggerWidth_0/WidthAdjuster_GENERATE[23].Width_Adjuster_0/Delayer_0/D[0]" driven by instance "TriggerWidth_0/WidthAdjuster_GENERATE[23].Width_Adjuster_0/Delayer_0/delay_reg[0]_i_1__45" located at site "SLICE_X39Y58"
+#startgroup
+create_pblock CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[23].Width_Adjuster_0/Delayer_0/D[0]
+add_cells_to_pblock [get_pblocks  CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[23].Width_Adjuster_0/Delayer_0/D[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="TriggerWidth_0/WidthAdjuster_GENERATE[23].Width_Adjuster_0/Delayer_0/D[0]"}]]]
+resize_pblock [get_pblocks CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[23].Width_Adjuster_0/Delayer_0/D[0]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "TriggerWidth_0/WidthAdjuster_GENERATE[23].Width_Adjuster_1/Delayer_0/D[0]" driven by instance "TriggerWidth_0/WidthAdjuster_GENERATE[23].Width_Adjuster_1/Delayer_0/delay_reg[0]_i_1__46" located at site "SLICE_X48Y55"
+#startgroup
+create_pblock CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[23].Width_Adjuster_1/Delayer_0/D[0]
+add_cells_to_pblock [get_pblocks  CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[23].Width_Adjuster_1/Delayer_0/D[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="TriggerWidth_0/WidthAdjuster_GENERATE[23].Width_Adjuster_1/Delayer_0/D[0]"}]]]
+resize_pblock [get_pblocks CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[23].Width_Adjuster_1/Delayer_0/D[0]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "TriggerWidth_0/WidthAdjuster_GENERATE[24].Width_Adjuster_0/Delayer_0/D[0]" driven by instance "TriggerWidth_0/WidthAdjuster_GENERATE[24].Width_Adjuster_0/Delayer_0/delay_reg[0]_i_1__47" located at site "SLICE_X47Y61"
+#startgroup
+create_pblock CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[24].Width_Adjuster_0/Delayer_0/D[0]
+add_cells_to_pblock [get_pblocks  CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[24].Width_Adjuster_0/Delayer_0/D[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="TriggerWidth_0/WidthAdjuster_GENERATE[24].Width_Adjuster_0/Delayer_0/D[0]"}]]]
+resize_pblock [get_pblocks CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[24].Width_Adjuster_0/Delayer_0/D[0]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "TriggerWidth_0/WidthAdjuster_GENERATE[24].Width_Adjuster_1/Delayer_0/D[0]" driven by instance "TriggerWidth_0/WidthAdjuster_GENERATE[24].Width_Adjuster_1/Delayer_0/delay_reg[0]_i_1__48" located at site "SLICE_X49Y51"
+#startgroup
+create_pblock CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[24].Width_Adjuster_1/Delayer_0/D[0]
+add_cells_to_pblock [get_pblocks  CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[24].Width_Adjuster_1/Delayer_0/D[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="TriggerWidth_0/WidthAdjuster_GENERATE[24].Width_Adjuster_1/Delayer_0/D[0]"}]]]
+resize_pblock [get_pblocks CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[24].Width_Adjuster_1/Delayer_0/D[0]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "TriggerWidth_0/WidthAdjuster_GENERATE[25].Width_Adjuster_0/Delayer_0/D[0]" driven by instance "TriggerWidth_0/WidthAdjuster_GENERATE[25].Width_Adjuster_0/Delayer_0/delay_reg[0]_i_1__49" located at site "SLICE_X72Y56"
+#startgroup
+create_pblock CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[25].Width_Adjuster_0/Delayer_0/D[0]
+add_cells_to_pblock [get_pblocks  CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[25].Width_Adjuster_0/Delayer_0/D[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="TriggerWidth_0/WidthAdjuster_GENERATE[25].Width_Adjuster_0/Delayer_0/D[0]"}]]]
+resize_pblock [get_pblocks CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[25].Width_Adjuster_0/Delayer_0/D[0]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "TriggerWidth_0/WidthAdjuster_GENERATE[25].Width_Adjuster_1/Delayer_0/D[0]" driven by instance "TriggerWidth_0/WidthAdjuster_GENERATE[25].Width_Adjuster_1/Delayer_0/delay_reg[0]_i_1__50" located at site "SLICE_X48Y55"
+#startgroup
+create_pblock CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[25].Width_Adjuster_1/Delayer_0/D[0]
+add_cells_to_pblock [get_pblocks  CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[25].Width_Adjuster_1/Delayer_0/D[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="TriggerWidth_0/WidthAdjuster_GENERATE[25].Width_Adjuster_1/Delayer_0/D[0]"}]]]
+resize_pblock [get_pblocks CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[25].Width_Adjuster_1/Delayer_0/D[0]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "TriggerWidth_0/WidthAdjuster_GENERATE[26].Width_Adjuster_0/Delayer_0/D[0]" driven by instance "TriggerWidth_0/WidthAdjuster_GENERATE[26].Width_Adjuster_0/Delayer_0/delay_reg[0]_i_1__51" located at site "SLICE_X52Y63"
+#startgroup
+create_pblock CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[26].Width_Adjuster_0/Delayer_0/D[0]
+add_cells_to_pblock [get_pblocks  CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[26].Width_Adjuster_0/Delayer_0/D[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="TriggerWidth_0/WidthAdjuster_GENERATE[26].Width_Adjuster_0/Delayer_0/D[0]"}]]]
+resize_pblock [get_pblocks CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[26].Width_Adjuster_0/Delayer_0/D[0]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "TriggerWidth_0/WidthAdjuster_GENERATE[26].Width_Adjuster_1/Delayer_0/D[0]" driven by instance "TriggerWidth_0/WidthAdjuster_GENERATE[26].Width_Adjuster_1/Delayer_0/delay_reg[0]_i_1__52" located at site "SLICE_X49Y55"
+#startgroup
+create_pblock CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[26].Width_Adjuster_1/Delayer_0/D[0]
+add_cells_to_pblock [get_pblocks  CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[26].Width_Adjuster_1/Delayer_0/D[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="TriggerWidth_0/WidthAdjuster_GENERATE[26].Width_Adjuster_1/Delayer_0/D[0]"}]]]
+resize_pblock [get_pblocks CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[26].Width_Adjuster_1/Delayer_0/D[0]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "TriggerWidth_0/WidthAdjuster_GENERATE[27].Width_Adjuster_0/Delayer_0/D[0]" driven by instance "TriggerWidth_0/WidthAdjuster_GENERATE[27].Width_Adjuster_0/Delayer_0/delay_reg[0]_i_1__53" located at site "SLICE_X8Y71"
+#startgroup
+create_pblock CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[27].Width_Adjuster_0/Delayer_0/D[0]
+add_cells_to_pblock [get_pblocks  CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[27].Width_Adjuster_0/Delayer_0/D[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="TriggerWidth_0/WidthAdjuster_GENERATE[27].Width_Adjuster_0/Delayer_0/D[0]"}]]]
+resize_pblock [get_pblocks CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[27].Width_Adjuster_0/Delayer_0/D[0]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "TriggerWidth_0/WidthAdjuster_GENERATE[27].Width_Adjuster_1/Delayer_0/D[0]" driven by instance "TriggerWidth_0/WidthAdjuster_GENERATE[27].Width_Adjuster_1/Delayer_0/delay_reg[0]_i_1__54" located at site "SLICE_X5Y86"
+#startgroup
+create_pblock CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[27].Width_Adjuster_1/Delayer_0/D[0]
+add_cells_to_pblock [get_pblocks  CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[27].Width_Adjuster_1/Delayer_0/D[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="TriggerWidth_0/WidthAdjuster_GENERATE[27].Width_Adjuster_1/Delayer_0/D[0]"}]]]
+resize_pblock [get_pblocks CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[27].Width_Adjuster_1/Delayer_0/D[0]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "TriggerWidth_0/WidthAdjuster_GENERATE[28].Width_Adjuster_0/Delayer_0/D[0]" driven by instance "TriggerWidth_0/WidthAdjuster_GENERATE[28].Width_Adjuster_0/Delayer_0/delay_reg[0]_i_1__55" located at site "SLICE_X31Y62"
+#startgroup
+create_pblock CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[28].Width_Adjuster_0/Delayer_0/D[0]
+add_cells_to_pblock [get_pblocks  CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[28].Width_Adjuster_0/Delayer_0/D[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="TriggerWidth_0/WidthAdjuster_GENERATE[28].Width_Adjuster_0/Delayer_0/D[0]"}]]]
+resize_pblock [get_pblocks CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[28].Width_Adjuster_0/Delayer_0/D[0]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "TriggerWidth_0/WidthAdjuster_GENERATE[28].Width_Adjuster_1/Delayer_0/D[0]" driven by instance "TriggerWidth_0/WidthAdjuster_GENERATE[28].Width_Adjuster_1/Delayer_0/delay_reg[0]_i_1__56" located at site "SLICE_X9Y79"
+#startgroup
+create_pblock CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[28].Width_Adjuster_1/Delayer_0/D[0]
+add_cells_to_pblock [get_pblocks  CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[28].Width_Adjuster_1/Delayer_0/D[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="TriggerWidth_0/WidthAdjuster_GENERATE[28].Width_Adjuster_1/Delayer_0/D[0]"}]]]
+resize_pblock [get_pblocks CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[28].Width_Adjuster_1/Delayer_0/D[0]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "TriggerWidth_0/WidthAdjuster_GENERATE[29].Width_Adjuster_0/Delayer_0/D[0]" driven by instance "TriggerWidth_0/WidthAdjuster_GENERATE[29].Width_Adjuster_0/Delayer_0/delay_reg[0]_i_1__57" located at site "SLICE_X6Y89"
+#startgroup
+create_pblock CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[29].Width_Adjuster_0/Delayer_0/D[0]
+add_cells_to_pblock [get_pblocks  CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[29].Width_Adjuster_0/Delayer_0/D[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="TriggerWidth_0/WidthAdjuster_GENERATE[29].Width_Adjuster_0/Delayer_0/D[0]"}]]]
+resize_pblock [get_pblocks CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[29].Width_Adjuster_0/Delayer_0/D[0]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "TriggerWidth_0/WidthAdjuster_GENERATE[29].Width_Adjuster_1/Delayer_0/D[0]" driven by instance "TriggerWidth_0/WidthAdjuster_GENERATE[29].Width_Adjuster_1/Delayer_0/delay_reg[0]_i_1__58" located at site "SLICE_X2Y72"
+#startgroup
+create_pblock CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[29].Width_Adjuster_1/Delayer_0/D[0]
+add_cells_to_pblock [get_pblocks  CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[29].Width_Adjuster_1/Delayer_0/D[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="TriggerWidth_0/WidthAdjuster_GENERATE[29].Width_Adjuster_1/Delayer_0/D[0]"}]]]
+resize_pblock [get_pblocks CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[29].Width_Adjuster_1/Delayer_0/D[0]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "TriggerWidth_0/WidthAdjuster_GENERATE[2].Width_Adjuster_0/Delayer_0/D[0]" driven by instance "TriggerWidth_0/WidthAdjuster_GENERATE[2].Width_Adjuster_0/Delayer_0/delay_reg[0]_i_1__3" located at site "SLICE_X26Y44"
+#startgroup
+create_pblock CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[2].Width_Adjuster_0/Delayer_0/D[0]
+add_cells_to_pblock [get_pblocks  CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[2].Width_Adjuster_0/Delayer_0/D[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="TriggerWidth_0/WidthAdjuster_GENERATE[2].Width_Adjuster_0/Delayer_0/D[0]"}]]]
+resize_pblock [get_pblocks CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[2].Width_Adjuster_0/Delayer_0/D[0]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "TriggerWidth_0/WidthAdjuster_GENERATE[2].Width_Adjuster_1/Delayer_0/D[0]" driven by instance "TriggerWidth_0/WidthAdjuster_GENERATE[2].Width_Adjuster_1/Delayer_0/delay_reg[0]_i_1__4" located at site "SLICE_X35Y43"
+#startgroup
+create_pblock CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[2].Width_Adjuster_1/Delayer_0/D[0]
+add_cells_to_pblock [get_pblocks  CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[2].Width_Adjuster_1/Delayer_0/D[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="TriggerWidth_0/WidthAdjuster_GENERATE[2].Width_Adjuster_1/Delayer_0/D[0]"}]]]
+resize_pblock [get_pblocks CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[2].Width_Adjuster_1/Delayer_0/D[0]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "TriggerWidth_0/WidthAdjuster_GENERATE[30].Width_Adjuster_0/Delayer_0/D[0]" driven by instance "TriggerWidth_0/WidthAdjuster_GENERATE[30].Width_Adjuster_0/Delayer_0/delay_reg[0]_i_1__59" located at site "SLICE_X9Y79"
+#startgroup
+create_pblock CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[30].Width_Adjuster_0/Delayer_0/D[0]
+add_cells_to_pblock [get_pblocks  CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[30].Width_Adjuster_0/Delayer_0/D[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="TriggerWidth_0/WidthAdjuster_GENERATE[30].Width_Adjuster_0/Delayer_0/D[0]"}]]]
+resize_pblock [get_pblocks CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[30].Width_Adjuster_0/Delayer_0/D[0]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "TriggerWidth_0/WidthAdjuster_GENERATE[30].Width_Adjuster_1/Delayer_0/D[0]" driven by instance "TriggerWidth_0/WidthAdjuster_GENERATE[30].Width_Adjuster_1/Delayer_0/delay_reg[0]_i_1__60" located at site "SLICE_X2Y94"
+#startgroup
+create_pblock CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[30].Width_Adjuster_1/Delayer_0/D[0]
+add_cells_to_pblock [get_pblocks  CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[30].Width_Adjuster_1/Delayer_0/D[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="TriggerWidth_0/WidthAdjuster_GENERATE[30].Width_Adjuster_1/Delayer_0/D[0]"}]]]
+resize_pblock [get_pblocks CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[30].Width_Adjuster_1/Delayer_0/D[0]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "TriggerWidth_0/WidthAdjuster_GENERATE[31].Width_Adjuster_0/Delayer_0/D[0]" driven by instance "TriggerWidth_0/WidthAdjuster_GENERATE[31].Width_Adjuster_0/Delayer_0/delay_reg[0]_i_1__61" located at site "SLICE_X3Y91"
+#startgroup
+create_pblock CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[31].Width_Adjuster_0/Delayer_0/D[0]
+add_cells_to_pblock [get_pblocks  CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[31].Width_Adjuster_0/Delayer_0/D[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="TriggerWidth_0/WidthAdjuster_GENERATE[31].Width_Adjuster_0/Delayer_0/D[0]"}]]]
+resize_pblock [get_pblocks CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[31].Width_Adjuster_0/Delayer_0/D[0]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "TriggerWidth_0/WidthAdjuster_GENERATE[31].Width_Adjuster_1/Delayer_0/D[0]" driven by instance "TriggerWidth_0/WidthAdjuster_GENERATE[31].Width_Adjuster_1/Delayer_0/delay_reg[0]_i_1__62" located at site "SLICE_X5Y87"
+#startgroup
+create_pblock CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[31].Width_Adjuster_1/Delayer_0/D[0]
+add_cells_to_pblock [get_pblocks  CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[31].Width_Adjuster_1/Delayer_0/D[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="TriggerWidth_0/WidthAdjuster_GENERATE[31].Width_Adjuster_1/Delayer_0/D[0]"}]]]
+resize_pblock [get_pblocks CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[31].Width_Adjuster_1/Delayer_0/D[0]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "TriggerWidth_0/WidthAdjuster_GENERATE[3].Width_Adjuster_0/Delayer_0/D[0]" driven by instance "TriggerWidth_0/WidthAdjuster_GENERATE[3].Width_Adjuster_0/Delayer_0/delay_reg[0]_i_1__5" located at site "SLICE_X24Y49"
+#startgroup
+create_pblock CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[3].Width_Adjuster_0/Delayer_0/D[0]
+add_cells_to_pblock [get_pblocks  CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[3].Width_Adjuster_0/Delayer_0/D[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="TriggerWidth_0/WidthAdjuster_GENERATE[3].Width_Adjuster_0/Delayer_0/D[0]"}]]]
+resize_pblock [get_pblocks CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[3].Width_Adjuster_0/Delayer_0/D[0]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "TriggerWidth_0/WidthAdjuster_GENERATE[3].Width_Adjuster_1/Delayer_0/D[0]" driven by instance "TriggerWidth_0/WidthAdjuster_GENERATE[3].Width_Adjuster_1/Delayer_0/delay_reg[0]_i_1__6" located at site "SLICE_X32Y37"
+#startgroup
+create_pblock CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[3].Width_Adjuster_1/Delayer_0/D[0]
+add_cells_to_pblock [get_pblocks  CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[3].Width_Adjuster_1/Delayer_0/D[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="TriggerWidth_0/WidthAdjuster_GENERATE[3].Width_Adjuster_1/Delayer_0/D[0]"}]]]
+resize_pblock [get_pblocks CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[3].Width_Adjuster_1/Delayer_0/D[0]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "TriggerWidth_0/WidthAdjuster_GENERATE[4].Width_Adjuster_0/Delayer_0/D[0]" driven by instance "TriggerWidth_0/WidthAdjuster_GENERATE[4].Width_Adjuster_0/Delayer_0/delay_reg[0]_i_1__7" located at site "SLICE_X25Y45"
+#startgroup
+create_pblock CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[4].Width_Adjuster_0/Delayer_0/D[0]
+add_cells_to_pblock [get_pblocks  CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[4].Width_Adjuster_0/Delayer_0/D[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="TriggerWidth_0/WidthAdjuster_GENERATE[4].Width_Adjuster_0/Delayer_0/D[0]"}]]]
+resize_pblock [get_pblocks CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[4].Width_Adjuster_0/Delayer_0/D[0]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "TriggerWidth_0/WidthAdjuster_GENERATE[4].Width_Adjuster_1/Delayer_0/D[0]" driven by instance "TriggerWidth_0/WidthAdjuster_GENERATE[4].Width_Adjuster_1/Delayer_0/delay_reg[0]_i_1__8" located at site "SLICE_X17Y47"
+#startgroup
+create_pblock CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[4].Width_Adjuster_1/Delayer_0/D[0]
+add_cells_to_pblock [get_pblocks  CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[4].Width_Adjuster_1/Delayer_0/D[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="TriggerWidth_0/WidthAdjuster_GENERATE[4].Width_Adjuster_1/Delayer_0/D[0]"}]]]
+resize_pblock [get_pblocks CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[4].Width_Adjuster_1/Delayer_0/D[0]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "TriggerWidth_0/WidthAdjuster_GENERATE[5].Width_Adjuster_0/Delayer_0/D[0]" driven by instance "TriggerWidth_0/WidthAdjuster_GENERATE[5].Width_Adjuster_0/Delayer_0/delay_reg[0]_i_1__9" located at site "SLICE_X15Y49"
+#startgroup
+create_pblock CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[5].Width_Adjuster_0/Delayer_0/D[0]
+add_cells_to_pblock [get_pblocks  CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[5].Width_Adjuster_0/Delayer_0/D[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="TriggerWidth_0/WidthAdjuster_GENERATE[5].Width_Adjuster_0/Delayer_0/D[0]"}]]]
+resize_pblock [get_pblocks CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[5].Width_Adjuster_0/Delayer_0/D[0]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "TriggerWidth_0/WidthAdjuster_GENERATE[5].Width_Adjuster_1/Delayer_0/D[0]" driven by instance "TriggerWidth_0/WidthAdjuster_GENERATE[5].Width_Adjuster_1/Delayer_0/delay_reg[0]_i_1__10" located at site "SLICE_X5Y41"
+#startgroup
+create_pblock CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[5].Width_Adjuster_1/Delayer_0/D[0]
+add_cells_to_pblock [get_pblocks  CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[5].Width_Adjuster_1/Delayer_0/D[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="TriggerWidth_0/WidthAdjuster_GENERATE[5].Width_Adjuster_1/Delayer_0/D[0]"}]]]
+resize_pblock [get_pblocks CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[5].Width_Adjuster_1/Delayer_0/D[0]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "TriggerWidth_0/WidthAdjuster_GENERATE[6].Width_Adjuster_0/Delayer_0/D[0]" driven by instance "TriggerWidth_0/WidthAdjuster_GENERATE[6].Width_Adjuster_0/Delayer_0/delay_reg[0]_i_1__11" located at site "SLICE_X8Y44"
+#startgroup
+create_pblock CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[6].Width_Adjuster_0/Delayer_0/D[0]
+add_cells_to_pblock [get_pblocks  CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[6].Width_Adjuster_0/Delayer_0/D[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="TriggerWidth_0/WidthAdjuster_GENERATE[6].Width_Adjuster_0/Delayer_0/D[0]"}]]]
+resize_pblock [get_pblocks CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[6].Width_Adjuster_0/Delayer_0/D[0]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "TriggerWidth_0/WidthAdjuster_GENERATE[6].Width_Adjuster_1/Delayer_0/D[0]" driven by instance "TriggerWidth_0/WidthAdjuster_GENERATE[6].Width_Adjuster_1/Delayer_0/delay_reg[0]_i_1__12" located at site "SLICE_X15Y42"
+#startgroup
+create_pblock CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[6].Width_Adjuster_1/Delayer_0/D[0]
+add_cells_to_pblock [get_pblocks  CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[6].Width_Adjuster_1/Delayer_0/D[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="TriggerWidth_0/WidthAdjuster_GENERATE[6].Width_Adjuster_1/Delayer_0/D[0]"}]]]
+resize_pblock [get_pblocks CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[6].Width_Adjuster_1/Delayer_0/D[0]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "TriggerWidth_0/WidthAdjuster_GENERATE[7].Width_Adjuster_0/Delayer_0/D[0]" driven by instance "TriggerWidth_0/WidthAdjuster_GENERATE[7].Width_Adjuster_0/Delayer_0/delay_reg[0]_i_1__13" located at site "SLICE_X4Y59"
+#startgroup
+create_pblock CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[7].Width_Adjuster_0/Delayer_0/D[0]
+add_cells_to_pblock [get_pblocks  CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[7].Width_Adjuster_0/Delayer_0/D[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="TriggerWidth_0/WidthAdjuster_GENERATE[7].Width_Adjuster_0/Delayer_0/D[0]"}]]]
+resize_pblock [get_pblocks CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[7].Width_Adjuster_0/Delayer_0/D[0]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "TriggerWidth_0/WidthAdjuster_GENERATE[7].Width_Adjuster_1/Delayer_0/D[0]" driven by instance "TriggerWidth_0/WidthAdjuster_GENERATE[7].Width_Adjuster_1/Delayer_0/delay_reg[0]_i_1__14" located at site "SLICE_X11Y59"
+#startgroup
+create_pblock CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[7].Width_Adjuster_1/Delayer_0/D[0]
+add_cells_to_pblock [get_pblocks  CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[7].Width_Adjuster_1/Delayer_0/D[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="TriggerWidth_0/WidthAdjuster_GENERATE[7].Width_Adjuster_1/Delayer_0/D[0]"}]]]
+resize_pblock [get_pblocks CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[7].Width_Adjuster_1/Delayer_0/D[0]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "TriggerWidth_0/WidthAdjuster_GENERATE[8].Width_Adjuster_0/Delayer_0/D[0]" driven by instance "TriggerWidth_0/WidthAdjuster_GENERATE[8].Width_Adjuster_0/Delayer_0/delay_reg[0]_i_1__15" located at site "SLICE_X6Y65"
+#startgroup
+create_pblock CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[8].Width_Adjuster_0/Delayer_0/D[0]
+add_cells_to_pblock [get_pblocks  CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[8].Width_Adjuster_0/Delayer_0/D[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="TriggerWidth_0/WidthAdjuster_GENERATE[8].Width_Adjuster_0/Delayer_0/D[0]"}]]]
+resize_pblock [get_pblocks CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[8].Width_Adjuster_0/Delayer_0/D[0]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "TriggerWidth_0/WidthAdjuster_GENERATE[8].Width_Adjuster_1/Delayer_0/D[0]" driven by instance "TriggerWidth_0/WidthAdjuster_GENERATE[8].Width_Adjuster_1/Delayer_0/delay_reg[0]_i_1__16" located at site "SLICE_X2Y61"
+#startgroup
+create_pblock CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[8].Width_Adjuster_1/Delayer_0/D[0]
+add_cells_to_pblock [get_pblocks  CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[8].Width_Adjuster_1/Delayer_0/D[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="TriggerWidth_0/WidthAdjuster_GENERATE[8].Width_Adjuster_1/Delayer_0/D[0]"}]]]
+resize_pblock [get_pblocks CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[8].Width_Adjuster_1/Delayer_0/D[0]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "TriggerWidth_0/WidthAdjuster_GENERATE[9].Width_Adjuster_0/Delayer_0/D[0]" driven by instance "TriggerWidth_0/WidthAdjuster_GENERATE[9].Width_Adjuster_0/Delayer_0/delay_reg[0]_i_1__17" located at site "SLICE_X13Y59"
+#startgroup
+create_pblock CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[9].Width_Adjuster_0/Delayer_0/D[0]
+add_cells_to_pblock [get_pblocks  CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[9].Width_Adjuster_0/Delayer_0/D[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="TriggerWidth_0/WidthAdjuster_GENERATE[9].Width_Adjuster_0/Delayer_0/D[0]"}]]]
+resize_pblock [get_pblocks CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[9].Width_Adjuster_0/Delayer_0/D[0]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "TriggerWidth_0/WidthAdjuster_GENERATE[9].Width_Adjuster_1/Delayer_0/D[0]" driven by instance "TriggerWidth_0/WidthAdjuster_GENERATE[9].Width_Adjuster_1/Delayer_0/delay_reg[0]_i_1__18" located at site "SLICE_X31Y52"
+#startgroup
+create_pblock CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[9].Width_Adjuster_1/Delayer_0/D[0]
+add_cells_to_pblock [get_pblocks  CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[9].Width_Adjuster_1/Delayer_0/D[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="TriggerWidth_0/WidthAdjuster_GENERATE[9].Width_Adjuster_1/Delayer_0/D[0]"}]]]
+resize_pblock [get_pblocks CLKAG_TriggerWidth_0/WidthAdjuster_GENERATE[9].Width_Adjuster_1/Delayer_0/D[0]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
