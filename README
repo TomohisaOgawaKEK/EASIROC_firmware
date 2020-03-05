@@ -5,6 +5,7 @@
 echo "# EASIROC_firmware" >> README.md  
 git init  
 git add README.md  
+# (use "git add/rm <file>..." to update what will be committed)
 git commit -m "first commit"  
 git remote add origin https://github.com/TomohisaOgawa/EASIROC_firmware.git  
 git push -u origin master  
@@ -60,4 +61,29 @@ Trigger: # parameters below are read one by one
          # 2: input hold, stop & accept are internally generated    
          #     after fixed 200 & 1000 nsec from hold, confirmed with calib pulse @ 20/02/22    
         Mode: 1   
+
+----- EASIROCfirmware_NC150923_viva14.3_up200304
+see yaml/RegisterValue.yml
+
+Trigger: # Explanation of parameters below    
+         #    
+         # 1: Based on TRIG, need to input HOLD, STOP, & ACCEPT individually. Standard operation.    
+         #    
+         # 2: Based on TRIG, need to input HOLD, but, STOP & ACCEPT are internally generated.     
+         #     With fixed delay of 80 & 1000 nsec from HOLD,    
+         #     operation was confirmed for test-charge with acquisitions of 2 KHz for 200fF & 100fF     
+         #     @ 20/02/22.    
+         #    
+         # 3: Based on TRIG, HOLD, STOP, & ACCEPT are internally generated.    
+         #     HOLD is generated with adjustbale delay, STOP, & ACCEPT are generated     
+         #     with fixed delay of 80 & 1000 nsec from HOLD    
+         #     @ 20/03/01.   
+        Mode: 3   
+        DelayTrigger: 38 # Adjustable delay with the internal 500MHz CLOCK (2nsec):     
+                         # 33 is peak for test charge w/ 200fF. acquisitions of 2 KHz @ 20/03/01.    
+                         # 33 is peak for test charge w/ 100fF. acquisitions of 2 KHz @ 20/03/01.    
+                         # 38 is peak for test charge w/ 100fF. acquisitions of 2 KHz @ 20/03/01.    
+                         # 42 is peak for test charge w/ 100fF. acquisitions of 0.4 KHz @ 20/03/01.   
+        DelayHold:    -1 # 25MHz :unused @ 20/03/01   
+        DelayL1Trig:  -1 # 6MHz  :unused @ 20/03/01   
 
