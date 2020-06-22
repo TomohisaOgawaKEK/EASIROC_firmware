@@ -6,7 +6,7 @@ echo "# EASIROC_firmware" >> README.md
 git init  
 git add README.md  
 # (use "git add/rm <file>..." to update what will be committed)
-git commit -m "first commit"  
+git commit -m "commit 20/03/31"  
 git remote add origin https://github.com/TomohisaOgawa/EASIROC_firmware.git  
 git push -u origin master  
 
@@ -21,9 +21,11 @@ git pull origin master
 
 
 ----- 2020/01/01 EASIROCfirmware_NC150923  
+
 the first version by Naruhiro Chikuma  
 
 ----- EASIROCfirmware_NC150923_viva14.3_up200117   
+
 injection pattern of test charge is added   
 
         when "001" =>  1   
@@ -41,49 +43,66 @@ this is controlled from RegisterValue.yml
 TestChargeSetting: 2  
 
 
------ EASIROCfirmware_NC150923_viva14.3_up200222   
-internal generation of stop and accept are added  
-  
-        if(TriggerMode = 2) then -- 2 => this works 02/22     
-           Hold_tmp <= HOLD;    
-           L1_tmp   <= L1_delayed; -- stop ~ delayed hold     
-           L2_tmp   <= L2_delayed; -- accept ~ delayed hold   
+----- EASIROCfirmware_NC150923_viva14.3_up200622
 
-        elsif(TriggerMode = 1) then -- 1        
-            Hold_tmp <= HOLD;    
-            L1_tmp   <= L1_TRIGGER; -- stop    
-            L2_tmp   <= L2_TRIGGER; -- accpt   
-        end if;
- 
-this is controlled from RegisterValue.yml
-Trigger: # parameters below are read one by one   
-         # 1: input hold, stop, & accept    
-         # 2: input hold, stop & accept are internally generated    
-         #     after fixed 200 & 1000 nsec from hold, confirmed with calib pulse @ 20/02/22    
-        Mode: 1   
-
------ EASIROCfirmware_NC150923_viva14.3_up200304
 see yaml/RegisterValue.yml
 
-Trigger: # Explanation of parameters below    
-         #    
-         # 1: Based on TRIG, need to input HOLD, STOP, & ACCEPT individually. Standard operation.    
-         #    
-         # 2: Based on TRIG, need to input HOLD, but, STOP & ACCEPT are internally generated.     
-         #     With fixed delay of 80 & 1000 nsec from HOLD,    
-         #     operation was confirmed for test-charge with acquisitions of 2 KHz for 200fF & 100fF     
-         #     @ 20/02/22.    
-         #    
-         # 3: Based on TRIG, HOLD, STOP, & ACCEPT are internally generated.    
-         #     HOLD is generated with adjustbale delay, STOP, & ACCEPT are generated     
-         #     with fixed delay of 80 & 1000 nsec from HOLD    
-         #     @ 20/03/01.   
-        Mode: 3   
-        DelayTrigger: 38 # Adjustable delay with the internal 500MHz CLOCK (2nsec):     
-                         # 33 is peak for test charge w/ 200fF. acquisitions of 2 KHz @ 20/03/01.    
-                         # 33 is peak for test charge w/ 100fF. acquisitions of 2 KHz @ 20/03/01.    
-                         # 38 is peak for test charge w/ 100fF. acquisitions of 2 KHz @ 20/03/01.    
-                         # 42 is peak for test charge w/ 100fF. acquisitions of 0.4 KHz @ 20/03/01.   
-        DelayHold:    -1 # 25MHz :unused @ 20/03/01   
-        DelayL1Trig:  -1 # 6MHz  :unused @ 20/03/01   
+Trigger:  
+      # Explanation of parameters below   
+      # 1: The default operation.   
+      #    Adjusting TRIG, one needs to input HOLD, STOP, & ACCEPT individually. 
+      # 2: Adjusting TRIG, one needs to input HOLD. But, STOP & ACCEPT are internally generated. 
+      #     Operation was confirmed for test-charge with acqui. of 2 KHz for 200fF & 100fF   
+      #       with fixed delay of 80 & 1000 nsec from HOLD @ 20/03/01.    
+      #       with fixed delay of 80 &  600 nsec from HOLD @ 20/06/20.    
+      # 3: Based on TRIG, three pulses: HOLD, STOP, & ACCEPT are internally generated.   
+      #     HOLD is generated with adjustbale delay, STOP, & ACCEPT are generated    
+      #       with fixed delay of 80 & 1000 nsec from HOLD @ 20/03/01.   
+      #       with fixed delay of 80 &  600 nsec from HOLD @ 20/06/20.   
+      Mode: 3   
+      DelayTrigger: 39 # Adjustable delay with the internal 500MHz CLOCK ( reso. 2nsec ):   
+                       #   @ 20/03/01. with fixed delay of 80 & 1000 nsec   
+                       #      25--65: acqui. for test-charge w/100fF is 2.0 KHz. 40 is close to peak.   
+                       #      But, 26, 42, 58 are 0.4 KHz.    
+                       #   @ 20/06/20. with fixed delay of 80 & 600 nsec   
+                       #      30--80: acqui. for test-charge w/100fF is 2.0 KHz. 40 is close to peak.   
+                       #      But, 34, 38, 50, 54, 66, 70 do not work!   
+                       #   @ 20/06/21. as for standard measurement,  
+                       #      you can see diary in Controller.rb   
+      DelayHold:    -1 # 25MHz :unused since internally fixed @ 20/03/01  
+      DelayL1Trig:  -1 # 6MHz  :unused since internally fixed @ 20/03/01  
+
+see Controller.rb
+
+   - statusInputDAC : <ch(0..63) / all(64)> put a status file under status/ 
+   - checkHVstability : check HV stability for ~ 30 min using above command  
+   - setThresholdDAC 
+   - setSelectbaleLogic :  <0..63> only is activated = OneCh_XX
+   - activateIndividual64 : loop using above to see trigger bevaviour on an oscilloscope      
+
+  HV Controlles  
+   - setHV       <bias voltage (00.00~90.00)> @ don't use! this increases at once @
+   - stepSetHV   <bias voltage> : step by step
+   - convergeHV  <bias voltage> : step by step and coverge it by looking HV monitor
+   - statusHV
+   - checkHV     <voltage_limit=80> <current_limit=20> <repeat_count=3>
+   - turnOffHV   : step by step to 0
+ 
+  Internal Trigger Ptn and Delay: see yaml/RegisterValue.yml
+   - setTriggerMode   : <0: ,>
+   - setTriggerDelay  : <0: ,>
+
+  Pulse Calibration:
+   - setTestPulsePtn  : <0,1,2>
+   - setTestPulseTo   : <0..63> each chip and ch by ch (recommended)
+   - calibrateIndividual64 : input test pulse to each chip and ch by ch (recommended) 
+
+  Finger plot can be seen w/   
+      LED4.2V(w=50ns,f=200Hz), V=56.9V, A=6.8uA, Logi64OR, thre=800, TrigDelay40 (acq.~400Hz) => ch05--63 NEvts=100K very good :)   
+      .........   
+      .........   
+      LED4.2V(w=50ns,f=2.0KHz),V=56.9V, A=6.8uA, Logi64OR, thre=800, TrigDelay40 (acq.~2.1KHz)=> ch05--63 NEvts=100K very good :)    
+      LED4.2V(w=50ns,f=3.0KHz),V=56.9V, A=6.8uA, Logi64OR, thre=800, TrigDelay40 (acq.~2.9KHz)=> ch05--63 NEvts=100K very good :)   
+      LED4.2V(w=50ns,f=4.0KHz),V=56.9V, A=6.8uA, Logi64OR, thre=800, TrigDelay40 (acq.~3.9KHz)=> ch05--63 NEvts=100K very good :)   
+      LED4.2V(w=50ns,f=5.0KHz),V=56.9V, A=6.8uA, Logi64OR, thre=800, TrigDelay40 (acq.~4.2KHz)=> ch05--63 NEvts=100K very good :)   
 

@@ -1,0 +1,3569 @@
+10
+help
+read
+help
+read 0 test.dat
+help
+version
+help
+write slowcontrol 
+help
+help
+slowcontrol 
+scaler off
+tdc off
+slowcontrol 
+tdc off
+scaler off
+help
+slowcontrol 
+help
+help
+slowcontrol 
+help
+slowcontrol 
+help
+ls
+help
+version 
+help
+muxControl 
+setHV 0.01
+setHV 0.00
+ls
+help
+setHV 0.00
+setHV 0.01
+setHV 0
+version 
+root
+setHV 0
+ls
+help
+slowcontrol 
+setHV 0
+muxControl 
+muxControl 0
+muxControl 32
+setHV 0
+setHV 0
+setHV 0
+setHV 0
+statusHV 
+setHV 0.1
+statusHV 
+setHV 0.5
+statusHV 
+setHV 1
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+setHV 0
+statusTemp 
+statusTemp 
+help
+statusInputDAC 
+help 
+pwd 
+setHV 0
+setHV 1
+statusHV 
+setHV 0
+muxControl 0
+muxControl 1
+muxControl 132
+muxControl 32
+setHV 0.1
+setHV 0.1
+setHV 0.1
+setHV 0.1
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+setHV 0
+setHV 1
+setHV 0
+help
+setHV 0
+statusHV 
+setHV 0.1
+statusHV 
+setHV 1
+statusHV 
+setHV 1
+setHV 1
+statusHV 
+statusHV 
+statusHV 
+statusInputDAC 
+statusTemp 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusTemp 
+setHV 1
+statusHV 
+statusHV 
+statusHV 
+setHV 1
+statusHV 
+statusTemp 
+statusHV 
+statusHV 
+statusHV 
+statusTemp 
+help
+version 
+setHV 5
+setHV 1
+setHV 2
+setHV 2.5
+setHV 3
+setHV 4
+setHV 3.5
+setHV 3.6
+setHV 3.5
+setHV 3.55
+setHV 3.57
+setHV 3.56
+setHV 0
+statusHV 
+ls
+setHV 
+help 
+statusTemp 
+ls
+statusHV 
+version 
+version 
+statusHV 
+statusHV 
+statusHV 
+setHV 0
+statusHV 
+statusTemp 
+statusTemp 
+statusInputDAC 
+statusHV 
+setHV 0
+statusHV 
+statusHV 
+statusHV 
+setHV 1
+statusHV 
+setHV 0
+statusHV 
+setHV 1
+setHV 1
+setHV 1
+statusHV 
+statusHV 5
+setHV 5
+statusHV 5
+setHV 5
+statusHV 
+statusInputDAC 
+statusTemp 
+help
+setHV 0
+statusHV 
+statusTemp 
+statusInputDAC 
+ls
+help
+mkdir ./test
+help
+ls
+help
+help
+setHV 1
+setHV 5
+help
+version 
+ls
+help
+help
+help
+help
+version 
+slowcontrol 
+ls
+setHV 1
+statusHV 
+statusHV 
+setHV 2
+statusHV 
+statusHV 
+help
+help
+read 10 test.txt
+slowcontrol 
+slowcontrol 
+read 10 test2
+setHV 
+setHV 0
+setHV 0 1
+setHV 0 
+setHV 0 
+setHV 0 
+setHV 0 
+setHV 0 0
+setHV 0 0 0
+setHV 0 0 0 0
+setHV 0
+setHV 0
+statusHV 
+statusHV 1
+setHV 1
+statusHV 
+setHV 2
+statusHV 
+setHV 10
+statusHV 
+setHV 100
+statusHV 
+statusHV 
+setHV 300
+statusHV 
+setHV 3000
+statusHV 
+setHV 0
+statusHV 
+ls
+setHV 
+setHV 0
+setHV 0
+setHV 0
+statusHV 
+statusHV 
+setHV 0
+setHV 1000
+setHV 60000
+setHV 6000
+setHV 60000
+slowcontrol 
+statusHV 
+setHV 65535
+setHV 65500
+setHV 60000
+setHV 0
+setHV 65535
+setHV 65534
+setHV 65535
+setHV 65535
+statusHV 
+statusTemp 
+statusInputDAC 
+muxControl 32
+statusInputDAC 
+setHV 0
+muxControl 5
+statusInputDAC 
+muxControl 32
+statusInputDAC 
+setHV 10000
+statusInputDAC 
+slowcontrol 
+statusInputDAC 
+slowcontrol 
+slowcontrol 
+statusInputDAC 
+slowcontrol 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+slowcontrol 
+statusInputDAC 
+slowcontrol 
+statusHV 
+slowcontrol 
+setHV 10000
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+slowcontrol 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+setHV 65535
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusTemp 
+statusTemp 
+statusTemp 
+statusTemp 
+statusTemp 
+statusTemp 
+statusHV 
+statusHV 
+statusHV 
+setHV 60000
+setHV 60000
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusTemp 
+statusTemp 
+muxControl 32
+statusTemp 
+statusTemp 
+statusHV 
+statusHV 
+setHV 57500
+setHV 55000
+setHV 52500
+setHV 50000
+setHV 50000
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusTemp 
+statusTemp 
+statusTemp 
+setHV 47500
+setHV 45000
+setHV 40000
+setHV 45000
+setHV 45000
+setHV 42500
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusTemp 
+statusTemp 
+statusTemp 
+statusTemp 
+setHV 40000
+setHV 40000
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusTemp 
+statusTemp 
+statusTemp 
+setHV 37500
+setHV 37500
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusTemp 
+statusTemp 
+statusHV 35000
+statusHV 35000
+setHV 35000
+setHV 35000
+statusHV
+statusHV
+statusHV
+statusHV
+statusHV
+statusHV
+statusTemp 
+statusTemp 
+setHV 32500
+setHV 32500
+statusHV
+statusHV
+statusHV
+statusHV
+statusHV
+statusHV
+statusHV
+statusHV
+statusTemp 
+statusTemp 
+statusTemp 
+statusHV
+statusHV
+setHV 30000
+statusHV
+statusHV
+statusHV
+statusHV
+statusHV
+statusHV
+statusHV
+statusHV
+statusTemp 
+statusTemp 
+setHV 27500
+statusHV
+statusHV
+statusHV
+statusHV
+statusHV
+statusHV
+statusHV
+statusTemp 
+statusTemp 
+setHV 25000
+statusTemp 
+statusTemp 
+statusHV
+statusHV
+statusHV
+statusHV
+statusHV
+setHV 22500
+statusHV
+statusHV
+statusHV
+statusHV
+statusHV
+statusTemp 
+statusTemp 
+setHV 20000
+setHV 20000
+statusHV
+statusHV
+statusHV
+statusHV
+statusHV
+statusHV
+statusHV
+statusTemp 
+statusTemp 
+setHV 17500
+setHV 17500
+statusHV
+statusHV
+statusHV
+statusHV
+statusHV
+statusHV
+statusTemp 
+statusTemp 
+setHV 15000
+setHV 15000
+statusHV
+statusHV
+statusHV
+statusHV
+statusHV
+statusHV
+statusTemp 
+statusTemp 
+setHV 12500
+setHV 12500
+statusHV
+statusHV
+statusHV
+statusHV
+statusHV
+statusHV
+statusTemp 
+statusTemp 
+setHV 10000
+setHV 10000
+statusHV
+statusHV
+statusHV
+statusHV
+statusHV
+statusHV
+statusTemp 
+statusTemp 
+statusTemp 
+setHV 7500
+setHV 7500
+statusHV
+statusHV
+statusHV
+statusHV
+statusHV
+statusHV
+statusHV
+statusHV
+statusTemp 
+statusTemp 
+setHV 5000
+statusHV
+setHV 5000
+statusHV
+statusHV
+statusHV
+statusHV
+statusTemp 
+statusTemp 
+setHV 2500
+statusHV
+statusHV
+statusHV
+statusHV
+statusHV
+statusHV
+statusHV
+statusHV
+statusHV
+statusHV
+statusHV
+statusTemp 
+statusTemp 
+setHV 2000
+setHV 2000
+statusHV
+statusHV
+statusHV
+statusHV
+statusHV
+statusHV
+statusTemp 
+statusTemp 
+setHV 1500
+statusHV
+statusHV
+statusHV
+statusHV
+statusHV
+statusHV
+statusHV
+statusHV
+statusHV
+statusHV
+statusHV
+statusHV
+statusHV
+statusHV
+statusHV
+statusHV
+statusHV
+statusHV
+setHV 1500
+setHV 1500
+setHV 1500
+setHV 1500
+setHV 1500
+setHV 1500
+setHV 1500
+setHV 1500
+setHV 1500
+setHV 1500
+setHV 1500
+setHV 1500
+setHV 1500
+setHV 1500
+setHV 1500
+setHV 1500
+setHV 1500
+setHV 1500
+setHV 1500
+setHV 1500
+setHV 1500
+setHV 1500
+setHV 1500
+setHV 1500
+setHV 1500
+setHV 1500
+setHV 1500
+statusHV
+setHV 1500
+setHV 1500
+statusHV
+statusHV
+statusHV
+statusHV
+statusHV
+statusHV
+setHV 1500
+statusHV
+statusHV
+setHV 1500
+statusHV
+statusHV
+statusHV
+setHV 500
+statusHV
+statusHV
+statusHV
+setHV 0
+setHV 0
+setHV 0
+setHV 500
+setHV 1000
+setHV 1000
+statusHV
+statusHV
+statusHV
+statusHV
+setHV 1200
+setHV 1500
+setHV 1600
+statusHV
+statusHV
+setHV 1600
+statusHV
+statusHV
+statusHV
+statusHV
+statusHV
+statusHV
+setHV 1536
+statusHV
+statusHV
+setHV 1535
+setHV 1535
+setHV 1535
+setHV 1535
+statusHV
+statusHV
+statusHV
+statusHV
+setHV 1530
+setHV 1500
+setHV 25000
+setHV 20000
+setHV 10000
+setHV 5000
+statusHV
+statusHV
+statusHV
+statusHV
+statusHV
+setHV 5000
+setHV 5000
+statusHV
+statusHV
+setHV 5000
+statusHV
+setHV 10000
+statusHV
+statusHV
+statusHV
+statusHV
+statusHV
+statusHV
+slowcontrol 
+slowcontrol 
+statusHV
+statusHV
+statusHV
+statusHV
+statusHV
+statusHV
+statusHV
+statusHV
+slowcontrol 
+statusHV
+statusHV
+statusHV
+statusHV
+statusHV
+statusHV
+statusHV
+slowcontrol 
+statusHV
+statusInputDAC 
+statusInputDAC 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+setHV 40000
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+slowcontrol 
+setHV 40000
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+setHV 40000
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+slowcontrol 
+statusHV 
+statusHV 
+setHV 30000
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+setHV 30000
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+slowcontrol 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+setHV 30000
+setHV 0
+setHV 30000
+setHV 30000
+statusHV 
+statusHV 
+statusHV 
+setHV 30000
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+setHV 30000
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+setHV 10000
+statusHV 
+statusHV 
+statusHV 
+setHV 30000
+slowcontrol 
+setHV 30000
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+statusInputDAC 
+setHV 30000
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+setHV 30000
+setHV 30000
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+setHV 10000
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+setHV 10000
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+help
+statusHV 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+setHV 30000
+slowcontrol 
+slowcontrol 
+statusInputDAC 
+slowcontrol 
+statusInputDAC 
+statusInputDAC 
+slowcontrol 
+statusInputDAC 
+slowcontrol 
+slowcontrol 
+statusInputDAC 
+slowcontrol 
+slowcontrol 
+statusInputDAC 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+statusInputDAC 
+slowcontrol 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+slowcontrol 
+setHV 30000
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+help 
+status
+statusHV 
+statusHV 
+setHV 10000
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+setHV 10000.
+.....................................................
+setHV 10000
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+setHV 30000
+setHV 40000
+setHV 20000
+setHV 10000
+setHV 5000
+setHV 2000
+setHV 1600
+setHV 2000
+setHV 1600
+setHV 1536
+setHV 1000
+setHV 2000
+setHV 65535
+setHV 60000
+setHV 50000
+setHV 40000
+setHV 45000
+setHV 40000
+setHV 42500
+setHV 40000
+setHV 37500
+setHV 35000
+setHV 32500
+setHV 30000
+setHV 27500
+setHV 25000
+setHV 22500
+setHV 20000
+setHV 17500
+setHV 15000
+setHV 12500
+setHV 10000
+setHV 7500
+setHV 5000
+setHV 2500
+setHV 2000
+setHV 1500
+setHV 1600
+setHV 1600
+setHV 1536
+setHV 1500
+setHV 1000
+setHV 500
+setHV 0
+setHV 30000
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+slowcontrol 
+statusInputDAC 
+statusInputDAC 
+slowcontrol 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+setHV 0
+setHV 10000
+setHV 30000
+setHV 30000
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+setHV 65535
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+setHV 60000
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+setHV 50000
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+setHV 45000
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+setHV 42500
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+setHV 40000
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+setHV 37500
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+setHV 35000
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+setHV 32500
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+setHV 30000
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+setHV 27500
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+setHV 25000
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+setHV 22500
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+setHV 20000
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+setHV 17500
+statusHV 
+statusHV 
+setHV 17500
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+setHV 15000
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+setHV 15000
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+setHV 12500
+setHV 12500
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+setHV 12500
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+setHV 10000
+setHV 10000
+statusHV 
+statusHV 
+statusHV 
+setHV 10000
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+setHV 7500
+setHV 7500
+statusHV 
+statusHV 
+setHV 7500
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+setHV 5000
+setHV 5000
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+setHV 5000
+statusHV 
+statusHV 
+statusHV 
+setHV 5000
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+setHV 2500
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+setHV 2500
+statusHV 
+statusHV 
+statusHV 
+setHV 2500
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+setHV 2500
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+setHV 2000
+statusHV 
+statusHV 
+setHV 2000
+setHV 2000
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+setHV 1600
+setHV 1600
+setHV 1600
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+setHV 1536
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+setHV 1600
+setHV 2000
+setHV 5000
+statusHV 
+statusHV 
+statusHV 
+setHV 30000
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+slowcontrol 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+slowcontrol 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+slowcontrol 
+slowcontrol 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+slowcontrol 
+slowcontrol 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+slowcontrol 
+slowcontrol 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+slowcontrol 
+slowcontrol 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+slowcontrol 
+slowcontrol 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+slowcontrol 
+slowcontrol 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+slowcontrol 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+slowcontrol 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+slowcontrol 
+statusInputDAC 
+statusInputDAC 
+slowcontrol 
+slowcontrol 
+statusInputDAC 
+statusInputDAC 
+slowcontrol 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+slowcontrol 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+slowcontrol 
+slowcontrol 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+slowcontrol 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+slowcontrol 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+slowcontrol 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+slowcontrol 
+slowcontrol 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+slowcontrol 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+statusInputDAC 
+ls
+statusInputDAC 
+statusInputDAC 1
+statusInputDAC 2
+statusInputDAC 2
+statusInputDAC 2
+statusInputDAC 2
+statusInputDAC 2
+statusInputDAC 2
+statusInputDAC 1
+statusInputDAC 1
+statusInputDAC 1
+statusInputDAC 1
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+statusHV 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+ls
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+ls
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+ls
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+ls
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+read 100 test_onlyCh30
+read 100 test_onlyCh30
+read 100 testtest
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+read 100 test_forBUSY
+read 100 test_forBUSY
+read 100 test_forBUSY1
+read 100 test_forBUSY1
+read 100 test_forBUSY2
+read 100 test_forBUSY3
+read 100 test_forBUSY4
+read 100 test_forBUSY5
+read 100 test_forBUSY6
+read 100 test_forBUSY7
+read 100 test_forBUSY8
+read 1000 test_forBUSY8
+read 1000 test_forBUSY9
+read 1000 test_forBUSY
+help 
+tdc on
+scaler on
+read 1000 test_forBUSY1
+read 10000 test_forBUSY10000
+read 1000 test_forBUSY1000
+read 1000 test_TDC
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+tdc on
+scaler on
+ls
+scaler on
+tdc on
+tdc on
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+statusHV
+statusHV
+read 1000 test_wCLK
+read 1 test
+read 10 test
+read 1 test
+read 1 test7
+ls ./data/
+ls ./data/
+read 1 test8
+read 10 test8
+read 10 test9
+read 10 test9
+read 10 test10
+read 10 test17
+read 10 test17
+read 10 test18
+read 10 test19
+read 10 test20
+read 10 test20
+read 10 test21
+read 1 test20
+read 10 test21
+read 10 test23
+read 10 test24
+read 10 test25
+read 100 test25
+read 100 test25
+read 100 test26
+read 100 test27
+read 10 test27
+read 10 test29
+read 10 test20
+read 10 test30
+read 11 test30
+read 1 test30
+read 1 test34
+read 10 test34
+read 10 test35
+read 10 test36
+read 10 test37
+read 10 test37
+read 10 test38
+read 10 test39
+read 10 test40
+read 10 test40
+read 10 test44
+read 10 test43
+read 10 test45
+read 10 test46
+read 10 test47
+read 10 test47
+read 10 test48
+read 10 test48
+read 10 test49
+read 10 test50
+read 10 test50
+read 10 test51
+read 10 test52
+read 100 test53
+read 1000 test54
+tdc on
+scaler on
+read 100 test55
+read 100 test56
+exeit
+ls
+ls data/
+slowcontrol 
+slowcontrol 
+ls
+help
+.q
+ls data/
+read 100 test59
+read 100 test60
+ls data/
+read 100 test64
+read 100 test65
+read 1000 test66
+read 1000 test67
+read 100 test67
+read 100 test68
+tdc on
+read 100 test69
+read 100 test69
+read 100 test70
+read 100 test72
+read 100 test73
+read 100 test73
+read 100 test74
+read 1000 test75
+read 1000 test76
+read 1000 test77
+read 10000 test78
+read 1000 test79
+read 1000 test81
+.q
+tdc off
+scaler off
+read 1000 test82
+adc off
+adc on
+tdc on
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+read 1000 test85
+read 1000 test86
+read 1000 test8
+ls data/
+ls data/test*
+rm data/test*
+sl da
+ls data/
+read 100 test1
+read 100 test2
+read 100 test3
+read 100 test4
+read 1000 test5
+slowcontrol 
+slowcontrol 
+slowcontrol 
+tdc on
+scaler on
+ls data/
+mkdir  data/20150914
+ls data/
+read 10000 20150914/test_ADC_TDC_SCALER
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+read 10000 20150914/test_ADC_TDC_SCALER2
+rm data/20150914/test_ADC_TDC_SCALER2.dat 
+read 10000 20150914/test_ADC_TDC_SCALER2
+tdc on
+read 10000 20150914/test_TDCON
+adc off 
+tdc on
+read 10000 20150914/test_ADCOFF_TDCON
+scaler off
+read 10000 20150914/test_ADCOFF_TDCON_SCALEROFF
+tdc off
+read 10000 20150914/test_ADCOFF_TDCOFF_SCALEROFF
+rm data/20150914/test_Direct.dat 
+tdc off
+adc off
+scaller off
+scaler off
+tdc off
+read 10000 20150914/test1
+read 10000 20150914/test2
+read 10000 20150914/test3
+read 10000 20150914/test4
+read 10000 20150914/test4
+help
+help
+help
+help
+q
+slowcontrol 
+ls
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+slowcontrol 
+help
+statusHV
+setHV 0
+statusHV
+chk_HVuniformity
+chk_HVuniformity
+chk_HVuniformity temp 70
+help
+chkHVuniformity
+chkHVuniformity test 10
+xit
+ll
+    setHV(10.0)
+    sleep 1
+chkHVuniformity test 10
+chkHVuniformity
+chkHVuniformity
+chkHVuniformity
+chkHVuniformity
+chkHVuniformity
+setHV 0
+chkHVuniformity
+chkHVuniformity
+chkHVuniformity
+statusInputDAC
+statusInputDAC 1
+statusInputDAC 2
+statusInputDAC 3
+statusInputDAC 32
+statusInputDAC 1
+statusInputDAC 0
+statusInputDAC 1
+statusInputDAC 2
+statusInputDAC 1
+statusInputDAC 1
+statusInputDAC 1
+statusInputDAC 1
+statusInputDAC 0
+statusInputDAC 0
+statusInputDAC 0
+statusInputDAC 0
+statusInputDAC 0
+statusInputDAC
+statusInputDAC 1
+statusInputDAC 1
+statusInputDAC 1
+statusInputDAC 1
+statusInputDAC 0
+statusInputDAC 0
+statusInputDAC 0
+statusInputDAC 0
+statusInputDAC 1
+statusInputDAC 1
+statusInputDAC 1
+help
+version
+:q
+help
+version
+help
+version
+version
+version
+version
+version
+version
+version
+version
+slowcontroll
+help
+slowcontrol
+setHV(10)
+setHV 10
+setHV 10
+version
+setHV 10
+TestCharge(1)
+setTestCharge(1)
+exir
+read 
+help
+version
+version
+version
+version
+version
+./Controller.rb 
+:q
+:wq
+ll ..
+setHV 10
+version
+version
+version
+help
+version
+:q
+version
+slowcontroll
+help
+slowcontrol
+version
+:q
+:q
+exi
+version
+:q
+:q
+scl 1
+help
+scaler 1
+scaler on
+version
+.q
+.q
+incHV 50
+incHV 50
+incHV30
+incHV 30
+ksetHV 40
+.q
+.q
+q
+q
+ksetHV 50
+statusHV
+statusHV
+ksetHV 50
+statusHV
+statusHV
+kset 55
+ksetHV 50
+statusHV
+statusHV
+ksetHV 55
+ksetHV 55
+ksetHV 55
+statusHV
+.q
+ksetHV 55
+slowcontrol
+statusHV
+ksetHV 56
+statusHV
+.q
+setTestQP 1
+setTestQP 1.
+setTestQP 1
+setTestQP 1.0
+setTestQP 10
+setTestQP 
+.q
+setTestQP 1
+setTestQP 1
+setTestQP 1
+.q
+setTestQP 1
+ setTestQP 1
+ setTestQP 1
+setTestQP 1
+ksetHV 50
+statusHV
+statusHV
+statusHV
+statusHV
+statusHV
+statusHV
+]]
+ksetHV 50
+statusHV
+statusHV
+statusHV
+ksetHV 60
+statusHV
+statusHV
+statusHV
+statusHV
+statusHV
+ksetHV 60
+statusHV
+statusHV
+statusHV
+statusHV
+statusHV
+statusHV
+ksetHV 20
+statusHV
+statusHV
+ksetHV 40
+statusHV
+statusHV
+ksetHV 30
+statusHV
+statusHV
+statusHV
+ksetHV 40
+statusHV
+statusHV
+ksetHV 60
+statusHV
+statusHV
+ksetHV 50
+ksetHV 40
+ksetHV 40
+statusHV
+ksetHV 50
+statusHV
+ksetHV 40
+statusHV
+statusHV
+statusHV
+ksetHV 40
+statusHV 
+statusHV
+statusHV
+read 100 100
+ll
+read 100 1000
+read 100 100
+read 10000 10000
+read 10000 10000
+read 20000 20000
+read 1000 1000
+read 2000 2000
+read 4000 4000
+read 1000 1000
+read 1000 1000
+read 2000 2000
+:q
+slowcontrl
+slowcontrol
+slowcontrol
+slowcontrol
+read 10000 dataX00
+slowcontrol
+slowcontrol
+slowcontrol
+slowcontrol
+slowcontrol
+read 1000 1000
+read 2000 2000
+read 10000 data_X00
+read 1000 1000
+read 5000 5000
+read 10000 data_x00
+slowcontrol
+read 10000 data_x01
+slowcontrol
+read 10000 data_x02
+slowcontrol
+slowcontrol
+read 10000 data_x03
+slowcontrol
+read 10000 data_x04
+slowcontrol
+read 10000 data_x05
+slowcontrol
+read 10000 data_x06
+slowcontrol
+read 10000 data_x07
+slowcontrol
+slowcontrol
+read 10000 data_x06
+slowcontrol
+read 10000 data_x10
+slowcontrol
+read 10000 data_x12
+slowcontrol
+read 10000 data_x13
+slowcontrol
+read 10000 data_x14
+slowcontrol
+read 10000 data_x16
+slowcontrol
+read 10000 data_x17
+slowcontrol
+read 10000 data_x18
+slowcontrol
+read 10000 data_x19
+slowcontrol
+read 10000 data_x20
+slowcontrol
+read 10000 data_x21
+slowcontrol
+read 10000 data_x22
+slowcontrol
+read 10000 data_x23
+slowcontrol
+read 10000 data_x24
+slowcontrol
+read 10000 data_x25
+slowcontrol
+read 10000 data_x26
+slowcontrol
+read 10000 data_x27
+slowcontrol
+read 10000 data_x28
+read 10000 data_x29
+slowcontrol
+read 10000 data_x30
+read 10000 data_x30
+slowcontrol
+read 10000 data_x31
+slowcontrol
+slowcontrol
+read 10000 data_x32
+slowcontrol
+read 10000 data_x33
+slowcontrol
+read 10000 data_x34
+slowcontrol
+read 10000 data_x35
+slowcontrol
+read 10000 data_x36
+slowcontrol
+read 10000 data_x37
+slowcontrol
+read 10000 data_x38
+slowcontrol
+read 10000 data_x39
+slowcontrol
+read 10000 data_x40
+slowcontrol
+read 10000 data_x41
+slowcontrol
+read 10000 data_x42
+slowcontrol
+read 10000 data_x43
+slowcontrol
+read 10000 data_x44
+slowcontrol
+read 10000 data_x45
+slowcontrol
+read 10000 data_x46
+slowcontrol
+read 10000 data_x47
+slowcontrol
+read 10000 data_x48
+slowcontrol
+read 10000 data_x49
+slowcontrol
+read 10000 data_x50
+slowcontrol
+read 10000 data_x51
+slowcontrol
+read 10000 data_x52
+slowcontrol
+read 10000 data_x53
+slowcontrol
+read 10000 data_x54
+slowcontrol
+read 10000 data_x55
+slowcontrol
+slowcontrol
+slowcontrol
+read 10000 data_x56
+slowcontrol
+read 10000 data_x57
+slowcontrol
+read 10000 data_x58
+slowcontrol
+read 10000 data_x59
+slowcontrol
+read 10000 data_x60
+slowcontrol
+read 10000 data_x61
+slowcontrol
+slowcontrol
+read 10000 data_x62
+slowcontrol
+read 10000 data_x63
+read 10000 data_x45
+slowcontrol
+read 10000 data_x46
+ksetHV 60
+statusHV
+ksetHV 60
+statusHV
+statusHV
+statusHV
+statusHV
+statusHV
+slowcontrol
+slowcontrol
+slowcontrol
+slowcontrol
+slowcontrol
+slowcontrol
+slowcontrol
+ksetHV 60
+statusInputDAC all
+ksetHV 60
+ksetHV 60
+statusInputDAC 64
+slowcontrol
+statusInputDAC 64
+slowcontrol
+statusInputDAC 64
+slowcontrol
+ksetHV 60
+ksetHV 60
+statusInputDAC 64
+lowcontrol
+slowcontrol
+read 1000 1000
+read 2000 2000
+slowcontrol
+read 3000 3000
+read 3000 3000
+slowcontrol
+read 5000 5000
+slowcontrol
+read 4000 4000
+slowcontrol
+read 2000 2000
+slowcontrol
+read 1000 1000
+q
+.q
+.q
+.q
+read 100 100
+read 1000 1000
+read 100 100
+read 1000 1000
+read 1000 1000
+read 1000 1000
+red 1000 1000
+read 1000 1000
+read 1000 1000
+read 1000 1000
+read 1000 1000
+read 1000 1000
+read 1000 1000
+read 100000 100000
+read 100000 100000
+read 100 100
+ll
+.q
+read 10000 10000
+read 10000 10000
+read 10000 10000
+read 10000 10000
+read 10000 10000
+read 10000 10000
+read 10000 10000
+read 10000 10000
+read 10000 10000
+read 10000 10000
+read 10000 10000
+read 10000 10000
+read 10000 10000
+read 10000 10000
+read 10000 10000
+read 10000 10000
+read 10000 10000
+read 10000 10000
+read 10000 10000
+read 10000 10000
+read 10000 10000
+read 10000 10000
+:q
+read 1000 test006
+read 10000 test008
+read 10000 test009
+calibration
+calibration
+calibration
+calibration
+calibration
+calibration
+calibration
+calibration
+calibration
+calibration
+calibration
+q
+que
+calibration
+calibration
+calibration64
+calibration64
+calibration64
+calibration64
+calibration64
+calibration64
+calibration64
+calibration64
+calibration64
+CCCCCC
+calibration64
+exi
+calibration64
+calibration64
+setTestPulsePtn 0
+setTestPulsePtn 1
+setTestPulsePtn 2
+setTestPulsePtn 0
+setTestPulsePtn 1
+setTestPulsePtn 2
+setTestPulsePtn 0
+setTestPulsePtn 1
+setTestPulsePtn 2
+.q
+calibration64
+calibration64
+.q
+calibration64
+ll
+calibration64
+ll data/
+calibration64
+calibration64
+calibration64
+calibration64
+calibration64
+calibration64
+calibration64
+calibration64
+ll
+.q
+testChargeTo(1)
+testChargeTo 1
+testChargeTo 2
+.q
+calibration64
+testChargeTo 0
+testChargeTo 1
+testChargeTo 2
+testChargeTo 3
+testChargeTo 4
+testChargeTo 0
+testChargeTo 0
+testChargeTo 1
+testChargeTo 2
+testChargeTo 0
+testChargeTo 1
+testChargeTo 3
+testChargeTo 1
+testChargeTo 2
+testChargeTo 0
+testChargeTo 1
+.q
+calibration64
+testChargeTo 1
+testChargeTo 2
+testChargeTo 1
+testChargeTo 0
+testChargeTo 2
+.q
+.q
+testChargeTo 2
+testChargeTo 2
+testChargeTo 3
+testChargeTo 4
+testChargeTo 5
+slowcontrol
+testChargeTo 5
+testChargeTo 5
+testChargeTo 5
+testChargeTo 5
+testChargeTo 5
+testChargeTo 44
+.q
+ll
+calib64
+setTestPulsePtn 0
+setTestPulsePtn 1
+setTestPulsePtn 2
+ll
+calib64
+setTriggerMode 0
+setTriggerMode 1
+setTriggerMode 2
+setTriggerMode 3
+setTriggerDelay 40
+setTriggerDelay 38
+setTriggerDelay 35
+setTriggerDelay 33
+setTriggerDelay 32
+setTriggerDelay 30
+setTriggerDelay 20
+setTriggerDelay 10
+setTriggerDelay 40
+setTriggerDelay 44
+setTriggerDelay 48
+setTriggerDelay 50
+setTriggerDelay 60
+setTriggerDelay 80
+setTriggerDelay 70
+setTriggerDelay 60
+setTriggerDelay 40
+setTriggerDelay 38
+setTriggerDelay 35
+.q
+.q
+increaseHV 50
+setThresholdDAC 500
+setThresholdDAC 500
+setThresholdDAC 700
+setThresholdDAC 800
+setThresholdDAC 860
+setThresholdDAC 870
+setThresholdDAC 890
+setThresholdDAC 800
+setThresholdDAC 700
+exi
+exi
+setTestPulseTo 1
+setTestPulseTo 2
+exi
+setTestPulseTo 2
+setTestPulseTo 1
+setThresholdDAC 800
+setThresholdDAC 850
+setThresholdDAC 860
+setTestPulseTo 1
+setThresholdDAC 650
+setTestPulseTo 1
+setThresholdDAC 50
+setTestPulseTo 1
+:q
+setThresholdDAC 400
+setThresholdDAC 500
+setThresholdDAC 800
+setThresholdDAC 700
+setThresholdDAC 800
+setThresholdDAC 800
+setThresholdDAC 780
+setThresholdDAC 800
+setThresholdDAC 600
+setThresholdDAC 850
+setThresholdDAC 850
+setThresholdDAC 800
+read 10000 test003
+setThresholdDAC 800
+read 10000 test005
+setThresholdDAC 800
+setThresholdDAC 850
+setThresholdDAC 900
+setThresholdDAC 850
+setThresholdDAC 830
+setThresholdDAC 820
+setThresholdDAC 800
+setThresholdDAC 780
+setThresholdDAC 750
+setThresholdDAC 760
+setThresholdDAC 770
+setThresholdDAC 780
+ll
+setThresholdDAC 820
+setThresholdDAC 800
+setThresholdDAC 770
+setThresholdDAC 780
+setSelectbaleLogic 1
+setSelectbaleLogic 0
+setSelectbaleLogic 2
+setSelectbaleLogic 3
+setSelectbaleLogic 11
+setSelectbaleLogic 11
+:q
+setThresholdDAC 820
+activationIndividual
+.q
+setThresholdDAC 820
+activationIndividual
+:q
+activateIndividual64
+activationIndividual
+activateIndividual64
+setThresholdDAC 840
+setThresholdDAC 820
+setThresholdDAC 830
+setThresholdDAC 830
+setThresholdDAC 820
+setThresholdDAC 800
+setThresholdDAC 780
+setThresholdDAC 770
+setThresholdDAC 750
+setThresholdDAC 800
+activateIndividual64
+help
+setSelectbaleLogic 32
+setThresholdDAC 820
+activateIndividual64
+setThresholdDAC 820
+setThresholdDAC 800
+setThresholdDAC 700
+setThresholdDAC 600
+setThresholdDAC 600
+setThresholdDAC 500
+setThresholdDAC 700
+setThresholdDAC 800
+setThresholdDAC 750
+setThresholdDAC 720
+setThresholdDAC 700
+setThresholdDAC 600
+setThresholdDAC 500
+setThresholdDAC 600
+read 10000 test6
+ll
+setThresholdDAC 800
+setThresholdDAC 780
+activateIndividual64
+setThresholdDAC 800
+setThresholdDAC 850
+setThresholdDAC 890
+setThresholdDAC 900
+setThresholdDAC 800
+setThresholdDAC 820
+setThresholdDAC 830
+setThresholdDAC 840
+setThresholdDAC 820
+setThresholdDAC 830
+setThresholdDAC 800
+setThresholdDAC 700
+setThresholdDAC 600
+setThresholdDAC 700
+setThresholdDAC 650
+setThresholdDAC 640
+setThresholdDAC 630
+setThresholdDAC 620
+setThresholdDAC 700
+setThresholdDAC 820
+setThresholdDAC 800
+setThresholdDAC 700
+setThresholdDAC 600
+setThresholdDAC 700
+setThresholdDAC 700
+read 1000 test1
+setThresholdDAC 800
+setThresholdDAC 800
+setThresholdDAC 600
+setThresholdDAC 500
+setThresholdDAC 600[2~
+setThresholdDAC850
+setThresholdDAC 900
+setThresholdDAC 850
+setThresholdDAC 800
+setThresholdDAC 700
+setThresholdDAC 800
+setThresholdDAC 840
+setThresholdDAC 830
+setThresholdDAC 840
+setThresholdDAC 830
+setThresholdDAC 730
+setThresholdDAC 830
+setThresholdDAC 730
+setThresholdDAC 750
+setThresholdDAC 780
+setThresholdDAC 800
+read 10000 ttt
+setThresholdDAC 780
+setThresholdDAC 750
+setThresholdDAC 760
+setThresholdDAC 750
+setThresholdDAC 740
+setThresholdDAC 700
+setThresholdDAC 600
+setThresholdDAC 740
+setThresholdDAC 840
+setThresholdDAC 800
+setThresholdDAC 700
+setThresholdDAC 600
+setThresholdDAC 700
+setThresholdDAC 800
+setThresholdDAC 700
+setTestPulseTo 1
+setTestPulseTo 1
+setThresholdDAC 700
+setThresholdDAC 800
+setThresholdDAC 700
+setThresholdDAC 700
+setTestPulseTo 1
+read 1000 tt
+read 10000 tt
+read 10000 tt
+setThresholdDAC 800
+setThresholdDAC 860
+setThresholdDAC 890
+setThresholdDAC 940
+setThresholdDAC 920
+setThresholdDAC 910
+setThresholdDAC 900
+setThresholdDAC 880
+setThresholdDAC 880
+setThresholdDAC 870
+statusHV
+setThresholdDAC 850
+increaseHV 50
+increaseHV 30
+increaseHV 30
+increaseHV 30
+increaseHV 30
+increaseHV 15
+increaseHV 15
+increaseHV 15
+increaseHV 15
+increaseHV 15
+increaseHV 15
+increaseHV 20
+increaseHV 30
+increaseHV 40
+increaseHV 45
+setHV50
+setHV 50
+help
+statusHV
+statusHV
+setHV 53
+setHV 52
+setHV 53
+help
+statusHV
+setHV 54
+statusHV
+read 10000 sss
+increaseHV 50
+setHV 52
+setHV 53
+setHV 54
+read 10000 aaa
+setHV 52
+statusHV
+setHV 53
+read 10000 mmm
+setThresholdDAC 820
+decreaseHV
+decreaseHV
+increaseHV 20
+increaseHV 10
+increaseHV 10
+setHV 53
+statusHV
+read 10000 t00
+setThresholdDAC 800
+read 10000 t01
+read 10000 t02
+setHV 54
+read 10000 t03
+statusHV
+read 10000 t04
+setHV 55
+read 10000 t05
+read 10000 t06
+read 10000 t07
+setThresholdDAC 820
+setThresholdDAC 800
+setHV 56
+read 10000 t08
+setThresholdDAC 800
+read 10000 t09
+help
+setTriggerDelay 42
+setTriggerDelay 52
+setTriggerDelay 62
+setTriggerDelay 58
+setTriggerDelay 59
+setTriggerDelay 58
+read 10000 t11
+read 10000 t12
+read 10000 t13
+read 10000 t14
+help
+decreaseHV
+increaseHV 56
+statusHV
+setThresholdDAC 800
+read 10000 t000
+setTriggerDelay 52
+setTriggerDelay 55
+setTriggerDelay 60
+setTriggerDelay 58
+read 10000 t001
+statusHV
+setTriggerDelay 59
+setTriggerDelay 56
+read 10000 t002
+setTriggerDelay 59
+setTriggerDelay 59
+read 10000 t002
+read 10000 t004
+decreaseHV
+increaseHV 57
+setTriggerDelay 59
+setTriggerDelay 58
+setThresholdDAC 800
+read 10000 ttt
+setThresholdDAC 800
+setTriggerDelay 58
+setTriggerDelay 57
+setTriggerDelay 56
+setTriggerDelay 55
+setTriggerDelay 40
+setTriggerDelay 41
+read 10000 qqq
+decrease 0
+decreaseHV 0
+increaseHV 57
+statusHV
+setTriggerDelay 42
+setThresholdDAC 800
+read 10000 qqq
+setThresholdDAC 800
+setTriggerDelay 42
+setTriggerDelay 43
+setTriggerDelay 42
+setThresholdDAC 800
+read 10000 www
+setTriggerDelay 46
+setTriggerDelay 48
+setTriggerDelay 49
+setTriggerDelay 58
+setTriggerDelay 66
+setTriggerDelay 58
+setTriggerDelay 55
+setTriggerDelay 54
+read 10000 eee
+setTriggerDelay 41
+statusHV
+read 10000 ddd
+setThresholdDAC 750
+read 10000 sss
+setThresholdDAC 850
+read 10000 zzz
+slowcontroll
+slowcontrol
+setThresholdDAC 800
+setTriggerDelay 41
+setHV 57
+read 10000 bbb
+read 100000 bbb
+help
+decreaseHV 0
+read 10000 aaa
+setTriggerDelay 38
+setTriggerDelay 30
+setTriggerDelay 20
+read 10000 ttt
+setTriggerDelay 22
+setTriggerDelay 23
+read 10000 ttt
+setTriggerDelay 23
+read 10000 ttt
+setTriggerDelay 24
+read 10000 ttt
+setTriggerDelay 26
+setTriggerDelay 28
+read 10000 ttt
+setTriggerDelay 29
+read 10000 ttt
+setTriggerDelay 30
+read 10000 ttt
+setTriggerDelay 31
+setTriggerDelay 35
+setTriggerDelay 32
+read 10000 ttt
+setTriggerDelay 33
+read 10000 ttt
+setTriggerDelay 34
+setTriggerDelay 34
+setTriggerDelay 35
+read 10000 ttt
+setTriggerDelay 36
+read 10000 ttt
+setTriggerDelay 37
+read 10000 ttt
+setTriggerDelay 40
+read 10000 ttt
+setTriggerDelay 41
+read 4000 ttt
+setTriggerDelay 42
+read 4000 ttt
+setTriggerDelay 43
+read 4000 ttt
+setTriggerDelay 44
+read 4000 ttt
+setTriggerDelay 45
+read 4000 ttt
+setTriggerDelay 46
+read 4000 ttt
+setTriggerDelay 47
+read 4000 ttt
+setTriggerDelay 48
+read 4000 ttt
+setTriggerDelay 49
+read 4000 ttt
+setTriggerDelay 50
+setTriggerDelay 51
+read 4000 ttt
+setTriggerDelay 52
+read 4000 tt2
+setTriggerDelay 53
+read 4000 tt2
+setTriggerDelay 54
+setTriggerDelay 55
+read 4000 tt2
+setTriggerDelay 56
+read 4000 tt2
+setTriggerDelay 57
+read 4000 tt2
+setTriggerDelay 58
+read 4000 tt2
+setTriggerDelay 59
+read 4000 tt
+setTriggerDelay 60
+read 4000 tt
+setTriggerDelay 61
+read 4000 tt
+setTriggerDelay 62
+read 4000 tt
+setTriggerDelay 63
+read 4000 tt
+setTriggerDelay 64
+read 4000 tt
+setTriggerDelay 65
+read 4000 tt
+setTriggerDelay 66
+setTriggerDelay 67
+read 4000 tt
+setTriggerDelay 68
+read 4000 tt
+setTriggerDelay 69
+read 4000 tt
+setTriggerDelay 70
+setTriggerDelay 71
+read 4000 tt
+setTriggerDelay 72
+read 4000 tt
+setTriggerDelay 73
+read 4000 tt
+setTriggerDelay 74
+read 4000 tt
+setTriggerDelay 75
+read 4000 tt
+setTriggerDelay 76
+read 4000 tt
+setTriggerDelay 77
+read 4000 tt
+setTriggerDelay 78
+read 4000 tt
+setTriggerDelay 79
+read 4000 tt
+setTriggerDelay 80
+read 10000 t000
+read 10000 t001
+read 10000 t003
+read 10000 t044
+read 10000 t000
+read 10000 t001
+read 10000 t002
+setTriggerDelay 25
+setTriggerDelay 35
+setTriggerDelay 25
+read 4000 t
+setTriggerDelay 26
+read 4000 t
+setTriggerDelay 27
+read 4000 t
+setTriggerDelay 28
+read 4000 t
+setTriggerDelay 29
+read 4000 t
+setTriggerDelay 30
+read 4000 t
+setTriggerDelay 31
+read 4000 t
+setTriggerDelay 32
+read 4000 t
+setTriggerDelay 33
+read 4000 t
+setTriggerDelay 34
+read 4000 t
+setTriggerDelay 35
+read 4000 t
+setTriggerDelay 36
+read 4000 t
+setTriggerDelay 37
+read 4000 t
+setTriggerDelay 38
+read 4000 t
+setTriggerDelay 39
+read 4000 t
+setTriggerDelay 40
+read 4000 t
+setTriggerDelay 41
+read 4000 t
+setTriggerDelay 42
+read 4000 t
+setTriggerDelay 43
+read 4000 t
+setTriggerDelay 44
+read 4000 t
+setTriggerDelay 46
+setTriggerDelay 45
+read 4000 t
+setTriggerDelay 46
+read 4000 t
+setTriggerDelay 47
+read 4000 t
+setTriggerDelay 48
+read 4000 t
+setTriggerDelay 49
+read 4000 t
+setTriggerDelay 50
+read 4000 t
+setTriggerDelay 51
+read 4000 t
+setTriggerDelay 52
+read 4000 t
+setTriggerDelay 53
+read 4000 t
+setTriggerDelay 54
+read 4000 t
+setTriggerDelay 55
+read 4000 t
+setTriggerDelay 56
+read 4000 t
+setTriggerDelay 57
+read 4000 t
+setTriggerDelay 58
+read 4000 t
+setTriggerDelay 59
+read 4000 t
+setTriggerDelay 60
+read 4000 t
+setTriggerDelay 61
+read 4000 t
+setTriggerDelay 62
+read 4000 t
+setTriggerDelay 63
+read 4000 t
+setTriggerDelay 64
+read 4000 t
+setTriggerDelay 65
+read 4000 t
+.q
+calibrateIndividual64
+calibrateIndividual64
+stepSetHV 10
+stepSetHV 30
+stepSetHV 20
+stepSetHV 30
+stepSetHV 10
+stepSetHV 50
+setHV 54
+setHV 55
+setHV 56
+setTriggerDelay 41
+setTriggerDelay 44
+setTriggerDelay 48
+setTriggerDelay 55
+setTriggerDelay 50
+setTriggerDelay 46
+setTriggerDelay 42
+setTriggerDelay 46
+read 10000 ttt
+stepSetHV 55
+statusHV
+statusHV
+stepSetHV 55
+setHV 56
+statusHV
+setHV 57
+setTriggerDelay 41
+setThresholdDAC 800
+read 100000 t000
+statusHV
+setTriggerDelay 40
+read 100000 t001
+setTriggerDelay 42
+read 100000 t002
+turnOffHV
+setThresholdDAC 800
+setThresholdDAC 700
+setThresholdDAC 840
+setThresholdDAC 800
+setThresholdDAC 700
+setThresholdDAC 760
+setThresholdDAC 800
+setThresholdDAC 840
+statusHV
+setTriggerDelay 42
+stepSetHV 55
+setHV 57
+statusHV
+setThresholdDAC 800
+setTriggerDelay 40
+read 100000 t004
+read 100000 t005
+setTriggerDelay 40
+read 100000 t006
+read 100000 t007
+setTriggerDelay 40
+read 100000 t008
+setTriggerDelay 40
+read 100000 t009
+setTriggerDelay 40
+read 100000 t010
+setTriggerDelay 40
+read 100000 t011
+setTriggerDelay 40
+read 100000 t012
+setTriggerDelay 40
+read 100000 t013
+setTriggerDelay 40
+read 100000 t014
+setTriggerDelay 40
+read 100000 t015
+setTriggerDelay 40
+read 100000 t016
+setTriggerDelay 41
+read 100000 t017
+setTriggerDelay 42
+read 100000 t018
+setTriggerDelay 39
+read 100000 t019
+setTriggerDelay 37
+read 100000 t020
+help
+turnOffHV
+statusHV
+statusHV
+statusHV
+diary
+setThresholdDAC 840
+diary
+statusHV
+stepSetHV 55
+statusHV
+setHV 56
+setThresholdDAC 800
+setTriggerDelay 40
+statusHV
+read 100000 t001
+setThresholdDAC 800
+setTriggerDelay 40
+setHV 57
+statusHV
+read 100000 t002
+statusHV
+setHV 56.8
+statusHV
+read 100000 t003
+setTriggerDelay 40
+setHV 56.6
+statusHV
+read 100000 t004
+setHV 56.4
+setTriggerDelay 40
+read 100000 t005
+statusHV
+setHV 56.2
+setTriggerDelay 40
+statusHV
+read 100000 t006
+setHV 56.0
+setTriggerDelay 40
+statusHV
+read 100000 t007
+setHV 57.0
+setHV 57.2
+setTriggerDelay 40
+read 100000 t008
+statusHV
+statusHV
+setTriggerDelay 40
+read 100000 t010
+setTriggerDelay 40
+setHV 57.4
+statusHV
+read 100000 t011
+setHV 57.6
+setTriggerDelay 40
+statusHV
+read 100000 t012
+help
+turnOffHV
+statusInputDAC
+statusInputDAC 64
+statusHV
+zzz
+turnOffHV
+stepSetHV 20
+stepSetHV 30
+.q
+stepSetHV 30
+.q
+stepSetHV 40
+stepSetHV 20
+setHV 30
+setHV 5
+.q
+.q
+statusInputDAC 64
+statusInputDAC 64
+statusInputDAC 64
+statusHV
+checkHVstability
+help
+turnOffHV
+checkHVstability
+ll
+help
+turnOffHV
+stepSetHV 57
+setHV 57.0
+setTriggerDelay 40
+setTriggerDelay 45
+setTriggerDelay 49
+setThresholdDAC 800
+setThresholdDAC 700
+setThresholdDAC 800
+setTriggerDelay 40
+setTriggerMode 0
+setTriggerMode 1
+setTriggerMode 2
+setTriggerMode 3
+setTriggerDelay 40
+setThresholdDAC 700
+help
+turnOffHV
