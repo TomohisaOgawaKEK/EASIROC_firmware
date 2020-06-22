@@ -28,7 +28,6 @@ class CommandDispatcher
     muxControl slowcontrol standby fit drawScaler dsleep 
     read adc tdc scaler cd pwd mode reset help diary version 
     exit quit progress stop timeStamp makeError 
-    xxx yyy zzz
   ) + DIRECT_COMMANDS.map(&:to_s)
   
   def initialize(vmeEasiroc, hist, q)
@@ -938,48 +937,6 @@ class CommandDispatcher
    EOS
    end 
 
-   def zzz
-      stepSetHV(55)
-      setHV(56)
-      sleep 1
-
-      setHV(56.60)
-      sleep 1
-      setThresholdDAC(800)
-      setTriggerDelay(40)
-      read(100000, "tmp56.60") 
-
-      setHV(56.80)
-      sleep 1
-      setThresholdDAC(800)
-      setTriggerDelay(40)
-      read(100000, "tmp56.80") 
-
-      setHV(57.00)
-      sleep 1
-      setThresholdDAC(800)
-      setTriggerDelay(40)
-      read(100000, "tmp57.00") 
-
-      setHV(57.20)
-      sleep 1
-      setThresholdDAC(800)
-      setTriggerDelay(40)
-      read(100000, "tmp57.20") 
-
-      setHV(57.40)
-      sleep 1
-      setThresholdDAC(800)
-      setTriggerDelay(40)
-      read(100000, "tmp57.40") 
-
-      setHV(57.60)
-      sleep 1
-      setThresholdDAC(800)
-      setTriggerDelay(40)
-      read(100000, "tmp57.60") 
-   end
-  
    def version
    	  versionMajor, 
 	  versionMinor, 
