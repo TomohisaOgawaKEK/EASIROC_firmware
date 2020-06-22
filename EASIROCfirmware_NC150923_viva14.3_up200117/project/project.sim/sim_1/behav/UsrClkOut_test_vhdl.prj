@@ -1,4 +1,0 @@
-# compile vhdl design source files
-vhdl xil_defaultlib  "../../../../rtl/RBCP_Receiver.vhd"
-vhdl xil_defaultlib  "../../../../rtl/UsrClkOut.vhd"
-vhdl xil_defaultlib  "../../../project.srcs/sim_1/imports/sim/UsrClkOut_test.vhd"

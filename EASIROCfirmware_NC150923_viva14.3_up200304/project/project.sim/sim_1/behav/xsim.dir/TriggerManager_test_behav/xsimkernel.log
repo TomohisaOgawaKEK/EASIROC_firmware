@@ -1,5 +1,0 @@
-Running: xsim.dir/TriggerManager_test_behav/xsimk.exe -simmode gui -wdb TriggerManager_test_behav.wdb -simrunnum 0 -socket 62495
-Design successfully loaded
-Design Loading CPU Usage: 593 ms
-Simulation completed
-Simulation CPU Usage: 655 ms

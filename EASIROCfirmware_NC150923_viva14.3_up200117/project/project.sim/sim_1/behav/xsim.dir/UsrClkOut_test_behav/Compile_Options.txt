@@ -1,1 +1,0 @@
--wto "a09aaa0935ee4069b68ed5f432374a15" --debug "typical" --relax -L "xil_defaultlib" -L "secureip" --snapshot "UsrClkOut_test_behav" "xil_defaultlib.UsrClkOut_test" -log "elaborate.log" 
