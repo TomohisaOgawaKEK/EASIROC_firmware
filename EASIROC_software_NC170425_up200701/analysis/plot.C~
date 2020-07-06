@@ -1,0 +1,45 @@
+
+
+void plot()
+{
+	TString dir[4];
+	dir[0] = "../data_store/easiroc200623_measu_led_temp20_SAMTEC1.0mNo1_Ecable0.5mNo1213_KEK15/";
+	dir[1] = "../data_store/easiroc200623_measu_led_temp20_SAMTEC2.0mNo1_Ecable0.5mNo1213_KEK15/";
+	dir[2] = "../data_store/easiroc200623_measu_led_temp20_SAMTEC1.0mNo1_Ecable1.0mNo12_KEK15/";
+	dir[3] = "../data_store/easiroc200623_measu_led_temp20_SAMTEC2.0mNo1_Ecable1.0mNo12_KEK15/";
+
+	ifstream ifs[4];
+	for (int i=0; i<4; i++) {
+		ifs[i].open(dir[i]+"summary.txt");
+	}
+
+	TGraphErrors *ge[4];
+
+   for (int i=0; i<4; i++) {
+		ge[i] = new TGraphErrors();
+
+		double a, b, c;
+		while ( ifs[i] >> a >> b >> c ) {
+			cerr << a << " " << b << endl;
+			int nth = ge[i]->GetN();
+			ge[i]->SetPoint     (nth, a, b);
+			ge[i]->SetPointError(nth, 0, c);
+		}
+	}
+
+	ge[0]->SetMinimum(50);
+	ge[0]->SetMaximum(55);
+	ge[0]->Draw("aple");
+
+	ge[1]->SetLineColor(2);
+	ge[1]->SetMarkerColor(2);
+	ge[1]->Draw(" ple");
+
+	ge[2]->SetLineColor(4);
+	ge[2]->SetMarkerColor(4);
+	ge[2]->Draw(" ple");
+
+	ge[3]->SetLineColor(kGreen+1);
+	ge[3]->SetMarkerColor(kGreen+1);
+	ge[3]->Draw(" ple");
+}

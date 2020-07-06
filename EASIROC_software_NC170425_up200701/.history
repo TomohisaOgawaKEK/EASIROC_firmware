@@ -1,0 +1,1317 @@
+setTriggerDelay 20
+setTriggerDelay 21
+setTriggerDelay 22
+setTriggerDelay 23
+setTriggerDelay 24
+setTriggerDelay 25
+setTriggerDelay 26
+setTriggerDelay 27
+setTriggerDelay 28
+setTriggerDelay 29
+setTriggerDelay 30
+setTriggerDelay 31
+setTriggerDelay 32
+setTriggerDelay 33
+setTriggerDelay 34
+setTriggerDelay 35
+setTriggerDelay 36
+setTriggerDelay 37
+setTriggerDelay 38
+setTriggerDelay 39
+setTriggerDelay 40
+setTriggerDelay 41
+setTriggerDelay 42
+setTriggerDelay 43
+setTriggerDelay 44
+setTriggerDelay 45
+setTriggerDelay 46
+setTriggerDelay 47
+setTriggerDelay 48
+setTriggerDelay 49
+setTriggerDelay 59
+setTriggerDelay 20
+setTriggerDelay 30
+setTriggerDelay 50
+setTriggerDelay 50
+setTriggerDelay 40
+setTriggerDelay 30
+setTriggerDelay 50
+setTriggerDelay 20
+setTriggerDelay 10
+setTriggerDelay 20
+setTriggerDelay 21
+setTriggerDelay 22
+setTriggerDelay 23
+setTriggerDelay 24
+setTriggerDelay 25
+setTriggerDelay 26
+setTriggerDelay 27
+setTriggerDelay 28
+setTriggerDelay 29
+setTriggerDelay 30
+setTriggerDelay 31
+setTriggerDelay 32
+setTriggerDelay 33
+setTriggerDelay 34
+setTriggerDelay 35
+setTriggerDelay 36
+setTriggerDelay 37
+setTriggerDelay 38
+setTriggerDelay 39
+setTriggerDelay 40
+setTriggerDelay 41
+setTriggerDelay 42
+setTriggerDelay 43
+setTriggerDelay 46
+setTriggerDelay 48
+setTriggerDelay 50
+setTriggerDelay 70
+setTriggerDelay 40
+setTriggerDelay 20
+setTriggerDelay 30
+setTriggerDelay 40
+setTriggerDelay 20
+setTriggerDelay 21
+setTriggerDelay 22
+setTriggerDelay 23
+setTriggerDelay 24
+setTriggerDelay 25
+setTriggerDelay 26
+setTriggerDelay 27
+setTriggerDelay 29
+setTriggerDelay 30
+setTriggerDelay 31
+setTriggerDelay 32
+setTriggerDelay 33
+setTriggerDelay 20
+setTriggerDelay 21
+setTriggerDelay 22
+setTriggerDelay 23
+setTriggerDelay 24
+setTriggerDelay 25
+setTriggerDelay 26
+setTriggerDelay 27
+setTriggerDelay 28
+setTriggerDelay 29
+setTriggerDelay 30
+setTriggerDelay 31
+setTriggerDelay 32
+setTriggerDelay 33
+setTriggerDelay 34
+setTriggerDelay 35
+setTriggerDelay 36
+setTriggerDelay 37
+setTriggerDelay 38
+setTriggerDelay 39
+setTriggerDelay 40
+setTriggerDelay 50
+setTriggerDelay 51
+setTriggerDelay 52
+setTriggerDelay 40
+setTriggerDelay 30
+setTriggerDelay 10
+setTriggerDelay 20
+setTriggerDelay 21
+setTriggerDelay 22
+setTriggerDelay 23
+setTriggerDelay 24
+setTriggerDelay 25
+setTriggerDelay 26
+setTriggerDelay 27
+setTriggerDelay 28
+setTriggerDelay 29
+setTriggerDelay 30
+setTriggerDelay 31
+setTriggerDelay 32
+setTriggerDelay 33
+setTriggerDelay 34
+setTriggerDelay 35
+setTriggerDelay 36
+setTriggerDelay 37
+setTriggerDelay 38
+setTriggerDelay 39
+setTriggerDelay 40
+setTriggerDelay 41
+setTriggerDelay 42
+setTriggerDelay 43
+setTriggerDelay 44
+setTriggerDelay 45
+setTriggerDelay 46
+setTriggerDelay 47
+setTriggerDelay 48
+setTriggerDelay 49
+setTriggerDelay 50
+setTriggerDelay 51
+setTriggerDelay 52
+setTriggerDelay 53
+setTriggerDelay 54
+setTriggerDelay 55
+setTriggerDelay 56
+setTriggerDelay 57
+setTriggerDelay 58
+setTriggerDelay 59
+setTriggerDelay 60
+setTriggerDelay 19
+setTriggerDelay 18
+setTriggerDelay 17
+setTriggerDelay 16
+setTriggerDelay 15
+setTriggerDelay 14
+setTriggerDelay 13
+setTriggerDelay 12
+setTriggerDelay 11
+setTriggerDelay 30
+setTriggerDelay 20
+setTriggerDelay 30
+setTriggerDelay 40
+setTriggerDelay 42
+setTriggerDelay 41
+read 1000 fff
+setTriggerDelay 40
+read 10000 ff
+setTriggerDelay 41
+read 10000 ff
+read 10000 ff
+setTriggerDelay 40
+read 100000 ff
+setTriggerDelay 39
+read 100000 ff
+ll
+setTriggerDelay 40
+read 10000 ff
+slowcontrol 
+setTriggerDelay 39
+read 10000 ff
+slowcontrol
+read 10000 fdsf
+slowcontrol
+read 10000 ref
+setTriggerDelay 40
+read 10000 fff
+setTriggerDelay 38
+read 100000 fff
+setTriggerDelay 40
+read 10000 rff
+setTriggerDelay 60
+setTriggerDelay 50
+read 10000 ttlv
+testTriggerDelay
+setTriggerDelay 0
+setTriggerDelay 1
+setTriggerDelay 50
+setTriggerDelay 10
+setTriggerDelay 5
+testTriggerDelay
+testTriggerDelay
+read 10000 fff
+slowcontrol 
+testTriggerDelay
+read 1000 rrr
+setTriggerDelay 40
+setTriggerDelay 20
+setTriggerDelay 25
+setTriggerDelay 26
+setTriggerDelay 27
+setTriggerDelay 28
+setTriggerDelay 29
+setTriggerDelay 30
+setTriggerDelay 31
+setTriggerDelay 32
+setTriggerDelay 33
+setTriggerDelay 34
+setTriggerDelay 35
+setTriggerDelay 36
+setTriggerDelay 37
+setTriggerDelay 38
+setTriggerDelay 39
+setTriggerDelay 40
+setTriggerDelay 41
+setTriggerDelay 42
+setTriggerDelay 43
+setTriggerDelay 44
+setTriggerDelay 46
+setTriggerDelay 48
+read 1000 
+read 10000 fff
+setTriggerDelay 40
+setTriggerDelay 30
+read 10000 fff
+setTriggerDelay 20
+setTriggerDelay 21
+setTriggerDelay 22
+setTriggerDelay 23
+setTriggerDelay 24
+setTriggerDelay 25
+setTriggerDelay 26
+setTriggerDelay 27
+setTriggerDelay 28
+setTriggerDelay 29
+setTriggerDelay 30
+setTriggerDelay 31
+setTriggerDelay 32
+setTriggerDelay 33
+setTriggerDelay 34
+setTriggerDelay 35
+setTriggerDelay 36
+setTriggerDelay 37
+setTriggerDelay 47
+setTriggerDelay 57
+setTriggerDelay 77
+read 1000 f
+setTriggerDelay 20
+setTriggerDelay 21
+setTriggerDelay 22
+setTriggerDelay 23
+setTriggerDelay 24
+setTriggerDelay 25
+setTriggerDelay 26
+setTriggerDelay 27
+setTriggerDelay 37
+setTriggerDelay 47
+read 10000 fff
+setTriggerDelay 20
+setTriggerDelay 21
+setTriggerDelay 22
+setTriggerDelay 23
+setTriggerDelay 24
+setTriggerDelay 25
+setTriggerDelay 26
+setTriggerDelay 27
+setTriggerDelay 28
+setTriggerDelay 29
+setTriggerDelay 30
+setTriggerDelay 31
+setTriggerDelay 32
+setTriggerDelay 33
+setTriggerDelay 34
+setTriggerDelay 35
+setTriggerDelay 36
+setTriggerDelay 37
+setTriggerDelay 38
+setTriggerDelay 39
+setTriggerDelay 40
+setTriggerDelay 41
+setTriggerDelay 42
+setTriggerDelay 43
+setTriggerDelay 44
+read 10000 ff
+read 1000 ff
+read 10000 ff
+setTriggerDelay 36
+setTriggerDelay 35
+read 10000 fff
+slowcontrol
+setTriggerDelay 36
+read 5000 dd
+read 10000 dd
+ll
+setTriggerDelay 38
+read 10000 dd
+setTriggerDelay 39
+read 10000 dd
+setTriggerDelay 41
+read 10000 dd
+setTriggerDelay 42
+read 10000 dd
+setTriggerDelay 20
+testTriggerDelay
+read 10000 fff
+setTriggerDelay 41
+read 10000 fff
+setTriggerDelay 41
+read 10000 fff
+read 10000 ffff
+setTriggerDelay 39
+setTriggerDelay 39
+read 10000 ffff
+slowcontrol
+setTriggerDelay 38
+read 10000 fff
+ setTriggerDelay 39
+read 10000 fff
+read 10000 ff
+setTriggerDelay 39
+read 1000 ff
+setTriggerDelay 41
+read 10000 rr
+setTriggerDelay 40
+read 10000 ddd
+slowcontrol
+setTriggerDelay 41
+read 10000 ddd
+setTriggerDelay 50
+setTriggerDelay 60
+setTriggerDelay 30
+setTriggerDelay 20
+setTriggerDelay 20
+setTriggerDelay 21
+setTriggerDelay 22
+setTriggerDelay 23
+setTriggerDelay 24
+setTriggerDelay 25
+setTriggerDelay 26
+setTriggerDelay 27
+setTriggerDelay 28
+setTriggerDelay 29
+setTriggerDelay 30
+setTriggerDelay 31
+setTriggerDelay 32
+setTriggerDelay 33
+setTriggerDelay 34
+setTriggerDelay 35
+setTriggerDelay 36
+setTriggerDelay 37
+setTriggerDelay 38
+setTriggerDelay 39
+setTriggerDelay 44
+setTriggerDelay 46
+read 1000 ff
+setTriggerDelay 41
+read 1000 ff
+setTriggerDelay 20
+setTriggerDelay 21
+setTriggerDelay 22
+setTriggerDelay 30
+setTriggerDelay 40
+setTriggerDelay 41
+setTriggerDelay 20
+setTriggerDelay 21
+setTriggerDelay 22
+setTriggerDelay 23
+setTriggerDelay 30
+read 10000 ff
+setTriggerDelay 42
+read 10000 ff
+read 1000 ff
+setTriggerDelay 41
+read 1000 ff
+setTriggerDelay 30
+setTriggerDelay 20
+setTriggerDelay 25
+read 10000 fff
+read 10000 fff
+setTriggerDelay 41
+setTriggerDelay 30
+setTriggerDelay 20
+read 10000 ffff
+testTriggerDelay 
+read 10000 ffff
+setTriggerDelay 20
+setTriggerDelay 21
+setTriggerDelay 41
+setTriggerDelay 30
+setTriggerDelay 31
+setTriggerDelay 32
+setTriggerDelay 33
+setTriggerDelay 34
+setTriggerDelay 35
+setTriggerDelay 36
+setTriggerDelay 37
+setTriggerDelay 38
+setTriggerDelay 39
+setTriggerDelay 40
+setTriggerDelay 41
+setTriggerDelay 42
+setTriggerDelay 43
+setTriggerDelay 44
+setTriggerDelay 45
+setTriggerDelay 46
+setTriggerDelay 47
+setTriggerDelay 48
+setTriggerDelay 49
+setTriggerDelay 40
+setTriggerDelay 50
+setTriggerDelay 51
+setTriggerDelay 52
+setTriggerDelay 52
+setTriggerDelay 60
+setTriggerDelay 70
+read 10000 fff
+setTriggerDelay 30
+setTriggerDelay 60
+setTriggerDelay 70
+setTriggerDelay 60
+setTriggerDelay 70
+setTriggerDelay 100
+setTriggerDelay 110
+testTriggerDelay
+read 10000 ff
+TriggerDelay 40
+read 10000 ffd
+TriggerDelay 41
+read 10000 ffdf
+TriggerDelay 39
+read 10000 ffdf
+setTriggerDelay 30
+setTriggerDelay 50
+setTriggerDelay 60
+testTriggerDelay 
+read 1000 fff
+read 10000 fff
+setTriggerDelay 20
+setTriggerDelay 21
+setTriggerDelay 22
+setTriggerDelay 23
+read 10000 fff
+setTriggerDelay 20
+setTriggerDelay 21
+setTriggerDelay 23
+setTriggerDelay 24
+setTriggerDelay 30
+setTriggerDelay 40
+setTriggerDelay 10
+setTriggerDelay 15
+setTriggerDelay 20
+setTriggerDelay 10
+setTriggerDelay 60
+ext
+setTriggerDelay 20
+setTriggerDelay 30
+setTriggerDelay 10
+read 10000 fff
+setTriggerDelay 20
+setTriggerDelay 20
+read 1000 ff
+setTriggerDelay 30
+setTriggerDelay 40
+setTriggerDelay 50
+setTriggerDelay 10
+setTriggerDelay 30
+setTriggerDelay 30
+setTriggerDelay 20
+setTriggerDelay 25
+setTriggerDelay 30
+setTriggerDelay 35
+setTriggerDelay 50
+read 10000 fff
+setTriggerDelay 30
+setTriggerDelay 20
+setTriggerDelay 20
+setTriggerDelay 21
+setTriggerDelay 41
+read 10000 ff
+setTriggerDelay 20
+setTriggerDelay 30
+setTriggerDelay 50
+read 1000 f
+testTriggerDelay
+testTriggerDelay
+testTriggerDelay
+read 1000 ff
+read 10000 fff
+read 10000 fff
+setTriggerDelay 40
+setTriggerDelay 50
+setTriggerDelay 55
+setTriggerDelay 60
+setTriggerDelay 30
+setTriggerDelay 40
+setTriggerDelay 50
+setTriggerDelay 30
+read 10000 ff
+setTriggerDelay 30
+setTriggerDelay 20
+setTriggerDelay 10
+read 1000 ff
+read 1000 ff
+read 1000 ff
+read 1000 ff
+read 10000 fff
+setTriggerDelay 30
+setTriggerDelay 20
+setTriggerDelay 30
+setTriggerDelay 40
+setTriggerDelay 30
+setTriggerDelay 40
+setTriggerDelay 20
+setTriggerDelay 10
+setTriggerDelay 50
+setTriggerDelay 60
+read 10000 fff
+exir
+read 10000 fff
+setTriggerDelay 
+setTriggerDelay10
+setTriggerDelay 20
+setTriggerDelay 40
+read 10000 fff
+setTriggerDelay 20
+setTriggerDelay 10
+setTriggerDelay 40
+read 1000 fff
+read 10000 fff
+setTriggerDelay 20
+setTriggerDelay 10
+setTriggerDelay 11
+setTriggerDelay 12
+setTriggerDelay 13
+setTriggerDelay 14
+setTriggerDelay 14
+setTriggerDelay 16
+setTriggerDelay 16
+setTriggerDelay 18
+setTriggerDelay 19
+setTriggerDelay 20
+setTriggerDelay 21
+setTriggerDelay 22
+setTriggerDelay 23
+setTriggerDelay 24
+setTriggerDelay 25
+setTriggerDelay 26
+setTriggerDelay 27
+setTriggerDelay 28
+setTriggerDelay 30
+setTriggerDelay 40
+setTriggerDelay 39
+testTriggerDelay
+read 1o0000 fff
+read 10000 fff
+setTriggerDelay 20
+setTriggerDelay 21
+setTriggerDelay 22
+setTriggerDelay 23
+setTriggerDelay 24
+setTriggerDelay 25
+setTriggerDelay 26
+setTriggerDelay 27
+setTriggerDelay 28
+setTriggerDelay 27
+setTriggerDelay 25
+setTriggerDelay 24
+read 1000 ff
+setTriggerDelay 35
+read 10000 ffff
+read 10000 ffff
+setTriggerDelay 20
+read 10000 ffff
+setTriggerDelay 20
+setTriggerDelay 50
+setTriggerDelay 60
+setTriggerDelay 50
+setTriggerDelay 40
+setTriggerDelay 20
+setTriggerDelay 40
+read 10000 
+xit
+setTriggerDelay 20
+setTriggerDelay 10
+setTriggerDelay 50
+setTriggerDelay 40
+setTriggerDelay 20
+setTriggerDelay 24
+setTriggerDelay 44
+read 10000 fff
+read 10000 fff
+read 1000 df
+read 1000 df
+read 10000 fff
+setTriggerDelay 20
+setTriggerDelay 10
+setTriggerDelay 40
+setTriggerDelay 50
+read 100000 ffff
+setTriggerDelay 50
+read 10000 fff
+setTriggerDelay 38
+setTriggerDelay 35
+setTriggerDelay 33
+read 1000 f
+setTriggerDelay
+testTriggerDelay
+TriggerDelay 50
+TriggerDelay 54
+TriggerDelay 64
+setTriggerDelay 50
+setTriggerDelay 40
+setTriggerDelay 30
+setTriggerDelay 20
+setTriggerDelay 60
+setTriggerDelay 50
+setTriggerDelay 55
+setTriggerDelay 56
+setTriggerDelay 57
+setTriggerDelay 58
+setTriggerDelay 40
+setTriggerDelay 41
+setTriggerDelay 42
+setTriggerDelay 22
+setTriggerDelay 60
+setTriggerDelay 80
+setTriggerDelay 70
+read 10000 ff
+read 10000 ff
+read 10000 ff
+setTriggerDelay 38
+read 10000 rff
+read 10000 rff
+setTriggerDelay 60
+read 10000 edl
+setTriggerDelay 30
+setTriggerDelay 50
+setTriggerDelay 60
+setTriggerDelay 70
+setTriggerDelay 40
+setTriggerDelay 42
+setTriggerDelay 62
+slowcontrol 
+read 10000 rf
+read 10000 ree
+read 1999 ffs
+read 10000 ttvd
+read 10000 fs
+read 10000 fe
+read 10000 fe
+setTriggerDelay 41
+read 10000 cs
+read 1000 cs
+read 10000 fre
+setTriggerDelay 20
+ read 10000 ces
+setTriggerDelay 70
+read 10000 cwsss
+read 10000 fce
+read 10000 fce
+read 10000 fce
+read 10000 fce
+setTriggerDelay 10
+read 1000 vef
+read 1000 cde
+read 1000 wv
+read 10000 fcw
+setTriggerDelay 20
+setTriggerDelay 30
+read 1000 ce
+read 10000 cwl
+t
+read 10000 ff
+read 1000 f
+setTriggerDelay 38
+setTriggerDelay 37
+setTriggerDelay 38
+setTriggerDelay 39
+setTriggerDelay 40
+setTriggerDelay 41
+setTriggerDelay 42
+read 10000 fe
+setTriggerDelay 10
+ read 10000 cwsv
+setTriggerDelay 20
+read 1000 ceav
+setTriggerDelay 33
+read 10000 ucgwhi
+read 10000 cw
+read 10000 few
+setTriggerDelay 12
+setTriggerDelay 1
+setTriggerDelay 100
+setTriggerDelay 10
+read 10000 jujv
+read 10000 yrhf
+setTriggerDelay 33
+read 100000 uuu
+setTriggerDelay 20
+setTriggerDelay 30
+setTriggerDelay 40
+setTriggerDelay 10
+setTriggerDelay 50
+read 1000 vvvv
+read 10000 fcw
+read 10000 fcw
+setTriggerDelay 44
+read 10000 ttt
+setTriggerDelay 42
+read 100000 fff
+setTriggerDelay 43
+read 1000 ffw
+setTriggerDelay 43
+read 10000 vdv
+setTriggerDelay 43
+setTriggerDelay 44
+read 10000 cev
+read 10000 f
+testTriggerDelay
+reset 
+slowcontrol
+slowcontrol
+read 1000 cew
+setTriggerDelay 20
+setTriggerMode 0
+setTriggerMode 1
+setTriggerMode 2
+setTriggerMode 3
+setTriggerMode 2
+setTriggerMode 3
+setTriggerDelay 0
+setTriggerDelay 20
+setTriggerDelay 120
+read 10000 ffwc
+read 1000 setTriggerDelay
+read 10000 fdsv
+read 10000 fff
+read 10000 fff
+read 10000 fff
+read 10000 fff
+read 10000 fff
+testTriggerDelay
+read 10000 dddd
+read 10000 fff
+setTriggerDelay 30
+setTriggerDelay 40
+setTriggerDelay 30
+read 10000 fff
+read 10000 fff
+exir
+read 1000 fff
+read 10000 fff
+setTriggerDelay 36
+read 10000 fff
+setTriggerDelay 38
+setTriggerDelay 39
+read 10000 ffff
+read 10000 fff
+read 100000 fff
+setTriggerDelay 38
+read 100000 fff
+setTriggerDelay 41
+read 10000 fff
+setTriggerDelay 20
+setTriggerDelay 30
+setTriggerDelay 40
+setTriggerDelay 50
+setTriggerDelay 60
+setTriggerDelay 50
+setTriggerMode 0
+setTriggerMode 1
+setTriggerMode 2
+setTriggerMode 3
+read 10000 ffff
+setTriggerDelay 20
+setTriggerDelay 26
+setTriggerDelay 36
+read 10000 tttt
+testTriggerDelay 
+read 10000 test
+setTriggerDelay 20
+setTriggerDelay 21
+setTriggerDelay 30
+setTriggerDelay 10
+read 10000 fff
+read 10000 ff
+testTriggerDelay 20
+setTriggerDelay 10
+setTriggerDelay 30
+setTriggerDelay 40
+setTriggerDelay 29
+setTriggerDelay 38
+read 10000 fff
+testTriggerDelay
+setTriggerDelay 22
+setTriggerDelay 30
+setTriggerDelay 28
+setTriggerDelay 30
+setTriggerDelay 23
+setTriggerDelay 30
+setTriggerDelay 24
+setTriggerDelay 30
+setTriggerDelay 25
+setTriggerDelay 30
+setTriggerDelay 26
+setTriggerDelay 30
+setTriggerDelay 27
+setTriggerDelay 28
+setTriggerDelay 30
+setTriggerDelay 29
+setTriggerDelay 30
+setTriggerDelay 31
+setTriggerDelay 32
+setTriggerDelay 33
+setTriggerDelay 34
+setTriggerDelay 35
+setTriggerDelay 36
+setTriggerDelay 37
+setTriggerDelay 38
+setTriggerDelay 39
+setTriggerDelay 40
+setTriggerDelay 41
+setTriggerDelay 42
+setTriggerDelay 43
+setTriggerDelay 44
+setTriggerDelay 45
+setTriggerDelay 46
+setTriggerDelay 47
+setTriggerDelay 48
+setTriggerDelay 48
+setTriggerDelay 50
+setTriggerDelay 51
+setTriggerDelay 52
+setTriggerDelay 53
+read 10000 ttt
+setTriggerDelay 40
+read 5000 fff
+setTriggerDelay 39
+read 5000 fff
+setTriggerDelay 38
+read 5000 fff
+setTriggerDelay 37
+read 5000 qqqq
+setTriggerDelay 41
+read 5000 qqqqq
+setTriggerDelay 42
+read 5000 qqqqq
+setTriggerDelay 39
+setTriggerDelay 40
+setTriggerDelay 38
+setTriggerDelay 37
+setTriggerDelay 36
+setTriggerDelay 35
+setTriggerDelay 34
+setTriggerDelay 33
+setTriggerDelay 32
+setTriggerDelay 31
+setTriggerDelay 30
+setTriggerDelay 42
+setTriggerDelay 43
+setTriggerDelay 44
+setTriggerDelay 42
+read 10000 ffff
+setTriggerDelay 40
+setTriggerDelay 39
+setTriggerDelay 38
+setTriggerDelay 36
+setTriggerDelay 37
+setTriggerDelay 38
+setTriggerDelay 39
+setTriggerDelay 41
+setTriggerDelay 42
+read 10000 ffs
+slowcontrol
+setTriggerDelay 41
+setTriggerDelay 35
+setTriggerDelay 36
+setTriggerDelay 37
+read 10000 fe
+read 10000 fff
+setTriggerDelay 20
+setTriggerDelay 21
+setTriggerDelay 22
+setTriggerDelay 23
+setTriggerDelay 24
+setTriggerDelay 25
+setTriggerDelay 26
+setTriggerDelay 27
+setTriggerDelay 30
+setTriggerDelay 31
+setTriggerDelay 32
+setTriggerDelay 33
+setTriggerDelay 34
+setTriggerDelay 35
+setTriggerDelay 36
+setTriggerDelay 37
+setTriggerDelay 38
+setTriggerDelay 39
+setTriggerDelay 40
+read 10000 fff
+setTriggerDelay 20
+setTriggerDelay 25
+setTriggerDelay 26
+setTriggerDelay 27
+setTriggerDelay 28
+setTriggerDelay 30
+setTriggerDelay 31
+setTriggerDelay 32
+setTriggerDelay 33
+setTriggerDelay 34
+setTriggerDelay 35
+setTriggerDelay 36
+setTriggerDelay 37
+setTriggerDelay 38
+setTriggerDelay 39
+setTriggerDelay 40
+setTriggerDelay 41
+setTriggerDelay 42
+setTriggerDelay 43
+setTriggerDelay 44
+read 10000 fff
+setTriggerDelay 20
+setTriggerDelay 21
+setTriggerDelay 22
+setTriggerDelay 23
+setTriggerDelay 24
+setTriggerDelay 25
+setTriggerDelay 26
+setTriggerDelay 27
+setTriggerDelay 28
+setTriggerDelay 30
+setTriggerDelay 31
+setTriggerDelay 32
+setTriggerDelay 33
+setTriggerDelay 34
+setTriggerDelay 35
+setTriggerDelay 36
+setTriggerDelay 37
+setTriggerDelay 38
+setTriggerDelay 39
+setTriggerDelay 40
+read 10000 fff
+read 10000 ff
+setTriggerDelay 30
+setTriggerDelay 39
+setTriggerDelay 38
+setTriggerDelay 37
+read 10000 fff
+read 10000 fff
+setTriggerDelay 39
+setTriggerDelay 38
+read 10000 ffff
+setTriggerDelay 39
+setTriggerDelay 38
+setTriggerDelay 40
+setTriggerDelay 41
+read 10000 fw
+setTriggerDelay 20
+setTriggerDelay 23
+setTriggerDelay 24
+setTriggerDelay 25
+setTriggerDelay 26
+setTriggerDelay 27
+setTriggerDelay 28
+setTriggerDelay 29
+setTriggerDelay 30
+setTriggerDelay 31
+setTriggerDelay 32
+setTriggerDelay 33
+setTriggerDelay 34
+setTriggerDelay 35
+setTriggerDelay 36
+setTriggerDelay 37
+setTriggerDelay 38
+setTriggerDelay 39
+setTriggerDelay 29
+setTriggerDelay 28
+setTriggerDelay 25
+read 10000 fff
+setTriggerDelay 41
+setTriggerDelay 42
+setTriggerDelay 43
+setTriggerDelay 41
+setTriggerDelay 42
+read 10000 fff
+setTriggerDelay 39
+setTriggerDelay 38
+setTriggerDelay 28
+setTriggerDelay 20
+setTriggerDelay 44
+read 100000 fff
+setTriggerDelay 44
+setTriggerDelay 42
+read 10000 fff
+setTriggerDelay 40
+setTriggerDelay 41
+setTriggerDelay 20
+setTriggerDelay 25
+read 10000 ffff
+read 10000 uyvs
+read 10000 fff
+read 10000 fff
+setTriggerDelay 39
+setTriggerDelay 38
+read 100000 ffff
+read 1000 fff
+read 10000 fff
+read 10000 fff
+setTriggerDelay 39
+setTriggerDelay 38
+setTriggerDelay 37
+setTriggerDelay 36
+setTriggerDelay 43
+setTriggerDelay 42
+setTriggerDelay 41
+setTriggerDelay 44
+setTriggerDelay 45
+ read 10000 ffff
+ read 10000 ffff
+read 10000 fff
+setTriggerDelay 36
+read 10000 fff
+read 1000 ff
+setTriggerDelay 41
+setTriggerDelay 42
+setTriggerDelay 43
+setTriggerDelay 44
+setTriggerDelay 45
+setTriggerDelay 25
+setTriggerDelay 23
+read 10000 fff
+setTriggerDelay 39
+setTriggerDelay 38
+setTriggerDelay 36
+setTriggerDelay 35
+setTriggerDelay 34
+setTriggerDelay 23
+setTriggerDelay 24
+setTriggerDelay 25
+read 10000 fff
+read 10000 fff
+setTriggerDelay 43
+setTriggerDelay 23
+setTriggerDelay 33
+read 10000 fff
+read 10000 fff
+setTriggerDelay 20
+setTriggerDelay 30
+setTriggerDelay 40
+setTriggerDelay 41
+setTriggerDelay 42
+read 10000 ffff
+setTriggerDelay 20
+setTriggerDelay 23
+setTriggerDelay 26
+setTriggerDelay 30
+setTriggerDelay 31
+setTriggerDelay 32
+setTriggerDelay 33
+setTriggerDelay 34
+setTriggerDelay 35
+setTriggerDelay 36
+setTriggerDelay 37
+setTriggerDelay 38
+setTriggerDelay 39
+setTriggerDelay 40
+setTriggerDelay 41
+setTriggerDelay 42
+setTriggerDelay 43
+setTriggerDelay 44
+setTriggerDelay 45
+setTriggerDelay 46
+setTriggerDelay 47
+setTriggerDelay 48
+setTriggerDelay 49
+setTriggerDelay 50
+setTriggerDelay 51
+setTriggerDelay 52
+setTriggerDelay 53
+setTriggerDelay 54
+setTriggerDelay 44
+setTriggerDelay 45
+setTriggerDelay 46
+setTriggerDelay 47
+setTriggerDelay 48
+setTriggerDelay 49
+setTriggerDelay 50
+setTriggerDelay 51
+setTriggerDelay 52
+setTriggerDelay 53
+setTriggerDelay 54
+setTriggerDelay 55
+setTriggerDelay 56
+setTriggerDelay 57
+setTriggerDelay 58
+setTriggerDelay 59
+setTriggerDelay 60
+setTriggerDelay 61
+setTriggerDelay 62
+setTriggerDelay 63
+setTriggerDelay 64
+setTriggerDelay 4
+setTriggerDelay 3
+setTriggerDelay 20
+setTriggerDelay 21
+setTriggerDelay 22
+setTriggerDelay 23
+setTriggerDelay 24
+setTriggerDelay 25
+setTriggerDelay 26
+setTriggerDelay 27
+setTriggerDelay 28
+setTriggerDelay 29
+setTriggerDelay 30
+setTriggerDelay 31
+setTriggerDelay 32
+setTriggerDelay 33
+setTriggerDelay 34
+setTriggerDelay 35
+read 10000 ff
+read 10000 fff
+setTriggerDelay 10
+setTriggerDelay 20
+setTriggerDelay 30
+setTriggerDelay 40
+setTriggerDelay 50
+setTriggerDelay 60
+setTriggerDelay 61
+setTriggerDelay 62
+setTriggerDelay 63
+setTriggerDelay 64
+setTriggerDelay 65
+setTriggerDelay 5
+setTriggerDelay 2
+setTriggerDelay 0
+setTriggerDelay 40
+read 10000 fff
+read 10000 fff
+setTriggerDelay 40
+setTriggerDelay 41
+setTriggerDelay 42
+setTriggerDelay 43
+setTriggerDelay 44
+setTriggerDelay 34
+setTriggerDelay 24
+read 10000 fff
+read 10000 fff
+read 10000 fff
+setTriggerDelay 39
+setTriggerDelay 38
+setTriggerDelay 37
+setTriggerDelay 36
+setTriggerDelay 35
+setTriggerDelay 3
+setTriggerDelay 34
+setTriggerDelay 35
+read 10000 fff
+setTriggerDelay 37
+setTriggerDelay 38
+setTriggerDelay 39
+read 10000 fff
+read 10000 ffff
+read 100000 fff
+setTriggerDelay 39
+read 10000 fff
+read 10000 fff 
+setTriggerDelay 41
+read 10000 ff
+read 10000 fff
+testTriggerDelay
+help
+setTriggerDelay 62
+setTriggerDelay 63
+setTriggerDelay 61
+setTriggerDelay 40
+read 5000 tg40
+setTriggerDelay 41
+read 5000 tg41
+setTriggerDelay 39
+read 5000 tg39
+setTriggerDelay 38
+read 5000 tg38
+read 5000 tg37
+setTriggerDelay 37
+read 5000 tg36
+setTriggerDelay 36
+setTriggerDelay 37
+setTriggerDelay 38
+setTriggerDelay 36
+read 5000 tg36
+setTriggerDelay 35
+read 5000 tg35
+setTriggerDelay 37
+read 5000 tg37
+setTriggerDelay 34
+read 5000 tg34
+setTriggerDelay 33
+setTriggerDelay 32
+setTriggerDelay 31
+setTriggerDelay 33
+read 5000 tg33
+setTriggerDelay 33
+read 5000 tg330
+calibrateDelayTime
+calibrateDelayTime
+calibrateDelayTime
+calibrateTrigDelayTime
+calibrateTrigDelayTime
+help
+slowcontrol
+setTestPulseTo 2
+setTestPulseTo 1
+setTestPulseTo 0
+.q
+calibrateIndividual64
+calibrateIndividual64
+calibrateTrigDelayTime
+help
+slowcontrol
+testTriggerDelay
+help
+setTriggerDelay 30
+read 100000 fff
+slowcontrol
+setTriggerDelay 28
+read 100000 fff
+setTriggerDelay 30
+testTriggerDelay
+testTriggerDelay
+setTriggerDelay 30
+read 10000 fff
+calibrateTrigDelayTime
+calibrateTrigDelayTime
+calibrateTrigDelayTime
+calibrateTrigDelayTime
+testTriggerDelay
+help
+calibrateTrigDelayTime
+calibrateTrigDelayTime
+calibrateTrigDelayTime
+calibrateIndividual64
+calibrateTrigDelayTime
+calibrateTrigDelayTime
+testTriggerDelay
+calibrateTrigDelayTime
+testTriggerDelay
+takeNoiseRate
+takeNoiseRate
+takeNoiseRate
+read 10000 ddd
+calibrateTrigDelayTime
+calibrateTrigDelayTime
+stepSetHV 56.5
+setTriggerDelay 15
+help
+takeNoiseRate
+help
+statusHV
+turnOffHV
+stepSetHV 56.5
+statusHV
+exitt
+:q
+stepSetHV 56.5
+takeNoiseRate
+statusHV
+turnOffHV
+stepSetHV 56.5
+takeNoiseRate
+turnOffHV
+stepSetHV 56.5
+stepSetHV 56.5
+takeNoiseRate
+stepSetHV 56.5
+takeNoiseRate
+stepSetHV 56.5
+statusHV
+setTriggerDelay 15
+setThresholdDAC 800
+statusHV
+ read 100000 t001
+help
+turnOffHV
+t001
+t000
+help
+turnOffHV
+calibrateTrigDelayTime
+ll
+stepSetHV 56.2
+read 100000 test
+help
+setThresholdDAC 780
+read 100000 t001
+setThresholdDAC 770
+read 100000 t002
+help
+setTriggerDelay 15
+read 100000 t001
+help
+turnOffHV
+t000
+help
+turnOffHV

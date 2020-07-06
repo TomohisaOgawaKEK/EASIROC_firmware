@@ -1,0 +1,1 @@
+-wto "a09aaa0935ee4069b68ed5f432374a15" --debug "typical" --relax -L "xil_defaultlib" -L "unisims_ver" -L "unimacro_ver" -L "secureip" --snapshot "TriggerManager_test_behav" "xil_defaultlib.TriggerManager_test" "xil_defaultlib.glbl" -log "elaborate.log" 

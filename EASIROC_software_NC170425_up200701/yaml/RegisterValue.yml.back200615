@@ -1,0 +1,90 @@
+EASIROC1:
+        #Capacitor HG PA Fdbck: 1.5pF # x10
+        #Capacitor LG PA Fdbck: 1.5pF # x10
+        #Capacitor HG PA Fdbck: 500fF # x30
+        #Capacitor LG PA Fdbck: 500fF # x30
+        #Capacitor HG PA Fdbck: 300fF # x50
+        #Capacitor LG PA Fdbck: 300fF # x50
+        #Capacitor HG PA Fdbck: 200fF # x75
+        #Capacitor LG PA Fdbck: 200fF # x75
+        Capacitor HG PA Fdbck: 100fF # x150
+        Capacitor LG PA Fdbck: 100fF # x150
+        Time Constant HG Shaper: 50ns
+        Time Constant LG Shaper: 50ns
+        #Time Constant HG Shaper: 175ns
+        #Time Constant LG Shaper: 175ns
+        DAC code: 840
+        DisablePA & In_calib_EN: [
+                0, 0, 0, 0, 0, 0, 0, 0,
+                0, 0, 0, 0, 0, 0, 0, 0,
+                0, 0, 0, 0, 0, 0, 0, 0,
+                0, 0, 0, 0, 0, 0, 0, 0 ]
+        Discriminator Mask: [ # HG is visible, but trigger is not issued.
+                0, 0, 0, 0, 0, 0, 0, 0,
+                0, 0, 0, 0, 0, 0, 0, 0,
+                0, 0, 0, 0, 0, 0, 0, 0,
+                0, 0, 0, 0, 0, 0, 0, 0 ]
+
+EASIROC2:
+        Capacitor HG PA Fdbck: same
+        Capacitor LG PA Fdbck: same
+        Time Constant HG Shaper: same
+        Time Constant LG Shaper: same
+        DAC code: 840
+        DisablePA & In_calib_EN: [
+                0, 0, 0, 0, 0, 0, 0, 0,
+                0, 0, 0, 0, 0, 0, 0, 0,
+                0, 0, 0, 0, 0, 0, 0, 0,
+                0, 0, 0, 0, 0, 0, 0, 0 ]
+        Discriminator Mask: [ # HG is visible, but trigger is not issued.
+                0, 0, 0, 0, 0, 0, 0, 0,
+                0, 0, 0, 0, 0, 0, 0, 0,
+                0, 0, 0, 0, 0, 0, 0, 0,
+                0, 0, 0, 0, 0, 0, 0, 0 ]
+
+High Gain Channel 1: 1 #
+High Gain Channel 2: 33 #
+Probe Channel 1: -1
+Probe Channel 2: -1
+Probe 1: Out_fs
+Probe 2: Out_fs #Out_PA_HG,Out_PA_LG,Out_ssh_HG,Out_ssh_LG,Out_fs
+
+SelectableLogic:
+      Pattern: Or32u # Or32And,Or16And,And32u,And32d,And64,And32Or
+      #Pattern: Or32d # Or32And,Or16And,And32u,And32d,And64,And32Or
+      #Pattern: Or64 # Or32And,Or16And,And32u,And32d,And64,And32Or
+      #Pattern: OneCh_31 # OneCh_#,Or32u,Or32d,Or64,Or32And,Or16And,And32u,And32d,And64,And32Or
+      #Pattern: OneCh_11 # OneCh_#,Or32u,Or32d,Or64,Or32And,Or16And,And32u,And32d,And64,And32O2
+      HitNum Threshold: 0 # Threshold for each OR logic. 0~64. Default: 0
+      And Channels: -1 # Cannels used in And Logic. 0~63. Default: -1
+
+TimeWindow: 4095ns
+#UsrClkOut: "OFF" #"OFF","ON",1Hz,10Hz,100Hz,1kHz.10kHz,100kHz,3MHz,25MHz
+UsrClkOut: "ON" #"OFF","ON",1Hz,10Hz,100Hz,1kHz.10kHz,100kHz,3MHz,25MHz
+
+# select combination of calibartion pulse
+# this was confirmed @ 19/12/30  
+TestChargePtn: 1 
+
+Trigger:
+      # Explanation of parameters below 
+      # 1: The default operation. 
+      #    Adjusting TRIG, one needs to input HOLD, STOP, & ACCEPT individually. 
+      # 2: Adjusting TRIG, one needs to input HOLD. But, STOP & ACCEPT are internally generated. 
+      #     Operation was confirmed for test-charge with acqui. of 2 KHz for 200fF & 100fF
+      #     with fixed delay of 80 & 1000 nsec from HOLD, 
+      #     @ 20/02/22. 
+      # 3: Based on TRIG, three pulses: HOLD, STOP, & ACCEPT are internally generated.
+      #     HOLD is generated with adjustbale delay, STOP, & ACCEPT are generated 
+      #     with fixed delay of 80 & 1000 nsec from HOLD 
+      #     @ 20/03/01.
+      Mode: 3 
+      DelayTrigger: 39 # Adjustable delay with the internal 500MHz CLOCK (2nsec): 
+                       # Blow are for module:KEK15
+                       # 33 is peak for test-charge w/200fF. acqui. of 2 KHz @ 20/03/01.
+                       # 38 is peak for test-charge w/100fF. acqui. of 2 KHz @ 20/03/01.
+                       # 42 is peak for test-charge w/100fF. acqui. of 0.4 KHz @ 20/03/01.
+      DelayHold:    -1 # 25MHz :unused since internally fixed @ 20/03/01
+      DelayL1Trig:  -1 # 6MHz  :unused since internally fixed @ 20/03/01
+      Width: raw
+

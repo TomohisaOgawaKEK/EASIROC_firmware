@@ -18,13 +18,11 @@ git push -u origin master
 if you remove .git  
 git pull origin master
 
-
-
 ----- 2020/01/01 EASIROCfirmware_NC150923  
 
 the first version by Naruhiro Chikuma  
 
------ EASIROCfirmware_NC150923_viva14.3_up200117   
+----- Modified
 
 injection pattern of test charge is added   
 
@@ -38,71 +36,54 @@ injection pattern of test charge is added
            CAL1 <= test_palse;   
            CAL2 <= 'Z'; -- High Impedance   
 
-this is controlled from RegisterValue.yml  
-# calibartion pulse combination   
-TestChargeSetting: 2  
-
-
------ EASIROCfirmware_NC150923_viva14.3_up200622
-
 see yaml/RegisterValue.yml
 
-Trigger:  
-      # Explanation of parameters below   
-      # 1: The default operation.   
-      #    Adjusting TRIG, one needs to input HOLD, STOP, & ACCEPT individually. 
-      # 2: Adjusting TRIG, one needs to input HOLD. But, STOP & ACCEPT are internally generated. 
-      #     Operation was confirmed for test-charge with acqui. of 2 KHz for 200fF & 100fF   
-      #       with fixed delay of 80 & 1000 nsec from HOLD @ 20/03/01.    
-      #       with fixed delay of 80 &  600 nsec from HOLD @ 20/06/20.    
-      # 3: Based on TRIG, three pulses: HOLD, STOP, & ACCEPT are internally generated.   
-      #     HOLD is generated with adjustbale delay, STOP, & ACCEPT are generated    
-      #       with fixed delay of 80 & 1000 nsec from HOLD @ 20/03/01.   
-      #       with fixed delay of 80 &  600 nsec from HOLD @ 20/06/20.   
-      Mode: 3   
-      DelayTrigger: 39 # Adjustable delay with the internal 500MHz CLOCK ( reso. 2nsec ):   
-                       #   @ 20/03/01. with fixed delay of 80 & 1000 nsec   
-                       #      25--65: acqui. for test-charge w/100fF is 2.0 KHz. 40 is close to peak.   
-                       #      But, 26, 42, 58 are 0.4 KHz.    
-                       #   @ 20/06/20. with fixed delay of 80 & 600 nsec   
-                       #      30--80: acqui. for test-charge w/100fF is 2.0 KHz. 40 is close to peak.   
-                       #      But, 34, 38, 50, 54, 66, 70 do not work!   
-                       #   @ 20/06/21. as for standard measurement,  
-                       #      you can see diary in Controller.rb   
-      DelayHold:    -1 # 25MHz :unused since internally fixed @ 20/03/01  
-      DelayL1Trig:  -1 # 6MHz  :unused since internally fixed @ 20/03/01  
+# select combination of calibartion pulse    
+# this was confirmed @ 19/12/30    
+TestChargePtn: 0   
 
-see Controller.rb
+Trigger:   
+      # Explanation of parameters below   
+      # 1: The default operation:   
+      #     By adjusting Trig, one needs to put HOLD, STOP, & ACCEPT individually.  
+      # 2: Semi-internal trigger:  
+      #     By adjusting Trig, one needs to input HOLD. STOP & ACCEPT are internally generated.   
+      # 3: All-internal trigger:  
+      #     Based on logic Trig, all three pulses: HOLD, STOP, & ACCEPT are internally generated.   
+      Mode: 3  
+      DelayTrigger: 10 # Adjustable delay with the internal 250 MHz CLOCK ( reso. 4nsec ):   
+                       #   15 is close to peak: KEK-No.15  
+      DelayHold:    -1 # 25MHz : internally fixed since its not useful @ 20/03/01  
+      DelayL1Trig:  -1 # 6MHz  : internally fixed since its not useful @ 20/03/01  
+      InExTrigger: 2   # 2: selectable internal trigger 3: external trigger (put NIM to [sync in])    
+      Width: raw  
+
+
+important commands  
 
    - statusInputDAC : <ch(0..63) / all(64)> put a status file under status/ 
    - checkHVstability : check HV stability for ~ 30 min using above command  
-   - setThresholdDAC 
-   - setSelectbaleLogic :  <0..63> only is activated = OneCh_XX
-   - activateIndividual64 : loop using above to see trigger bevaviour on an oscilloscope      
+   - setThresholdDAC   
 
-  HV Controlles  
-   - setHV       <bias voltage (00.00~90.00)> @ don't use! this increases at once @
-   - stepSetHV   <bias voltage> : step by step
-   - convergeHV  <bias voltage> : step by step and coverge it by looking HV monitor
-   - statusHV
-   - checkHV     <voltage_limit=80> <current_limit=20> <repeat_count=3>
-   - turnOffHV   : step by step to 0
+   - setSelectbaleLogic :  <0..63> only is activated = OneCh_XX  
+   - activateIndividual64 : loop using above to see trigger bevaviour on an oscilloscope        
+
+  HV Controlles    
+   - setHV       <bias voltage (00.00~90.00)> @ don't use! this increases at once @  
+   - stepSetHV   <bias voltage> : step by step  
+   - convergeHV  <bias voltage> : step by step and coverge it by looking HV monitor  
+   - statusHV  
+   - checkHV     <voltage_limit=80> <current_limit=20> <repeat_count=3>  
+   - turnOffHV   : step by step to 0   
  
-  Internal Trigger Ptn and Delay: see yaml/RegisterValue.yml
-   - setTriggerMode   : <0: ,>
-   - setTriggerDelay  : <0: ,>
+  Internal Trigger Ptn and Delay: see yaml/RegisterValue.yml   
+   - setTriggerMode   : <0: ,>  
+   - setTriggerDelay  : <0: ,>  
 
-  Pulse Calibration:
-   - setTestPulsePtn  : <0,1,2>
-   - setTestPulseTo   : <0..63> each chip and ch by ch (recommended)
+  Pulse Calibration:  
+   - setTestPulsePtn  : <0,1,2>   
+   - setTestPulseTo   : <0..63> each chip and ch by ch (recommended)   
    - calibrateIndividual64 : input test pulse to each chip and ch by ch (recommended) 
+   - calibrateTrigDelayTime : scan trigger delay   
 
-  Finger plot can be seen w/   
-      LED4.2V(w=50ns,f=200Hz), V=56.9V, A=6.8uA, Logi64OR, thre=800, TrigDelay40 (acq.~400Hz) => ch05--63 NEvts=100K very good :)   
-      .........   
-      .........   
-      LED4.2V(w=50ns,f=2.0KHz),V=56.9V, A=6.8uA, Logi64OR, thre=800, TrigDelay40 (acq.~2.1KHz)=> ch05--63 NEvts=100K very good :)    
-      LED4.2V(w=50ns,f=3.0KHz),V=56.9V, A=6.8uA, Logi64OR, thre=800, TrigDelay40 (acq.~2.9KHz)=> ch05--63 NEvts=100K very good :)   
-      LED4.2V(w=50ns,f=4.0KHz),V=56.9V, A=6.8uA, Logi64OR, thre=800, TrigDelay40 (acq.~3.9KHz)=> ch05--63 NEvts=100K very good :)   
-      LED4.2V(w=50ns,f=5.0KHz),V=56.9V, A=6.8uA, Logi64OR, thre=800, TrigDelay40 (acq.~4.2KHz)=> ch05--63 NEvts=100K very good :)   
 
