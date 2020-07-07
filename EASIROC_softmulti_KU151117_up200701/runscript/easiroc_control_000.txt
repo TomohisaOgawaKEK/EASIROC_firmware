@@ -1,0 +1,12 @@
+timeStamp
+sleep 1
+zzzincreaseHV 5
+zzztest 10 easiroc0_0000_1593344010
+sleep 1
+setHV 0.0
+sleep 1
+shutdownHV
+sleep 1
+timeStamp
+sleep 10
+exit

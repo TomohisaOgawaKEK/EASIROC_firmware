@@ -1,0 +1,52 @@
+
+README 20/06/25
+
+1.  RunOperation.rb 
+		is the uppermost file an user uses ./RunOperation.rb.
+
+    This file generates runscript files the user define 
+      and each module read them and follow, which is done in a file below. 
+
+2.  ModuleMassCmdr.rb
+		is telling each module what they need to know: initial info.
+
+    使うEASIROC の初期情報などを与えて、ModuleCtrlCmdr のオブジェクト(?)を立ち上げる。
+
+    commanders << ModuleCtrlCmdr.new(“Y1”, “192.168.10.26", 
+　　　　　　　　　　　 　　　　　Path + (ARGV.shift || “.rc”), daq_ready)
+
+    “Y1" などでEASIROC の名前づけと IP、  
+    初期設定コマンドファイルの場所を教えている。
+
+
+3.  上記の ModuleCtrlCmdr のオブジェクト内で、独立に IP で呼んで、各々モジュールを走らせる。
+    と同時に ModuleCtrlDptr に書かれている ModuleCtrlDptr をそのメンバ関数(?)としている。  
+ 
+    ModuleCtrlCmdr そのは内部で Named-Easiroc を呼ぶための定義が書かれている。
+　　Named-Easiroc.rb  の中身を見ると、( 設定ファイルを教えるためVME-EASIROC.rb からの書き換え) 
+
+    config_filename 関数の中で、名付けられた名前は directory の名前として、
+    register 関連の情報の読み込みに yaml/名前/each_file のように使われることになる。
+
+
+    実際に、class ModuleCtrlCmdr で
+ 
+    class ModuleCtrlCmdr
+
+    def initialize(name, ipaddr, runCommandFile, que)
+       最初にそれぞれの情報を受けとってキープして NamedEasiroc に渡している。
+       @name = name
+       @ipaddr = ipaddr
+       @runCommandFile = runCommandFile
+         連続のコマンドファイル、後続のループで一個ずつ読む
+       @que = que
+       @namedEasiroc = NamedEasiroc.new(@ipaddr, 24, 4660, @name)
+    　　各 EASIROC の初期設定 してる、実際に NamedEasiroc のinitialize をみに行くと、
+        内部の関数で name をみながら yaml の下の自分の名前のdirectory の設定ファイルを読みに行っている。
+
+
+4.  ModuleCtrlDptr (Dispatcher) は ModuleCtrlCmdr のオブジェクトに含まれ、
+    各々のコマンドの定義がされている。
+　　( 内部で EASIROC の名前を使って解析コマンド使用のため
+　　　Controller.rb から書き換えられている )
+　　 

@@ -1,0 +1,26 @@
+---
+EASIROC1:
+  Capacitor HG PA Fdbck: 100fF
+  Capacitor LG PA Fdbck: 100fF
+  Time Constant HG Shaper: 150ns
+  Time Constant LG Shaper: 50ns
+  DAC code: 700
+EASIROC2:
+  Capacitor HG PA Fdbck: same
+  Capacitor LG PA Fdbck: same
+  Time Constant HG Shaper: same
+  Time Constant LG Shaper: same
+  DAC code: same
+High Gain Channel 1: 0
+High Gain Channel 2: -1
+Probe Channel 1: 0
+Probe Channel 2: -1
+Probe 1: Out_fs
+Probe 2: Out_fs
+SelectableLogic:
+  Pattern: Or64
+  HitNum Threshold: 2
+  And Channels: -1
+TriggerWidth: 40ns
+TimeWindow: 4095ns
+UsrClkOut: 0

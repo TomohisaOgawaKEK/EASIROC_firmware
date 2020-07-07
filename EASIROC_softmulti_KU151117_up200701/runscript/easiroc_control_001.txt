@@ -1,0 +1,14 @@
+timeStamp
+sleep 1
+increaseHV 5
+sleep 1
+read 10 easiroc1_0000_1593344010 queue
+sleep 2
+sleep 1
+setHV 0.0
+sleep 1
+shutdownHV
+sleep 1
+timeStamp
+sleep 1
+exit
