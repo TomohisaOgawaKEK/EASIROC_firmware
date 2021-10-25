@@ -1,0 +1,96 @@
+  Keep a Diary on SFGD-64PCB 
+
+   - @ 20/06/17--21 Noise is huge, 
+
+      - a AC/DC adapter for providing V to EASIROC is too bad, -> put it into a crate,
+      - connect metallic mesh wires to a crate and voltage souce.
+      - a pulse gene. is put a bit far place w/ a different v-souce. 
+        => Config: EASIORC-Splitter-64PCB w/ Logi64OR, thre840 => No noise triggers :)
+      - an incubator is turned on --> give huge noise --> grounded with the same mesh wires.
+        => Config: EASIORC-Splitter-64PCB w/ Logi64OR, thre840 => No noise triggers :)   
+ 
+   < Below, inputDAC is 470, typical voltages are >
+     {:HV=>0.341, :current=>0.036, :InputDAC=>[
+       0.077, 0.144, 0.000, 0.000, 0.000, 0.078, 0.103, 0.118, 
+       0.076, 0.167, 0.174, 0.116, 0.186, 0.132, 0.049, 0.214, 
+       0.180, 0.240, 0.216, 0.177, 0.295, 0.322, 0.222, 0.161, 
+       0.320, 0.206, 0.316, 0.387, 0.303, 0.290, 0.342, 0.000, 
+       0.032, 0.001, 0.196, 0.001, 0.127, 0.003, 0.001, 0.069, 
+       0.167, 0.448, 0.044, 0.001, 0.011, 0.001, 0.090, 0.001, 
+       0.002, 0.000, 0.017, 0.001, 0.008, 0.001, 0.282, 0.001, 
+       0.070, 0.002, 0.001, 0.001, 0.075, 0.000, 0.006, 0.000]} 
+      -- EASIORC-KEK15: inputDAC is 500, -> adjustable HV for each are 0.00
+
+   - @ 20/06/17 Config: 
+
+      -- EASIORC-KEK15, (ch0--4 are ploblematic) -Splitter -64PCB, 
+      -- Firmware 80 & 1000 nsec
+      LED4.2V(w=50ns,f=400Hz), V=55.9V, A=6.2uA, Logi64OR, thre=800, TrigDelay58 (acq.~ 35Hz,bug?) => peaks are crushed
+      LED4.2V(w=50ns,f=400Hz), V=56.9V, A=6.8uA, Logi64OR, thre=800, TrigDelay42 (acq.~ 45Hz,bug?) => peaks are crushed 
+      LED4.1V(w=50ns,f=400Hz), V=56.9V, A=6.8uA, Logi64OR, thre=800, TrigDelay41 (acq.~500Hz,bug?) => better compared to above
+      LED4.2V(w=50ns,f=400Hz), V=56.9V, A=6.8uA, Logi64OR, thre=800, TrigDelay41 (acq.~600Hz,bug?) => better compared to above
+      LED4.2V(w=50ns,f=400Hz), V=56.9V, A=6.8uA, Logi64OR, thre=800, TrigDelay41 (acq.~600Hz) => ch05--63 NEvts=100K fingers OK! 
+ 
+
+   - @ 20/06/21 Config: 
+
+      -- EASIORC-KEK15, (ch0--4 are ploblematic) -Splitter -64PCB, 
+      -- Firmware 80 &  600 nsec
+      LED4.2V(w=50ns,f=200Hz), V=56.9V, A=6.8uA, Logi64OR, thre=800, TrigDelay40 (acq.~400Hz) => ch05--63 NEvts=100K fingers OK! 
+      LED4.2V(w=50ns,f=200Hz), V=56.9V, A=6.8uA, Logi64OR, thre=800, TrigDelay41 (acq.~400Hz) => ch05--63 NEvts=100K fingers OK! 
+      LED4.2V(w=50ns,f=200Hz), V=56.9V, A=6.8uA, Logi64OR, thre=800, TrigDelay42 (acq.~400Hz) => ch05--63 NEvts=100K fingers... 
+
+      < Noise condition was improved > 
+      LED4.2V(w=50ns,f=200Hz), V=56.9V, A=6.8uA, Logi64OR, thre=800, TrigDelay40 (acq.~400Hz) => ch05--63 NEvts=100K very good :) 
+      LED4.2V(w=50ns,f=300Hz), V=56.9V, A=6.8uA, Logi64OR, thre=800, TrigDelay40 (acq.~500Hz) => ch05--63 NEvts=100K very good :) 
+      LED4.2V(w=50ns,f=400Hz), V=56.9V, A=6.8uA, Logi64OR, thre=800, TrigDelay40 (acq.~600Hz) => ch05--63 NEvts=100K very good :) 
+      LED4.2V(w=50ns,f=500Hz), V=56.9V, A=6.8uA, Logi64OR, thre=800, TrigDelay40 (acq.~700Hz) => ch05--63 NEvts=100K very good :) 
+      .........
+      LED4.2V(w=50ns,f=1.0KHz),V=56.9V, A=6.8uA, Logi64OR, thre=800, TrigDelay40 (acq.~1.2KHz)=> ch05--63 NEvts=100K very good :) 
+      LED4.2V(w=50ns,f=1.2KHz),V=56.9V, A=6.8uA, Logi64OR, thre=800, TrigDelay40 (acq.~1.4KHz)=> ch05--63 NEvts=100K very good :) 
+      LED4.2V(w=50ns,f=1.4KHz),V=56.9V, A=6.8uA, Logi64OR, thre=800, TrigDelay40 (acq.~1.6KHz)=> ch05--63 NEvts=100K very good :) 
+      LED4.2V(w=50ns,f=1.6KHz),V=56.9V, A=6.8uA, Logi64OR, thre=800, TrigDelay40 (acq.~1.7KHz)=> ch05--63 NEvts=100K very good :) 
+      LED4.2V(w=50ns,f=1.8KHz),V=56.9V, A=6.8uA, Logi64OR, thre=800, TrigDelay40 (acq.~1.9KHz)=> ch05--63 NEvts=100K very good :) 
+      LED4.2V(w=50ns,f=2.0KHz),V=56.9V, A=6.8uA, Logi64OR, thre=800, TrigDelay40 (acq.~2.1KHz)=> ch05--63 NEvts=100K very good :) 
+      LED4.2V(w=50ns,f=3.0KHz),V=56.9V, A=6.8uA, Logi64OR, thre=800, TrigDelay40 (acq.~2.9KHz)=> ch05--63 NEvts=100K very good :) 
+      LED4.2V(w=50ns,f=4.0KHz),V=56.9V, A=6.8uA, Logi64OR, thre=800, TrigDelay40 (acq.~3.9KHz)=> ch05--63 NEvts=100K very good :) 
+      LED4.2V(w=50ns,f=5.0KHz),V=56.9V, A=6.8uA, Logi64OR, thre=800, TrigDelay40 (acq.~4.2KHz)=> ch05--63 NEvts=100K very good :) 
+
+      < Diff TriggerDelay > 
+      LED4.2V(w=50ns,f=2.0KHz),V=56.9V, A=6.8uA, Logi64OR, thre=800, TrigDelay37 (acq.~2.1KHz)=> ch05--63 NEvts=100K still good... 
+      LED4.2V(w=50ns,f=2.0KHz),V=56.9V, A=6.8uA, Logi64OR, thre=800, TrigDelay39 (acq.~2.1KHz)=> ch05--63 NEvts=100K very good :) 
+      LED4.2V(w=50ns,f=2.0KHz),V=56.9V, A=6.8uA, Logi64OR, thre=800, TrigDelay41 (acq.~2.1KHz)=> ch05--63 NEvts=100K very good :) 
+      LED4.2V(w=50ns,f=2.0KHz),V=56.9V, A=6.8uA, Logi64OR, thre=800, TrigDelay42 (acq.~2.1KHz)=> ch05--63 NEvts=100K still good...  
+     
+      < LED4.2V(w=50ns,f=2.0KHz), Logi64OR, thre=800, TrigDelay40 (an incubator is completely off) > 
+      setV = 57.6V, monV 57.49  acq.~2.8KHz => peaks are very good (d-val~30)
+      setV = 57.4V, monV 57.29  acq.~2.5KHz => peaks are very good
+      setV = 57.2V, monV 57.09  acq.~2.3KHz => peaks are very good (d-val~30)
+      setV = 57.0V, monV 56.89  acq.~2.1KHz => peaks are very good
+      setV = 56.8V, monV 56.69  acq.~1.9KHz => peaks are very good
+      setV = 56.6V, monV 56.49  acq.~1.7KHz => peaks are still good
+      setV = 56.4V, monV 56.29  acq.~1.4KHz => peaks are still good (d-val~25)
+      setV = 56.2V, monV 56.09  acq.~1.1KHz => peaks are maybe good
+      setV = 56.0V, monV 55.90  acq.~0.8KHz => peaks are maybe good
+      !! due to gain of MPPC, peaks gets close and uncrear w/ low voltage. 
+      !! due to increase of noise rate, acq. rate incerease -> pedestal peak gets large (random timing). 
+
+      < LED4.2V(w=50ns,f=2.0KHz), Logi64OR, thre=800, TrigDelay40 (an incubator is on, stand by) >
+      setV = 57.2V, monV 57.09  acq.~2.3KHz => peaks are very good (no changes from above)
+      
+   - @ 20/06/24 Config:
+
+      -- EASIORC-UT18, -Splitter -64PCB,
+      -- Firmware 80 & 1000 nsec
+      LED4.2V(w=50ns,f=500Hz), V=56.7V, A=6.2uA, Logi64OR, thre=780, TrigDelay40 (acq.~1.0KHz) => NEvts=100K very good :)
+      LED4.2V(w=50ns,f=500Hz), V=57.4V, A=6.2uA, Logi64OR, thre=780, TrigDelay40 (acq.~2.0KHz) => NEvts=100K very good :)
+      V > 57.6V -> program crushed and freeze !
+
+      < LED4.2V(w=50ns,f=600Hz), Logi64OR, thre=770, TrigDelay4 >
+      setV = 57.4V, monV 57.29  acq.~1.4KHz => peaks are very good
+      setV = 57.2V, monV 57.09  acq.~1.2KHz => peaks are very good 
+      setV = 57.0V, monV 56.89  acq.~1.0KHz => peaks are very good
+      setV = 56.8V, monV 56.69  acq.~0.8KHz => peaks are very good
+      setV = 56.4V, monV 55.90  acq.~0.6KHz => peaks are very good
+    
+

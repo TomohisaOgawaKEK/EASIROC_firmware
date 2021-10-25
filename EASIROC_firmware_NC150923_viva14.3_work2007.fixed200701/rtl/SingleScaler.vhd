@@ -22,6 +22,7 @@ entity SingleScaler is
     );
 end SingleScaler;
 
+
 architecture RTL of SingleScaler is
     component EdgeDetector is
     port (

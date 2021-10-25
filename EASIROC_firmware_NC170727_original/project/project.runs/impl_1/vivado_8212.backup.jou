@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Vivado v2014.3.1 (64-bit)
+# SW Build 1056140 on Thu Oct 30 17:03:40 MDT 2014
+# IP Build 1028902 on Fri Sep 26 17:35:13 MDT 2014
+# Start of session at: Sat May 21 00:49:41 2016
+# Process ID: 3508
+# Log file: C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.runs/impl_1/TopLevel.vdi
+# Journal file: C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source TopLevel.tcl -notrace

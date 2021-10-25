@@ -12,7 +12,6 @@ entity BusyManager is
     port(
         FAST_CLK : in std_logic;
         RESET : in  std_logic;
-
         HOLD : in std_logic;
         RESET_BUSY : in std_logic;
         BUSY : out std_logic

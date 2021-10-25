@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2015.3 (64-bit)
+# SW Build 1368829 on Mon Sep 28 20:06:43 MDT 2015
+# IP Build 1367837 on Mon Sep 28 08:56:14 MDT 2015
+# Start of session at: Thu Sep 03 20:26:38 2020
+# Process ID: 14672
+# Current directory: C:/Users/owner/Downloads/sfgd_vivadoFPGA/EASIROC_FPGA/EASIROC_firmware_NC150923_viva14.3_work2009/project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2456 C:\Users\owner\Downloads\sfgd_vivadoFPGA\EASIROC_FPGA\EASIROC_firmware_NC150923_viva14.3_work2009\project\project.xpr
+# Log file: C:/Users/owner/Downloads/sfgd_vivadoFPGA/EASIROC_FPGA/EASIROC_firmware_NC150923_viva14.3_work2009/project/vivado.log
+# Journal file: C:/Users/owner/Downloads/sfgd_vivadoFPGA/EASIROC_FPGA/EASIROC_firmware_NC150923_viva14.3_work2009/project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Sep 03 20:26:54 2020...

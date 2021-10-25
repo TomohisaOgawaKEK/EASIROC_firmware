@@ -1,0 +1,11 @@
+===================================
+Configuration Memory information
+===================================
+File Format        MCS
+Interface          SPIX1
+Size               32M
+Start Address      0x00000000
+End Address        0x01FFFFFF
+
+Addr1         Addr2         Date                    File(s)
+0x00000000    0x003A607B    Jun 30 23:49:39 2020    C:/Users/owner/Downloads/sfgd_vivadoFPGA/EASIROC_FPGA/EASIROC_firmware_NC150923_viva14.3_work2007.fixed200701/project/project.runs/impl_1/TopLevel.bit

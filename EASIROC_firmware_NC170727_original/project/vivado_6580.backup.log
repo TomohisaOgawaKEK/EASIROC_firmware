@@ -1,0 +1,104 @@
+#-----------------------------------------------------------
+# Vivado v2014.3.1 (64-bit)
+# SW Build 1056140 on Thu Oct 30 17:03:40 MDT 2014
+# IP Build 1028902 on Fri Sep 26 17:35:13 MDT 2014
+# Start of session at: Sun May 22 20:32:59 2016
+# Process ID: 2552
+# Log file: C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/vivado.log
+# Journal file: C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2014.3.1/data/ip'.
+open_project: Time (s): cpu = 00:00:27 ; elapsed = 00:00:10 . Memory (MB): peak = 754.922 ; gain = 190.496
+open_hw
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2014.3
+  **** Build date : Oct 30 2014-16:54:42
+    ** Copyright 1986-1999, 2001-2014 Xilinx, Inc. All Rights Reserved.
+
+INFO: hw_server application started
+INFO: Use Ctrl-C to exit hw_server application
+
+
+****** Xilinx hw_server v2014.3
+  **** Build date : Oct 30 2014-16:54:42
+    ** Copyright 1986-1999, 2001-2014 Xilinx, Inc. All Rights Reserved.
+
+INFO: hw_server application started
+INFO: Use Ctrl-C to exit hw_server application
+
+
+connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:23 . Memory (MB): peak = 756.141 ; gain = 0.000
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2014.3
+  **** Build date : Oct 30 2014-16:54:42
+    ** Copyright 1986-1999, 2001-2014 Xilinx, Inc. All Rights Reserved.
+
+INFO: hw_server application started
+INFO: Use Ctrl-C to exit hw_server application
+
+
+****** Xilinx hw_server v2014.3
+  **** Build date : Oct 30 2014-16:54:42
+    ** Copyright 1986-1999, 2001-2014 Xilinx, Inc. All Rights Reserved.
+
+INFO: hw_server application started
+INFO: Use Ctrl-C to exit hw_server application
+
+
+connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:23 . Memory (MB): peak = 756.141 ; gain = 0.000
+ERROR: [Vivado 12-106] *** Exception: java.lang.ArrayIndexOutOfBoundsException: Array index out of range: 0 (See C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/vivado_pid2552.debug)
+ERROR: [Vivado 12-106] *** Exception: java.lang.ArrayIndexOutOfBoundsException: Array index out of range: 0 (See C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/vivado_pid2552.debug)
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2014.3
+  **** Build date : Oct 30 2014-16:54:42
+    ** Copyright 1986-1999, 2001-2014 Xilinx, Inc. All Rights Reserved.
+
+INFO: hw_server application started
+INFO: Use Ctrl-C to exit hw_server application
+
+
+****** Xilinx hw_server v2014.3
+  **** Build date : Oct 30 2014-16:54:42
+    ** Copyright 1986-1999, 2001-2014 Xilinx, Inc. All Rights Reserved.
+
+INFO: hw_server application started
+INFO: Use Ctrl-C to exit hw_server application
+
+
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2014.3
+  **** Build date : Oct 30 2014-16:54:42
+    ** Copyright 1986-1999, 2001-2014 Xilinx, Inc. All Rights Reserved.
+
+INFO: hw_server application started
+INFO: Use Ctrl-C to exit hw_server application
+
+
+****** Xilinx hw_server v2014.3
+  **** Build date : Oct 30 2014-16:54:42
+    ** Copyright 1986-1999, 2001-2014 Xilinx, Inc. All Rights Reserved.
+
+INFO: hw_server application started
+INFO: Use Ctrl-C to exit hw_server application
+
+
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun May 22 20:38:34 2016...

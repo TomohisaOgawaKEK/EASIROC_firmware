@@ -1,0 +1,75 @@
+INFO: [Common 17-701] A license check has taken more than 10 seconds to complete. This may indicate that there is a performance issue with one or more license servers listed in XILINXD_LICENSE_FILE or LM_LICENSE_FILE, or that the license servers are just not responding at all. Try setting the FLEXLM_DIAGNOSTICS environment variable to 3 and running Vivado again to get more information.
+#-----------------------------------------------------------
+# Vivado v2014.3.1 (64-bit)
+# SW Build 1056140 on Thu Oct 30 17:03:40 MDT 2014
+# IP Build 1028902 on Fri Sep 26 17:35:13 MDT 2014
+# Start of session at: Sat May 21 00:35:04 2016
+# Process ID: 7604
+# Log file: C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/vivado.log
+# Journal file: C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.xpr
+CRITICAL WARNING: [Project 1-19] Could not find the file 'C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/constraint/pblock.xdc'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2014.3.1/data/ip'.
+open_project: Time (s): cpu = 00:01:31 ; elapsed = 00:00:40 . Memory (MB): peak = 657.453 ; gain = 117.102
+remove_files -fileset constrs_1 C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/constraint/pblock.xdc
+set_property target_constrs_file C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/constraint/io.xdc [current_fileset -constrset]
+reset_run synth_1
+launch_runs impl_1
+[Sat May 21 00:38:04 2016] Launched synth_1...
+Run output will be captured here: C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.runs/synth_1/runme.log
+[Sat May 21 00:38:04 2016] Launched impl_1...
+Run output will be captured here: C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 661.402 ; gain = 0.000
+launch_runs impl_1 -to_step write_bitstream
+[Sat May 21 01:13:03 2016] Launched impl_1...
+Run output will be captured here: C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 2021 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2014.3.1
+Loading clock regions from C:/Xilinx/Vivado/2014.3.1/data\parts/xilinx/artix7/artix7/xc7a100t/ClockRegion.xml
+Loading clock buffers from C:/Xilinx/Vivado/2014.3.1/data\parts/xilinx/artix7/artix7/xc7a100t/ClockBuffers.xml
+Loading clock placement rules from C:/Xilinx/Vivado/2014.3.1/data/parts/xilinx/artix7/ClockPlacerRules.xml
+Loading package pin functions from C:/Xilinx/Vivado/2014.3.1/data\parts/xilinx/artix7/PinFunctions.xml...
+Loading package from C:/Xilinx/Vivado/2014.3.1/data\parts/xilinx/artix7/artix7/xc7a100t/fgg676/Package.xml
+Loading io standards from C:/Xilinx/Vivado/2014.3.1/data\./parts/xilinx/artix7/IOStandards.xml
+Loading device configuration modes from C:/Xilinx/Vivado/2014.3.1/data\parts/xilinx/artix7/ConfigModes.xml
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/.Xil/Vivado-7604-nchikuma-VAIO/dcp/TopLevel_early.xdc]
+Finished Parsing XDC File [C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/.Xil/Vivado-7604-nchikuma-VAIO/dcp/TopLevel_early.xdc]
+Parsing XDC File [C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/.Xil/Vivado-7604-nchikuma-VAIO/dcp/TopLevel.xdc]
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'vclk_6M' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/constraint/timing.xdc:9]
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'vclk_66M' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/constraint/timing.xdc:10]
+INFO: [Timing 38-35] Done setting XDC timing constraints. [C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/constraint/timing.xdc:13]
+INFO: [Timing 38-2] Deriving generated clocks [C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/constraint/timing.xdc:13]
+create_generated_clock: Time (s): cpu = 00:01:05 ; elapsed = 00:01:02 . Memory (MB): peak = 1526.625 ; gain = 522.680
+Finished Parsing XDC File [C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/.Xil/Vivado-7604-nchikuma-VAIO/dcp/TopLevel.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:44 ; elapsed = 00:00:44 . Memory (MB): peak = 1580.941 ; gain = 52.191
+Restored from archive | CPU: 46.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:44 ; elapsed = 00:00:44 . Memory (MB): peak = 1580.941 ; gain = 52.191
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1051 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 1 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 1036 instances
+  RAM32X1S => RAM32X1S (RAMS32): 8 instances
+  RAM64M => RAM64M (RAMD64E, RAMD64E, RAMD64E, RAMD64E): 6 instances
+
+open_run: Time (s): cpu = 00:04:11 ; elapsed = 00:03:18 . Memory (MB): peak = 1719.297 ; gain = 1022.379
+write_cfgmem -force -format MCS -size 32 -interface SPIx1 -loadbit "up 0x0 C:/Users/nchikuma/Documents/NaruhiroChikuma/easiroc/New_Firmware/project/project.runs/impl_1/TopLevel.bit" C:/Users/nchikuma/Documents/NaruhiroChikuma/easiroc/New_Firmware/project/TopLevel.mcs
+Creating config memory files...
+Creating bitstream load up from address 0x00000000
+Loading bitfile C:/Users/nchikuma/Documents/NaruhiroChikuma/easiroc/New_Firmware/project/project.runs/impl_1/TopLevel.bit
+Writing file C:/Users/nchikuma/Documents/NaruhiroChikuma/easiroc/New_Firmware/project/TopLevel.mcs
+write_cfgmem: Time (s): cpu = 00:00:21 ; elapsed = 00:00:17 . Memory (MB): peak = 1942.348 ; gain = 112.352
+exit
+INFO: [Common 17-206] Exiting Vivado at Sat May 21 01:34:51 2016...

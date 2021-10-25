@@ -1,0 +1,1259 @@
+#-----------------------------------------------------------
+# Vivado v2014.3.1 (64-bit)
+# SW Build 1056140 on Thu Oct 30 17:03:40 MDT 2014
+# IP Build 1028902 on Fri Sep 26 17:35:13 MDT 2014
+# Start of session at: Thu Dec 19 23:45:10 2019
+# Process ID: 13940
+# Log file: C:/Users/tomoh/vivado/ChikumaProject150923_test191108/chikuma_new/New_Firmware/project/project.runs/impl_4/TopLevel.vdi
+# Journal file: C:/Users/tomoh/vivado/ChikumaProject150923_test191108/chikuma_new/New_Firmware/project/project.runs/impl_4\vivado.jou
+#-----------------------------------------------------------
+source TopLevel.tcl -notrace
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Netlist 29-17] Analyzing 2031 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2014.3.1
+Loading clock regions from C:/Xilinx/Vivado/2014.3.1/data\parts/xilinx/artix7/artix7/xc7a100t/ClockRegion.xml
+Loading clock buffers from C:/Xilinx/Vivado/2014.3.1/data\parts/xilinx/artix7/artix7/xc7a100t/ClockBuffers.xml
+Loading clock placement rules from C:/Xilinx/Vivado/2014.3.1/data/parts/xilinx/artix7/ClockPlacerRules.xml
+Loading package pin functions from C:/Xilinx/Vivado/2014.3.1/data\parts/xilinx/artix7/PinFunctions.xml...
+Loading package from C:/Xilinx/Vivado/2014.3.1/data\parts/xilinx/artix7/artix7/xc7a100t/fgg676/Package.xml
+Loading io standards from C:/Xilinx/Vivado/2014.3.1/data\./parts/xilinx/artix7/IOStandards.xml
+Loading device configuration modes from C:/Xilinx/Vivado/2014.3.1/data\parts/xilinx/artix7/ConfigModes.xml
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-140] Inserted 0 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-141] Inserted 0 OBUFs to IO ports without IO buffers.
+Parsing XDC File [C:/Users/tomoh/vivado/ChikumaProject150923_test191108/chikuma_new/New_Firmware/constraint/io.xdc]
+Finished Parsing XDC File [C:/Users/tomoh/vivado/ChikumaProject150923_test191108/chikuma_new/New_Firmware/constraint/io.xdc]
+Parsing XDC File [C:/Users/tomoh/vivado/ChikumaProject150923_test191108/chikuma_new/New_Firmware/constraint/timing.xdc]
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'vclk_6M' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [C:/Users/tomoh/vivado/ChikumaProject150923_test191108/chikuma_new/New_Firmware/constraint/timing.xdc:9]
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'vclk_66M' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [C:/Users/tomoh/vivado/ChikumaProject150923_test191108/chikuma_new/New_Firmware/constraint/timing.xdc:10]
+INFO: [Timing 38-35] Done setting XDC timing constraints. [C:/Users/tomoh/vivado/ChikumaProject150923_test191108/chikuma_new/New_Firmware/constraint/timing.xdc:13]
+INFO: [Timing 38-2] Deriving generated clocks [C:/Users/tomoh/vivado/ChikumaProject150923_test191108/chikuma_new/New_Firmware/constraint/timing.xdc:13]
+create_generated_clock: Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1073.164 ; gain = 524.859
+Finished Parsing XDC File [C:/Users/tomoh/vivado/ChikumaProject150923_test191108/chikuma_new/New_Firmware/constraint/timing.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1051 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 1 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 1036 instances
+  RAM32X1S => RAM32X1S (RAMS32): 8 instances
+  RAM64M => RAM64M (RAMD64E, RAMD64E, RAMD64E, RAMD64E): 6 instances
+
+link_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:24 . Memory (MB): peak = 1075.258 ; gain = 895.926
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Drc 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [Drc 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.250 . Memory (MB): peak = 1075.258 ; gain = 0.000
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+WARNING: [Opt 31-143] Automatic BUFG insertion was skipped because there are already at least 12 clock buffers (BUFG and BUFHCE) using global resources.
+Resolution: Manually insert a BUFG to drive the high fanout net. However, make sure to first analyze clock buffer utilization to determine if the insertion is safe to perform.
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 1d40a4df4
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1075.258 ; gain = 0.000
+
+Phase 2 Constant Propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-10] Eliminated 579 cells.
+Phase 2 Constant Propagation | Checksum: 1a0499c75
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1075.258 ; gain = 0.000
+
+Phase 3 Sweep
+INFO: [Opt 31-12] Eliminated 1954 unconnected nets.
+INFO: [Opt 31-140] Inserted 0 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-141] Inserted 0 OBUFs to IO ports without IO buffers.
+INFO: [Opt 31-11] Eliminated 112 unconnected cells.
+Phase 3 Sweep | Checksum: 7b9abe79
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1075.258 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 7b9abe79
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 1075.258 ; gain = 0.000
+Implement Debug Cores | Checksum: 8bdff683
+Logic Optimization | Checksum: 8bdff683
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 3.13 ns.
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 11 BRAM(s) out of a total of 39 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 14 WE to EN ports
+Number of BRAM Ports augmented: 0 newly gated: 67 Total Ports: 78
+Ending PowerOpt Patch Enables Task | Checksum: 11995020e
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.078 . Memory (MB): peak = 1246.281 ; gain = 0.000
+Ending Power Optimization Task | Checksum: 11995020e
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 1246.281 ; gain = 171.023
+INFO: [Common 17-83] Releasing license: Implementation
+33 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:13 . Memory (MB): peak = 1246.281 ; gain = 171.023
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.062 . Memory (MB): peak = 1246.281 ; gain = 0.000
+INFO: [Drc 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file C:/Users/tomoh/vivado/ChikumaProject150923_test191108/chikuma_new/New_Firmware/project/project.runs/impl_4/TopLevel_drc_opted.rpt.
+Command: place_design -directive ExtraPostPlacementOpt
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Drc 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [Drc 23-27] Running DRC with 2 threads
+WARNING: [Drc 23-20] Rule violation (CKLD-2) Clock Net has direct IO Driver - Clock net ETH_RX_CLK_IBUF is directly driven by an IO rather than a Clock Buffer. Driver(s): ETH_RX_CLK_IBUF_inst/O2000
+WARNING: [Drc 23-20] Rule violation (CKLD-2) Clock Net has direct IO Driver - Clock net ETH_TX_CLK_IBUF is directly driven by an IO rather than a Clock Buffer. Driver(s): ETH_TX_CLK_IBUF_inst/O2000
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 2 Warnings
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 46-5] The placer was invoked with the 'ExtraPostPlacementOpt' directive.
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+
+Phase 1 Placer Runtime Estimator
+Phase 1 Placer Runtime Estimator | Checksum: bb82770a
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.515 . Memory (MB): peak = 1246.281 ; gain = 0.000
+
+Phase 2 Placer Initialization
+
+Phase 2.1 Placer Initialization Core
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.110 . Memory (MB): peak = 1246.281 ; gain = 0.000
+INFO: [Opt 31-140] Inserted 0 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-141] Inserted 0 OBUFs to IO ports without IO buffers.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.063 . Memory (MB): peak = 1246.281 ; gain = 0.000
+
+Phase 2.1.1 IO Placement/ Clock Placement/ Build Placer Device
+
+Phase 2.1.1.1 Pre-Place Cells
+Phase 2.1.1.1 Pre-Place Cells | Checksum: 38465510
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1246.281 ; gain = 0.000
+WARNING: [Place 30-568] A LUT 'TriggerWidth_0/WidthAdjuster_GENERATE[10].Width_Adjuster_1/counter_next_reg[7]_i_2__23' is driving clock pin of 8 registers. This could lead to large hold time violations. First few involved registers are:
+	TriggerWidth_0/WidthAdjuster_GENERATE[10].Width_Adjuster_1/counter_next_reg[5] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[10].Width_Adjuster_1/counter_next_reg[4] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[10].Width_Adjuster_1/counter_next_reg[3] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[10].Width_Adjuster_1/counter_next_reg[2] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[10].Width_Adjuster_1/counter_next_reg[1] {LDCE}
+WARNING: [Place 30-568] A LUT 'TriggerWidth_0/WidthAdjuster_GENERATE[11].Width_Adjuster_0/counter_next_reg[7]_i_2__24' is driving clock pin of 8 registers. This could lead to large hold time violations. First few involved registers are:
+	TriggerWidth_0/WidthAdjuster_GENERATE[11].Width_Adjuster_0/counter_next_reg[1] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[11].Width_Adjuster_0/counter_next_reg[0] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[11].Width_Adjuster_0/counter_next_reg[2] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[11].Width_Adjuster_0/counter_next_reg[3] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[11].Width_Adjuster_0/counter_next_reg[4] {LDCE}
+WARNING: [Place 30-568] A LUT 'TriggerWidth_0/WidthAdjuster_GENERATE[11].Width_Adjuster_1/counter_next_reg[7]_i_2__25' is driving clock pin of 8 registers. This could lead to large hold time violations. First few involved registers are:
+	TriggerWidth_0/WidthAdjuster_GENERATE[11].Width_Adjuster_1/counter_next_reg[2] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[11].Width_Adjuster_1/counter_next_reg[0] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[11].Width_Adjuster_1/counter_next_reg[1] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[11].Width_Adjuster_1/counter_next_reg[3] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[11].Width_Adjuster_1/counter_next_reg[4] {LDCE}
+WARNING: [Place 30-568] A LUT 'TriggerWidth_0/WidthAdjuster_GENERATE[12].Width_Adjuster_0/counter_next_reg[7]_i_2__26' is driving clock pin of 8 registers. This could lead to large hold time violations. First few involved registers are:
+	TriggerWidth_0/WidthAdjuster_GENERATE[12].Width_Adjuster_0/counter_next_reg[3] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[12].Width_Adjuster_0/counter_next_reg[2] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[12].Width_Adjuster_0/counter_next_reg[1] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[12].Width_Adjuster_0/counter_next_reg[0] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[12].Width_Adjuster_0/counter_next_reg[4] {LDCE}
+WARNING: [Place 30-568] A LUT 'TriggerWidth_0/WidthAdjuster_GENERATE[12].Width_Adjuster_1/counter_next_reg[7]_i_2__27' is driving clock pin of 8 registers. This could lead to large hold time violations. First few involved registers are:
+	TriggerWidth_0/WidthAdjuster_GENERATE[12].Width_Adjuster_1/counter_next_reg[2] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[12].Width_Adjuster_1/counter_next_reg[1] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[12].Width_Adjuster_1/counter_next_reg[0] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[12].Width_Adjuster_1/counter_next_reg[3] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[12].Width_Adjuster_1/counter_next_reg[4] {LDCE}
+WARNING: [Place 30-568] A LUT 'TriggerManager_0/Hold_Delayer/trigger_s_reg_i_2__64' is driving clock pin of 1 registers. This could lead to large hold time violations. First few involved registers are:
+	TriggerManager_0/Hold_Delayer/trigger_s_reg {LDCE}
+WARNING: [Place 30-568] A LUT 'TriggerManager_0/L1_Delayer/trigger_s_reg_i_2__65' is driving clock pin of 1 registers. This could lead to large hold time violations. First few involved registers are:
+	TriggerManager_0/L1_Delayer/trigger_s_reg {LDCE}
+WARNING: [Place 30-568] A LUT 'TriggerManager_0/Trigger_Delayer/trigger_s_reg_i_2__63' is driving clock pin of 1 registers. This could lead to large hold time violations. First few involved registers are:
+	TriggerManager_0/Trigger_Delayer/trigger_s_reg {LDCE}
+WARNING: [Place 30-568] A LUT 'TriggerManager_0/L1_tmp_reg_i_2' is driving clock pin of 3 registers. This could lead to large hold time violations. First few involved registers are:
+	TriggerManager_0/L2_tmp_reg {LDCE}
+	TriggerManager_0/L1_tmp_reg {LDCE}
+	TriggerManager_0/Hold_tmp_reg {LDCE}
+WARNING: [Place 30-568] A LUT 'TriggerWidth_0/WidthAdjuster_GENERATE[0].Width_Adjuster_0/counter_next_reg[7]_i_2__2' is driving clock pin of 8 registers. This could lead to large hold time violations. First few involved registers are:
+	TriggerWidth_0/WidthAdjuster_GENERATE[0].Width_Adjuster_0/counter_next_reg[4] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[0].Width_Adjuster_0/counter_next_reg[2] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[0].Width_Adjuster_0/counter_next_reg[3] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[0].Width_Adjuster_0/counter_next_reg[1] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[0].Width_Adjuster_0/counter_next_reg[0] {LDCE}
+WARNING: [Place 30-568] A LUT 'TriggerWidth_0/WidthAdjuster_GENERATE[0].Width_Adjuster_1/counter_next_reg[7]_i_2__3' is driving clock pin of 8 registers. This could lead to large hold time violations. First few involved registers are:
+	TriggerWidth_0/WidthAdjuster_GENERATE[0].Width_Adjuster_1/counter_next_reg[2] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[0].Width_Adjuster_1/counter_next_reg[1] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[0].Width_Adjuster_1/counter_next_reg[0] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[0].Width_Adjuster_1/counter_next_reg[3] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[0].Width_Adjuster_1/counter_next_reg[4] {LDCE}
+WARNING: [Place 30-568] A LUT 'TriggerWidth_0/WidthAdjuster_GENERATE[10].Width_Adjuster_0/counter_next_reg[7]_i_2__22' is driving clock pin of 8 registers. This could lead to large hold time violations. First few involved registers are:
+	TriggerWidth_0/WidthAdjuster_GENERATE[10].Width_Adjuster_0/counter_next_reg[2] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[10].Width_Adjuster_0/counter_next_reg[1] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[10].Width_Adjuster_0/counter_next_reg[0] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[10].Width_Adjuster_0/counter_next_reg[4] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[10].Width_Adjuster_0/counter_next_reg[3] {LDCE}
+WARNING: [Place 30-568] A LUT 'TriggerWidth_0/WidthAdjuster_GENERATE[13].Width_Adjuster_0/counter_next_reg[7]_i_2__28' is driving clock pin of 8 registers. This could lead to large hold time violations. First few involved registers are:
+	TriggerWidth_0/WidthAdjuster_GENERATE[13].Width_Adjuster_0/counter_next_reg[4] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[13].Width_Adjuster_0/counter_next_reg[3] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[13].Width_Adjuster_0/counter_next_reg[2] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[13].Width_Adjuster_0/counter_next_reg[1] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[13].Width_Adjuster_0/counter_next_reg[0] {LDCE}
+WARNING: [Place 30-568] A LUT 'TriggerWidth_0/WidthAdjuster_GENERATE[13].Width_Adjuster_1/counter_next_reg[7]_i_2__29' is driving clock pin of 8 registers. This could lead to large hold time violations. First few involved registers are:
+	TriggerWidth_0/WidthAdjuster_GENERATE[13].Width_Adjuster_1/counter_next_reg[2] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[13].Width_Adjuster_1/counter_next_reg[0] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[13].Width_Adjuster_1/counter_next_reg[1] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[13].Width_Adjuster_1/counter_next_reg[3] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[13].Width_Adjuster_1/counter_next_reg[4] {LDCE}
+WARNING: [Place 30-568] A LUT 'TriggerWidth_0/WidthAdjuster_GENERATE[14].Width_Adjuster_0/counter_next_reg[7]_i_2__30' is driving clock pin of 8 registers. This could lead to large hold time violations. First few involved registers are:
+	TriggerWidth_0/WidthAdjuster_GENERATE[14].Width_Adjuster_0/counter_next_reg[2] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[14].Width_Adjuster_0/counter_next_reg[1] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[14].Width_Adjuster_0/counter_next_reg[0] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[14].Width_Adjuster_0/counter_next_reg[3] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[14].Width_Adjuster_0/counter_next_reg[4] {LDCE}
+WARNING: [Place 30-568] A LUT 'TriggerWidth_0/WidthAdjuster_GENERATE[14].Width_Adjuster_1/counter_next_reg[7]_i_2__31' is driving clock pin of 8 registers. This could lead to large hold time violations. First few involved registers are:
+	TriggerWidth_0/WidthAdjuster_GENERATE[14].Width_Adjuster_1/counter_next_reg[2] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[14].Width_Adjuster_1/counter_next_reg[1] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[14].Width_Adjuster_1/counter_next_reg[0] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[14].Width_Adjuster_1/counter_next_reg[3] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[14].Width_Adjuster_1/counter_next_reg[4] {LDCE}
+WARNING: [Place 30-568] A LUT 'TriggerWidth_0/WidthAdjuster_GENERATE[15].Width_Adjuster_0/counter_next_reg[7]_i_2__32' is driving clock pin of 8 registers. This could lead to large hold time violations. First few involved registers are:
+	TriggerWidth_0/WidthAdjuster_GENERATE[15].Width_Adjuster_0/counter_next_reg[7] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[15].Width_Adjuster_0/counter_next_reg[0] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[15].Width_Adjuster_0/counter_next_reg[1] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[15].Width_Adjuster_0/counter_next_reg[2] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[15].Width_Adjuster_0/counter_next_reg[3] {LDCE}
+WARNING: [Place 30-568] A LUT 'TriggerWidth_0/WidthAdjuster_GENERATE[15].Width_Adjuster_1/counter_next_reg[7]_i_2__33' is driving clock pin of 8 registers. This could lead to large hold time violations. First few involved registers are:
+	TriggerWidth_0/WidthAdjuster_GENERATE[15].Width_Adjuster_1/counter_next_reg[3] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[15].Width_Adjuster_1/counter_next_reg[2] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[15].Width_Adjuster_1/counter_next_reg[0] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[15].Width_Adjuster_1/counter_next_reg[1] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[15].Width_Adjuster_1/counter_next_reg[4] {LDCE}
+WARNING: [Place 30-568] A LUT 'TriggerWidth_0/WidthAdjuster_GENERATE[16].Width_Adjuster_0/counter_next_reg[7]_i_2__34' is driving clock pin of 8 registers. This could lead to large hold time violations. First few involved registers are:
+	TriggerWidth_0/WidthAdjuster_GENERATE[16].Width_Adjuster_0/counter_next_reg[3] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[16].Width_Adjuster_0/counter_next_reg[2] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[16].Width_Adjuster_0/counter_next_reg[1] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[16].Width_Adjuster_0/counter_next_reg[0] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[16].Width_Adjuster_0/counter_next_reg[4] {LDCE}
+WARNING: [Place 30-568] A LUT 'TriggerWidth_0/WidthAdjuster_GENERATE[16].Width_Adjuster_1/counter_next_reg[7]_i_2__35' is driving clock pin of 8 registers. This could lead to large hold time violations. First few involved registers are:
+	TriggerWidth_0/WidthAdjuster_GENERATE[16].Width_Adjuster_1/counter_next_reg[3] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[16].Width_Adjuster_1/counter_next_reg[2] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[16].Width_Adjuster_1/counter_next_reg[1] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[16].Width_Adjuster_1/counter_next_reg[0] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[16].Width_Adjuster_1/counter_next_reg[4] {LDCE}
+WARNING: [Place 30-568] A LUT 'TriggerWidth_0/WidthAdjuster_GENERATE[17].Width_Adjuster_0/counter_next_reg[7]_i_2__36' is driving clock pin of 8 registers. This could lead to large hold time violations. First few involved registers are:
+	TriggerWidth_0/WidthAdjuster_GENERATE[17].Width_Adjuster_0/counter_next_reg[2] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[17].Width_Adjuster_0/counter_next_reg[1] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[17].Width_Adjuster_0/counter_next_reg[0] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[17].Width_Adjuster_0/counter_next_reg[3] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[17].Width_Adjuster_0/counter_next_reg[4] {LDCE}
+WARNING: [Place 30-568] A LUT 'TriggerWidth_0/WidthAdjuster_GENERATE[17].Width_Adjuster_1/counter_next_reg[7]_i_2__37' is driving clock pin of 8 registers. This could lead to large hold time violations. First few involved registers are:
+	TriggerWidth_0/WidthAdjuster_GENERATE[17].Width_Adjuster_1/counter_next_reg[3] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[17].Width_Adjuster_1/counter_next_reg[2] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[17].Width_Adjuster_1/counter_next_reg[1] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[17].Width_Adjuster_1/counter_next_reg[0] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[17].Width_Adjuster_1/counter_next_reg[4] {LDCE}
+WARNING: [Place 30-568] A LUT 'TriggerWidth_0/WidthAdjuster_GENERATE[18].Width_Adjuster_0/counter_next_reg[7]_i_2__38' is driving clock pin of 8 registers. This could lead to large hold time violations. First few involved registers are:
+	TriggerWidth_0/WidthAdjuster_GENERATE[18].Width_Adjuster_0/counter_next_reg[2] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[18].Width_Adjuster_0/counter_next_reg[1] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[18].Width_Adjuster_0/counter_next_reg[0] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[18].Width_Adjuster_0/counter_next_reg[3] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[18].Width_Adjuster_0/counter_next_reg[4] {LDCE}
+WARNING: [Place 30-568] A LUT 'TriggerWidth_0/WidthAdjuster_GENERATE[18].Width_Adjuster_1/counter_next_reg[7]_i_2__39' is driving clock pin of 8 registers. This could lead to large hold time violations. First few involved registers are:
+	TriggerWidth_0/WidthAdjuster_GENERATE[18].Width_Adjuster_1/counter_next_reg[5] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[18].Width_Adjuster_1/counter_next_reg[4] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[18].Width_Adjuster_1/counter_next_reg[3] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[18].Width_Adjuster_1/counter_next_reg[2] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[18].Width_Adjuster_1/counter_next_reg[1] {LDCE}
+WARNING: [Place 30-568] A LUT 'TriggerWidth_0/WidthAdjuster_GENERATE[19].Width_Adjuster_0/counter_next_reg[7]_i_2__40' is driving clock pin of 8 registers. This could lead to large hold time violations. First few involved registers are:
+	TriggerWidth_0/WidthAdjuster_GENERATE[19].Width_Adjuster_0/counter_next_reg[2] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[19].Width_Adjuster_0/counter_next_reg[1] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[19].Width_Adjuster_0/counter_next_reg[0] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[19].Width_Adjuster_0/counter_next_reg[4] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[19].Width_Adjuster_0/counter_next_reg[3] {LDCE}
+WARNING: [Place 30-568] A LUT 'TriggerWidth_0/WidthAdjuster_GENERATE[19].Width_Adjuster_1/counter_next_reg[7]_i_2__41' is driving clock pin of 8 registers. This could lead to large hold time violations. First few involved registers are:
+	TriggerWidth_0/WidthAdjuster_GENERATE[19].Width_Adjuster_1/counter_next_reg[2] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[19].Width_Adjuster_1/counter_next_reg[1] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[19].Width_Adjuster_1/counter_next_reg[0] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[19].Width_Adjuster_1/counter_next_reg[3] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[19].Width_Adjuster_1/counter_next_reg[4] {LDCE}
+WARNING: [Place 30-568] A LUT 'TriggerWidth_0/WidthAdjuster_GENERATE[1].Width_Adjuster_0/counter_next_reg[7]_i_2__4' is driving clock pin of 8 registers. This could lead to large hold time violations. First few involved registers are:
+	TriggerWidth_0/WidthAdjuster_GENERATE[1].Width_Adjuster_0/counter_next_reg[2] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[1].Width_Adjuster_0/counter_next_reg[1] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[1].Width_Adjuster_0/counter_next_reg[0] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[1].Width_Adjuster_0/counter_next_reg[3] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[1].Width_Adjuster_0/counter_next_reg[4] {LDCE}
+WARNING: [Place 30-568] A LUT 'TriggerWidth_0/WidthAdjuster_GENERATE[1].Width_Adjuster_1/counter_next_reg[7]_i_2__5' is driving clock pin of 8 registers. This could lead to large hold time violations. First few involved registers are:
+	TriggerWidth_0/WidthAdjuster_GENERATE[1].Width_Adjuster_1/counter_next_reg[3] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[1].Width_Adjuster_1/counter_next_reg[2] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[1].Width_Adjuster_1/counter_next_reg[1] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[1].Width_Adjuster_1/counter_next_reg[0] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[1].Width_Adjuster_1/counter_next_reg[4] {LDCE}
+WARNING: [Place 30-568] A LUT 'TriggerWidth_0/WidthAdjuster_GENERATE[20].Width_Adjuster_0/counter_next_reg[7]_i_2__42' is driving clock pin of 8 registers. This could lead to large hold time violations. First few involved registers are:
+	TriggerWidth_0/WidthAdjuster_GENERATE[20].Width_Adjuster_0/counter_next_reg[3] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[20].Width_Adjuster_0/counter_next_reg[2] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[20].Width_Adjuster_0/counter_next_reg[0] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[20].Width_Adjuster_0/counter_next_reg[1] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[20].Width_Adjuster_0/counter_next_reg[4] {LDCE}
+WARNING: [Place 30-568] A LUT 'TriggerWidth_0/WidthAdjuster_GENERATE[20].Width_Adjuster_1/counter_next_reg[7]_i_2__43' is driving clock pin of 8 registers. This could lead to large hold time violations. First few involved registers are:
+	TriggerWidth_0/WidthAdjuster_GENERATE[20].Width_Adjuster_1/counter_next_reg[4] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[20].Width_Adjuster_1/counter_next_reg[3] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[20].Width_Adjuster_1/counter_next_reg[2] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[20].Width_Adjuster_1/counter_next_reg[1] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[20].Width_Adjuster_1/counter_next_reg[0] {LDCE}
+WARNING: [Place 30-568] A LUT 'TriggerWidth_0/WidthAdjuster_GENERATE[21].Width_Adjuster_0/counter_next_reg[7]_i_2__44' is driving clock pin of 8 registers. This could lead to large hold time violations. First few involved registers are:
+	TriggerWidth_0/WidthAdjuster_GENERATE[21].Width_Adjuster_0/counter_next_reg[4] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[21].Width_Adjuster_0/counter_next_reg[3] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[21].Width_Adjuster_0/counter_next_reg[2] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[21].Width_Adjuster_0/counter_next_reg[1] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[21].Width_Adjuster_0/counter_next_reg[0] {LDCE}
+WARNING: [Place 30-568] A LUT 'TriggerWidth_0/WidthAdjuster_GENERATE[21].Width_Adjuster_1/counter_next_reg[7]_i_2__45' is driving clock pin of 8 registers. This could lead to large hold time violations. First few involved registers are:
+	TriggerWidth_0/WidthAdjuster_GENERATE[21].Width_Adjuster_1/counter_next_reg[2] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[21].Width_Adjuster_1/counter_next_reg[1] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[21].Width_Adjuster_1/counter_next_reg[0] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[21].Width_Adjuster_1/counter_next_reg[3] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[21].Width_Adjuster_1/counter_next_reg[4] {LDCE}
+WARNING: [Place 30-568] A LUT 'TriggerWidth_0/WidthAdjuster_GENERATE[22].Width_Adjuster_0/counter_next_reg[7]_i_2__46' is driving clock pin of 8 registers. This could lead to large hold time violations. First few involved registers are:
+	TriggerWidth_0/WidthAdjuster_GENERATE[22].Width_Adjuster_0/counter_next_reg[2] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[22].Width_Adjuster_0/counter_next_reg[1] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[22].Width_Adjuster_0/counter_next_reg[0] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[22].Width_Adjuster_0/counter_next_reg[3] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[22].Width_Adjuster_0/counter_next_reg[4] {LDCE}
+WARNING: [Place 30-568] A LUT 'TriggerWidth_0/WidthAdjuster_GENERATE[22].Width_Adjuster_1/counter_next_reg[7]_i_2__47' is driving clock pin of 8 registers. This could lead to large hold time violations. First few involved registers are:
+	TriggerWidth_0/WidthAdjuster_GENERATE[22].Width_Adjuster_1/counter_next_reg[2] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[22].Width_Adjuster_1/counter_next_reg[1] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[22].Width_Adjuster_1/counter_next_reg[0] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[22].Width_Adjuster_1/counter_next_reg[3] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[22].Width_Adjuster_1/counter_next_reg[4] {LDCE}
+WARNING: [Place 30-568] A LUT 'TriggerWidth_0/WidthAdjuster_GENERATE[23].Width_Adjuster_0/counter_next_reg[7]_i_2__48' is driving clock pin of 8 registers. This could lead to large hold time violations. First few involved registers are:
+	TriggerWidth_0/WidthAdjuster_GENERATE[23].Width_Adjuster_0/counter_next_reg[4] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[23].Width_Adjuster_0/counter_next_reg[3] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[23].Width_Adjuster_0/counter_next_reg[2] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[23].Width_Adjuster_0/counter_next_reg[1] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[23].Width_Adjuster_0/counter_next_reg[0] {LDCE}
+WARNING: [Place 30-568] A LUT 'TriggerWidth_0/WidthAdjuster_GENERATE[23].Width_Adjuster_1/counter_next_reg[7]_i_2__49' is driving clock pin of 8 registers. This could lead to large hold time violations. First few involved registers are:
+	TriggerWidth_0/WidthAdjuster_GENERATE[23].Width_Adjuster_1/counter_next_reg[3] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[23].Width_Adjuster_1/counter_next_reg[2] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[23].Width_Adjuster_1/counter_next_reg[1] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[23].Width_Adjuster_1/counter_next_reg[0] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[23].Width_Adjuster_1/counter_next_reg[4] {LDCE}
+WARNING: [Place 30-568] A LUT 'TriggerWidth_0/WidthAdjuster_GENERATE[24].Width_Adjuster_0/counter_next_reg[7]_i_2__50' is driving clock pin of 8 registers. This could lead to large hold time violations. First few involved registers are:
+	TriggerWidth_0/WidthAdjuster_GENERATE[24].Width_Adjuster_0/counter_next_reg[2] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[24].Width_Adjuster_0/counter_next_reg[1] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[24].Width_Adjuster_0/counter_next_reg[0] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[24].Width_Adjuster_0/counter_next_reg[3] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[24].Width_Adjuster_0/counter_next_reg[4] {LDCE}
+WARNING: [Place 30-568] A LUT 'TriggerWidth_0/WidthAdjuster_GENERATE[24].Width_Adjuster_1/counter_next_reg[7]_i_2__51' is driving clock pin of 8 registers. This could lead to large hold time violations. First few involved registers are:
+	TriggerWidth_0/WidthAdjuster_GENERATE[24].Width_Adjuster_1/counter_next_reg[2] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[24].Width_Adjuster_1/counter_next_reg[1] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[24].Width_Adjuster_1/counter_next_reg[0] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[24].Width_Adjuster_1/counter_next_reg[3] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[24].Width_Adjuster_1/counter_next_reg[4] {LDCE}
+WARNING: [Place 30-568] A LUT 'TriggerWidth_0/WidthAdjuster_GENERATE[25].Width_Adjuster_0/counter_next_reg[7]_i_2__52' is driving clock pin of 8 registers. This could lead to large hold time violations. First few involved registers are:
+	TriggerWidth_0/WidthAdjuster_GENERATE[25].Width_Adjuster_0/counter_next_reg[2] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[25].Width_Adjuster_0/counter_next_reg[1] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[25].Width_Adjuster_0/counter_next_reg[0] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[25].Width_Adjuster_0/counter_next_reg[3] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[25].Width_Adjuster_0/counter_next_reg[4] {LDCE}
+WARNING: [Place 30-568] A LUT 'TriggerWidth_0/WidthAdjuster_GENERATE[25].Width_Adjuster_1/counter_next_reg[7]_i_2__53' is driving clock pin of 8 registers. This could lead to large hold time violations. First few involved registers are:
+	TriggerWidth_0/WidthAdjuster_GENERATE[25].Width_Adjuster_1/counter_next_reg[2] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[25].Width_Adjuster_1/counter_next_reg[1] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[25].Width_Adjuster_1/counter_next_reg[0] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[25].Width_Adjuster_1/counter_next_reg[3] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[25].Width_Adjuster_1/counter_next_reg[4] {LDCE}
+WARNING: [Place 30-568] A LUT 'TriggerWidth_0/WidthAdjuster_GENERATE[26].Width_Adjuster_0/counter_next_reg[7]_i_2__54' is driving clock pin of 8 registers. This could lead to large hold time violations. First few involved registers are:
+	TriggerWidth_0/WidthAdjuster_GENERATE[26].Width_Adjuster_0/counter_next_reg[3] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[26].Width_Adjuster_0/counter_next_reg[2] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[26].Width_Adjuster_0/counter_next_reg[1] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[26].Width_Adjuster_0/counter_next_reg[0] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[26].Width_Adjuster_0/counter_next_reg[4] {LDCE}
+WARNING: [Place 30-568] A LUT 'TriggerWidth_0/WidthAdjuster_GENERATE[26].Width_Adjuster_1/counter_next_reg[7]_i_2__55' is driving clock pin of 8 registers. This could lead to large hold time violations. First few involved registers are:
+	TriggerWidth_0/WidthAdjuster_GENERATE[26].Width_Adjuster_1/counter_next_reg[3] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[26].Width_Adjuster_1/counter_next_reg[2] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[26].Width_Adjuster_1/counter_next_reg[1] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[26].Width_Adjuster_1/counter_next_reg[0] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[26].Width_Adjuster_1/counter_next_reg[4] {LDCE}
+WARNING: [Place 30-568] A LUT 'TriggerWidth_0/WidthAdjuster_GENERATE[27].Width_Adjuster_0/counter_next_reg[7]_i_2__56' is driving clock pin of 8 registers. This could lead to large hold time violations. First few involved registers are:
+	TriggerWidth_0/WidthAdjuster_GENERATE[27].Width_Adjuster_0/counter_next_reg[7] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[27].Width_Adjuster_0/counter_next_reg[6] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[27].Width_Adjuster_0/counter_next_reg[5] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[27].Width_Adjuster_0/counter_next_reg[0] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[27].Width_Adjuster_0/counter_next_reg[1] {LDCE}
+WARNING: [Place 30-568] A LUT 'TriggerWidth_0/WidthAdjuster_GENERATE[27].Width_Adjuster_1/counter_next_reg[7]_i_2__57' is driving clock pin of 8 registers. This could lead to large hold time violations. First few involved registers are:
+	TriggerWidth_0/WidthAdjuster_GENERATE[27].Width_Adjuster_1/counter_next_reg[2] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[27].Width_Adjuster_1/counter_next_reg[1] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[27].Width_Adjuster_1/counter_next_reg[0] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[27].Width_Adjuster_1/counter_next_reg[3] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[27].Width_Adjuster_1/counter_next_reg[4] {LDCE}
+WARNING: [Place 30-568] A LUT 'TriggerWidth_0/WidthAdjuster_GENERATE[28].Width_Adjuster_0/counter_next_reg[7]_i_2__58' is driving clock pin of 8 registers. This could lead to large hold time violations. First few involved registers are:
+	TriggerWidth_0/WidthAdjuster_GENERATE[28].Width_Adjuster_0/counter_next_reg[2] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[28].Width_Adjuster_0/counter_next_reg[1] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[28].Width_Adjuster_0/counter_next_reg[0] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[28].Width_Adjuster_0/counter_next_reg[3] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[28].Width_Adjuster_0/counter_next_reg[4] {LDCE}
+WARNING: [Place 30-568] A LUT 'TriggerWidth_0/WidthAdjuster_GENERATE[28].Width_Adjuster_1/counter_next_reg[7]_i_2__59' is driving clock pin of 8 registers. This could lead to large hold time violations. First few involved registers are:
+	TriggerWidth_0/WidthAdjuster_GENERATE[28].Width_Adjuster_1/counter_next_reg[4] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[28].Width_Adjuster_1/counter_next_reg[3] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[28].Width_Adjuster_1/counter_next_reg[2] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[28].Width_Adjuster_1/counter_next_reg[1] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[28].Width_Adjuster_1/counter_next_reg[0] {LDCE}
+WARNING: [Place 30-568] A LUT 'TriggerWidth_0/WidthAdjuster_GENERATE[29].Width_Adjuster_0/counter_next_reg[7]_i_2__60' is driving clock pin of 8 registers. This could lead to large hold time violations. First few involved registers are:
+	TriggerWidth_0/WidthAdjuster_GENERATE[29].Width_Adjuster_0/counter_next_reg[2] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[29].Width_Adjuster_0/counter_next_reg[1] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[29].Width_Adjuster_0/counter_next_reg[0] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[29].Width_Adjuster_0/counter_next_reg[3] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[29].Width_Adjuster_0/counter_next_reg[4] {LDCE}
+WARNING: [Place 30-568] A LUT 'TriggerWidth_0/WidthAdjuster_GENERATE[29].Width_Adjuster_1/counter_next_reg[7]_i_2__61' is driving clock pin of 8 registers. This could lead to large hold time violations. First few involved registers are:
+	TriggerWidth_0/WidthAdjuster_GENERATE[29].Width_Adjuster_1/counter_next_reg[1] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[29].Width_Adjuster_1/counter_next_reg[0] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[29].Width_Adjuster_1/counter_next_reg[2] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[29].Width_Adjuster_1/counter_next_reg[3] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[29].Width_Adjuster_1/counter_next_reg[4] {LDCE}
+WARNING: [Place 30-568] A LUT 'TriggerWidth_0/WidthAdjuster_GENERATE[2].Width_Adjuster_0/counter_next_reg[7]_i_2__6' is driving clock pin of 8 registers. This could lead to large hold time violations. First few involved registers are:
+	TriggerWidth_0/WidthAdjuster_GENERATE[2].Width_Adjuster_0/counter_next_reg[3] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[2].Width_Adjuster_0/counter_next_reg[2] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[2].Width_Adjuster_0/counter_next_reg[1] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[2].Width_Adjuster_0/counter_next_reg[0] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[2].Width_Adjuster_0/counter_next_reg[4] {LDCE}
+WARNING: [Place 30-568] A LUT 'TriggerWidth_0/WidthAdjuster_GENERATE[2].Width_Adjuster_1/counter_next_reg[7]_i_2__7' is driving clock pin of 8 registers. This could lead to large hold time violations. First few involved registers are:
+	TriggerWidth_0/WidthAdjuster_GENERATE[2].Width_Adjuster_1/counter_next_reg[3] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[2].Width_Adjuster_1/counter_next_reg[2] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[2].Width_Adjuster_1/counter_next_reg[1] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[2].Width_Adjuster_1/counter_next_reg[0] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[2].Width_Adjuster_1/counter_next_reg[4] {LDCE}
+WARNING: [Place 30-568] A LUT 'TriggerWidth_0/WidthAdjuster_GENERATE[30].Width_Adjuster_0/counter_next_reg[7]_i_2__62' is driving clock pin of 8 registers. This could lead to large hold time violations. First few involved registers are:
+	TriggerWidth_0/WidthAdjuster_GENERATE[30].Width_Adjuster_0/counter_next_reg[2] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[30].Width_Adjuster_0/counter_next_reg[1] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[30].Width_Adjuster_0/counter_next_reg[0] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[30].Width_Adjuster_0/counter_next_reg[3] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[30].Width_Adjuster_0/counter_next_reg[4] {LDCE}
+WARNING: [Place 30-568] A LUT 'TriggerWidth_0/WidthAdjuster_GENERATE[30].Width_Adjuster_1/counter_next_reg[7]_i_2__63' is driving clock pin of 8 registers. This could lead to large hold time violations. First few involved registers are:
+	TriggerWidth_0/WidthAdjuster_GENERATE[30].Width_Adjuster_1/counter_next_reg[3] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[30].Width_Adjuster_1/counter_next_reg[2] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[30].Width_Adjuster_1/counter_next_reg[1] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[30].Width_Adjuster_1/counter_next_reg[0] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[30].Width_Adjuster_1/counter_next_reg[4] {LDCE}
+WARNING: [Place 30-568] A LUT 'TriggerWidth_0/WidthAdjuster_GENERATE[31].Width_Adjuster_0/counter_next_reg[7]_i_2__64' is driving clock pin of 8 registers. This could lead to large hold time violations. First few involved registers are:
+	TriggerWidth_0/WidthAdjuster_GENERATE[31].Width_Adjuster_0/counter_next_reg[4] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[31].Width_Adjuster_0/counter_next_reg[3] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[31].Width_Adjuster_0/counter_next_reg[2] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[31].Width_Adjuster_0/counter_next_reg[1] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[31].Width_Adjuster_0/counter_next_reg[0] {LDCE}
+WARNING: [Place 30-568] A LUT 'TriggerWidth_0/WidthAdjuster_GENERATE[31].Width_Adjuster_1/counter_next_reg[7]_i_2__65' is driving clock pin of 8 registers. This could lead to large hold time violations. First few involved registers are:
+	TriggerWidth_0/WidthAdjuster_GENERATE[31].Width_Adjuster_1/counter_next_reg[4] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[31].Width_Adjuster_1/counter_next_reg[3] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[31].Width_Adjuster_1/counter_next_reg[2] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[31].Width_Adjuster_1/counter_next_reg[1] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[31].Width_Adjuster_1/counter_next_reg[0] {LDCE}
+WARNING: [Place 30-568] A LUT 'TriggerWidth_0/WidthAdjuster_GENERATE[3].Width_Adjuster_0/counter_next_reg[7]_i_2__8' is driving clock pin of 8 registers. This could lead to large hold time violations. First few involved registers are:
+	TriggerWidth_0/WidthAdjuster_GENERATE[3].Width_Adjuster_0/counter_next_reg[2] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[3].Width_Adjuster_0/counter_next_reg[1] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[3].Width_Adjuster_0/counter_next_reg[0] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[3].Width_Adjuster_0/counter_next_reg[3] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[3].Width_Adjuster_0/counter_next_reg[4] {LDCE}
+WARNING: [Place 30-568] A LUT 'TriggerWidth_0/WidthAdjuster_GENERATE[3].Width_Adjuster_1/counter_next_reg[7]_i_2__9' is driving clock pin of 8 registers. This could lead to large hold time violations. First few involved registers are:
+	TriggerWidth_0/WidthAdjuster_GENERATE[3].Width_Adjuster_1/counter_next_reg[2] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[3].Width_Adjuster_1/counter_next_reg[1] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[3].Width_Adjuster_1/counter_next_reg[0] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[3].Width_Adjuster_1/counter_next_reg[3] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[3].Width_Adjuster_1/counter_next_reg[4] {LDCE}
+WARNING: [Place 30-568] A LUT 'TriggerWidth_0/WidthAdjuster_GENERATE[4].Width_Adjuster_0/counter_next_reg[7]_i_2__10' is driving clock pin of 8 registers. This could lead to large hold time violations. First few involved registers are:
+	TriggerWidth_0/WidthAdjuster_GENERATE[4].Width_Adjuster_0/counter_next_reg[0] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[4].Width_Adjuster_0/counter_next_reg[1] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[4].Width_Adjuster_0/counter_next_reg[2] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[4].Width_Adjuster_0/counter_next_reg[3] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[4].Width_Adjuster_0/counter_next_reg[4] {LDCE}
+WARNING: [Place 30-568] A LUT 'TriggerWidth_0/WidthAdjuster_GENERATE[4].Width_Adjuster_1/counter_next_reg[7]_i_2__11' is driving clock pin of 8 registers. This could lead to large hold time violations. First few involved registers are:
+	TriggerWidth_0/WidthAdjuster_GENERATE[4].Width_Adjuster_1/counter_next_reg[4] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[4].Width_Adjuster_1/counter_next_reg[3] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[4].Width_Adjuster_1/counter_next_reg[2] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[4].Width_Adjuster_1/counter_next_reg[1] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[4].Width_Adjuster_1/counter_next_reg[0] {LDCE}
+WARNING: [Place 30-568] A LUT 'TriggerWidth_0/WidthAdjuster_GENERATE[5].Width_Adjuster_0/counter_next_reg[7]_i_2__12' is driving clock pin of 8 registers. This could lead to large hold time violations. First few involved registers are:
+	TriggerWidth_0/WidthAdjuster_GENERATE[5].Width_Adjuster_0/counter_next_reg[1] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[5].Width_Adjuster_0/counter_next_reg[0] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[5].Width_Adjuster_0/counter_next_reg[2] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[5].Width_Adjuster_0/counter_next_reg[3] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[5].Width_Adjuster_0/counter_next_reg[4] {LDCE}
+WARNING: [Place 30-568] A LUT 'TriggerWidth_0/WidthAdjuster_GENERATE[5].Width_Adjuster_1/counter_next_reg[7]_i_2__13' is driving clock pin of 8 registers. This could lead to large hold time violations. First few involved registers are:
+	TriggerWidth_0/WidthAdjuster_GENERATE[5].Width_Adjuster_1/counter_next_reg[2] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[5].Width_Adjuster_1/counter_next_reg[1] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[5].Width_Adjuster_1/counter_next_reg[0] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[5].Width_Adjuster_1/counter_next_reg[3] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[5].Width_Adjuster_1/counter_next_reg[4] {LDCE}
+WARNING: [Place 30-568] A LUT 'TriggerWidth_0/WidthAdjuster_GENERATE[6].Width_Adjuster_0/counter_next_reg[7]_i_2__14' is driving clock pin of 8 registers. This could lead to large hold time violations. First few involved registers are:
+	TriggerWidth_0/WidthAdjuster_GENERATE[6].Width_Adjuster_0/counter_next_reg[2] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[6].Width_Adjuster_0/counter_next_reg[1] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[6].Width_Adjuster_0/counter_next_reg[0] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[6].Width_Adjuster_0/counter_next_reg[3] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[6].Width_Adjuster_0/counter_next_reg[4] {LDCE}
+WARNING: [Place 30-568] A LUT 'TriggerWidth_0/WidthAdjuster_GENERATE[6].Width_Adjuster_1/counter_next_reg[7]_i_2__15' is driving clock pin of 8 registers. This could lead to large hold time violations. First few involved registers are:
+	TriggerWidth_0/WidthAdjuster_GENERATE[6].Width_Adjuster_1/counter_next_reg[0] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[6].Width_Adjuster_1/counter_next_reg[1] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[6].Width_Adjuster_1/counter_next_reg[2] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[6].Width_Adjuster_1/counter_next_reg[3] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[6].Width_Adjuster_1/counter_next_reg[4] {LDCE}
+WARNING: [Place 30-568] A LUT 'TriggerWidth_0/WidthAdjuster_GENERATE[7].Width_Adjuster_0/counter_next_reg[7]_i_2__16' is driving clock pin of 8 registers. This could lead to large hold time violations. First few involved registers are:
+	TriggerWidth_0/WidthAdjuster_GENERATE[7].Width_Adjuster_0/counter_next_reg[5] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[7].Width_Adjuster_0/counter_next_reg[4] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[7].Width_Adjuster_0/counter_next_reg[3] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[7].Width_Adjuster_0/counter_next_reg[2] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[7].Width_Adjuster_0/counter_next_reg[1] {LDCE}
+WARNING: [Place 30-568] A LUT 'TriggerWidth_0/WidthAdjuster_GENERATE[7].Width_Adjuster_1/counter_next_reg[7]_i_2__17' is driving clock pin of 8 registers. This could lead to large hold time violations. First few involved registers are:
+	TriggerWidth_0/WidthAdjuster_GENERATE[7].Width_Adjuster_1/counter_next_reg[7] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[7].Width_Adjuster_1/counter_next_reg[6] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[7].Width_Adjuster_1/counter_next_reg[0] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[7].Width_Adjuster_1/counter_next_reg[1] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[7].Width_Adjuster_1/counter_next_reg[2] {LDCE}
+WARNING: [Place 30-568] A LUT 'TriggerWidth_0/WidthAdjuster_GENERATE[8].Width_Adjuster_0/counter_next_reg[7]_i_2__18' is driving clock pin of 8 registers. This could lead to large hold time violations. First few involved registers are:
+	TriggerWidth_0/WidthAdjuster_GENERATE[8].Width_Adjuster_0/counter_next_reg[2] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[8].Width_Adjuster_0/counter_next_reg[1] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[8].Width_Adjuster_0/counter_next_reg[0] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[8].Width_Adjuster_0/counter_next_reg[3] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[8].Width_Adjuster_0/counter_next_reg[4] {LDCE}
+WARNING: [Place 30-568] A LUT 'TriggerWidth_0/WidthAdjuster_GENERATE[8].Width_Adjuster_1/counter_next_reg[7]_i_2__19' is driving clock pin of 8 registers. This could lead to large hold time violations. First few involved registers are:
+	TriggerWidth_0/WidthAdjuster_GENERATE[8].Width_Adjuster_1/counter_next_reg[3] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[8].Width_Adjuster_1/counter_next_reg[2] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[8].Width_Adjuster_1/counter_next_reg[1] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[8].Width_Adjuster_1/counter_next_reg[0] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[8].Width_Adjuster_1/counter_next_reg[4] {LDCE}
+WARNING: [Place 30-568] A LUT 'TriggerWidth_0/WidthAdjuster_GENERATE[9].Width_Adjuster_0/counter_next_reg[7]_i_2__20' is driving clock pin of 8 registers. This could lead to large hold time violations. First few involved registers are:
+	TriggerWidth_0/WidthAdjuster_GENERATE[9].Width_Adjuster_0/counter_next_reg[4] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[9].Width_Adjuster_0/counter_next_reg[3] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[9].Width_Adjuster_0/counter_next_reg[2] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[9].Width_Adjuster_0/counter_next_reg[1] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[9].Width_Adjuster_0/counter_next_reg[0] {LDCE}
+WARNING: [Place 30-568] A LUT 'TriggerWidth_0/WidthAdjuster_GENERATE[9].Width_Adjuster_1/counter_next_reg[7]_i_2__21' is driving clock pin of 8 registers. This could lead to large hold time violations. First few involved registers are:
+	TriggerWidth_0/WidthAdjuster_GENERATE[9].Width_Adjuster_1/counter_next_reg[3] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[9].Width_Adjuster_1/counter_next_reg[2] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[9].Width_Adjuster_1/counter_next_reg[1] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[9].Width_Adjuster_1/counter_next_reg[0] {LDCE}
+	TriggerWidth_0/WidthAdjuster_GENERATE[9].Width_Adjuster_1/counter_next_reg[4] {LDCE}
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'vclk_6M' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [C:/Users/tomoh/vivado/ChikumaProject150923_test191108/chikuma_new/New_Firmware/constraint/timing.xdc:9]
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'vclk_66M' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [C:/Users/tomoh/vivado/ChikumaProject150923_test191108/chikuma_new/New_Firmware/constraint/timing.xdc:10]
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 2.1.1.2 IO & Clk Clean Up
+Phase 2.1.1.2 IO & Clk Clean Up | Checksum: 38465510
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1246.281 ; gain = 0.000
+
+Phase 2.1.1.3 Implementation Feasibility check On IDelay
+Phase 2.1.1.3 Implementation Feasibility check On IDelay | Checksum: 38465510
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1246.281 ; gain = 0.000
+
+Phase 2.1.1.4 Commit IO Placement
+Phase 2.1.1.4 Commit IO Placement | Checksum: 24cb3ad6
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1246.281 ; gain = 0.000
+Phase 2.1.1 IO Placement/ Clock Placement/ Build Placer Device | Checksum: a3c3b7e8
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1246.281 ; gain = 0.000
+
+Phase 2.1.2 Build Placer Netlist Model
+
+Phase 2.1.2.1 Place Init Design
+
+Phase 2.1.2.1.1 Init Lut Pin Assignment
+Phase 2.1.2.1.1 Init Lut Pin Assignment | Checksum: 11e917674
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:14 . Memory (MB): peak = 1246.281 ; gain = 0.000
+Phase 2.1.2.1 Place Init Design | Checksum: e49c1a10
+
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:23 . Memory (MB): peak = 1246.281 ; gain = 0.000
+Phase 2.1.2 Build Placer Netlist Model | Checksum: e49c1a10
+
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:23 . Memory (MB): peak = 1246.281 ; gain = 0.000
+
+Phase 2.1.3 Constrain Clocks/Macros
+
+Phase 2.1.3.1 Constrain Global/Regional Clocks
+Phase 2.1.3.1 Constrain Global/Regional Clocks | Checksum: e49c1a10
+
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:23 . Memory (MB): peak = 1246.281 ; gain = 0.000
+Phase 2.1.3 Constrain Clocks/Macros | Checksum: e49c1a10
+
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:23 . Memory (MB): peak = 1246.281 ; gain = 0.000
+Phase 2.1 Placer Initialization Core | Checksum: e49c1a10
+
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:23 . Memory (MB): peak = 1246.281 ; gain = 0.000
+Phase 2 Placer Initialization | Checksum: e49c1a10
+
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:24 . Memory (MB): peak = 1246.281 ; gain = 0.000
+
+Phase 3 Global Placement
+Phase 3 Global Placement | Checksum: 159c02ace
+
+Time (s): cpu = 00:01:12 ; elapsed = 00:00:50 . Memory (MB): peak = 1246.281 ; gain = 0.000
+
+Phase 4 Detail Placement
+
+Phase 4.1 Commit Multi Column Macros
+Phase 4.1 Commit Multi Column Macros | Checksum: 159c02ace
+
+Time (s): cpu = 00:01:12 ; elapsed = 00:00:50 . Memory (MB): peak = 1246.281 ; gain = 0.000
+
+Phase 4.2 Commit Most Macros & LUTRAMs
+Phase 4.2 Commit Most Macros & LUTRAMs | Checksum: 1c44a148d
+
+Time (s): cpu = 00:01:25 ; elapsed = 00:01:00 . Memory (MB): peak = 1246.281 ; gain = 0.000
+
+Phase 4.3 Area Swap Optimization
+Phase 4.3 Area Swap Optimization | Checksum: 18f905f28
+
+Time (s): cpu = 00:01:26 ; elapsed = 00:01:00 . Memory (MB): peak = 1246.281 ; gain = 0.000
+
+Phase 4.4 Timing Path Optimizer
+Phase 4.4 Timing Path Optimizer | Checksum: 1bb39a023
+
+Time (s): cpu = 00:01:32 ; elapsed = 00:01:03 . Memory (MB): peak = 1246.281 ; gain = 0.000
+
+Phase 4.5 Commit Small Macros & Core Logic
+
+Phase 4.5.1 setBudgets
+Phase 4.5.1 setBudgets | Checksum: 1e5f5d4c3
+
+Time (s): cpu = 00:01:32 ; elapsed = 00:01:03 . Memory (MB): peak = 1246.281 ; gain = 0.000
+
+Phase 4.5.2 Commit Slice Clusters
+Phase 4.5.2 Commit Slice Clusters | Checksum: 159047db0
+
+Time (s): cpu = 00:01:39 ; elapsed = 00:01:09 . Memory (MB): peak = 1246.281 ; gain = 0.000
+Phase 4.5 Commit Small Macros & Core Logic | Checksum: 159047db0
+
+Time (s): cpu = 00:01:39 ; elapsed = 00:01:10 . Memory (MB): peak = 1246.281 ; gain = 0.000
+
+Phase 4.6 Clock Restriction Legalization for Leaf Columns
+Phase 4.6 Clock Restriction Legalization for Leaf Columns | Checksum: 159047db0
+
+Time (s): cpu = 00:01:40 ; elapsed = 00:01:10 . Memory (MB): peak = 1246.281 ; gain = 0.000
+
+Phase 4.7 Clock Restriction Legalization for Non-Clock Pins
+WARNING: [Constraints 18-647] Placement may not be routable. The following cell(s) are grouped together and are placed in one single tile. The total number of clocks on non-clock pins of these cells is greater than 2, therefore, placer is not able to legalize the design to satisfy the suggested number of clocks that can drive non-clock pins in a single tile. Please modify the design such that each cell has at most 2 clocks driving its non-clock pins. Also, if one or more cells should be grouped together and placed in one tile, make sure the total number of such clocks does not exceed the maximum suggested.
+ClockManager_0/MMCM_0/OUT_FPGA_OBUF[3]_inst_i_4
+
+WARNING: [Constraints 18-643] Placement may not be routable as design contains luts and/or flops whose data pins are driven by global clock signals and final placement is such that the number of such signals exceed the suggested number of such clocks in a single tile, which is 2. The following clock nets need to be routed to non-clock pins in tile CLBLL_L_X52Y100:
+ClockManager_0/AD9220_CLK, ClockManager_0/MMCM_0/FAST_CLK, and ClockManager_0/MMCM_0/SCALER_CLK
+Phase 4.7 Clock Restriction Legalization for Non-Clock Pins | Checksum: 1175cf98b
+
+Time (s): cpu = 00:01:40 ; elapsed = 00:01:10 . Memory (MB): peak = 1246.281 ; gain = 0.000
+
+Phase 4.8 Place Remaining
+Phase 4.8 Place Remaining | Checksum: 1d6623373
+
+Time (s): cpu = 00:01:40 ; elapsed = 00:01:10 . Memory (MB): peak = 1246.281 ; gain = 0.000
+
+Phase 4.9 Re-assign LUT pins
+Phase 4.9 Re-assign LUT pins | Checksum: 1d6623373
+
+Time (s): cpu = 00:01:41 ; elapsed = 00:01:11 . Memory (MB): peak = 1246.281 ; gain = 0.000
+Phase 4 Detail Placement | Checksum: 1d6623373
+
+Time (s): cpu = 00:01:41 ; elapsed = 00:01:11 . Memory (MB): peak = 1246.281 ; gain = 0.000
+
+Phase 5 Post Placement Optimization and Clean-Up
+
+Phase 5.1 PCOPT Shape updates
+Phase 5.1 PCOPT Shape updates | Checksum: 151fa619a
+
+Time (s): cpu = 00:01:42 ; elapsed = 00:01:12 . Memory (MB): peak = 1246.281 ; gain = 0.000
+
+Phase 5.2 Post Placement Optimization
+
+Phase 5.2.1 Post Placement Timing Optimization
+
+Phase 5.2.1.1 Restore Best Placement
+Phase 5.2.1.1 Restore Best Placement | Checksum: 11baf882f
+
+Time (s): cpu = 00:01:56 ; elapsed = 00:01:22 . Memory (MB): peak = 1246.281 ; gain = 0.000
+INFO: [Place 30-746] Post Placement Timing Summary WNS=-0.122. For the most accurate timing information please run report_timing.
+Phase 5.2.1 Post Placement Timing Optimization | Checksum: 11baf882f
+
+Time (s): cpu = 00:01:56 ; elapsed = 00:01:23 . Memory (MB): peak = 1246.281 ; gain = 0.000
+Phase 5.2 Post Placement Optimization | Checksum: 11baf882f
+
+Time (s): cpu = 00:01:56 ; elapsed = 00:01:23 . Memory (MB): peak = 1246.281 ; gain = 0.000
+
+Phase 5.3 Commit Small Macros & Core Logic
+
+Phase 5.3.1 setBudgets
+Phase 5.3.1 setBudgets | Checksum: 21c753b4c
+
+Time (s): cpu = 00:01:58 ; elapsed = 00:01:24 . Memory (MB): peak = 1246.281 ; gain = 0.000
+
+Phase 5.3.2 Commit Slice Clusters
+Phase 5.3.2 Commit Slice Clusters | Checksum: 145983399
+
+Time (s): cpu = 00:01:59 ; elapsed = 00:01:25 . Memory (MB): peak = 1246.281 ; gain = 0.000
+Phase 5.3 Commit Small Macros & Core Logic | Checksum: 1e95f2c41
+
+Time (s): cpu = 00:02:05 ; elapsed = 00:01:29 . Memory (MB): peak = 1246.281 ; gain = 0.000
+
+Phase 5.4 Clock Restriction Legalization for Leaf Columns
+Phase 5.4 Clock Restriction Legalization for Leaf Columns | Checksum: 1e95f2c41
+
+Time (s): cpu = 00:02:05 ; elapsed = 00:01:29 . Memory (MB): peak = 1246.281 ; gain = 0.000
+
+Phase 5.5 Clock Restriction Legalization for Non-Clock Pins
+WARNING: [Constraints 18-647] Placement may not be routable. The following cell(s) are grouped together and are placed in one single tile. The total number of clocks on non-clock pins of these cells is greater than 2, therefore, placer is not able to legalize the design to satisfy the suggested number of clocks that can drive non-clock pins in a single tile. Please modify the design such that each cell has at most 2 clocks driving its non-clock pins. Also, if one or more cells should be grouped together and placed in one tile, make sure the total number of such clocks does not exceed the maximum suggested.
+ClockManager_0/MMCM_0/OUT_FPGA_OBUF[3]_inst_i_4
+
+WARNING: [Constraints 18-643] Placement may not be routable as design contains luts and/or flops whose data pins are driven by global clock signals and final placement is such that the number of such signals exceed the suggested number of such clocks in a single tile, which is 2. The following clock nets need to be routed to non-clock pins in tile CLBLL_L_X52Y100:
+ClockManager_0/AD9220_CLK, ClockManager_0/MMCM_0/FAST_CLK, and ClockManager_0/MMCM_0/SCALER_CLK
+Phase 5.5 Clock Restriction Legalization for Non-Clock Pins | Checksum: 1e95f2c41
+
+Time (s): cpu = 00:02:05 ; elapsed = 00:01:29 . Memory (MB): peak = 1246.281 ; gain = 0.000
+
+Phase 5.6 Post Placement Optimization
+
+Phase 5.6.1 Post Placement Timing Optimization
+
+Phase 5.6.1.1 Restore Best Placement
+Phase 5.6.1.1 Restore Best Placement | Checksum: 1d4b1954c
+
+Time (s): cpu = 00:02:17 ; elapsed = 00:01:37 . Memory (MB): peak = 1246.281 ; gain = 0.000
+INFO: [Place 30-746] Post Placement Timing Summary WNS=-0.056. For the most accurate timing information please run report_timing.
+Phase 5.6.1 Post Placement Timing Optimization | Checksum: 1d4b1954c
+
+Time (s): cpu = 00:02:18 ; elapsed = 00:01:37 . Memory (MB): peak = 1246.281 ; gain = 0.000
+Phase 5.6 Post Placement Optimization | Checksum: 1d4b1954c
+
+Time (s): cpu = 00:02:18 ; elapsed = 00:01:37 . Memory (MB): peak = 1246.281 ; gain = 0.000
+
+Phase 5.7 Post Placement Optimization
+
+Phase 5.7.1 Post Placement Timing Optimization
+
+Phase 5.7.1.1 Restore Best Placement
+Phase 5.7.1.1 Restore Best Placement | Checksum: 266945146
+
+Time (s): cpu = 00:02:30 ; elapsed = 00:01:47 . Memory (MB): peak = 1246.281 ; gain = 0.000
+INFO: [Place 30-746] Post Placement Timing Summary WNS=-0.056. For the most accurate timing information please run report_timing.
+Phase 5.7.1 Post Placement Timing Optimization | Checksum: 266945146
+
+Time (s): cpu = 00:02:30 ; elapsed = 00:01:47 . Memory (MB): peak = 1246.281 ; gain = 0.000
+Phase 5.7 Post Placement Optimization | Checksum: 266945146
+
+Time (s): cpu = 00:02:31 ; elapsed = 00:01:47 . Memory (MB): peak = 1246.281 ; gain = 0.000
+
+Phase 5.8 Post Placement Cleanup
+Phase 5.8 Post Placement Cleanup | Checksum: 266945146
+
+Time (s): cpu = 00:02:31 ; elapsed = 00:01:47 . Memory (MB): peak = 1246.281 ; gain = 0.000
+
+Phase 5.9 Placer Reporting
+
+Phase 5.9.1 Restore STA
+Phase 5.9.1 Restore STA | Checksum: 266945146
+
+Time (s): cpu = 00:02:31 ; elapsed = 00:01:47 . Memory (MB): peak = 1246.281 ; gain = 0.000
+Phase 5.9 Placer Reporting | Checksum: 266945146
+
+Time (s): cpu = 00:02:31 ; elapsed = 00:01:47 . Memory (MB): peak = 1246.281 ; gain = 0.000
+
+Phase 5.10 Final Placement Cleanup
+Phase 5.10 Final Placement Cleanup | Checksum: 2a83bee74
+
+Time (s): cpu = 00:02:31 ; elapsed = 00:01:47 . Memory (MB): peak = 1246.281 ; gain = 0.000
+Phase 5 Post Placement Optimization and Clean-Up | Checksum: 2a83bee74
+
+Time (s): cpu = 00:02:31 ; elapsed = 00:01:47 . Memory (MB): peak = 1246.281 ; gain = 0.000
+Ending Placer Task | Checksum: 1f69d47ca
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:01:47 . Memory (MB): peak = 1246.281 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+54 Infos, 75 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:02:35 ; elapsed = 00:01:50 . Memory (MB): peak = 1246.281 ; gain = 0.000
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 1246.281 ; gain = 0.000
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.734 . Memory (MB): peak = 1246.281 ; gain = 0.000
+Command: phys_opt_design -directive AddRetime
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Vivado_Tcl 4-137] Directive used for phys_opt_design is: AddRetime
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+Phase 1 Physical Synthesis Initialization | Checksum: 19e86f631
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 1246.281 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.047 . Memory (MB): peak = 1246.281 ; gain = 0.000
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.056 | TNS=-0.065 |
+
+Phase 2 Fanout Optimization
+INFO: [Physopt 32-76] Pass 1. Identified 11 candidate nets for fanout optimization.
+INFO: [Physopt 32-81] Processed net MHTDC_0/MHTDC_Core_0/MHTDC_Builder_Trailing/n_0_Channel_reg[1]_rep__4. Replicated 2 times.
+INFO: [Physopt 32-81] Processed net MHTDC_0/MHTDC_Core_0/MHTDC_Builder_Trailing/n_0_Channel_reg[0]_rep. Replicated 4 times.
+INFO: [Physopt 32-81] Processed net MHTDC_0/MHTDC_Core_0/MHTDC_Builder_Trailing/n_0_Channel_reg[0]_rep__0. Replicated 4 times.
+INFO: [Physopt 32-81] Processed net MHTDC_0/MHTDC_Core_0/MHTDC_Builder_Trailing/n_0_Channel_reg[0]_rep__2. Replicated 4 times.
+INFO: [Physopt 32-81] Processed net MHTDC_0/MHTDC_Core_0/MHTDC_Builder_Trailing/Channel_reg[0]. Replicated 3 times.
+INFO: [Physopt 32-81] Processed net MHTDC_0/MHTDC_Core_0/MHTDC_Builder_Trailing/n_0_Channel_reg[1]_rep__0. Replicated 2 times.
+INFO: [Physopt 32-81] Processed net MHTDC_0/MHTDC_Core_0/MHTDC_Builder_Trailing/n_0_Channel_reg[1]_rep__3. Replicated 2 times.
+INFO: [Physopt 32-572] Net MHTDC_0/MHTDC_Core_0/MHTDC_Builder_Trailing/n_0_Channel_reg[1]_rep__5 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-81] Processed net MHTDC_0/MHTDC_Core_0/MHTDC_Builder_Trailing/n_0_Channel_reg[1]_rep__2. Replicated 4 times.
+INFO: [Physopt 32-81] Processed net MHTDC_0/MHTDC_Core_0/MHTDC_Builder_Trailing/n_0_Channel_reg[0]_rep__1. Replicated 4 times.
+INFO: [Physopt 32-81] Processed net MHTDC_0/MHTDC_Core_0/MHTDC_Builder_Trailing/n_0_Channel_reg[1]_rep__1. Replicated 2 times.
+INFO: [Physopt 32-29] End Pass 1. Optimized 10 nets. Created 31 new instances.
+
+INFO: [Physopt 32-76] Pass 2. Identified 2 candidate nets for fanout optimization.
+INFO: [Physopt 32-81] Processed net MHTDC_0/MHTDC_Core_0/MHTDC_Builder_Trailing/n_0_Channel_reg[1]_rep__5. Replicated 2 times.
+INFO: [Physopt 32-81] Processed net MHTDC_0/MHTDC_Core_0/MHTDC_Builder_Trailing/n_0_Channel_reg[0]_rep_repN_1. Replicated 2 times.
+INFO: [Physopt 32-29] End Pass 2. Optimized 2 nets. Created 4 new instances.
+
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.056 | TNS=-0.065 |
+Phase 2 Fanout Optimization | Checksum: 1c7c2e51e
+
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:12 . Memory (MB): peak = 1246.281 ; gain = 0.000
+
+Phase 3 Placement Based Optimization
+INFO: [Physopt 32-660] Identified 100 candidate nets for placement-based optimization.
+INFO: [Physopt 32-662] Processed net TriggerManager_0/Trigger_Delayer/eqOp.  Did not re-place instance TriggerManager_0/Trigger_Delayer/trigger_s_reg_i_3__1
+INFO: [Physopt 32-662] Processed net TriggerManager_0/Trigger_Delayer/n_0_state[0]_i_1__65.  Did not re-place instance TriggerManager_0/Trigger_Delayer/state[0]_i_1__65
+INFO: [Physopt 32-662] Processed net TriggerManager_0/Trigger_Delayer/n_0_trigger_s_reg_i_5__1.  Did not re-place instance TriggerManager_0/Trigger_Delayer/trigger_s_reg_i_5__1
+INFO: [Physopt 32-662] Processed net TriggerManager_0/Trigger_Delayer/n_0_trigger_s_reg_i_7__1.  Did not re-place instance TriggerManager_0/Trigger_Delayer/trigger_s_reg_i_7__1
+INFO: [Physopt 32-662] Processed net TriggerManager_0/Trigger_Delayer/n_0_trigger_s_reg_i_8__1.  Did not re-place instance TriggerManager_0/Trigger_Delayer/trigger_s_reg_i_8__1
+INFO: [Physopt 32-662] Processed net TriggerManager_0/Trigger_Delayer/counter[2].  Did not re-place instance TriggerManager_0/Trigger_Delayer/counter_reg[2]
+INFO: [Physopt 32-662] Processed net TriggerManager_0/Trigger_Delayer/counter[3].  Did not re-place instance TriggerManager_0/Trigger_Delayer/counter_reg[3]
+INFO: [Physopt 32-662] Processed net TriggerManager_0/Trigger_Delayer/state_next[1].  Did not re-place instance TriggerManager_0/Trigger_Delayer/state[1]_i_1__63
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[9].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[2].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[9].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[2]
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[27].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[2].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[27].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[2]
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[30].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[16].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[30].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[16]
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[13].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[9].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[13].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[9]
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[8].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[1].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[8].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[1]
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[5].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[0].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[5].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[0]
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[28].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[2].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[28].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[2]
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[28].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[0].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[28].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[0]
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[21].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[14].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[21].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[14]
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[24].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[1].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[24].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[1]
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[28].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[16].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[28].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[16]
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[8].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[9].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[8].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[9]
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[19].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[15].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[19].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[15]
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/MHTDC_Builder_Trailing/n_0_Channel_reg[1]_rep__3_repN.  Did not re-place instance MHTDC_0/MHTDC_Core_0/MHTDC_Builder_Trailing/Channel_reg[1]_rep__3_replica
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[30].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[7].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[30].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[7]
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/MHTDC_Builder_Trailing/n_0_Channel_reg[0]_rep_repN_1_repN.  Did not re-place instance MHTDC_0/MHTDC_Core_0/MHTDC_Builder_Trailing/Channel_reg[0]_rep_replica_1_replica
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[3].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[0].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[3].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[0]
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[26].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[16].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[26].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[16]
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/MHTDC_Builder_Trailing/n_0_Channel_reg[0]_rep__2_repN_2.  Did not re-place instance MHTDC_0/MHTDC_Core_0/MHTDC_Builder_Trailing/Channel_reg[0]_rep__2_replica_2
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[29].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[21].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[29].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[21]
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[30].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[8].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[30].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[8]
+INFO: [Physopt 32-662] Processed net TriggerManager_0/SynchEdgeDetector_FAST_CLEAR/DelayedDin_0.  Did not re-place instance TriggerManager_0/SynchEdgeDetector_FAST_CLEAR/DelayedDin_reg
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[18].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[3].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[18].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[3]
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[21].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[16].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[21].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[16]
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[25].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[7].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[25].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[7]
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[20].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[0].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[20].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[0]
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[24].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[0].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[24].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[0]
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/MHTDC_Builder_Trailing/n_0_Channel_reg[1]_rep__2_repN.  Did not re-place instance MHTDC_0/MHTDC_Core_0/MHTDC_Builder_Trailing/Channel_reg[1]_rep__2_replica
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[20].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[13].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[20].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[13]
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[29].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[4].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[29].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[4]
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[28].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[20].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[28].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[20]
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[7].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[23].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[7].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[23]
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/MHTDC_Builder_Trailing/n_0_Channel_reg[0]_rep__1_repN_1.  Did not re-place instance MHTDC_0/MHTDC_Core_0/MHTDC_Builder_Trailing/Channel_reg[0]_rep__1_replica_1
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/MHTDC_Builder_Trailing/n_0_Channel_reg[0]_rep__3.  Did not re-place instance MHTDC_0/MHTDC_Core_0/MHTDC_Builder_Trailing/Channel_reg[0]_rep__3
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[15].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[3].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[15].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[3]
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[16].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[0].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[16].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[0]
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[30].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[1].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[30].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[1]
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[26].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[0].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[26].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[0]
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[27].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[1].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[27].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[1]
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[29].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[0].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[29].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[0]
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[29].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[8].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[29].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[8]
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[31].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[1].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[31].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[1]
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[29].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[5].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[29].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[5]
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[27].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[17].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[27].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[17]
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[31].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[3].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[31].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[3]
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[10].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[3].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[10].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[3]
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[28].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[3].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[28].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[3]
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[29].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[22].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[29].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[22]
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[30].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[5].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[30].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[5]
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[26].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[1].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[26].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[1]
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[21].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[12].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[21].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[12]
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[25].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[1].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[25].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[1]
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[28].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[26].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[28].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[26]
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[27].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[22].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[27].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[22]
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[12].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[9].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[12].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[9]
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[8].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[3].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[8].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[3]
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/MHTDC_Builder_Trailing/n_0_Channel_reg[1]_rep__5_repN.  Did not re-place instance MHTDC_0/MHTDC_Core_0/MHTDC_Builder_Trailing/Channel_reg[1]_rep__5_replica
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[26].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[3].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[26].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[3]
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[27].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[20].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[27].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[20]
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[29].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[13].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[29].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[13]
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[29].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[19].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[29].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[19]
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[8].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[0].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[8].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[0]
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/MHTDC_Builder_Leading/n_0_Channel_reg[1]_rep__6.  Did not re-place instance MHTDC_0/MHTDC_Core_0/MHTDC_Builder_Leading/Channel_reg[1]_rep__6
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[27].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[13].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[27].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[13]
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/MHTDC_Builder_Trailing/n_0_Channel_reg[2]_rep__0.  Did not re-place instance MHTDC_0/MHTDC_Core_0/MHTDC_Builder_Trailing/Channel_reg[2]_rep__0
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/MHTDC_Builder_Leading/n_0_Channel_reg[0]_rep__4.  Did not re-place instance MHTDC_0/MHTDC_Core_0/MHTDC_Builder_Leading/Channel_reg[0]_rep__4
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[16].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[15].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[16].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[15]
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/MHTDC_Builder_Trailing/n_0_Channel_reg[0]_rep__0_repN.  Did not re-place instance MHTDC_0/MHTDC_Core_0/MHTDC_Builder_Trailing/Channel_reg[0]_rep__0_replica
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/MHTDC_Builder_Leading/n_0_Channel_reg[0]_rep__8.  Did not re-place instance MHTDC_0/MHTDC_Core_0/MHTDC_Builder_Leading/Channel_reg[0]_rep__8
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[28].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[4].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[28].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[4]
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[30].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[0].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[30].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[0]
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[31].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[13].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[31].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[13]
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[28].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[1].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[28].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[1]
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[16].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[17].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[16].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[17]
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[26].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[13].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[26].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[13]
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[26].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[14].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[26].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[14]
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[5].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[7].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[5].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[7]
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[31].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[11].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[31].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[11]
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[21].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[0].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[21].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[0]
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[19].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[14].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[19].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[14]
+INFO: [Physopt 32-662] Processed net TriggerManager_0/SynchEdgeDetector_FAST_CLEAR/Synchronizer_0/DOUT.  Did not re-place instance TriggerManager_0/SynchEdgeDetector_FAST_CLEAR/Synchronizer_0/DoubleFFSynchronizerFF2
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[13].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[0].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[13].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[0]
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[13].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[2].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[13].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[2]
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[18].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[13].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[18].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[13]
+INFO: [Physopt 32-663] Processed net TriggerManager_0/CurrentState[3].  Re-placed instance TriggerManager_0/CurrentState_reg[3]
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[18].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[12].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[18].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[12]
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[13].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[1].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[13].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[1]
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[11].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[1].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[11].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[1]
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[25].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[21].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[25].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[21]
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[25].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[4].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[25].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[4]
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[12].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[0].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[12].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[0]
+INFO: [Physopt 32-662] Processed net MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[20].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[15].  Did not re-place instance MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[20].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT_reg[15]
+INFO: [Physopt 32-661] Optimized 1 net.  Re-placed 1 instance.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.056 | TNS=-0.065 |
+Phase 3 Placement Based Optimization | Checksum: 223e5437d
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:20 . Memory (MB): peak = 1246.281 ; gain = 0.000
+
+Phase 4 Rewire
+INFO: [Physopt 32-246] Starting Signal Push optimization...
+INFO: [Physopt 32-197] Pass 1. Identified 2 candidate nets for rewire optimization.
+INFO: [Physopt 32-134] Processed net TriggerManager_0/Trigger_Delayer/n_0_trigger_s_reg_i_7__1. Rewiring did not optimize the net.
+INFO: [Physopt 32-242] Processed net TriggerManager_0/Trigger_Delayer/eqOp. Rewired (signal push) TriggerManager_0/Trigger_Delayer/n_0_trigger_s_reg_i_5__1 to 2 loads. Replicated 1 times.
+INFO: [Physopt 32-29] End Pass 1. Optimized 1 net. Created 1 new instance.
+
+INFO: [Physopt 32-197] Pass 2. Identified 1 candidate net for rewire optimization.
+INFO: [Physopt 32-134] Processed net TriggerManager_0/Trigger_Delayer/n_0_trigger_s_reg_i_7__1. Rewiring did not optimize the net.
+INFO: [Physopt 32-29] End Pass 2. Optimized 0 net. Created 0 new instance.
+
+INFO: [Physopt 32-238] Finished Signal Push optimization...
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.063 . Memory (MB): peak = 1246.281 ; gain = 0.000
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.015 | TNS=-0.015 |
+Phase 4 Rewire | Checksum: 16f7d4cea
+
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:20 . Memory (MB): peak = 1246.281 ; gain = 0.000
+
+Phase 5 Critical Cell Optimization
+INFO: [Physopt 32-46] Identified 9 candidate nets for critical-cell optimization.
+INFO: [Physopt 32-572] Net TriggerManager_0/Trigger_Delayer/n_0_trigger_s_reg_i_5__1 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-572] Net TriggerManager_0/Trigger_Delayer/eqOp_repN was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-571] Net TriggerManager_0/Trigger_Delayer/eqOp was not replicated.
+INFO: [Physopt 32-571] Net TriggerManager_0/Trigger_Delayer/counter[4] was not replicated.
+INFO: [Physopt 32-571] Net TriggerManager_0/CurrentState[2] was not replicated.
+INFO: [Physopt 32-571] Net TriggerManager_0/Synchronizer_AdcTdcBusy/DOUT was not replicated.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+Phase 5 Critical Cell Optimization | Checksum: 206082ca0
+
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:21 . Memory (MB): peak = 1246.281 ; gain = 0.000
+
+Phase 6 DSP Register Optimization
+INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
+Phase 6 DSP Register Optimization | Checksum: 206082ca0
+
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:21 . Memory (MB): peak = 1246.281 ; gain = 0.000
+
+Phase 7 BRAM Register Optimization
+INFO: [Physopt 32-526] No candidate cells for BRAM register optimization found in the design
+Phase 7 BRAM Register Optimization | Checksum: 206082ca0
+
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:21 . Memory (MB): peak = 1246.281 ; gain = 0.000
+
+Phase 8 Shift Register Optimization
+INFO: [Physopt 32-677] No candidate cells for Shift Register optimization found in the design
+Phase 8 Shift Register Optimization | Checksum: 206082ca0
+
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:21 . Memory (MB): peak = 1246.281 ; gain = 0.000
+
+Phase 9 Retime Optimization
+INFO: [Physopt 32-203] No nets found for retiming optimization.
+Phase 9 Retime Optimization | Checksum: 206082ca0
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:22 . Memory (MB): peak = 1246.281 ; gain = 0.000
+
+Phase 10 Critical Pin Optimization
+INFO: [Physopt 32-606] Identified 4 candidate nets for critical-pin optimization.
+INFO: [Physopt 32-609] Processed net TriggerManager_0/Trigger_Delayer/n_0_trigger_s_reg_i_5__1.  Critical pin optimization did not optimize the net.
+INFO: [Physopt 32-608] Optimized 0 net.  Swapped 0 pin.
+Phase 10 Critical Pin Optimization | Checksum: 206082ca0
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:22 . Memory (MB): peak = 1246.281 ; gain = 0.000
+
+Phase 11 Very High Fanout Optimization
+INFO: [Physopt 32-64] No nets found for fanout-optimization.
+Phase 11 Very High Fanout Optimization | Checksum: 206082ca0
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:22 . Memory (MB): peak = 1246.281 ; gain = 0.000
+
+Phase 12 BRAM Enable Optimization
+Phase 12 BRAM Enable Optimization | Checksum: 206082ca0
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:22 . Memory (MB): peak = 1246.281 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.047 . Memory (MB): peak = 1246.281 ; gain = 0.000
+INFO: [Physopt 32-603] Post Physical Optimization Timing Summary | WNS=-0.015 | TNS=-0.015 |
+Ending Physical Synthesis Task | Checksum: 1455941d9
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:23 . Memory (MB): peak = 1246.281 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+206 Infos, 75 Warnings, 0 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+phys_opt_design: Time (s): cpu = 00:00:44 ; elapsed = 00:00:34 . Memory (MB): peak = 1246.281 ; gain = 0.000
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 1246.281 ; gain = 0.000
+Command: route_design -directive HigherDelayCost
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Drc 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command route_design
+INFO: [Drc 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-270] Using Router directive 'HigherDelayCost'.
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
+
+Phase 1 Build RT Design
+Phase 1 Build RT Design | Checksum: b4954b02
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:26 . Memory (MB): peak = 1358.051 ; gain = 85.598
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: b4954b02
+
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:27 . Memory (MB): peak = 1360.766 ; gain = 88.313
+
+Phase 2.2 Pre Route Cleanup
+Phase 2.2 Pre Route Cleanup | Checksum: b4954b02
+
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:27 . Memory (MB): peak = 1368.426 ; gain = 95.973
+ Number of Nodes with overlaps = 0
+
+Phase 2.3 Update Timing
+Phase 2.3 Update Timing | Checksum: 235549f69
+
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:39 . Memory (MB): peak = 1443.820 ; gain = 171.367
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-0.0736| TNS=-0.11  | WHS=-1.34  | THS=-3.26e+03|
+
+Phase 2 Router Initialization | Checksum: 1d2e71a7b
+
+Time (s): cpu = 00:01:02 ; elapsed = 00:00:44 . Memory (MB): peak = 1443.820 ; gain = 171.367
+
+Phase 3 Initial Routing
+Phase 3 Initial Routing | Checksum: 1e84e0c1b
+
+Time (s): cpu = 00:01:10 ; elapsed = 00:00:48 . Memory (MB): peak = 1443.820 ; gain = 171.367
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 8268
+ Number of Nodes with overlaps = 2851
+ Number of Nodes with overlaps = 1364
+ Number of Nodes with overlaps = 629
+ Number of Nodes with overlaps = 297
+ Number of Nodes with overlaps = 119
+ Number of Nodes with overlaps = 72
+ Number of Nodes with overlaps = 28
+ Number of Nodes with overlaps = 21
+ Number of Nodes with overlaps = 8
+ Number of Nodes with overlaps = 0
+
+Phase 4.1.1 Update Timing
+Phase 4.1.1 Update Timing | Checksum: 21ecc5ee0
+
+Time (s): cpu = 00:02:24 ; elapsed = 00:01:29 . Memory (MB): peak = 1443.820 ; gain = 171.367
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-0.0636| TNS=-0.0636| WHS=N/A    | THS=N/A    |
+
+
+Phase 4.1.2 GlobIterForTiming
+
+Phase 4.1.2.1 Update Timing
+Phase 4.1.2.1 Update Timing | Checksum: 15ba4afb7
+
+Time (s): cpu = 00:02:25 ; elapsed = 00:01:30 . Memory (MB): peak = 1443.820 ; gain = 171.367
+
+Phase 4.1.2.2 Fast Budgeting
+Phase 4.1.2.2 Fast Budgeting | Checksum: 1178ce528
+
+Time (s): cpu = 00:02:27 ; elapsed = 00:01:31 . Memory (MB): peak = 1459.961 ; gain = 187.508
+Phase 4.1.2 GlobIterForTiming | Checksum: 180563192
+
+Time (s): cpu = 00:02:27 ; elapsed = 00:01:31 . Memory (MB): peak = 1459.961 ; gain = 187.508
+Phase 4.1 Global Iteration 0 | Checksum: 180563192
+
+Time (s): cpu = 00:02:27 ; elapsed = 00:01:32 . Memory (MB): peak = 1459.961 ; gain = 187.508
+
+Phase 4.2 Global Iteration 1
+ Number of Nodes with overlaps = 225
+ Number of Nodes with overlaps = 111
+ Number of Nodes with overlaps = 74
+ Number of Nodes with overlaps = 40
+ Number of Nodes with overlaps = 20
+ Number of Nodes with overlaps = 20
+ Number of Nodes with overlaps = 9
+ Number of Nodes with overlaps = 6
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 1
+INFO: [Route 35-325] The following overlapped node exist in the design and there is low overall congestion. 
+Resolution: Check for routing resource conflicts on the identified nets or significant localized congestion using the Route Congestion Metrics in the Device View. 
+1. INT_L_X34Y165/WW2BEG1
+Overlapping nets: 2
+	MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[28].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[27]
+	MHTDC_0/MHTDC_Core_0/CHANNEL_BUFFER_TRAILING_GENERATE[28].MHTDC_ChannelBuffer_Trailing/DualPortRam_0/DOUT[26]
+
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 0
+
+Phase 4.2.1 Update Timing
+Phase 4.2.1 Update Timing | Checksum: 1662808dc
+
+Time (s): cpu = 00:02:40 ; elapsed = 00:01:40 . Memory (MB): peak = 1459.961 ; gain = 187.508
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-0.0636| TNS=-0.0636| WHS=N/A    | THS=N/A    |
+
+Phase 4.2 Global Iteration 1 | Checksum: 16099b6fc
+
+Time (s): cpu = 00:02:40 ; elapsed = 00:01:41 . Memory (MB): peak = 1459.961 ; gain = 187.508
+Phase 4 Rip-up And Reroute | Checksum: 16099b6fc
+
+Time (s): cpu = 00:02:40 ; elapsed = 00:01:41 . Memory (MB): peak = 1459.961 ; gain = 187.508
+
+Phase 5 Delay CleanUp
+
+Phase 5.1 Update Timing
+Phase 5.1 Update Timing | Checksum: 17d1045ad
+
+Time (s): cpu = 00:02:43 ; elapsed = 00:01:42 . Memory (MB): peak = 1459.961 ; gain = 187.508
+INFO: [Route 35-57] Estimated Timing Summary | WNS=0.0204 | TNS=0      | WHS=N/A    | THS=N/A    |
+
+Phase 5 Delay CleanUp | Checksum: 17d1045ad
+
+Time (s): cpu = 00:02:43 ; elapsed = 00:01:42 . Memory (MB): peak = 1459.961 ; gain = 187.508
+
+Phase 6 Clock Skew Optimization
+Phase 6 Clock Skew Optimization | Checksum: 17d1045ad
+
+Time (s): cpu = 00:02:43 ; elapsed = 00:01:42 . Memory (MB): peak = 1459.961 ; gain = 187.508
+
+Phase 7 Post Hold Fix
+
+Phase 7.1 Update Timing
+Phase 7.1 Update Timing | Checksum: 19a4dfd59
+
+Time (s): cpu = 00:02:47 ; elapsed = 00:01:44 . Memory (MB): peak = 1459.961 ; gain = 187.508
+INFO: [Route 35-57] Estimated Timing Summary | WNS=0.0204 | TNS=0      | WHS=-0.065 | THS=-0.365 |
+
+Phase 7 Post Hold Fix | Checksum: 1c216e53d
+
+Time (s): cpu = 00:02:47 ; elapsed = 00:01:45 . Memory (MB): peak = 1459.961 ; gain = 187.508
+
+Phase 8 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 9.64743 %
+  Global Horizontal Routing Utilization  = 10.5303 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Congestion Report
+North Dir 1x1 Area, Max Cong = 90.991%, Congestion bounded by tiles (Lower Left Tile -> Upper Right Tile):
+   INT_L_X22Y110 -> INT_L_X22Y110
+South Dir 1x1 Area, Max Cong = 76.5766%, No Congested Regions.
+East Dir 1x1 Area, Max Cong = 80.8824%, No Congested Regions.
+West Dir 1x1 Area, Max Cong = 89.7059%, Congestion bounded by tiles (Lower Left Tile -> Upper Right Tile):
+   INT_L_X28Y154 -> INT_L_X28Y154
+   INT_L_X22Y140 -> INT_L_X22Y140
+Phase 8 Route finalize | Checksum: e7e68b06
+
+Time (s): cpu = 00:02:48 ; elapsed = 00:01:45 . Memory (MB): peak = 1459.961 ; gain = 187.508
+
+Phase 9 Verifying routed nets
+
+ Verification completed successfully
+Phase 9 Verifying routed nets | Checksum: e7e68b06
+
+Time (s): cpu = 00:02:48 ; elapsed = 00:01:45 . Memory (MB): peak = 1459.961 ; gain = 187.508
+
+Phase 10 Depositing Routes
+Phase 10 Depositing Routes | Checksum: 1305abbe1
+
+Time (s): cpu = 00:02:50 ; elapsed = 00:01:47 . Memory (MB): peak = 1459.961 ; gain = 187.508
+
+Phase 11 Post Router Timing
+
+Phase 11.1 Update Timing
+Phase 11.1 Update Timing | Checksum: 1305abbe1
+
+Time (s): cpu = 00:02:53 ; elapsed = 00:01:49 . Memory (MB): peak = 1459.961 ; gain = 187.508
+INFO: [Route 35-57] Estimated Timing Summary | WNS=0.0204 | TNS=0      | WHS=0.051  | THS=0      |
+
+INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
+Phase 11 Post Router Timing | Checksum: 1305abbe1
+
+Time (s): cpu = 00:02:53 ; elapsed = 00:01:49 . Memory (MB): peak = 1459.961 ; gain = 187.508
+INFO: [Route 35-16] Router Completed Successfully
+
+Routing Is Done.
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:01:49 . Memory (MB): peak = 1459.961 ; gain = 187.508
+INFO: [Common 17-83] Releasing license: Implementation
+225 Infos, 75 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:02:57 ; elapsed = 00:01:51 . Memory (MB): peak = 1459.961 ; gain = 213.680
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 1459.961 ; gain = 0.000
+write_checkpoint: Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 1459.961 ; gain = 0.000
+INFO: [Drc 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file C:/Users/tomoh/vivado/ChikumaProject150923_test191108/chikuma_new/New_Firmware/project/project.runs/impl_4/TopLevel_drc_routed.rpt.
+report_drc: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 1464.027 ; gain = 4.066
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+report_timing_summary: Time (s): cpu = 00:00:20 ; elapsed = 00:00:12 . Memory (MB): peak = 1510.395 ; gain = 46.367
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+report_power: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 1533.152 ; gain = 22.758
+INFO: [Common 17-206] Exiting Vivado at Thu Dec 19 23:50:50 2019...

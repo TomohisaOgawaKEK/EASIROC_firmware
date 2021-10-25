@@ -1272,7 +1272,7 @@ begin
         COMMON_STOP       => CommonStop,
         TDC_FAST_CLEAR    => TdcFastClear,
         TDC_BUSY          => TdcBusy,
-        SCALER_TRIGGER    => ScalerTrigger,
+        SCALER_TRIGGER    => ScalerTrigger, -- issued by L1Edge (tstop)
         SCALER_FAST_CLEAR => ScalerFastClear,
         SCALER_BUSY       => ScalerBusy,
         HOLD_OUT1_N       => EASIROC1_HOLDB,
@@ -1423,8 +1423,8 @@ begin
     port map(
         SCALER_CLK => ScalerClk,
         RESET      => ScalerTimerReset,
-        TIMER_1MHZ => ScalerTimer1Mhz,
-        TIMER_1KHZ => ScalerTimer1Khz
+        TIMER_1MHZ => ScalerTimer1Mhz, -- out: 1usec count
+        TIMER_1KHZ => ScalerTimer1Khz  -- out: 1msec count
     );
 
     DiscriOr_0: DiscriOr
@@ -1436,9 +1436,7 @@ begin
         OR64  => OR64
     );
 
-    ScalerDin <= ScalerTimer1Khz & ScalerTimer1Mhz &
-                 Or64 & Or32u & Or32d &
-                 EASIROC2_TRIGGER & EASIROC1_TRIGGER;
+    ScalerDin <= ScalerTimer1Khz & ScalerTimer1Mhz & Or64 & Or32u & Or32d & EASIROC2_TRIGGER & EASIROC1_TRIGGER;
 
     Scaler_0: Scaler
     port map(
@@ -1447,7 +1445,7 @@ begin
         RESET       => ScalerReset,
         RESET_TIMER => ResetExternalScalerTimer,
         DIN         => ScalerDin,
-        L1_TRIGGER  => ScalerTrigger,
+        L1_TRIGGER  => ScalerTrigger, -- from trigger manager L1Edge (tstop)
         FAST_CLEAR  => ScalerFastClear,
         BUSY        => ScalerBusy,
         DOUT        => ScalerDout,

@@ -1,0 +1,7 @@
+Determining compilation order of HDL files.
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/tomoh/vivado/ChikumaProjectOriginal170727_test191108/chikuma_new/New_Firmware/rtl/RBCP_Receiver.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity RBCP_Receiver
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/tomoh/vivado/ChikumaProjectOriginal170727_test191108/chikuma_new/New_Firmware/rtl/TestChargeInjection.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TestChargeInjection
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/tomoh/vivado/ChikumaProjectOriginal170727_test191108/chikuma_new/New_Firmware/sim/TestChargeInjection_test.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TestChargeInjection_test

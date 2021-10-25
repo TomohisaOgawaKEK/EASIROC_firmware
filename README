@@ -18,14 +18,29 @@ git push -u origin master
 if you remove .git  
 git pull origin master
 
------ 2020/01/01 EASIROCfirmware_NC150923  
 
-the first version by Naruhiro Chikuma  
+========== EASIROC_firmware_NC150923_viva14.3_work2009.Fixed200901 
+written @ 21/10/20
 
------ Modified
+-. Implement internal generation of Stop and Accept pulses.
+   (the Chikuma model needs to split a trigger signal in NIMs, apply a delay, etc., 
+    and those puleses need to input into the module.)   
+-. Change Hold timing from software (the Chikuma model needs to adjust it in NIMs)
+-. 3 patterns of test pulse signal amplitude (Chikuma model has 1 pattern only)
+-. External trigger input is available
+-. Freeze during data acquisition due to a bug of pulse delay in the firmware was solved,
+   which is discovered by Sato.
 
-injection pattern of test charge is added   
+Those above were implemented for the MPPC mass test of SFGD, 
+and it works fine on the actual module level.
 
+
+========== 2020/01/01 EASIROCfirmware_NC150923  
+written @ 20/07/01
+
+the first version by Naruhiro Chikuma  : NC
+
+-. injection pattern of test charge is added   
         when "001" =>  1   
            CAL1 <= 'Z'; -- High Impedance    
            CAL2 <= test_palse;   
@@ -41,7 +56,6 @@ see yaml/RegisterValue.yml
 # select combination of calibartion pulse    
 # this was confirmed @ 19/12/30    
 TestChargePtn: 0   
-
 Trigger:   
       # Explanation of parameters below   
       # 1: The default operation:   
@@ -58,8 +72,7 @@ Trigger:
       InExTrigger: 2   # 2: selectable internal trigger 3: external trigger (put NIM to [sync in])    
       Width: raw  
 
-
-important commands  
+-. New important commands are as follows.
 
    - statusInputDAC : <ch(0..63) / all(64)> put a status file under status/ 
    - checkHVstability : check HV stability for ~ 30 min using above command  

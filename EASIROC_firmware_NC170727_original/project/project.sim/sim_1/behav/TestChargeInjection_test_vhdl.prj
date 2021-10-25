@@ -1,0 +1,4 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  "../../../../rtl/RBCP_Receiver.vhd"
+vhdl xil_defaultlib  "../../../../rtl/TestChargeInjection.vhd"
+vhdl xil_defaultlib  "../../../../sim/TestChargeInjection_test.vhd"

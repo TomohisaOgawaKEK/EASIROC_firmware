@@ -1,0 +1,1697 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Fri Jul  3 04:36:08 2020
+| Host         : ishiiPC11 running 64-bit major release  (build 9200)
+| Command      : report_methodology -file TopLevel_methodology_drc_routed.rpt -pb TopLevel_methodology_drc_routed.pb -rpx TopLevel_methodology_drc_routed.rpx
+| Design       : TopLevel
+| Device       : xc7a100tfgg676-2
+| Speed File   : -2
+| Design State : Fully Routed
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 328
++-----------+----------+------------------------------------------------------------------+------------+
+| Rule      | Severity | Description                                                      | Violations |
++-----------+----------+------------------------------------------------------------------+------------+
+| CKLD-2    | Warning  | Clock Net has IO Driver, not a Clock Buf, and/or non-Clock loads | 2          |
+| LUTAR-1   | Warning  | LUT drives async reset alert                                     | 70         |
+| SYNTH-6   | Warning  | Timing of a block RAM might be sub-optimal                       | 2          |
+| TIMING-9  | Warning  | Unknown CDC Logic                                                | 1          |
+| TIMING-10 | Warning  | Missing property on synchronizer                                 | 1          |
+| TIMING-20 | Warning  | Non-clocked latch                                                | 116        |
+| TIMING-46 | Warning  | Multicycle path with tied CE pins                                | 129        |
+| XDCH-1    | Warning  | Hold option missing in multicycle path constraint                | 1          |
+| XDCH-2    | Warning  | Same min and max delay values on IO port                         | 6          |
++-----------+----------+------------------------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+CKLD-2#1 Warning
+Clock Net has IO Driver, not a Clock Buf, and/or non-Clock loads  
+Clock net ETH_RX_CLK_IBUF is directly driven by an IO rather than a Clock Buffer or may be an IO driving a mix of Clock Buffer and non-Clock loads. This connectivity should be reviewed and corrected as appropriate. Driver(s): WRAP_SiTCP_GMII_XC7A_32K_0/GMII_RX_CLK, ETH_RX_CLK_IBUF_inst/O
+Related violations: <none>
+
+CKLD-2#2 Warning
+Clock Net has IO Driver, not a Clock Buf, and/or non-Clock loads  
+Clock net ETH_TX_CLK_IBUF is directly driven by an IO rather than a Clock Buffer or may be an IO driving a mix of Clock Buffer and non-Clock loads. This connectivity should be reviewed and corrected as appropriate. Driver(s): WRAP_SiTCP_GMII_XC7A_32K_0/GMII_TX_CLK, ETH_TX_CLK_IBUF_inst/O
+Related violations: <none>
+
+LUTAR-1#1 Warning
+LUT drives async reset alert  
+LUT cell ClockManager_0/MMCM_0/Clk3M_i_3, with 2 or more inputs, drives asynchronous preset/clear pin(s) DirectControl_0/DelayedDirectControlRegisterWe2_reg/CLR, DirectControl_0/DirectControlRegister0_reg[0]/CLR, DirectControl_0/DirectControlRegister0_reg[1]/CLR, DirectControl_0/DirectControlRegister0_reg[2]/CLR, DirectControl_0/DirectControlRegister0_reg[3]/CLR, DirectControl_0/DirectControlRegister0_reg[4]/CLR, DirectControl_0/DirectControlRegister0_reg[5]/CLR, DirectControl_0/DirectControlRegister0_reg[6]/CLR, DirectControl_0/DirectControlRegister0_reg[7]/CLR, DirectControl_0/DirectControlRegister1_reg[0]/CLR, DirectControl_0/DirectControlRegister1_reg[1]/CLR, DirectControl_0/DirectControlRegister1_reg[2]/CLR, DirectControl_0/DirectControlRegister1_reg[3]/CLR, DirectControl_0/DirectControlRegister1_reg[4]/CLR, DirectControl_0/DirectControlRegister1_reg[5]/CLR (the first 15 of 6707 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#2 Warning
+LUT drives async reset alert  
+LUT cell HVControl_O/HV_EN_r_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) HVControl_O/dout_led_r_reg[0]/CLR, HVControl_O/dout_led_r_reg[10]/CLR, HVControl_O/dout_led_r_reg[11]/CLR, HVControl_O/dout_led_r_reg[12]/CLR, HVControl_O/dout_led_r_reg[13]/CLR, HVControl_O/dout_led_r_reg[14]/CLR, HVControl_O/dout_led_r_reg[15]/CLR, HVControl_O/dout_led_r_reg[1]/CLR, HVControl_O/dout_led_r_reg[2]/CLR, HVControl_O/dout_led_r_reg[3]/CLR, HVControl_O/dout_led_r_reg[4]/CLR, HVControl_O/dout_led_r_reg[5]/CLR, HVControl_O/dout_led_r_reg[6]/CLR, HVControl_O/dout_led_r_reg[7]/CLR, HVControl_O/dout_led_r_reg[8]/CLR (the first 15 of 16 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#3 Warning
+LUT drives async reset alert  
+LUT cell ResetManager_0/FSM_onehot_CurrentState[8]_i_1__8, with 2 or more inputs, drives asynchronous preset/clear pin(s) ADC_0/ADC_Controller_0/Channel_reg[0]/CLR, ADC_0/ADC_Controller_0/Channel_reg[1]/CLR, ADC_0/ADC_Controller_0/Channel_reg[2]/CLR, ADC_0/ADC_Controller_0/Channel_reg[3]/CLR, ADC_0/ADC_Controller_0/Channel_reg[4]/CLR, ADC_0/ADC_Controller_0/CurrentState_reg[0]/CLR, ADC_0/ADC_Controller_0/CurrentState_reg[1]/CLR, ADC_0/ADC_Controller_0/CurrentState_reg[2]/CLR, ADC_0/ADC_Controller_0/SynchEdgeDetector_0/DelayedDin_reg/CLR, ADC_0/ADC_Controller_0/SynchEdgeDetector_0/Synchronizer_0/DoubleFFSynchronizerFF1/CLR, ADC_0/ADC_Controller_0/SynchEdgeDetector_0/Synchronizer_0/DoubleFFSynchronizerFF2/CLR, ADC_0/ADC_Core_HG1/Address_reg[0]/CLR, ADC_0/ADC_Core_HG1/Address_reg[1]/CLR, ADC_0/ADC_Core_HG1/Address_reg[2]/CLR, ADC_0/ADC_Core_HG1/Address_reg[3]/CLR (the first 15 of 798 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#4 Warning
+LUT drives async reset alert  
+LUT cell ResetManager_0/q1_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) Scaler_0/SINGLE_SCALER_GENERATE[0].SingleScaler_0/EdgeDetector_0/q1_reg/CLR, Scaler_0/SINGLE_SCALER_GENERATE[0].SingleScaler_0/EdgeDetector_0/q2_reg/CLR, Scaler_0/SINGLE_SCALER_GENERATE[10].SingleScaler_0/EdgeDetector_0/q1_reg/CLR, Scaler_0/SINGLE_SCALER_GENERATE[10].SingleScaler_0/EdgeDetector_0/q2_reg/CLR, Scaler_0/SINGLE_SCALER_GENERATE[11].SingleScaler_0/EdgeDetector_0/q1_reg/CLR, Scaler_0/SINGLE_SCALER_GENERATE[11].SingleScaler_0/EdgeDetector_0/q2_reg/CLR, Scaler_0/SINGLE_SCALER_GENERATE[12].SingleScaler_0/EdgeDetector_0/q1_reg/CLR, Scaler_0/SINGLE_SCALER_GENERATE[12].SingleScaler_0/EdgeDetector_0/q2_reg/CLR, Scaler_0/SINGLE_SCALER_GENERATE[13].SingleScaler_0/EdgeDetector_0/q1_reg/CLR, Scaler_0/SINGLE_SCALER_GENERATE[13].SingleScaler_0/EdgeDetector_0/q2_reg/CLR, Scaler_0/SINGLE_SCALER_GENERATE[14].SingleScaler_0/EdgeDetector_0/q1_reg/CLR, Scaler_0/SINGLE_SCALER_GENERATE[14].SingleScaler_0/EdgeDetector_0/q2_reg/CLR, Scaler_0/SINGLE_SCALER_GENERATE[15].SingleScaler_0/EdgeDetector_0/q1_reg/CLR, Scaler_0/SINGLE_SCALER_GENERATE[15].SingleScaler_0/EdgeDetector_0/q2_reg/CLR, Scaler_0/SINGLE_SCALER_GENERATE[16].SingleScaler_0/EdgeDetector_0/q1_reg/CLR (the first 15 of 138 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#5 Warning
+LUT drives async reset alert  
+LUT cell TriggerManager_0/SynchEdgeDetector_IsDaqMode/Synchronizer_0/q1_i_1__3, with 2 or more inputs, drives asynchronous preset/clear pin(s) TriggerManager_0/HoldExpander_0/EdgeDetector_HOLD/q1_reg/CLR, TriggerManager_0/HoldExpander_0/EdgeDetector_HOLD/q2_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#6 Warning
+LUT drives async reset alert  
+LUT cell TriggerWidth_0/WidthAdjuster_GENERATE[0].Width_Adjuster_0/trig_pulse, with 2 or more inputs, drives asynchronous preset/clear pin(s) TriggerWidth_0/WidthAdjuster_GENERATE[0].Width_Adjuster_0/trigger_s_reg_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#7 Warning
+LUT drives async reset alert  
+LUT cell TriggerWidth_0/WidthAdjuster_GENERATE[0].Width_Adjuster_1/trig_pulse, with 2 or more inputs, drives asynchronous preset/clear pin(s) TriggerWidth_0/WidthAdjuster_GENERATE[0].Width_Adjuster_1/trigger_s_reg_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#8 Warning
+LUT drives async reset alert  
+LUT cell TriggerWidth_0/WidthAdjuster_GENERATE[10].Width_Adjuster_0/trig_pulse, with 2 or more inputs, drives asynchronous preset/clear pin(s) TriggerWidth_0/WidthAdjuster_GENERATE[10].Width_Adjuster_0/trigger_s_reg_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#9 Warning
+LUT drives async reset alert  
+LUT cell TriggerWidth_0/WidthAdjuster_GENERATE[10].Width_Adjuster_1/trig_pulse, with 2 or more inputs, drives asynchronous preset/clear pin(s) TriggerWidth_0/WidthAdjuster_GENERATE[10].Width_Adjuster_1/trigger_s_reg_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#10 Warning
+LUT drives async reset alert  
+LUT cell TriggerWidth_0/WidthAdjuster_GENERATE[11].Width_Adjuster_0/trig_pulse, with 2 or more inputs, drives asynchronous preset/clear pin(s) TriggerWidth_0/WidthAdjuster_GENERATE[11].Width_Adjuster_0/trigger_s_reg_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#11 Warning
+LUT drives async reset alert  
+LUT cell TriggerWidth_0/WidthAdjuster_GENERATE[11].Width_Adjuster_1/trig_pulse, with 2 or more inputs, drives asynchronous preset/clear pin(s) TriggerWidth_0/WidthAdjuster_GENERATE[11].Width_Adjuster_1/trigger_s_reg_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#12 Warning
+LUT drives async reset alert  
+LUT cell TriggerWidth_0/WidthAdjuster_GENERATE[12].Width_Adjuster_0/trig_pulse, with 2 or more inputs, drives asynchronous preset/clear pin(s) TriggerWidth_0/WidthAdjuster_GENERATE[12].Width_Adjuster_0/trigger_s_reg_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#13 Warning
+LUT drives async reset alert  
+LUT cell TriggerWidth_0/WidthAdjuster_GENERATE[12].Width_Adjuster_1/trig_pulse, with 2 or more inputs, drives asynchronous preset/clear pin(s) TriggerWidth_0/WidthAdjuster_GENERATE[12].Width_Adjuster_1/trigger_s_reg_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#14 Warning
+LUT drives async reset alert  
+LUT cell TriggerWidth_0/WidthAdjuster_GENERATE[13].Width_Adjuster_0/trig_pulse, with 2 or more inputs, drives asynchronous preset/clear pin(s) TriggerWidth_0/WidthAdjuster_GENERATE[13].Width_Adjuster_0/trigger_s_reg_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#15 Warning
+LUT drives async reset alert  
+LUT cell TriggerWidth_0/WidthAdjuster_GENERATE[13].Width_Adjuster_1/trig_pulse, with 2 or more inputs, drives asynchronous preset/clear pin(s) TriggerWidth_0/WidthAdjuster_GENERATE[13].Width_Adjuster_1/trigger_s_reg_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#16 Warning
+LUT drives async reset alert  
+LUT cell TriggerWidth_0/WidthAdjuster_GENERATE[14].Width_Adjuster_0/trig_pulse, with 2 or more inputs, drives asynchronous preset/clear pin(s) TriggerWidth_0/WidthAdjuster_GENERATE[14].Width_Adjuster_0/trigger_s_reg_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#17 Warning
+LUT drives async reset alert  
+LUT cell TriggerWidth_0/WidthAdjuster_GENERATE[14].Width_Adjuster_1/trig_pulse, with 2 or more inputs, drives asynchronous preset/clear pin(s) TriggerWidth_0/WidthAdjuster_GENERATE[14].Width_Adjuster_1/trigger_s_reg_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#18 Warning
+LUT drives async reset alert  
+LUT cell TriggerWidth_0/WidthAdjuster_GENERATE[15].Width_Adjuster_0/trig_pulse, with 2 or more inputs, drives asynchronous preset/clear pin(s) TriggerWidth_0/WidthAdjuster_GENERATE[15].Width_Adjuster_0/trigger_s_reg_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#19 Warning
+LUT drives async reset alert  
+LUT cell TriggerWidth_0/WidthAdjuster_GENERATE[15].Width_Adjuster_1/trig_pulse, with 2 or more inputs, drives asynchronous preset/clear pin(s) TriggerWidth_0/WidthAdjuster_GENERATE[15].Width_Adjuster_1/trigger_s_reg_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#20 Warning
+LUT drives async reset alert  
+LUT cell TriggerWidth_0/WidthAdjuster_GENERATE[16].Width_Adjuster_0/trig_pulse, with 2 or more inputs, drives asynchronous preset/clear pin(s) TriggerWidth_0/WidthAdjuster_GENERATE[16].Width_Adjuster_0/trigger_s_reg_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#21 Warning
+LUT drives async reset alert  
+LUT cell TriggerWidth_0/WidthAdjuster_GENERATE[16].Width_Adjuster_1/trig_pulse, with 2 or more inputs, drives asynchronous preset/clear pin(s) TriggerWidth_0/WidthAdjuster_GENERATE[16].Width_Adjuster_1/trigger_s_reg_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#22 Warning
+LUT drives async reset alert  
+LUT cell TriggerWidth_0/WidthAdjuster_GENERATE[17].Width_Adjuster_0/trig_pulse, with 2 or more inputs, drives asynchronous preset/clear pin(s) TriggerWidth_0/WidthAdjuster_GENERATE[17].Width_Adjuster_0/trigger_s_reg_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#23 Warning
+LUT drives async reset alert  
+LUT cell TriggerWidth_0/WidthAdjuster_GENERATE[17].Width_Adjuster_1/trig_pulse, with 2 or more inputs, drives asynchronous preset/clear pin(s) TriggerWidth_0/WidthAdjuster_GENERATE[17].Width_Adjuster_1/trigger_s_reg_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#24 Warning
+LUT drives async reset alert  
+LUT cell TriggerWidth_0/WidthAdjuster_GENERATE[18].Width_Adjuster_0/trig_pulse, with 2 or more inputs, drives asynchronous preset/clear pin(s) TriggerWidth_0/WidthAdjuster_GENERATE[18].Width_Adjuster_0/trigger_s_reg_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#25 Warning
+LUT drives async reset alert  
+LUT cell TriggerWidth_0/WidthAdjuster_GENERATE[18].Width_Adjuster_1/trig_pulse, with 2 or more inputs, drives asynchronous preset/clear pin(s) TriggerWidth_0/WidthAdjuster_GENERATE[18].Width_Adjuster_1/trigger_s_reg_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#26 Warning
+LUT drives async reset alert  
+LUT cell TriggerWidth_0/WidthAdjuster_GENERATE[19].Width_Adjuster_0/trig_pulse, with 2 or more inputs, drives asynchronous preset/clear pin(s) TriggerWidth_0/WidthAdjuster_GENERATE[19].Width_Adjuster_0/trigger_s_reg_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#27 Warning
+LUT drives async reset alert  
+LUT cell TriggerWidth_0/WidthAdjuster_GENERATE[19].Width_Adjuster_1/trig_pulse, with 2 or more inputs, drives asynchronous preset/clear pin(s) TriggerWidth_0/WidthAdjuster_GENERATE[19].Width_Adjuster_1/trigger_s_reg_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#28 Warning
+LUT drives async reset alert  
+LUT cell TriggerWidth_0/WidthAdjuster_GENERATE[1].Width_Adjuster_0/trig_pulse, with 2 or more inputs, drives asynchronous preset/clear pin(s) TriggerWidth_0/WidthAdjuster_GENERATE[1].Width_Adjuster_0/trigger_s_reg_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#29 Warning
+LUT drives async reset alert  
+LUT cell TriggerWidth_0/WidthAdjuster_GENERATE[1].Width_Adjuster_1/trig_pulse, with 2 or more inputs, drives asynchronous preset/clear pin(s) TriggerWidth_0/WidthAdjuster_GENERATE[1].Width_Adjuster_1/trigger_s_reg_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#30 Warning
+LUT drives async reset alert  
+LUT cell TriggerWidth_0/WidthAdjuster_GENERATE[20].Width_Adjuster_0/trig_pulse, with 2 or more inputs, drives asynchronous preset/clear pin(s) TriggerWidth_0/WidthAdjuster_GENERATE[20].Width_Adjuster_0/trigger_s_reg_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#31 Warning
+LUT drives async reset alert  
+LUT cell TriggerWidth_0/WidthAdjuster_GENERATE[20].Width_Adjuster_1/trig_pulse, with 2 or more inputs, drives asynchronous preset/clear pin(s) TriggerWidth_0/WidthAdjuster_GENERATE[20].Width_Adjuster_1/trigger_s_reg_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#32 Warning
+LUT drives async reset alert  
+LUT cell TriggerWidth_0/WidthAdjuster_GENERATE[21].Width_Adjuster_0/trig_pulse, with 2 or more inputs, drives asynchronous preset/clear pin(s) TriggerWidth_0/WidthAdjuster_GENERATE[21].Width_Adjuster_0/trigger_s_reg_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#33 Warning
+LUT drives async reset alert  
+LUT cell TriggerWidth_0/WidthAdjuster_GENERATE[21].Width_Adjuster_1/trig_pulse, with 2 or more inputs, drives asynchronous preset/clear pin(s) TriggerWidth_0/WidthAdjuster_GENERATE[21].Width_Adjuster_1/trigger_s_reg_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#34 Warning
+LUT drives async reset alert  
+LUT cell TriggerWidth_0/WidthAdjuster_GENERATE[22].Width_Adjuster_0/trig_pulse, with 2 or more inputs, drives asynchronous preset/clear pin(s) TriggerWidth_0/WidthAdjuster_GENERATE[22].Width_Adjuster_0/trigger_s_reg_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#35 Warning
+LUT drives async reset alert  
+LUT cell TriggerWidth_0/WidthAdjuster_GENERATE[22].Width_Adjuster_1/trig_pulse, with 2 or more inputs, drives asynchronous preset/clear pin(s) TriggerWidth_0/WidthAdjuster_GENERATE[22].Width_Adjuster_1/trigger_s_reg_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#36 Warning
+LUT drives async reset alert  
+LUT cell TriggerWidth_0/WidthAdjuster_GENERATE[23].Width_Adjuster_0/trig_pulse, with 2 or more inputs, drives asynchronous preset/clear pin(s) TriggerWidth_0/WidthAdjuster_GENERATE[23].Width_Adjuster_0/trigger_s_reg_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#37 Warning
+LUT drives async reset alert  
+LUT cell TriggerWidth_0/WidthAdjuster_GENERATE[23].Width_Adjuster_1/trig_pulse, with 2 or more inputs, drives asynchronous preset/clear pin(s) TriggerWidth_0/WidthAdjuster_GENERATE[23].Width_Adjuster_1/trigger_s_reg_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#38 Warning
+LUT drives async reset alert  
+LUT cell TriggerWidth_0/WidthAdjuster_GENERATE[24].Width_Adjuster_0/trig_pulse, with 2 or more inputs, drives asynchronous preset/clear pin(s) TriggerWidth_0/WidthAdjuster_GENERATE[24].Width_Adjuster_0/trigger_s_reg_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#39 Warning
+LUT drives async reset alert  
+LUT cell TriggerWidth_0/WidthAdjuster_GENERATE[24].Width_Adjuster_1/trig_pulse, with 2 or more inputs, drives asynchronous preset/clear pin(s) TriggerWidth_0/WidthAdjuster_GENERATE[24].Width_Adjuster_1/trigger_s_reg_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#40 Warning
+LUT drives async reset alert  
+LUT cell TriggerWidth_0/WidthAdjuster_GENERATE[25].Width_Adjuster_0/trig_pulse, with 2 or more inputs, drives asynchronous preset/clear pin(s) TriggerWidth_0/WidthAdjuster_GENERATE[25].Width_Adjuster_0/trigger_s_reg_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#41 Warning
+LUT drives async reset alert  
+LUT cell TriggerWidth_0/WidthAdjuster_GENERATE[25].Width_Adjuster_1/trig_pulse, with 2 or more inputs, drives asynchronous preset/clear pin(s) TriggerWidth_0/WidthAdjuster_GENERATE[25].Width_Adjuster_1/trigger_s_reg_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#42 Warning
+LUT drives async reset alert  
+LUT cell TriggerWidth_0/WidthAdjuster_GENERATE[26].Width_Adjuster_0/trig_pulse, with 2 or more inputs, drives asynchronous preset/clear pin(s) TriggerWidth_0/WidthAdjuster_GENERATE[26].Width_Adjuster_0/trigger_s_reg_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#43 Warning
+LUT drives async reset alert  
+LUT cell TriggerWidth_0/WidthAdjuster_GENERATE[26].Width_Adjuster_1/trig_pulse, with 2 or more inputs, drives asynchronous preset/clear pin(s) TriggerWidth_0/WidthAdjuster_GENERATE[26].Width_Adjuster_1/trigger_s_reg_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#44 Warning
+LUT drives async reset alert  
+LUT cell TriggerWidth_0/WidthAdjuster_GENERATE[27].Width_Adjuster_0/trig_pulse, with 2 or more inputs, drives asynchronous preset/clear pin(s) TriggerWidth_0/WidthAdjuster_GENERATE[27].Width_Adjuster_0/trigger_s_reg_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#45 Warning
+LUT drives async reset alert  
+LUT cell TriggerWidth_0/WidthAdjuster_GENERATE[27].Width_Adjuster_1/trig_pulse, with 2 or more inputs, drives asynchronous preset/clear pin(s) TriggerWidth_0/WidthAdjuster_GENERATE[27].Width_Adjuster_1/trigger_s_reg_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#46 Warning
+LUT drives async reset alert  
+LUT cell TriggerWidth_0/WidthAdjuster_GENERATE[28].Width_Adjuster_0/trig_pulse, with 2 or more inputs, drives asynchronous preset/clear pin(s) TriggerWidth_0/WidthAdjuster_GENERATE[28].Width_Adjuster_0/trigger_s_reg_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#47 Warning
+LUT drives async reset alert  
+LUT cell TriggerWidth_0/WidthAdjuster_GENERATE[28].Width_Adjuster_1/trig_pulse, with 2 or more inputs, drives asynchronous preset/clear pin(s) TriggerWidth_0/WidthAdjuster_GENERATE[28].Width_Adjuster_1/trigger_s_reg_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#48 Warning
+LUT drives async reset alert  
+LUT cell TriggerWidth_0/WidthAdjuster_GENERATE[29].Width_Adjuster_0/trig_pulse, with 2 or more inputs, drives asynchronous preset/clear pin(s) TriggerWidth_0/WidthAdjuster_GENERATE[29].Width_Adjuster_0/trigger_s_reg_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#49 Warning
+LUT drives async reset alert  
+LUT cell TriggerWidth_0/WidthAdjuster_GENERATE[29].Width_Adjuster_1/trig_pulse, with 2 or more inputs, drives asynchronous preset/clear pin(s) TriggerWidth_0/WidthAdjuster_GENERATE[29].Width_Adjuster_1/trigger_s_reg_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#50 Warning
+LUT drives async reset alert  
+LUT cell TriggerWidth_0/WidthAdjuster_GENERATE[2].Width_Adjuster_0/trig_pulse, with 2 or more inputs, drives asynchronous preset/clear pin(s) TriggerWidth_0/WidthAdjuster_GENERATE[2].Width_Adjuster_0/trigger_s_reg_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#51 Warning
+LUT drives async reset alert  
+LUT cell TriggerWidth_0/WidthAdjuster_GENERATE[2].Width_Adjuster_1/trig_pulse, with 2 or more inputs, drives asynchronous preset/clear pin(s) TriggerWidth_0/WidthAdjuster_GENERATE[2].Width_Adjuster_1/trigger_s_reg_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#52 Warning
+LUT drives async reset alert  
+LUT cell TriggerWidth_0/WidthAdjuster_GENERATE[30].Width_Adjuster_0/trig_pulse, with 2 or more inputs, drives asynchronous preset/clear pin(s) TriggerWidth_0/WidthAdjuster_GENERATE[30].Width_Adjuster_0/trigger_s_reg_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#53 Warning
+LUT drives async reset alert  
+LUT cell TriggerWidth_0/WidthAdjuster_GENERATE[30].Width_Adjuster_1/trig_pulse, with 2 or more inputs, drives asynchronous preset/clear pin(s) TriggerWidth_0/WidthAdjuster_GENERATE[30].Width_Adjuster_1/trigger_s_reg_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#54 Warning
+LUT drives async reset alert  
+LUT cell TriggerWidth_0/WidthAdjuster_GENERATE[31].Width_Adjuster_0/trig_pulse, with 2 or more inputs, drives asynchronous preset/clear pin(s) TriggerWidth_0/WidthAdjuster_GENERATE[31].Width_Adjuster_0/trigger_s_reg_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#55 Warning
+LUT drives async reset alert  
+LUT cell TriggerWidth_0/WidthAdjuster_GENERATE[31].Width_Adjuster_1/trig_pulse, with 2 or more inputs, drives asynchronous preset/clear pin(s) TriggerWidth_0/WidthAdjuster_GENERATE[31].Width_Adjuster_1/trigger_s_reg_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#56 Warning
+LUT drives async reset alert  
+LUT cell TriggerWidth_0/WidthAdjuster_GENERATE[3].Width_Adjuster_0/trig_pulse, with 2 or more inputs, drives asynchronous preset/clear pin(s) TriggerWidth_0/WidthAdjuster_GENERATE[3].Width_Adjuster_0/trigger_s_reg_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#57 Warning
+LUT drives async reset alert  
+LUT cell TriggerWidth_0/WidthAdjuster_GENERATE[3].Width_Adjuster_1/trig_pulse, with 2 or more inputs, drives asynchronous preset/clear pin(s) TriggerWidth_0/WidthAdjuster_GENERATE[3].Width_Adjuster_1/trigger_s_reg_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#58 Warning
+LUT drives async reset alert  
+LUT cell TriggerWidth_0/WidthAdjuster_GENERATE[4].Width_Adjuster_0/trig_pulse, with 2 or more inputs, drives asynchronous preset/clear pin(s) TriggerWidth_0/WidthAdjuster_GENERATE[4].Width_Adjuster_0/trigger_s_reg_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#59 Warning
+LUT drives async reset alert  
+LUT cell TriggerWidth_0/WidthAdjuster_GENERATE[4].Width_Adjuster_1/trig_pulse, with 2 or more inputs, drives asynchronous preset/clear pin(s) TriggerWidth_0/WidthAdjuster_GENERATE[4].Width_Adjuster_1/trigger_s_reg_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#60 Warning
+LUT drives async reset alert  
+LUT cell TriggerWidth_0/WidthAdjuster_GENERATE[5].Width_Adjuster_0/trig_pulse, with 2 or more inputs, drives asynchronous preset/clear pin(s) TriggerWidth_0/WidthAdjuster_GENERATE[5].Width_Adjuster_0/trigger_s_reg_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#61 Warning
+LUT drives async reset alert  
+LUT cell TriggerWidth_0/WidthAdjuster_GENERATE[5].Width_Adjuster_1/trig_pulse, with 2 or more inputs, drives asynchronous preset/clear pin(s) TriggerWidth_0/WidthAdjuster_GENERATE[5].Width_Adjuster_1/trigger_s_reg_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#62 Warning
+LUT drives async reset alert  
+LUT cell TriggerWidth_0/WidthAdjuster_GENERATE[6].Width_Adjuster_0/trig_pulse, with 2 or more inputs, drives asynchronous preset/clear pin(s) TriggerWidth_0/WidthAdjuster_GENERATE[6].Width_Adjuster_0/trigger_s_reg_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#63 Warning
+LUT drives async reset alert  
+LUT cell TriggerWidth_0/WidthAdjuster_GENERATE[6].Width_Adjuster_1/trig_pulse, with 2 or more inputs, drives asynchronous preset/clear pin(s) TriggerWidth_0/WidthAdjuster_GENERATE[6].Width_Adjuster_1/trigger_s_reg_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#64 Warning
+LUT drives async reset alert  
+LUT cell TriggerWidth_0/WidthAdjuster_GENERATE[7].Width_Adjuster_0/trig_pulse, with 2 or more inputs, drives asynchronous preset/clear pin(s) TriggerWidth_0/WidthAdjuster_GENERATE[7].Width_Adjuster_0/trigger_s_reg_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#65 Warning
+LUT drives async reset alert  
+LUT cell TriggerWidth_0/WidthAdjuster_GENERATE[7].Width_Adjuster_1/trig_pulse, with 2 or more inputs, drives asynchronous preset/clear pin(s) TriggerWidth_0/WidthAdjuster_GENERATE[7].Width_Adjuster_1/trigger_s_reg_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#66 Warning
+LUT drives async reset alert  
+LUT cell TriggerWidth_0/WidthAdjuster_GENERATE[8].Width_Adjuster_0/trig_pulse, with 2 or more inputs, drives asynchronous preset/clear pin(s) TriggerWidth_0/WidthAdjuster_GENERATE[8].Width_Adjuster_0/trigger_s_reg_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#67 Warning
+LUT drives async reset alert  
+LUT cell TriggerWidth_0/WidthAdjuster_GENERATE[8].Width_Adjuster_1/trig_pulse, with 2 or more inputs, drives asynchronous preset/clear pin(s) TriggerWidth_0/WidthAdjuster_GENERATE[8].Width_Adjuster_1/trigger_s_reg_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#68 Warning
+LUT drives async reset alert  
+LUT cell TriggerWidth_0/WidthAdjuster_GENERATE[9].Width_Adjuster_0/trig_pulse, with 2 or more inputs, drives asynchronous preset/clear pin(s) TriggerWidth_0/WidthAdjuster_GENERATE[9].Width_Adjuster_0/trigger_s_reg_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#69 Warning
+LUT drives async reset alert  
+LUT cell TriggerWidth_0/WidthAdjuster_GENERATE[9].Width_Adjuster_1/trig_pulse, with 2 or more inputs, drives asynchronous preset/clear pin(s) TriggerWidth_0/WidthAdjuster_GENERATE[9].Width_Adjuster_1/trigger_s_reg_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#70 Warning
+LUT drives async reset alert  
+LUT cell WRAP_SiTCP_GMII_XC7A_32K_0/trigger_s_reg_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) TriggerWidth_0/WidthAdjuster_GENERATE[0].Width_Adjuster_0/trigger_s_reg_C/CLR, TriggerWidth_0/WidthAdjuster_GENERATE[0].Width_Adjuster_0/trigger_s_reg_LDC/CLR, TriggerWidth_0/WidthAdjuster_GENERATE[0].Width_Adjuster_1/trigger_s_reg_C/CLR, TriggerWidth_0/WidthAdjuster_GENERATE[0].Width_Adjuster_1/trigger_s_reg_LDC/CLR, TriggerWidth_0/WidthAdjuster_GENERATE[10].Width_Adjuster_0/trigger_s_reg_C/CLR, TriggerWidth_0/WidthAdjuster_GENERATE[10].Width_Adjuster_0/trigger_s_reg_LDC/CLR, TriggerWidth_0/WidthAdjuster_GENERATE[10].Width_Adjuster_1/trigger_s_reg_C/CLR, TriggerWidth_0/WidthAdjuster_GENERATE[10].Width_Adjuster_1/trigger_s_reg_LDC/CLR, TriggerWidth_0/WidthAdjuster_GENERATE[11].Width_Adjuster_0/trigger_s_reg_C/CLR, TriggerWidth_0/WidthAdjuster_GENERATE[11].Width_Adjuster_0/trigger_s_reg_LDC/CLR, TriggerWidth_0/WidthAdjuster_GENERATE[11].Width_Adjuster_1/trigger_s_reg_C/CLR, TriggerWidth_0/WidthAdjuster_GENERATE[11].Width_Adjuster_1/trigger_s_reg_LDC/CLR, TriggerWidth_0/WidthAdjuster_GENERATE[12].Width_Adjuster_0/trigger_s_reg_C/CLR, TriggerWidth_0/WidthAdjuster_GENERATE[12].Width_Adjuster_0/trigger_s_reg_LDC/CLR, TriggerWidth_0/WidthAdjuster_GENERATE[12].Width_Adjuster_1/trigger_s_reg_C/CLR (the first 15 of 128 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+SYNTH-6#1 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance Scaler_0/DoubleBuffer_0/DualPortRam_0/RamData_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#2 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance Scaler_0/DoubleBuffer_0/DualPortRam_1/RamData_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+TIMING-9#1 Warning
+Unknown CDC Logic  
+One or more asynchronous Clock Domain Crossing has been detected between 2 clock domains through a set_false_path or a set_clock_groups or set_max_delay -datapath_only constraint but no double-registers logic synchronizer has been found on the side of the capture clock. It is recommended to run report_cdc for a complete and detailed CDC coverage. Please consider using XPM_CDC to avoid Critical severities
+Related violations: <none>
+
+TIMING-10#1 Warning
+Missing property on synchronizer  
+One or more logic synchronizer has been detected between 2 clock domains but the synchronizer does not have the property ASYNC_REG defined on one or both registers. It is recommended to run report_cdc for a complete and detailed CDC coverage
+Related violations: <none>
+
+TIMING-20#1 Warning
+Non-clocked latch  
+The latch TriggerManager_0/GlobalSelectableTrigger_reg cannot be properly analyzed as its control pin TriggerManager_0/GlobalSelectableTrigger_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#2 Warning
+Non-clocked latch  
+The latch TriggerManager_0/L1_Delayer/counter_25M_next_reg[0] cannot be properly analyzed as its control pin TriggerManager_0/L1_Delayer/counter_25M_next_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#3 Warning
+Non-clocked latch  
+The latch TriggerManager_0/L1_Delayer/counter_25M_next_reg[1] cannot be properly analyzed as its control pin TriggerManager_0/L1_Delayer/counter_25M_next_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#4 Warning
+Non-clocked latch  
+The latch TriggerManager_0/L1_Delayer/counter_25M_next_reg[2] cannot be properly analyzed as its control pin TriggerManager_0/L1_Delayer/counter_25M_next_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#5 Warning
+Non-clocked latch  
+The latch TriggerManager_0/L1_Delayer/counter_25M_next_reg[3] cannot be properly analyzed as its control pin TriggerManager_0/L1_Delayer/counter_25M_next_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#6 Warning
+Non-clocked latch  
+The latch TriggerManager_0/L1_Delayer/counter_25M_next_reg[4] cannot be properly analyzed as its control pin TriggerManager_0/L1_Delayer/counter_25M_next_reg[4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#7 Warning
+Non-clocked latch  
+The latch TriggerManager_0/L1_Delayer/counter_25M_next_reg[5] cannot be properly analyzed as its control pin TriggerManager_0/L1_Delayer/counter_25M_next_reg[5]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#8 Warning
+Non-clocked latch  
+The latch TriggerManager_0/L1_Delayer/counter_25M_next_reg[6] cannot be properly analyzed as its control pin TriggerManager_0/L1_Delayer/counter_25M_next_reg[6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#9 Warning
+Non-clocked latch  
+The latch TriggerManager_0/L1_Delayer/counter_25M_next_reg[7] cannot be properly analyzed as its control pin TriggerManager_0/L1_Delayer/counter_25M_next_reg[7]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#10 Warning
+Non-clocked latch  
+The latch TriggerManager_0/L1_Delayer/counter_next_reg[0] cannot be properly analyzed as its control pin TriggerManager_0/L1_Delayer/counter_next_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#11 Warning
+Non-clocked latch  
+The latch TriggerManager_0/L1_Delayer/counter_next_reg[1] cannot be properly analyzed as its control pin TriggerManager_0/L1_Delayer/counter_next_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#12 Warning
+Non-clocked latch  
+The latch TriggerManager_0/L1_Delayer/counter_next_reg[2] cannot be properly analyzed as its control pin TriggerManager_0/L1_Delayer/counter_next_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#13 Warning
+Non-clocked latch  
+The latch TriggerManager_0/L1_Delayer/counter_next_reg[3] cannot be properly analyzed as its control pin TriggerManager_0/L1_Delayer/counter_next_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#14 Warning
+Non-clocked latch  
+The latch TriggerManager_0/L1_Delayer/counter_next_reg[4] cannot be properly analyzed as its control pin TriggerManager_0/L1_Delayer/counter_next_reg[4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#15 Warning
+Non-clocked latch  
+The latch TriggerManager_0/L1_Delayer/counter_next_reg[5] cannot be properly analyzed as its control pin TriggerManager_0/L1_Delayer/counter_next_reg[5]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#16 Warning
+Non-clocked latch  
+The latch TriggerManager_0/L1_Delayer/counter_next_reg[6] cannot be properly analyzed as its control pin TriggerManager_0/L1_Delayer/counter_next_reg[6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#17 Warning
+Non-clocked latch  
+The latch TriggerManager_0/L1_Delayer/counter_next_reg[7] cannot be properly analyzed as its control pin TriggerManager_0/L1_Delayer/counter_next_reg[7]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#18 Warning
+Non-clocked latch  
+The latch TriggerManager_0/L1_Delayer/trigger_s_reg cannot be properly analyzed as its control pin TriggerManager_0/L1_Delayer/trigger_s_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#19 Warning
+Non-clocked latch  
+The latch TriggerManager_0/L2_Delayer/counter_25M_next_reg[0] cannot be properly analyzed as its control pin TriggerManager_0/L2_Delayer/counter_25M_next_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#20 Warning
+Non-clocked latch  
+The latch TriggerManager_0/L2_Delayer/counter_25M_next_reg[1] cannot be properly analyzed as its control pin TriggerManager_0/L2_Delayer/counter_25M_next_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#21 Warning
+Non-clocked latch  
+The latch TriggerManager_0/L2_Delayer/counter_25M_next_reg[2] cannot be properly analyzed as its control pin TriggerManager_0/L2_Delayer/counter_25M_next_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#22 Warning
+Non-clocked latch  
+The latch TriggerManager_0/L2_Delayer/counter_25M_next_reg[3] cannot be properly analyzed as its control pin TriggerManager_0/L2_Delayer/counter_25M_next_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#23 Warning
+Non-clocked latch  
+The latch TriggerManager_0/L2_Delayer/counter_25M_next_reg[4] cannot be properly analyzed as its control pin TriggerManager_0/L2_Delayer/counter_25M_next_reg[4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#24 Warning
+Non-clocked latch  
+The latch TriggerManager_0/L2_Delayer/counter_25M_next_reg[5] cannot be properly analyzed as its control pin TriggerManager_0/L2_Delayer/counter_25M_next_reg[5]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#25 Warning
+Non-clocked latch  
+The latch TriggerManager_0/L2_Delayer/counter_25M_next_reg[6] cannot be properly analyzed as its control pin TriggerManager_0/L2_Delayer/counter_25M_next_reg[6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#26 Warning
+Non-clocked latch  
+The latch TriggerManager_0/L2_Delayer/counter_25M_next_reg[7] cannot be properly analyzed as its control pin TriggerManager_0/L2_Delayer/counter_25M_next_reg[7]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#27 Warning
+Non-clocked latch  
+The latch TriggerManager_0/L2_Delayer/counter_next_reg[0] cannot be properly analyzed as its control pin TriggerManager_0/L2_Delayer/counter_next_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#28 Warning
+Non-clocked latch  
+The latch TriggerManager_0/L2_Delayer/counter_next_reg[1] cannot be properly analyzed as its control pin TriggerManager_0/L2_Delayer/counter_next_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#29 Warning
+Non-clocked latch  
+The latch TriggerManager_0/L2_Delayer/counter_next_reg[2] cannot be properly analyzed as its control pin TriggerManager_0/L2_Delayer/counter_next_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#30 Warning
+Non-clocked latch  
+The latch TriggerManager_0/L2_Delayer/counter_next_reg[3] cannot be properly analyzed as its control pin TriggerManager_0/L2_Delayer/counter_next_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#31 Warning
+Non-clocked latch  
+The latch TriggerManager_0/L2_Delayer/counter_next_reg[4] cannot be properly analyzed as its control pin TriggerManager_0/L2_Delayer/counter_next_reg[4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#32 Warning
+Non-clocked latch  
+The latch TriggerManager_0/L2_Delayer/counter_next_reg[5] cannot be properly analyzed as its control pin TriggerManager_0/L2_Delayer/counter_next_reg[5]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#33 Warning
+Non-clocked latch  
+The latch TriggerManager_0/L2_Delayer/counter_next_reg[6] cannot be properly analyzed as its control pin TriggerManager_0/L2_Delayer/counter_next_reg[6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#34 Warning
+Non-clocked latch  
+The latch TriggerManager_0/L2_Delayer/counter_next_reg[7] cannot be properly analyzed as its control pin TriggerManager_0/L2_Delayer/counter_next_reg[7]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#35 Warning
+Non-clocked latch  
+The latch TriggerManager_0/L2_Delayer/trigger_s_reg cannot be properly analyzed as its control pin TriggerManager_0/L2_Delayer/trigger_s_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#36 Warning
+Non-clocked latch  
+The latch TriggerManager_0/Trig_Delayer/counter_25M_next_reg[0] cannot be properly analyzed as its control pin TriggerManager_0/Trig_Delayer/counter_25M_next_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#37 Warning
+Non-clocked latch  
+The latch TriggerManager_0/Trig_Delayer/counter_25M_next_reg[1] cannot be properly analyzed as its control pin TriggerManager_0/Trig_Delayer/counter_25M_next_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#38 Warning
+Non-clocked latch  
+The latch TriggerManager_0/Trig_Delayer/counter_25M_next_reg[2] cannot be properly analyzed as its control pin TriggerManager_0/Trig_Delayer/counter_25M_next_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#39 Warning
+Non-clocked latch  
+The latch TriggerManager_0/Trig_Delayer/counter_25M_next_reg[3] cannot be properly analyzed as its control pin TriggerManager_0/Trig_Delayer/counter_25M_next_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#40 Warning
+Non-clocked latch  
+The latch TriggerManager_0/Trig_Delayer/counter_25M_next_reg[4] cannot be properly analyzed as its control pin TriggerManager_0/Trig_Delayer/counter_25M_next_reg[4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#41 Warning
+Non-clocked latch  
+The latch TriggerManager_0/Trig_Delayer/counter_25M_next_reg[5] cannot be properly analyzed as its control pin TriggerManager_0/Trig_Delayer/counter_25M_next_reg[5]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#42 Warning
+Non-clocked latch  
+The latch TriggerManager_0/Trig_Delayer/counter_25M_next_reg[6] cannot be properly analyzed as its control pin TriggerManager_0/Trig_Delayer/counter_25M_next_reg[6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#43 Warning
+Non-clocked latch  
+The latch TriggerManager_0/Trig_Delayer/counter_25M_next_reg[7] cannot be properly analyzed as its control pin TriggerManager_0/Trig_Delayer/counter_25M_next_reg[7]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#44 Warning
+Non-clocked latch  
+The latch TriggerManager_0/Trig_Delayer/counter_next_reg[0] cannot be properly analyzed as its control pin TriggerManager_0/Trig_Delayer/counter_next_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#45 Warning
+Non-clocked latch  
+The latch TriggerManager_0/Trig_Delayer/counter_next_reg[1] cannot be properly analyzed as its control pin TriggerManager_0/Trig_Delayer/counter_next_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#46 Warning
+Non-clocked latch  
+The latch TriggerManager_0/Trig_Delayer/counter_next_reg[2] cannot be properly analyzed as its control pin TriggerManager_0/Trig_Delayer/counter_next_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#47 Warning
+Non-clocked latch  
+The latch TriggerManager_0/Trig_Delayer/counter_next_reg[3] cannot be properly analyzed as its control pin TriggerManager_0/Trig_Delayer/counter_next_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#48 Warning
+Non-clocked latch  
+The latch TriggerManager_0/Trig_Delayer/counter_next_reg[4] cannot be properly analyzed as its control pin TriggerManager_0/Trig_Delayer/counter_next_reg[4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#49 Warning
+Non-clocked latch  
+The latch TriggerManager_0/Trig_Delayer/counter_next_reg[5] cannot be properly analyzed as its control pin TriggerManager_0/Trig_Delayer/counter_next_reg[5]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#50 Warning
+Non-clocked latch  
+The latch TriggerManager_0/Trig_Delayer/counter_next_reg[6] cannot be properly analyzed as its control pin TriggerManager_0/Trig_Delayer/counter_next_reg[6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#51 Warning
+Non-clocked latch  
+The latch TriggerManager_0/Trig_Delayer/counter_next_reg[7] cannot be properly analyzed as its control pin TriggerManager_0/Trig_Delayer/counter_next_reg[7]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#52 Warning
+Non-clocked latch  
+The latch TriggerManager_0/Trig_Delayer/trigger_s_reg cannot be properly analyzed as its control pin TriggerManager_0/Trig_Delayer/trigger_s_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#53 Warning
+Non-clocked latch  
+The latch TriggerWidth_0/WidthAdjuster_GENERATE[0].Width_Adjuster_0/trigger_s_reg_LDC cannot be properly analyzed as its control pin TriggerWidth_0/WidthAdjuster_GENERATE[0].Width_Adjuster_0/trigger_s_reg_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#54 Warning
+Non-clocked latch  
+The latch TriggerWidth_0/WidthAdjuster_GENERATE[0].Width_Adjuster_1/trigger_s_reg_LDC cannot be properly analyzed as its control pin TriggerWidth_0/WidthAdjuster_GENERATE[0].Width_Adjuster_1/trigger_s_reg_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#55 Warning
+Non-clocked latch  
+The latch TriggerWidth_0/WidthAdjuster_GENERATE[10].Width_Adjuster_0/trigger_s_reg_LDC cannot be properly analyzed as its control pin TriggerWidth_0/WidthAdjuster_GENERATE[10].Width_Adjuster_0/trigger_s_reg_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#56 Warning
+Non-clocked latch  
+The latch TriggerWidth_0/WidthAdjuster_GENERATE[10].Width_Adjuster_1/trigger_s_reg_LDC cannot be properly analyzed as its control pin TriggerWidth_0/WidthAdjuster_GENERATE[10].Width_Adjuster_1/trigger_s_reg_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#57 Warning
+Non-clocked latch  
+The latch TriggerWidth_0/WidthAdjuster_GENERATE[11].Width_Adjuster_0/trigger_s_reg_LDC cannot be properly analyzed as its control pin TriggerWidth_0/WidthAdjuster_GENERATE[11].Width_Adjuster_0/trigger_s_reg_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#58 Warning
+Non-clocked latch  
+The latch TriggerWidth_0/WidthAdjuster_GENERATE[11].Width_Adjuster_1/trigger_s_reg_LDC cannot be properly analyzed as its control pin TriggerWidth_0/WidthAdjuster_GENERATE[11].Width_Adjuster_1/trigger_s_reg_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#59 Warning
+Non-clocked latch  
+The latch TriggerWidth_0/WidthAdjuster_GENERATE[12].Width_Adjuster_0/trigger_s_reg_LDC cannot be properly analyzed as its control pin TriggerWidth_0/WidthAdjuster_GENERATE[12].Width_Adjuster_0/trigger_s_reg_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#60 Warning
+Non-clocked latch  
+The latch TriggerWidth_0/WidthAdjuster_GENERATE[12].Width_Adjuster_1/trigger_s_reg_LDC cannot be properly analyzed as its control pin TriggerWidth_0/WidthAdjuster_GENERATE[12].Width_Adjuster_1/trigger_s_reg_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#61 Warning
+Non-clocked latch  
+The latch TriggerWidth_0/WidthAdjuster_GENERATE[13].Width_Adjuster_0/trigger_s_reg_LDC cannot be properly analyzed as its control pin TriggerWidth_0/WidthAdjuster_GENERATE[13].Width_Adjuster_0/trigger_s_reg_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#62 Warning
+Non-clocked latch  
+The latch TriggerWidth_0/WidthAdjuster_GENERATE[13].Width_Adjuster_1/trigger_s_reg_LDC cannot be properly analyzed as its control pin TriggerWidth_0/WidthAdjuster_GENERATE[13].Width_Adjuster_1/trigger_s_reg_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#63 Warning
+Non-clocked latch  
+The latch TriggerWidth_0/WidthAdjuster_GENERATE[14].Width_Adjuster_0/trigger_s_reg_LDC cannot be properly analyzed as its control pin TriggerWidth_0/WidthAdjuster_GENERATE[14].Width_Adjuster_0/trigger_s_reg_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#64 Warning
+Non-clocked latch  
+The latch TriggerWidth_0/WidthAdjuster_GENERATE[14].Width_Adjuster_1/trigger_s_reg_LDC cannot be properly analyzed as its control pin TriggerWidth_0/WidthAdjuster_GENERATE[14].Width_Adjuster_1/trigger_s_reg_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#65 Warning
+Non-clocked latch  
+The latch TriggerWidth_0/WidthAdjuster_GENERATE[15].Width_Adjuster_0/trigger_s_reg_LDC cannot be properly analyzed as its control pin TriggerWidth_0/WidthAdjuster_GENERATE[15].Width_Adjuster_0/trigger_s_reg_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#66 Warning
+Non-clocked latch  
+The latch TriggerWidth_0/WidthAdjuster_GENERATE[15].Width_Adjuster_1/trigger_s_reg_LDC cannot be properly analyzed as its control pin TriggerWidth_0/WidthAdjuster_GENERATE[15].Width_Adjuster_1/trigger_s_reg_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#67 Warning
+Non-clocked latch  
+The latch TriggerWidth_0/WidthAdjuster_GENERATE[16].Width_Adjuster_0/trigger_s_reg_LDC cannot be properly analyzed as its control pin TriggerWidth_0/WidthAdjuster_GENERATE[16].Width_Adjuster_0/trigger_s_reg_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#68 Warning
+Non-clocked latch  
+The latch TriggerWidth_0/WidthAdjuster_GENERATE[16].Width_Adjuster_1/trigger_s_reg_LDC cannot be properly analyzed as its control pin TriggerWidth_0/WidthAdjuster_GENERATE[16].Width_Adjuster_1/trigger_s_reg_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#69 Warning
+Non-clocked latch  
+The latch TriggerWidth_0/WidthAdjuster_GENERATE[17].Width_Adjuster_0/trigger_s_reg_LDC cannot be properly analyzed as its control pin TriggerWidth_0/WidthAdjuster_GENERATE[17].Width_Adjuster_0/trigger_s_reg_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#70 Warning
+Non-clocked latch  
+The latch TriggerWidth_0/WidthAdjuster_GENERATE[17].Width_Adjuster_1/trigger_s_reg_LDC cannot be properly analyzed as its control pin TriggerWidth_0/WidthAdjuster_GENERATE[17].Width_Adjuster_1/trigger_s_reg_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#71 Warning
+Non-clocked latch  
+The latch TriggerWidth_0/WidthAdjuster_GENERATE[18].Width_Adjuster_0/trigger_s_reg_LDC cannot be properly analyzed as its control pin TriggerWidth_0/WidthAdjuster_GENERATE[18].Width_Adjuster_0/trigger_s_reg_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#72 Warning
+Non-clocked latch  
+The latch TriggerWidth_0/WidthAdjuster_GENERATE[18].Width_Adjuster_1/trigger_s_reg_LDC cannot be properly analyzed as its control pin TriggerWidth_0/WidthAdjuster_GENERATE[18].Width_Adjuster_1/trigger_s_reg_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#73 Warning
+Non-clocked latch  
+The latch TriggerWidth_0/WidthAdjuster_GENERATE[19].Width_Adjuster_0/trigger_s_reg_LDC cannot be properly analyzed as its control pin TriggerWidth_0/WidthAdjuster_GENERATE[19].Width_Adjuster_0/trigger_s_reg_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#74 Warning
+Non-clocked latch  
+The latch TriggerWidth_0/WidthAdjuster_GENERATE[19].Width_Adjuster_1/trigger_s_reg_LDC cannot be properly analyzed as its control pin TriggerWidth_0/WidthAdjuster_GENERATE[19].Width_Adjuster_1/trigger_s_reg_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#75 Warning
+Non-clocked latch  
+The latch TriggerWidth_0/WidthAdjuster_GENERATE[1].Width_Adjuster_0/trigger_s_reg_LDC cannot be properly analyzed as its control pin TriggerWidth_0/WidthAdjuster_GENERATE[1].Width_Adjuster_0/trigger_s_reg_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#76 Warning
+Non-clocked latch  
+The latch TriggerWidth_0/WidthAdjuster_GENERATE[1].Width_Adjuster_1/trigger_s_reg_LDC cannot be properly analyzed as its control pin TriggerWidth_0/WidthAdjuster_GENERATE[1].Width_Adjuster_1/trigger_s_reg_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#77 Warning
+Non-clocked latch  
+The latch TriggerWidth_0/WidthAdjuster_GENERATE[20].Width_Adjuster_0/trigger_s_reg_LDC cannot be properly analyzed as its control pin TriggerWidth_0/WidthAdjuster_GENERATE[20].Width_Adjuster_0/trigger_s_reg_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#78 Warning
+Non-clocked latch  
+The latch TriggerWidth_0/WidthAdjuster_GENERATE[20].Width_Adjuster_1/trigger_s_reg_LDC cannot be properly analyzed as its control pin TriggerWidth_0/WidthAdjuster_GENERATE[20].Width_Adjuster_1/trigger_s_reg_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#79 Warning
+Non-clocked latch  
+The latch TriggerWidth_0/WidthAdjuster_GENERATE[21].Width_Adjuster_0/trigger_s_reg_LDC cannot be properly analyzed as its control pin TriggerWidth_0/WidthAdjuster_GENERATE[21].Width_Adjuster_0/trigger_s_reg_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#80 Warning
+Non-clocked latch  
+The latch TriggerWidth_0/WidthAdjuster_GENERATE[21].Width_Adjuster_1/trigger_s_reg_LDC cannot be properly analyzed as its control pin TriggerWidth_0/WidthAdjuster_GENERATE[21].Width_Adjuster_1/trigger_s_reg_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#81 Warning
+Non-clocked latch  
+The latch TriggerWidth_0/WidthAdjuster_GENERATE[22].Width_Adjuster_0/trigger_s_reg_LDC cannot be properly analyzed as its control pin TriggerWidth_0/WidthAdjuster_GENERATE[22].Width_Adjuster_0/trigger_s_reg_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#82 Warning
+Non-clocked latch  
+The latch TriggerWidth_0/WidthAdjuster_GENERATE[22].Width_Adjuster_1/trigger_s_reg_LDC cannot be properly analyzed as its control pin TriggerWidth_0/WidthAdjuster_GENERATE[22].Width_Adjuster_1/trigger_s_reg_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#83 Warning
+Non-clocked latch  
+The latch TriggerWidth_0/WidthAdjuster_GENERATE[23].Width_Adjuster_0/trigger_s_reg_LDC cannot be properly analyzed as its control pin TriggerWidth_0/WidthAdjuster_GENERATE[23].Width_Adjuster_0/trigger_s_reg_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#84 Warning
+Non-clocked latch  
+The latch TriggerWidth_0/WidthAdjuster_GENERATE[23].Width_Adjuster_1/trigger_s_reg_LDC cannot be properly analyzed as its control pin TriggerWidth_0/WidthAdjuster_GENERATE[23].Width_Adjuster_1/trigger_s_reg_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#85 Warning
+Non-clocked latch  
+The latch TriggerWidth_0/WidthAdjuster_GENERATE[24].Width_Adjuster_0/trigger_s_reg_LDC cannot be properly analyzed as its control pin TriggerWidth_0/WidthAdjuster_GENERATE[24].Width_Adjuster_0/trigger_s_reg_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#86 Warning
+Non-clocked latch  
+The latch TriggerWidth_0/WidthAdjuster_GENERATE[24].Width_Adjuster_1/trigger_s_reg_LDC cannot be properly analyzed as its control pin TriggerWidth_0/WidthAdjuster_GENERATE[24].Width_Adjuster_1/trigger_s_reg_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#87 Warning
+Non-clocked latch  
+The latch TriggerWidth_0/WidthAdjuster_GENERATE[25].Width_Adjuster_0/trigger_s_reg_LDC cannot be properly analyzed as its control pin TriggerWidth_0/WidthAdjuster_GENERATE[25].Width_Adjuster_0/trigger_s_reg_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#88 Warning
+Non-clocked latch  
+The latch TriggerWidth_0/WidthAdjuster_GENERATE[25].Width_Adjuster_1/trigger_s_reg_LDC cannot be properly analyzed as its control pin TriggerWidth_0/WidthAdjuster_GENERATE[25].Width_Adjuster_1/trigger_s_reg_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#89 Warning
+Non-clocked latch  
+The latch TriggerWidth_0/WidthAdjuster_GENERATE[26].Width_Adjuster_0/trigger_s_reg_LDC cannot be properly analyzed as its control pin TriggerWidth_0/WidthAdjuster_GENERATE[26].Width_Adjuster_0/trigger_s_reg_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#90 Warning
+Non-clocked latch  
+The latch TriggerWidth_0/WidthAdjuster_GENERATE[26].Width_Adjuster_1/trigger_s_reg_LDC cannot be properly analyzed as its control pin TriggerWidth_0/WidthAdjuster_GENERATE[26].Width_Adjuster_1/trigger_s_reg_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#91 Warning
+Non-clocked latch  
+The latch TriggerWidth_0/WidthAdjuster_GENERATE[27].Width_Adjuster_0/trigger_s_reg_LDC cannot be properly analyzed as its control pin TriggerWidth_0/WidthAdjuster_GENERATE[27].Width_Adjuster_0/trigger_s_reg_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#92 Warning
+Non-clocked latch  
+The latch TriggerWidth_0/WidthAdjuster_GENERATE[27].Width_Adjuster_1/trigger_s_reg_LDC cannot be properly analyzed as its control pin TriggerWidth_0/WidthAdjuster_GENERATE[27].Width_Adjuster_1/trigger_s_reg_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#93 Warning
+Non-clocked latch  
+The latch TriggerWidth_0/WidthAdjuster_GENERATE[28].Width_Adjuster_0/trigger_s_reg_LDC cannot be properly analyzed as its control pin TriggerWidth_0/WidthAdjuster_GENERATE[28].Width_Adjuster_0/trigger_s_reg_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#94 Warning
+Non-clocked latch  
+The latch TriggerWidth_0/WidthAdjuster_GENERATE[28].Width_Adjuster_1/trigger_s_reg_LDC cannot be properly analyzed as its control pin TriggerWidth_0/WidthAdjuster_GENERATE[28].Width_Adjuster_1/trigger_s_reg_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#95 Warning
+Non-clocked latch  
+The latch TriggerWidth_0/WidthAdjuster_GENERATE[29].Width_Adjuster_0/trigger_s_reg_LDC cannot be properly analyzed as its control pin TriggerWidth_0/WidthAdjuster_GENERATE[29].Width_Adjuster_0/trigger_s_reg_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#96 Warning
+Non-clocked latch  
+The latch TriggerWidth_0/WidthAdjuster_GENERATE[29].Width_Adjuster_1/trigger_s_reg_LDC cannot be properly analyzed as its control pin TriggerWidth_0/WidthAdjuster_GENERATE[29].Width_Adjuster_1/trigger_s_reg_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#97 Warning
+Non-clocked latch  
+The latch TriggerWidth_0/WidthAdjuster_GENERATE[2].Width_Adjuster_0/trigger_s_reg_LDC cannot be properly analyzed as its control pin TriggerWidth_0/WidthAdjuster_GENERATE[2].Width_Adjuster_0/trigger_s_reg_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#98 Warning
+Non-clocked latch  
+The latch TriggerWidth_0/WidthAdjuster_GENERATE[2].Width_Adjuster_1/trigger_s_reg_LDC cannot be properly analyzed as its control pin TriggerWidth_0/WidthAdjuster_GENERATE[2].Width_Adjuster_1/trigger_s_reg_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#99 Warning
+Non-clocked latch  
+The latch TriggerWidth_0/WidthAdjuster_GENERATE[30].Width_Adjuster_0/trigger_s_reg_LDC cannot be properly analyzed as its control pin TriggerWidth_0/WidthAdjuster_GENERATE[30].Width_Adjuster_0/trigger_s_reg_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#100 Warning
+Non-clocked latch  
+The latch TriggerWidth_0/WidthAdjuster_GENERATE[30].Width_Adjuster_1/trigger_s_reg_LDC cannot be properly analyzed as its control pin TriggerWidth_0/WidthAdjuster_GENERATE[30].Width_Adjuster_1/trigger_s_reg_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#101 Warning
+Non-clocked latch  
+The latch TriggerWidth_0/WidthAdjuster_GENERATE[31].Width_Adjuster_0/trigger_s_reg_LDC cannot be properly analyzed as its control pin TriggerWidth_0/WidthAdjuster_GENERATE[31].Width_Adjuster_0/trigger_s_reg_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#102 Warning
+Non-clocked latch  
+The latch TriggerWidth_0/WidthAdjuster_GENERATE[31].Width_Adjuster_1/trigger_s_reg_LDC cannot be properly analyzed as its control pin TriggerWidth_0/WidthAdjuster_GENERATE[31].Width_Adjuster_1/trigger_s_reg_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#103 Warning
+Non-clocked latch  
+The latch TriggerWidth_0/WidthAdjuster_GENERATE[3].Width_Adjuster_0/trigger_s_reg_LDC cannot be properly analyzed as its control pin TriggerWidth_0/WidthAdjuster_GENERATE[3].Width_Adjuster_0/trigger_s_reg_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#104 Warning
+Non-clocked latch  
+The latch TriggerWidth_0/WidthAdjuster_GENERATE[3].Width_Adjuster_1/trigger_s_reg_LDC cannot be properly analyzed as its control pin TriggerWidth_0/WidthAdjuster_GENERATE[3].Width_Adjuster_1/trigger_s_reg_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#105 Warning
+Non-clocked latch  
+The latch TriggerWidth_0/WidthAdjuster_GENERATE[4].Width_Adjuster_0/trigger_s_reg_LDC cannot be properly analyzed as its control pin TriggerWidth_0/WidthAdjuster_GENERATE[4].Width_Adjuster_0/trigger_s_reg_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#106 Warning
+Non-clocked latch  
+The latch TriggerWidth_0/WidthAdjuster_GENERATE[4].Width_Adjuster_1/trigger_s_reg_LDC cannot be properly analyzed as its control pin TriggerWidth_0/WidthAdjuster_GENERATE[4].Width_Adjuster_1/trigger_s_reg_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#107 Warning
+Non-clocked latch  
+The latch TriggerWidth_0/WidthAdjuster_GENERATE[5].Width_Adjuster_0/trigger_s_reg_LDC cannot be properly analyzed as its control pin TriggerWidth_0/WidthAdjuster_GENERATE[5].Width_Adjuster_0/trigger_s_reg_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#108 Warning
+Non-clocked latch  
+The latch TriggerWidth_0/WidthAdjuster_GENERATE[5].Width_Adjuster_1/trigger_s_reg_LDC cannot be properly analyzed as its control pin TriggerWidth_0/WidthAdjuster_GENERATE[5].Width_Adjuster_1/trigger_s_reg_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#109 Warning
+Non-clocked latch  
+The latch TriggerWidth_0/WidthAdjuster_GENERATE[6].Width_Adjuster_0/trigger_s_reg_LDC cannot be properly analyzed as its control pin TriggerWidth_0/WidthAdjuster_GENERATE[6].Width_Adjuster_0/trigger_s_reg_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#110 Warning
+Non-clocked latch  
+The latch TriggerWidth_0/WidthAdjuster_GENERATE[6].Width_Adjuster_1/trigger_s_reg_LDC cannot be properly analyzed as its control pin TriggerWidth_0/WidthAdjuster_GENERATE[6].Width_Adjuster_1/trigger_s_reg_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#111 Warning
+Non-clocked latch  
+The latch TriggerWidth_0/WidthAdjuster_GENERATE[7].Width_Adjuster_0/trigger_s_reg_LDC cannot be properly analyzed as its control pin TriggerWidth_0/WidthAdjuster_GENERATE[7].Width_Adjuster_0/trigger_s_reg_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#112 Warning
+Non-clocked latch  
+The latch TriggerWidth_0/WidthAdjuster_GENERATE[7].Width_Adjuster_1/trigger_s_reg_LDC cannot be properly analyzed as its control pin TriggerWidth_0/WidthAdjuster_GENERATE[7].Width_Adjuster_1/trigger_s_reg_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#113 Warning
+Non-clocked latch  
+The latch TriggerWidth_0/WidthAdjuster_GENERATE[8].Width_Adjuster_0/trigger_s_reg_LDC cannot be properly analyzed as its control pin TriggerWidth_0/WidthAdjuster_GENERATE[8].Width_Adjuster_0/trigger_s_reg_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#114 Warning
+Non-clocked latch  
+The latch TriggerWidth_0/WidthAdjuster_GENERATE[8].Width_Adjuster_1/trigger_s_reg_LDC cannot be properly analyzed as its control pin TriggerWidth_0/WidthAdjuster_GENERATE[8].Width_Adjuster_1/trigger_s_reg_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#115 Warning
+Non-clocked latch  
+The latch TriggerWidth_0/WidthAdjuster_GENERATE[9].Width_Adjuster_0/trigger_s_reg_LDC cannot be properly analyzed as its control pin TriggerWidth_0/WidthAdjuster_GENERATE[9].Width_Adjuster_0/trigger_s_reg_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#116 Warning
+Non-clocked latch  
+The latch TriggerWidth_0/WidthAdjuster_GENERATE[9].Width_Adjuster_1/trigger_s_reg_LDC cannot be properly analyzed as its control pin TriggerWidth_0/WidthAdjuster_GENERATE[9].Width_Adjuster_1/trigger_s_reg_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-46#1 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[0].MHTDC_Counter_Leading/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[0].MHTDC_Counter_Leading/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#2 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[10].MHTDC_Counter_Leading/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[10].MHTDC_Counter_Leading/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#3 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[11].MHTDC_Counter_Leading/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[11].MHTDC_Counter_Leading/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#4 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[12].MHTDC_Counter_Leading/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[12].MHTDC_Counter_Leading/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#5 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[13].MHTDC_Counter_Leading/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[13].MHTDC_Counter_Leading/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#6 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[14].MHTDC_Counter_Leading/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[14].MHTDC_Counter_Leading/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#7 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[15].MHTDC_Counter_Leading/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[15].MHTDC_Counter_Leading/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#8 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[16].MHTDC_Counter_Leading/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[16].MHTDC_Counter_Leading/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#9 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[17].MHTDC_Counter_Leading/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[17].MHTDC_Counter_Leading/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#10 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[18].MHTDC_Counter_Leading/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[18].MHTDC_Counter_Leading/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#11 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[19].MHTDC_Counter_Leading/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[19].MHTDC_Counter_Leading/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#12 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[1].MHTDC_Counter_Leading/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[1].MHTDC_Counter_Leading/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#13 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[20].MHTDC_Counter_Leading/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[20].MHTDC_Counter_Leading/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#14 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[21].MHTDC_Counter_Leading/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[21].MHTDC_Counter_Leading/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#15 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[22].MHTDC_Counter_Leading/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[22].MHTDC_Counter_Leading/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#16 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[23].MHTDC_Counter_Leading/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[23].MHTDC_Counter_Leading/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#17 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[24].MHTDC_Counter_Leading/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[24].MHTDC_Counter_Leading/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#18 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[25].MHTDC_Counter_Leading/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[25].MHTDC_Counter_Leading/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#19 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[26].MHTDC_Counter_Leading/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[26].MHTDC_Counter_Leading/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#20 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[27].MHTDC_Counter_Leading/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[27].MHTDC_Counter_Leading/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#21 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[28].MHTDC_Counter_Leading/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[28].MHTDC_Counter_Leading/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#22 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[29].MHTDC_Counter_Leading/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[29].MHTDC_Counter_Leading/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#23 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[2].MHTDC_Counter_Leading/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[2].MHTDC_Counter_Leading/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#24 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[30].MHTDC_Counter_Leading/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[30].MHTDC_Counter_Leading/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#25 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[31].MHTDC_Counter_Leading/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[31].MHTDC_Counter_Leading/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#26 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[32].MHTDC_Counter_Leading/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[32].MHTDC_Counter_Leading/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#27 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[33].MHTDC_Counter_Leading/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[33].MHTDC_Counter_Leading/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#28 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[34].MHTDC_Counter_Leading/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[34].MHTDC_Counter_Leading/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#29 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[35].MHTDC_Counter_Leading/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[35].MHTDC_Counter_Leading/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#30 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[36].MHTDC_Counter_Leading/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[36].MHTDC_Counter_Leading/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#31 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[37].MHTDC_Counter_Leading/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[37].MHTDC_Counter_Leading/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#32 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[38].MHTDC_Counter_Leading/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[38].MHTDC_Counter_Leading/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#33 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[39].MHTDC_Counter_Leading/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[39].MHTDC_Counter_Leading/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#34 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[3].MHTDC_Counter_Leading/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[3].MHTDC_Counter_Leading/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#35 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[40].MHTDC_Counter_Leading/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[40].MHTDC_Counter_Leading/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#36 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[41].MHTDC_Counter_Leading/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[41].MHTDC_Counter_Leading/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#37 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[42].MHTDC_Counter_Leading/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[42].MHTDC_Counter_Leading/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#38 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[43].MHTDC_Counter_Leading/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[43].MHTDC_Counter_Leading/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#39 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[44].MHTDC_Counter_Leading/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[44].MHTDC_Counter_Leading/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#40 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[45].MHTDC_Counter_Leading/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[45].MHTDC_Counter_Leading/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#41 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[46].MHTDC_Counter_Leading/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[46].MHTDC_Counter_Leading/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#42 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[47].MHTDC_Counter_Leading/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[47].MHTDC_Counter_Leading/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#43 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[48].MHTDC_Counter_Leading/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[48].MHTDC_Counter_Leading/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#44 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[49].MHTDC_Counter_Leading/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[49].MHTDC_Counter_Leading/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#45 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[4].MHTDC_Counter_Leading/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[4].MHTDC_Counter_Leading/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#46 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[50].MHTDC_Counter_Leading/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[50].MHTDC_Counter_Leading/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#47 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[51].MHTDC_Counter_Leading/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[51].MHTDC_Counter_Leading/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#48 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[52].MHTDC_Counter_Leading/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[52].MHTDC_Counter_Leading/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#49 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[53].MHTDC_Counter_Leading/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[53].MHTDC_Counter_Leading/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#50 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[54].MHTDC_Counter_Leading/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[54].MHTDC_Counter_Leading/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#51 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[55].MHTDC_Counter_Leading/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[55].MHTDC_Counter_Leading/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#52 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[56].MHTDC_Counter_Leading/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[56].MHTDC_Counter_Leading/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#53 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[57].MHTDC_Counter_Leading/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[57].MHTDC_Counter_Leading/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#54 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[58].MHTDC_Counter_Leading/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[58].MHTDC_Counter_Leading/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#55 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[59].MHTDC_Counter_Leading/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[59].MHTDC_Counter_Leading/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#56 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[5].MHTDC_Counter_Leading/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[5].MHTDC_Counter_Leading/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#57 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[60].MHTDC_Counter_Leading/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[60].MHTDC_Counter_Leading/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#58 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[61].MHTDC_Counter_Leading/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[61].MHTDC_Counter_Leading/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#59 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[62].MHTDC_Counter_Leading/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[62].MHTDC_Counter_Leading/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#60 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[63].MHTDC_Counter_Leading/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[63].MHTDC_Counter_Leading/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#61 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[6].MHTDC_Counter_Leading/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[6].MHTDC_Counter_Leading/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#62 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[7].MHTDC_Counter_Leading/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[7].MHTDC_Counter_Leading/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#63 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[8].MHTDC_Counter_Leading/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[8].MHTDC_Counter_Leading/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#64 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[9].MHTDC_Counter_Leading/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_LEADING_GENERATE[9].MHTDC_Counter_Leading/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#65 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[0].MHTDC_Counter_Trailing/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[0].MHTDC_Counter_Trailing/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#66 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[10].MHTDC_Counter_Trailing/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[10].MHTDC_Counter_Trailing/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#67 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[11].MHTDC_Counter_Trailing/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[11].MHTDC_Counter_Trailing/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#68 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[12].MHTDC_Counter_Trailing/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[12].MHTDC_Counter_Trailing/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#69 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[13].MHTDC_Counter_Trailing/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[13].MHTDC_Counter_Trailing/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#70 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[14].MHTDC_Counter_Trailing/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[14].MHTDC_Counter_Trailing/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#71 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[15].MHTDC_Counter_Trailing/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[15].MHTDC_Counter_Trailing/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#72 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[16].MHTDC_Counter_Trailing/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[16].MHTDC_Counter_Trailing/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#73 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[17].MHTDC_Counter_Trailing/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[17].MHTDC_Counter_Trailing/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#74 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[18].MHTDC_Counter_Trailing/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[18].MHTDC_Counter_Trailing/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#75 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[19].MHTDC_Counter_Trailing/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[19].MHTDC_Counter_Trailing/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#76 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[1].MHTDC_Counter_Trailing/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[1].MHTDC_Counter_Trailing/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#77 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[20].MHTDC_Counter_Trailing/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[20].MHTDC_Counter_Trailing/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#78 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[21].MHTDC_Counter_Trailing/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[21].MHTDC_Counter_Trailing/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#79 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[22].MHTDC_Counter_Trailing/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[22].MHTDC_Counter_Trailing/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#80 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[23].MHTDC_Counter_Trailing/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[23].MHTDC_Counter_Trailing/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#81 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[24].MHTDC_Counter_Trailing/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[24].MHTDC_Counter_Trailing/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#82 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[25].MHTDC_Counter_Trailing/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[25].MHTDC_Counter_Trailing/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#83 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[26].MHTDC_Counter_Trailing/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[26].MHTDC_Counter_Trailing/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#84 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[27].MHTDC_Counter_Trailing/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[27].MHTDC_Counter_Trailing/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#85 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[28].MHTDC_Counter_Trailing/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[28].MHTDC_Counter_Trailing/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#86 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[29].MHTDC_Counter_Trailing/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[29].MHTDC_Counter_Trailing/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#87 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[2].MHTDC_Counter_Trailing/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[2].MHTDC_Counter_Trailing/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#88 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[30].MHTDC_Counter_Trailing/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[30].MHTDC_Counter_Trailing/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#89 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[31].MHTDC_Counter_Trailing/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[31].MHTDC_Counter_Trailing/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#90 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[32].MHTDC_Counter_Trailing/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[32].MHTDC_Counter_Trailing/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#91 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[33].MHTDC_Counter_Trailing/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[33].MHTDC_Counter_Trailing/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#92 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[34].MHTDC_Counter_Trailing/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[34].MHTDC_Counter_Trailing/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#93 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[35].MHTDC_Counter_Trailing/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[35].MHTDC_Counter_Trailing/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#94 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[36].MHTDC_Counter_Trailing/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[36].MHTDC_Counter_Trailing/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#95 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[37].MHTDC_Counter_Trailing/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[37].MHTDC_Counter_Trailing/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#96 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[38].MHTDC_Counter_Trailing/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[38].MHTDC_Counter_Trailing/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#97 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[39].MHTDC_Counter_Trailing/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[39].MHTDC_Counter_Trailing/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#98 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[3].MHTDC_Counter_Trailing/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[3].MHTDC_Counter_Trailing/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#99 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[40].MHTDC_Counter_Trailing/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[40].MHTDC_Counter_Trailing/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#100 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[41].MHTDC_Counter_Trailing/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[41].MHTDC_Counter_Trailing/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#101 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[42].MHTDC_Counter_Trailing/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[42].MHTDC_Counter_Trailing/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#102 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[43].MHTDC_Counter_Trailing/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[43].MHTDC_Counter_Trailing/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#103 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[44].MHTDC_Counter_Trailing/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[44].MHTDC_Counter_Trailing/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#104 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[45].MHTDC_Counter_Trailing/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[45].MHTDC_Counter_Trailing/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#105 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[46].MHTDC_Counter_Trailing/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[46].MHTDC_Counter_Trailing/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#106 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[47].MHTDC_Counter_Trailing/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[47].MHTDC_Counter_Trailing/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#107 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[48].MHTDC_Counter_Trailing/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[48].MHTDC_Counter_Trailing/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#108 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[49].MHTDC_Counter_Trailing/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[49].MHTDC_Counter_Trailing/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#109 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[4].MHTDC_Counter_Trailing/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[4].MHTDC_Counter_Trailing/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#110 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[50].MHTDC_Counter_Trailing/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[50].MHTDC_Counter_Trailing/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#111 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[51].MHTDC_Counter_Trailing/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[51].MHTDC_Counter_Trailing/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#112 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[52].MHTDC_Counter_Trailing/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[52].MHTDC_Counter_Trailing/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#113 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[53].MHTDC_Counter_Trailing/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[53].MHTDC_Counter_Trailing/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#114 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[54].MHTDC_Counter_Trailing/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[54].MHTDC_Counter_Trailing/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#115 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[55].MHTDC_Counter_Trailing/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[55].MHTDC_Counter_Trailing/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#116 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[56].MHTDC_Counter_Trailing/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[56].MHTDC_Counter_Trailing/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#117 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[57].MHTDC_Counter_Trailing/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[57].MHTDC_Counter_Trailing/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#118 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[58].MHTDC_Counter_Trailing/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[58].MHTDC_Counter_Trailing/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#119 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[59].MHTDC_Counter_Trailing/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[59].MHTDC_Counter_Trailing/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#120 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[5].MHTDC_Counter_Trailing/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[5].MHTDC_Counter_Trailing/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#121 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[60].MHTDC_Counter_Trailing/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[60].MHTDC_Counter_Trailing/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#122 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[61].MHTDC_Counter_Trailing/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[61].MHTDC_Counter_Trailing/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#123 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[62].MHTDC_Counter_Trailing/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[62].MHTDC_Counter_Trailing/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#124 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[63].MHTDC_Counter_Trailing/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[63].MHTDC_Counter_Trailing/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#125 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[6].MHTDC_Counter_Trailing/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[6].MHTDC_Counter_Trailing/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#126 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[7].MHTDC_Counter_Trailing/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[7].MHTDC_Counter_Trailing/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#127 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[8].MHTDC_Counter_Trailing/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[8].MHTDC_Counter_Trailing/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#128 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[9].MHTDC_Counter_Trailing/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/COUNTER_TRAILING_GENERATE[9].MHTDC_Counter_Trailing/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+TIMING-46#129 Warning
+Multicycle path with tied CE pins  
+One or more multicycle paths are defined between registers MHTDC_0/MHTDC_Core_0/CommonStopManager_0/MHTDC_Counter_0/FineCounter_0/Stage0_reg[3]/Q and MHTDC_0/MHTDC_Core_0/CommonStopManager_0/MHTDC_Counter_0/FineCounter_0/Stage1_reg[3]/D with a direct connection and the CE pins connected to VCC (see constraint position 69 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+Related violations: <none>
+
+XDCH-1#1 Warning
+Hold option missing in multicycle path constraint  
+A multicycle constraint has been set to override the setup relationship, but no multicycle constraint has been defined to change the hold relationship. As a result, the default hold for those paths is derived from the setup and may not be evaluated as expected.
+set_multicycle_path -setup -from [get_clocks CLK_250M_270] -to [get_clocks CLK_250M_0] 2
+C:/Users/owner/Downloads/sfgd_vivadoFPGA/EASIROC_FPGA/EASIROC_firmware_NC150923_viva19.1_work2007/constraint/timing.xdc (Line: 113)
+Related violations: <none>
+
+XDCH-2#1 Warning
+Same min and max delay values on IO port  
+The same input delay of 28.000 ns has been defined on port 'ETH_RXD[0]' relative to clock ETH_RX_CLK for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks ETH_RX_CLK] 28.000 [get_ports -regexp ETH_(RXD|RX_DV|RX_ER)]
+C:/Users/owner/Downloads/sfgd_vivadoFPGA/EASIROC_FPGA/EASIROC_firmware_NC150923_viva19.1_work2007/constraint/timing.xdc (Line: 34)
+Related violations: <none>
+
+XDCH-2#2 Warning
+Same min and max delay values on IO port  
+The same input delay of 28.000 ns has been defined on port 'ETH_RXD[1]' relative to clock ETH_RX_CLK for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks ETH_RX_CLK] 28.000 [get_ports -regexp ETH_(RXD|RX_DV|RX_ER)]
+C:/Users/owner/Downloads/sfgd_vivadoFPGA/EASIROC_FPGA/EASIROC_firmware_NC150923_viva19.1_work2007/constraint/timing.xdc (Line: 34)
+Related violations: <none>
+
+XDCH-2#3 Warning
+Same min and max delay values on IO port  
+The same input delay of 28.000 ns has been defined on port 'ETH_RXD[2]' relative to clock ETH_RX_CLK for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks ETH_RX_CLK] 28.000 [get_ports -regexp ETH_(RXD|RX_DV|RX_ER)]
+C:/Users/owner/Downloads/sfgd_vivadoFPGA/EASIROC_FPGA/EASIROC_firmware_NC150923_viva19.1_work2007/constraint/timing.xdc (Line: 34)
+Related violations: <none>
+
+XDCH-2#4 Warning
+Same min and max delay values on IO port  
+The same input delay of 28.000 ns has been defined on port 'ETH_RXD[3]' relative to clock ETH_RX_CLK for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks ETH_RX_CLK] 28.000 [get_ports -regexp ETH_(RXD|RX_DV|RX_ER)]
+C:/Users/owner/Downloads/sfgd_vivadoFPGA/EASIROC_FPGA/EASIROC_firmware_NC150923_viva19.1_work2007/constraint/timing.xdc (Line: 34)
+Related violations: <none>
+
+XDCH-2#5 Warning
+Same min and max delay values on IO port  
+The same input delay of 28.000 ns has been defined on port 'ETH_RX_DV' relative to clock ETH_RX_CLK for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks ETH_RX_CLK] 28.000 [get_ports -regexp ETH_(RXD|RX_DV|RX_ER)]
+C:/Users/owner/Downloads/sfgd_vivadoFPGA/EASIROC_FPGA/EASIROC_firmware_NC150923_viva19.1_work2007/constraint/timing.xdc (Line: 34)
+Related violations: <none>
+
+XDCH-2#6 Warning
+Same min and max delay values on IO port  
+The same input delay of 28.000 ns has been defined on port 'ETH_RX_ER' relative to clock ETH_RX_CLK for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks ETH_RX_CLK] 28.000 [get_ports -regexp ETH_(RXD|RX_DV|RX_ER)]
+C:/Users/owner/Downloads/sfgd_vivadoFPGA/EASIROC_FPGA/EASIROC_firmware_NC150923_viva19.1_work2007/constraint/timing.xdc (Line: 34)
+Related violations: <none>
+
+

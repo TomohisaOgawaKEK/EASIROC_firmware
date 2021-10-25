@@ -23,11 +23,12 @@ entity TriggerManager is
         FAST_CLK   : in std_logic;
         RESET      : in std_logic;
         -- Trigger
-        HOLD : in std_logic;       -- IN_FPGA(1): hold
+        HOLD       : in std_logic; -- IN_FPGA(1): hold
         L1_TRIGGER : in std_logic; -- IN_FPGA(4): tstop
         L2_TRIGGER : in std_logic; -- IN_FPGA(3): accept
         FAST_CLEAR : in std_logic; -- IN_FPGA(2): clear
-        BUSY : out std_logic;
+        BUSY       : out std_logic;
+
         -- this is new on NC, which is from "SelectableLogic" 
         -- and it is input into OUT_FPGA(2)
 	     SelectableTrigger : in std_logic; 
@@ -338,7 +339,7 @@ begin
 
     process(InExTriggerMode, SelectableTrigger, ExternalTrigger) 
     begin
-        if   (InExTriggerMode = "010") then 
+        if    (InExTriggerMode = "010") then -- 2
             GlobalSelectableTrigger <= SelectableTrigger; 
         elsif (InExTriggerMode = "011") then -- 3
             GlobalSelectableTrigger <= ExternalTrigger;
@@ -361,10 +362,10 @@ begin
             Hold_tmp <= HOLD;
             L1_tmp   <= L1_TRIGGER; -- stop
             L2_tmp   <= L2_TRIGGER; -- accpt
-        -- 02/15 remove several modes, here 
-        end case;
 
-	     -- 02/15 remove several modes, here 
+        -- 02/15 remove several modes, here 
+
+        end case;
 
         --case TriggerMode is => this works 02/22
         --    when "100" => -- 4
@@ -442,35 +443,38 @@ begin
         DOUT  => SynchGathererBusy
     );
 
-    process(CurrentState, 
-			HoldEdge, L1Edge, L2Edge, FastClearEdge, int_BUSY,
+    process(CurrentState, HoldEdge, L1Edge, L2Edge, FastClearEdge, int_BUSY,
             SynchGathererBusy, SynchAdcTdcScalerBusy)
     begin
         case CurrentState is
             when IDLE =>
-                if(HoldEdge = '1') then
+                if( HoldEdge = '1' ) then
                     NextState <= SEND_ADC_TRIGGER;
                 else
                     NextState <= CurrentState;
                 end if;
+
             when SEND_ADC_TRIGGER =>
                 NextState <= HOLD_RECEIVED;
-            when HOLD_RECEIVED =>
-                if(L1Edge = '1') then
+
+            when HOLD_RECEIVED => -- hold is alredy received and done for signal pulse
+                if( L1Edge = '1' ) then -- give tstop
                     NextState <= L1_RECEIVED;
                 else
                     NextState <= CurrentState;
                 end if;
-            when L1_RECEIVED =>
-                if(FastClearEdge = '1') then
+
+            when L1_RECEIVED => -- tstop is alredy received
+                if   ( FastClearEdge = '1' ) then
                     NextState <= CLEAR_STATE;
-                elsif(L2Edge = '1') then
+                elsif( L2Edge = '1' ) then
                     NextState <= WAIT_GATHERER_BUSY;
                 else
                     NextState <= CurrentState;
                 end if;
             when CLEAR_STATE =>
                 NextState <= WAIT_ADC_TDC_BUSY;
+
             when WAIT_GATHERER_BUSY =>
                 if(SynchGathererBusy = '1') then
                     NextState <= CurrentState;
@@ -525,7 +529,7 @@ begin
         CLK_OUT     => SCALER_CLK,
         RESET       => RESET,
         TRIGGER_IN  => L1Edge,
-        TRIGGER_OUT => SCALER_TRIGGER
+        TRIGGER_OUT => SCALER_TRIGGER -- issued by L1Edge (tstop)
     );
 
     InterclockTrigger_TransmitStart: InterclockTrigger
@@ -598,11 +602,11 @@ begin
 
     BusyManager_0: BusyManager
     port map(
-        FAST_CLK => FAST_CLK,
-        RESET    => ResetHoldBusy,
-        HOLD     => MaskedHold,
-        RESET_BUSY => ResetBusy,
-        BUSY     => int_BUSY
+        FAST_CLK => FAST_CLK, -- in
+        RESET    => ResetHoldBusy, -- in
+        HOLD     => MaskedHold, -- in
+        RESET_BUSY => ResetBusy, -- in
+        BUSY     => int_BUSY -- out
     );
 
     BUSY <= int_BUSY;

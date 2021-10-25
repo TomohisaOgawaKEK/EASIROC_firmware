@@ -1,0 +1,1487 @@
+#-----------------------------------------------------------
+# Vivado v2014.3.1 (64-bit)
+# SW Build 1056140 on Thu Oct 30 17:03:40 MDT 2014
+# IP Build 1028902 on Fri Sep 26 17:35:13 MDT 2014
+# Start of session at: Sun May 22 21:54:04 2016
+# Process ID: 6580
+# Log file: C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/vivado.log
+# Journal file: C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2014.3.1/data/ip'.
+open_project: Time (s): cpu = 00:01:32 ; elapsed = 00:00:39 . Memory (MB): peak = 737.105 ; gain = 194.199
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/sim/TriggerDelayer_test.vhd
+update_compile_order -fileset sim_1
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'TopLevel' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in 'C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav'
+"xvlog -m64 -prj TopLevel_vlog.prj"
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+INFO: [Common 17-344] 'run_program' was cancelled
+1
+    while executing
+"catch {rdi::run_program $scr_file} error_log"
+    (procedure "::tclapp::xilinx::xsim::usf_launch_script" line 35)
+    invoked from within
+"::tclapp::xilinx::xsim::usf_launch_script "xsim" $step"
+    (procedure "tclapp::xilinx::xsim::compile" line 13)
+    invoked from within
+"tclapp::xilinx::xsim::compile { -simset sim_1 -mode behavioral -run_dir C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/proje..."
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 766.676 ; gain = 0.000
+INFO: [Common 17-344] 'launch_simulation' was cancelled
+set_property top TriggerDelayer_test [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'TriggerDelayer_test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in 'C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav'
+"xvhdl -m64 -prj TriggerDelayer_test_vhdl.prj"
+Determining compilation order of HDL files.
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/rtl/TriggerDelayer.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TriggerDelayer
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/sim/TriggerDelayer_test.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TriggerDelayer_test
+ERROR: [VRFC 10-91] rst is not declared [C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/sim/TriggerDelayer_test.vhd:79]
+ERROR: [VRFC 10-91] rst is not declared [C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/sim/TriggerDelayer_test.vhd:82]
+ERROR: [VRFC 10-1504] unit behavior ignored due to previous errors [C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/sim/TriggerDelayer_test.vhd:14]
+INFO: [VRFC 10-240] VHDL file C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/sim/TriggerDelayer_test.vhd ignored due to errors
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or '' file for more information.
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'TriggerDelayer_test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in 'C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav'
+"xvhdl -m64 -prj TriggerDelayer_test_vhdl.prj"
+Determining compilation order of HDL files.
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/rtl/TriggerDelayer.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TriggerDelayer
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/sim/TriggerDelayer_test.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TriggerDelayer_test
+ERROR: [VRFC 10-91] rst is not declared [C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/sim/TriggerDelayer_test.vhd:79]
+ERROR: [VRFC 10-91] rst is not declared [C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/sim/TriggerDelayer_test.vhd:82]
+ERROR: [VRFC 10-1504] unit behavior ignored due to previous errors [C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/sim/TriggerDelayer_test.vhd:14]
+INFO: [VRFC 10-240] VHDL file C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/sim/TriggerDelayer_test.vhd ignored due to errors
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or '' file for more information.
+set_property simulator_language VHDL [current_project]
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'TriggerDelayer_test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in 'C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav'
+"xvhdl -m64 -prj TriggerDelayer_test_vhdl.prj"
+Determining compilation order of HDL files.
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/rtl/TriggerDelayer.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TriggerDelayer
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/sim/TriggerDelayer_test.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TriggerDelayer_test
+ERROR: [VRFC 10-91] rst is not declared [C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/sim/TriggerDelayer_test.vhd:79]
+ERROR: [VRFC 10-91] rst is not declared [C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/sim/TriggerDelayer_test.vhd:82]
+ERROR: [VRFC 10-1504] unit behavior ignored due to previous errors [C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/sim/TriggerDelayer_test.vhd:14]
+INFO: [VRFC 10-240] VHDL file C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/sim/TriggerDelayer_test.vhd ignored due to errors
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or '' file for more information.
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'TriggerDelayer_test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in 'C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav'
+"xvhdl -m64 -prj TriggerDelayer_test_vhdl.prj"
+Determining compilation order of HDL files.
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/rtl/TriggerDelayer.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TriggerDelayer
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/sim/TriggerDelayer_test.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TriggerDelayer_test
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav'
+Vivado Simulator 2014.3
+Copyright 1986-1999, 2001-2014 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2014.3.1/bin/unwrapped/win64.o/xelab.exe -wto 68c8138172e247eb9165dcd9af948f46 --debug typical --relax -L xil_defaultlib -L secureip --snapshot TriggerDelayer_test_behav xil_defaultlib.TriggerDelayer_test -log elaborate.log 
+Multi-threading is on. Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling architecture rtl of entity xil_defaultlib.TriggerDelayer [triggerdelayer_default]
+Compiling architecture behavior of entity xil_defaultlib.triggerdelayer_test
+Waiting for 2 sub-compilation(s) to finish...
+Built simulation snapshot TriggerDelayer_test_behav
+
+****** Webtalk v2014.3.1 (64-bit)
+  **** SW Build 1056140 on Thu Oct 30 17:03:40 MDT 2014
+  **** IP Build 1028902 on Fri Sep 26 17:35:13 MDT 2014
+    ** Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav/xsim.dir/TriggerDelayer_test_behav/webtalk/xsim_webtalk.tcl -notrace
+
+    while executing
+"webtalk_transmit -clientid 605601989 -regid "210979440_0_0_834" -xml C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project...."
+    (file "C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav/xsim.dir/TriggerDelayer_test_behav/webtalk/xsim_webta..." line 41)
+INFO: [Common 17-206] Exiting Webtalk at Sun May 22 22:21:45 2016...
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:19 . Memory (MB): peak = 766.676 ; gain = 0.000
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "TriggerDelayer_test_behav -key {Behavioral:sim_1:Functional:TriggerDelayer_test} -tclbatch {TriggerDelayer_test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2014.3
+Time resolution is 1 ps
+source TriggerDelayer_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+xsim: Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 773.645 ; gain = 6.969
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'TriggerDelayer_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:10 ; elapsed = 00:00:30 . Memory (MB): peak = 773.645 ; gain = 6.969
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 1 us
+add_bp C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/rtl/TriggerDelayer.vhd 45
+remove_bps -file C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/rtl/TriggerDelayer.vhd -line 45
+add_bp C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/rtl/TriggerDelayer.vhd 67
+remove_bps -file C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/rtl/TriggerDelayer.vhd -line 67
+add_bp C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/rtl/TriggerDelayer.vhd 67
+remove_bps -file C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/rtl/TriggerDelayer.vhd -line 67
+add_bp C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/rtl/TriggerDelayer.vhd 68
+remove_bps -file C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/rtl/TriggerDelayer.vhd -line 68
+add_bp C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/rtl/TriggerDelayer.vhd 68
+add_bp C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/rtl/TriggerDelayer.vhd 76
+add_bp C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/rtl/TriggerDelayer.vhd 87
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 784.207 ; gain = 0.000
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'TriggerDelayer_test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in 'C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav'
+"xvhdl -m64 -prj TriggerDelayer_test_vhdl.prj"
+Determining compilation order of HDL files.
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/rtl/TriggerDelayer.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TriggerDelayer
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/sim/TriggerDelayer_test.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TriggerDelayer_test
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav'
+Vivado Simulator 2014.3
+Copyright 1986-1999, 2001-2014 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2014.3.1/bin/unwrapped/win64.o/xelab.exe -wto 68c8138172e247eb9165dcd9af948f46 --debug typical --relax -L xil_defaultlib -L secureip --snapshot TriggerDelayer_test_behav xil_defaultlib.TriggerDelayer_test -log elaborate.log 
+Multi-threading is on. Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling architecture rtl of entity xil_defaultlib.TriggerDelayer [triggerdelayer_default]
+Compiling architecture behavior of entity xil_defaultlib.triggerdelayer_test
+Waiting for 2 sub-compilation(s) to finish...
+Built simulation snapshot TriggerDelayer_test_behav
+
+****** Webtalk v2014.3.1 (64-bit)
+  **** SW Build 1056140 on Thu Oct 30 17:03:40 MDT 2014
+  **** IP Build 1028902 on Fri Sep 26 17:35:13 MDT 2014
+    ** Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav/xsim.dir/TriggerDelayer_test_behav/webtalk/xsim_webtalk.tcl -notrace
+
+    while executing
+"webtalk_transmit -clientid 953297348 -regid "210979440_0_0_834" -xml C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project...."
+    (file "C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav/xsim.dir/TriggerDelayer_test_behav/webtalk/xsim_webta..." line 41)
+INFO: [Common 17-206] Exiting Webtalk at Sun May 22 22:32:28 2016...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:13 . Memory (MB): peak = 784.207 ; gain = 0.000
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "TriggerDelayer_test_behav -key {Behavioral:sim_1:Functional:TriggerDelayer_test} -tclbatch {TriggerDelayer_test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2014.3
+Time resolution is 1 ps
+source TriggerDelayer_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+xsim: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 784.207 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'TriggerDelayer_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:25 . Memory (MB): peak = 784.207 ; gain = 0.000
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 1 us
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 110 ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 784.207 ; gain = 0.000
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'TriggerDelayer_test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in 'C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav'
+"xvhdl -m64 -prj TriggerDelayer_test_vhdl.prj"
+Determining compilation order of HDL files.
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/rtl/TriggerDelayer.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TriggerDelayer
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/sim/TriggerDelayer_test.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TriggerDelayer_test
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav'
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+INFO: [Common 17-344] 'run_program' was cancelled
+1
+    while executing
+"catch {rdi::run_program $scr_file} error_log"
+    (procedure "::tclapp::xilinx::xsim::usf_launch_script" line 35)
+    invoked from within
+"::tclapp::xilinx::xsim::usf_launch_script "xsim" $step"
+    (procedure "tclapp::xilinx::xsim::elaborate" line 13)
+    invoked from within
+"tclapp::xilinx::xsim::elaborate { -simset sim_1 -mode behavioral -run_dir C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/pro..."
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 784.207 ; gain = 0.000
+INFO: [Common 17-344] 'launch_simulation' was cancelled
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'TriggerDelayer_test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in 'C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav'
+"xvhdl -m64 -prj TriggerDelayer_test_vhdl.prj"
+Determining compilation order of HDL files.
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/rtl/TriggerDelayer.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TriggerDelayer
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/sim/TriggerDelayer_test.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TriggerDelayer_test
+ERROR: [VRFC 10-1471] type error near count ; current type std_logic; expected type std_logic_vector [C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/sim/TriggerDelayer_test.vhd:61]
+ERROR: [VRFC 10-1471] type error near count_n ; current type std_logic; expected type std_logic_vector [C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/sim/TriggerDelayer_test.vhd:62]
+ERROR: [VRFC 10-1504] unit behavior ignored due to previous errors [C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/sim/TriggerDelayer_test.vhd:14]
+INFO: [VRFC 10-240] VHDL file C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/sim/TriggerDelayer_test.vhd ignored due to errors
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or '' file for more information.
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'TriggerDelayer_test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in 'C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav'
+"xvhdl -m64 -prj TriggerDelayer_test_vhdl.prj"
+Determining compilation order of HDL files.
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/rtl/TriggerDelayer.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TriggerDelayer
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/sim/TriggerDelayer_test.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TriggerDelayer_test
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav'
+Vivado Simulator 2014.3
+Copyright 1986-1999, 2001-2014 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2014.3.1/bin/unwrapped/win64.o/xelab.exe -wto 68c8138172e247eb9165dcd9af948f46 --debug typical --relax -L xil_defaultlib -L secureip --snapshot TriggerDelayer_test_behav xil_defaultlib.TriggerDelayer_test -log elaborate.log 
+Multi-threading is on. Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling architecture rtl of entity xil_defaultlib.TriggerDelayer [triggerdelayer_default]
+Compiling architecture behavior of entity xil_defaultlib.triggerdelayer_test
+Waiting for 2 sub-compilation(s) to finish...
+Built simulation snapshot TriggerDelayer_test_behav
+
+****** Webtalk v2014.3.1 (64-bit)
+  **** SW Build 1056140 on Thu Oct 30 17:03:40 MDT 2014
+  **** IP Build 1028902 on Fri Sep 26 17:35:13 MDT 2014
+    ** Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav/xsim.dir/TriggerDelayer_test_behav/webtalk/xsim_webtalk.tcl -notrace
+
+    while executing
+"webtalk_transmit -clientid 202824760 -regid "210979440_0_0_834" -xml C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project...."
+    (file "C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav/xsim.dir/TriggerDelayer_test_behav/webtalk/xsim_webta..." line 41)
+INFO: [Common 17-206] Exiting Webtalk at Sun May 22 22:46:33 2016...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:13 . Memory (MB): peak = 784.207 ; gain = 0.000
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "TriggerDelayer_test_behav -key {Behavioral:sim_1:Functional:TriggerDelayer_test} -tclbatch {TriggerDelayer_test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2014.3
+Time resolution is 1 ps
+source TriggerDelayer_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'TriggerDelayer_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:23 . Memory (MB): peak = 784.207 ; gain = 0.000
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 1 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 784.207 ; gain = 0.000
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'TriggerDelayer_test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in 'C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav'
+"xvhdl -m64 -prj TriggerDelayer_test_vhdl.prj"
+Determining compilation order of HDL files.
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/rtl/TriggerDelayer.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TriggerDelayer
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/sim/TriggerDelayer_test.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TriggerDelayer_test
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav'
+Vivado Simulator 2014.3
+Copyright 1986-1999, 2001-2014 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2014.3.1/bin/unwrapped/win64.o/xelab.exe -wto 68c8138172e247eb9165dcd9af948f46 --debug typical --relax -L xil_defaultlib -L secureip --snapshot TriggerDelayer_test_behav xil_defaultlib.TriggerDelayer_test -log elaborate.log 
+Multi-threading is on. Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling architecture rtl of entity xil_defaultlib.TriggerDelayer [triggerdelayer_default]
+Compiling architecture behavior of entity xil_defaultlib.triggerdelayer_test
+Waiting for 2 sub-compilation(s) to finish...
+Built simulation snapshot TriggerDelayer_test_behav
+
+****** Webtalk v2014.3.1 (64-bit)
+  **** SW Build 1056140 on Thu Oct 30 17:03:40 MDT 2014
+  **** IP Build 1028902 on Fri Sep 26 17:35:13 MDT 2014
+    ** Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav/xsim.dir/TriggerDelayer_test_behav/webtalk/xsim_webtalk.tcl -notrace
+
+    while executing
+"webtalk_transmit -clientid 2592302345 -regid "210979440_0_0_834" -xml C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project..."
+    (file "C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav/xsim.dir/TriggerDelayer_test_behav/webtalk/xsim_webta..." line 41)
+INFO: [Common 17-206] Exiting Webtalk at Sun May 22 22:48:38 2016...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:13 . Memory (MB): peak = 784.207 ; gain = 0.000
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "TriggerDelayer_test_behav -key {Behavioral:sim_1:Functional:TriggerDelayer_test} -tclbatch {TriggerDelayer_test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2014.3
+Time resolution is 1 ps
+source TriggerDelayer_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+xsim: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 784.207 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'TriggerDelayer_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:23 . Memory (MB): peak = 784.207 ; gain = 0.000
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 1 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 784.207 ; gain = 0.000
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'TriggerDelayer_test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in 'C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav'
+"xvhdl -m64 -prj TriggerDelayer_test_vhdl.prj"
+Determining compilation order of HDL files.
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/rtl/TriggerDelayer.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TriggerDelayer
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/sim/TriggerDelayer_test.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TriggerDelayer_test
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav'
+Vivado Simulator 2014.3
+Copyright 1986-1999, 2001-2014 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2014.3.1/bin/unwrapped/win64.o/xelab.exe -wto 68c8138172e247eb9165dcd9af948f46 --debug typical --relax -L xil_defaultlib -L secureip --snapshot TriggerDelayer_test_behav xil_defaultlib.TriggerDelayer_test -log elaborate.log 
+Multi-threading is on. Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling architecture rtl of entity xil_defaultlib.TriggerDelayer [triggerdelayer_default]
+Compiling architecture behavior of entity xil_defaultlib.triggerdelayer_test
+Waiting for 2 sub-compilation(s) to finish...
+Built simulation snapshot TriggerDelayer_test_behav
+
+****** Webtalk v2014.3.1 (64-bit)
+  **** SW Build 1056140 on Thu Oct 30 17:03:40 MDT 2014
+  **** IP Build 1028902 on Fri Sep 26 17:35:13 MDT 2014
+    ** Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav/xsim.dir/TriggerDelayer_test_behav/webtalk/xsim_webtalk.tcl -notrace
+
+    while executing
+"webtalk_transmit -clientid 1748023190 -regid "210979440_0_0_834" -xml C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project..."
+    (file "C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav/xsim.dir/TriggerDelayer_test_behav/webtalk/xsim_webta..." line 41)
+INFO: [Common 17-206] Exiting Webtalk at Sun May 22 22:50:03 2016...
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 784.207 ; gain = 0.000
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "TriggerDelayer_test_behav -key {Behavioral:sim_1:Functional:TriggerDelayer_test} -tclbatch {TriggerDelayer_test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2014.3
+Time resolution is 1 ps
+source TriggerDelayer_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'TriggerDelayer_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:23 . Memory (MB): peak = 784.207 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 784.207 ; gain = 0.000
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'TriggerDelayer_test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in 'C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav'
+"xvhdl -m64 -prj TriggerDelayer_test_vhdl.prj"
+Determining compilation order of HDL files.
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/rtl/TriggerDelayer.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TriggerDelayer
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/sim/TriggerDelayer_test.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TriggerDelayer_test
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav'
+Vivado Simulator 2014.3
+Copyright 1986-1999, 2001-2014 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2014.3.1/bin/unwrapped/win64.o/xelab.exe -wto 68c8138172e247eb9165dcd9af948f46 --debug typical --relax -L xil_defaultlib -L secureip --snapshot TriggerDelayer_test_behav xil_defaultlib.TriggerDelayer_test -log elaborate.log 
+Multi-threading is on. Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling architecture rtl of entity xil_defaultlib.TriggerDelayer [triggerdelayer_default]
+Compiling architecture behavior of entity xil_defaultlib.triggerdelayer_test
+Waiting for 2 sub-compilation(s) to finish...
+Built simulation snapshot TriggerDelayer_test_behav
+
+****** Webtalk v2014.3.1 (64-bit)
+  **** SW Build 1056140 on Thu Oct 30 17:03:40 MDT 2014
+  **** IP Build 1028902 on Fri Sep 26 17:35:13 MDT 2014
+    ** Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav/xsim.dir/TriggerDelayer_test_behav/webtalk/xsim_webtalk.tcl -notrace
+
+    while executing
+"webtalk_transmit -clientid 2896581696 -regid "210979440_0_0_834" -xml C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project..."
+    (file "C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav/xsim.dir/TriggerDelayer_test_behav/webtalk/xsim_webta..." line 41)
+INFO: [Common 17-206] Exiting Webtalk at Sun May 22 22:51:48 2016...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:13 . Memory (MB): peak = 784.207 ; gain = 0.000
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "TriggerDelayer_test_behav -key {Behavioral:sim_1:Functional:TriggerDelayer_test} -tclbatch {TriggerDelayer_test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2014.3
+Time resolution is 1 ps
+source TriggerDelayer_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+xsim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 784.207 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'TriggerDelayer_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:23 . Memory (MB): peak = 784.207 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 784.207 ; gain = 0.000
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'TriggerDelayer_test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in 'C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav'
+"xvhdl -m64 -prj TriggerDelayer_test_vhdl.prj"
+Determining compilation order of HDL files.
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/rtl/TriggerDelayer.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TriggerDelayer
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/sim/TriggerDelayer_test.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TriggerDelayer_test
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav'
+Vivado Simulator 2014.3
+Copyright 1986-1999, 2001-2014 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2014.3.1/bin/unwrapped/win64.o/xelab.exe -wto 68c8138172e247eb9165dcd9af948f46 --debug typical --relax -L xil_defaultlib -L secureip --snapshot TriggerDelayer_test_behav xil_defaultlib.TriggerDelayer_test -log elaborate.log 
+Multi-threading is on. Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling architecture rtl of entity xil_defaultlib.TriggerDelayer [triggerdelayer_default]
+Compiling architecture behavior of entity xil_defaultlib.triggerdelayer_test
+Waiting for 2 sub-compilation(s) to finish...
+Built simulation snapshot TriggerDelayer_test_behav
+
+****** Webtalk v2014.3.1 (64-bit)
+  **** SW Build 1056140 on Thu Oct 30 17:03:40 MDT 2014
+  **** IP Build 1028902 on Fri Sep 26 17:35:13 MDT 2014
+    ** Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav/xsim.dir/TriggerDelayer_test_behav/webtalk/xsim_webtalk.tcl -notrace
+
+    while executing
+"webtalk_transmit -clientid 3306257567 -regid "210979440_0_0_834" -xml C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project..."
+    (file "C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav/xsim.dir/TriggerDelayer_test_behav/webtalk/xsim_webta..." line 41)
+INFO: [Common 17-206] Exiting Webtalk at Sun May 22 22:55:52 2016...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:13 . Memory (MB): peak = 784.207 ; gain = 0.000
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "TriggerDelayer_test_behav -key {Behavioral:sim_1:Functional:TriggerDelayer_test} -tclbatch {TriggerDelayer_test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2014.3
+Time resolution is 1 ps
+source TriggerDelayer_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'TriggerDelayer_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:22 . Memory (MB): peak = 784.207 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 803.582 ; gain = 0.000
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'TriggerDelayer_test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in 'C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav'
+"xvhdl -m64 -prj TriggerDelayer_test_vhdl.prj"
+Determining compilation order of HDL files.
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/rtl/TriggerDelayer.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TriggerDelayer
+ERROR: [VRFC 10-91] count_25m_on is not declared [../../../../rtl/TriggerDelayer.vhd:65]
+ERROR: [VRFC 10-91] count_25m_on is not declared [../../../../rtl/TriggerDelayer.vhd:67]
+ERROR: [VRFC 10-91] count_25m_on is not declared [../../../../rtl/TriggerDelayer.vhd:80]
+ERROR: [VRFC 10-91] count_25m_on is not declared [../../../../rtl/TriggerDelayer.vhd:95]
+ERROR: [VRFC 10-1504] unit rtl ignored due to previous errors [../../../../rtl/TriggerDelayer.vhd:28]
+INFO: [VRFC 10-240] VHDL file C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/rtl/TriggerDelayer.vhd ignored due to errors
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or '' file for more information.
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'TriggerDelayer_test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in 'C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav'
+"xvhdl -m64 -prj TriggerDelayer_test_vhdl.prj"
+Determining compilation order of HDL files.
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/rtl/TriggerDelayer.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TriggerDelayer
+ERROR: [VRFC 10-91] count_25m_on is not declared [../../../../rtl/TriggerDelayer.vhd:65]
+ERROR: [VRFC 10-91] count_25m_on is not declared [../../../../rtl/TriggerDelayer.vhd:67]
+ERROR: [VRFC 10-91] count_25m_on is not declared [../../../../rtl/TriggerDelayer.vhd:80]
+ERROR: [VRFC 10-91] count_25m_on is not declared [../../../../rtl/TriggerDelayer.vhd:95]
+ERROR: [VRFC 10-1504] unit rtl ignored due to previous errors [../../../../rtl/TriggerDelayer.vhd:28]
+INFO: [VRFC 10-240] VHDL file C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/rtl/TriggerDelayer.vhd ignored due to errors
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or '' file for more information.
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'TriggerDelayer_test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in 'C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav'
+"xvhdl -m64 -prj TriggerDelayer_test_vhdl.prj"
+Determining compilation order of HDL files.
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/rtl/TriggerDelayer.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TriggerDelayer
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/sim/TriggerDelayer_test.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TriggerDelayer_test
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav'
+Vivado Simulator 2014.3
+Copyright 1986-1999, 2001-2014 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2014.3.1/bin/unwrapped/win64.o/xelab.exe -wto 68c8138172e247eb9165dcd9af948f46 --debug typical --relax -L xil_defaultlib -L secureip --snapshot TriggerDelayer_test_behav xil_defaultlib.TriggerDelayer_test -log elaborate.log 
+Multi-threading is on. Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling architecture rtl of entity xil_defaultlib.TriggerDelayer [triggerdelayer_default]
+Compiling architecture behavior of entity xil_defaultlib.triggerdelayer_test
+Waiting for 2 sub-compilation(s) to finish...
+Built simulation snapshot TriggerDelayer_test_behav
+
+****** Webtalk v2014.3.1 (64-bit)
+  **** SW Build 1056140 on Thu Oct 30 17:03:40 MDT 2014
+  **** IP Build 1028902 on Fri Sep 26 17:35:13 MDT 2014
+    ** Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav/xsim.dir/TriggerDelayer_test_behav/webtalk/xsim_webtalk.tcl -notrace
+
+    while executing
+"webtalk_transmit -clientid 441768673 -regid "210979440_0_0_834" -xml C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project...."
+    (file "C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav/xsim.dir/TriggerDelayer_test_behav/webtalk/xsim_webta..." line 41)
+INFO: [Common 17-206] Exiting Webtalk at Mon May 23 00:03:04 2016...
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 803.582 ; gain = 0.000
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "TriggerDelayer_test_behav -key {Behavioral:sim_1:Functional:TriggerDelayer_test} -tclbatch {TriggerDelayer_test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2014.3
+Time resolution is 1 ps
+source TriggerDelayer_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'TriggerDelayer_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:23 . Memory (MB): peak = 803.582 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 803.582 ; gain = 0.000
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'TriggerDelayer_test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in 'C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav'
+"xvhdl -m64 -prj TriggerDelayer_test_vhdl.prj"
+Determining compilation order of HDL files.
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/rtl/TriggerDelayer.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TriggerDelayer
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/sim/TriggerDelayer_test.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TriggerDelayer_test
+ERROR: [VRFC 10-719] formal port/generic <count_25m> is not declared in <triggerdelayer> [C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/sim/TriggerDelayer_test.vhd:63]
+ERROR: [VRFC 10-704] formal delay has no actual or default value [C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/sim/TriggerDelayer_test.vhd:54]
+ERROR: [VRFC 10-1504] unit behavior ignored due to previous errors [C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/sim/TriggerDelayer_test.vhd:14]
+INFO: [VRFC 10-240] VHDL file C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/sim/TriggerDelayer_test.vhd ignored due to errors
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or '' file for more information.
+launch_simulation
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav/.compile.log.swp
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'TriggerDelayer_test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in 'C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav'
+"xvhdl -m64 -prj TriggerDelayer_test_vhdl.prj"
+Determining compilation order of HDL files.
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/rtl/TriggerDelayer.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TriggerDelayer
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/sim/TriggerDelayer_test.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TriggerDelayer_test
+ERROR: [VRFC 10-719] formal port/generic <count_25m> is not declared in <triggerdelayer> [C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/sim/TriggerDelayer_test.vhd:63]
+ERROR: [VRFC 10-704] formal delay has no actual or default value [C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/sim/TriggerDelayer_test.vhd:54]
+ERROR: [VRFC 10-1504] unit behavior ignored due to previous errors [C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/sim/TriggerDelayer_test.vhd:14]
+INFO: [VRFC 10-240] VHDL file C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/sim/TriggerDelayer_test.vhd ignored due to errors
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or '' file for more information.
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'TriggerDelayer_test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in 'C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav'
+"xvhdl -m64 -prj TriggerDelayer_test_vhdl.prj"
+Determining compilation order of HDL files.
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/rtl/TriggerDelayer.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TriggerDelayer
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/sim/TriggerDelayer_test.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TriggerDelayer_test
+ERROR: [VRFC 10-719] formal port/generic <count_25m> is not declared in <triggerdelayer> [C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/sim/TriggerDelayer_test.vhd:63]
+ERROR: [VRFC 10-704] formal delay has no actual or default value [C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/sim/TriggerDelayer_test.vhd:54]
+ERROR: [VRFC 10-1504] unit behavior ignored due to previous errors [C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/sim/TriggerDelayer_test.vhd:14]
+INFO: [VRFC 10-240] VHDL file C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/sim/TriggerDelayer_test.vhd ignored due to errors
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or '' file for more information.
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'TriggerDelayer_test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in 'C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav'
+"xvhdl -m64 -prj TriggerDelayer_test_vhdl.prj"
+Determining compilation order of HDL files.
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/rtl/TriggerDelayer.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TriggerDelayer
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/sim/TriggerDelayer_test.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TriggerDelayer_test
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav'
+Vivado Simulator 2014.3
+Copyright 1986-1999, 2001-2014 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2014.3.1/bin/unwrapped/win64.o/xelab.exe -wto 68c8138172e247eb9165dcd9af948f46 --debug typical --relax -L xil_defaultlib -L secureip --snapshot TriggerDelayer_test_behav xil_defaultlib.TriggerDelayer_test -log elaborate.log 
+Multi-threading is on. Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling architecture rtl of entity xil_defaultlib.TriggerDelayer [triggerdelayer_default]
+Compiling architecture behavior of entity xil_defaultlib.triggerdelayer_test
+Waiting for 2 sub-compilation(s) to finish...
+Built simulation snapshot TriggerDelayer_test_behav
+
+****** Webtalk v2014.3.1 (64-bit)
+  **** SW Build 1056140 on Thu Oct 30 17:03:40 MDT 2014
+  **** IP Build 1028902 on Fri Sep 26 17:35:13 MDT 2014
+    ** Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav/xsim.dir/TriggerDelayer_test_behav/webtalk/xsim_webtalk.tcl -notrace
+
+    while executing
+"webtalk_transmit -clientid 3787910260 -regid "210979440_0_0_834" -xml C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project..."
+    (file "C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav/xsim.dir/TriggerDelayer_test_behav/webtalk/xsim_webta..." line 41)
+INFO: [Common 17-206] Exiting Webtalk at Mon May 23 00:17:38 2016...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:14 . Memory (MB): peak = 803.582 ; gain = 0.000
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "TriggerDelayer_test_behav -key {Behavioral:sim_1:Functional:TriggerDelayer_test} -tclbatch {TriggerDelayer_test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2014.3
+Time resolution is 1 ps
+source TriggerDelayer_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'TriggerDelayer_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:26 . Memory (MB): peak = 803.582 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 810.441 ; gain = 0.000
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'TriggerDelayer_test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in 'C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav'
+"xvhdl -m64 -prj TriggerDelayer_test_vhdl.prj"
+Determining compilation order of HDL files.
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/rtl/TriggerDelayer.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TriggerDelayer
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/sim/TriggerDelayer_test.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TriggerDelayer_test
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav'
+Vivado Simulator 2014.3
+Copyright 1986-1999, 2001-2014 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2014.3.1/bin/unwrapped/win64.o/xelab.exe -wto 68c8138172e247eb9165dcd9af948f46 --debug typical --relax -L xil_defaultlib -L secureip --snapshot TriggerDelayer_test_behav xil_defaultlib.TriggerDelayer_test -log elaborate.log 
+Multi-threading is on. Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling architecture rtl of entity xil_defaultlib.TriggerDelayer [triggerdelayer_default]
+Compiling architecture behavior of entity xil_defaultlib.triggerdelayer_test
+Waiting for 2 sub-compilation(s) to finish...
+Built simulation snapshot TriggerDelayer_test_behav
+
+****** Webtalk v2014.3.1 (64-bit)
+  **** SW Build 1056140 on Thu Oct 30 17:03:40 MDT 2014
+  **** IP Build 1028902 on Fri Sep 26 17:35:13 MDT 2014
+    ** Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav/xsim.dir/TriggerDelayer_test_behav/webtalk/xsim_webtalk.tcl -notrace
+
+    while executing
+"webtalk_transmit -clientid 1682245835 -regid "210979440_0_0_834" -xml C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project..."
+    (file "C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav/xsim.dir/TriggerDelayer_test_behav/webtalk/xsim_webta..." line 41)
+INFO: [Common 17-206] Exiting Webtalk at Mon May 23 00:23:49 2016...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:15 . Memory (MB): peak = 810.441 ; gain = 0.000
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "TriggerDelayer_test_behav -key {Behavioral:sim_1:Functional:TriggerDelayer_test} -tclbatch {TriggerDelayer_test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2014.3
+Time resolution is 1 ps
+source TriggerDelayer_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'TriggerDelayer_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:28 . Memory (MB): peak = 810.441 ; gain = 0.000
+run 1 us
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 1 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 810.441 ; gain = 0.000
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'TriggerDelayer_test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in 'C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav'
+"xvhdl -m64 -prj TriggerDelayer_test_vhdl.prj"
+Determining compilation order of HDL files.
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/rtl/TriggerDelayer.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TriggerDelayer
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/sim/TriggerDelayer_test.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TriggerDelayer_test
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav'
+Vivado Simulator 2014.3
+Copyright 1986-1999, 2001-2014 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2014.3.1/bin/unwrapped/win64.o/xelab.exe -wto 68c8138172e247eb9165dcd9af948f46 --debug typical --relax -L xil_defaultlib -L secureip --snapshot TriggerDelayer_test_behav xil_defaultlib.TriggerDelayer_test -log elaborate.log 
+Multi-threading is on. Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling architecture rtl of entity xil_defaultlib.TriggerDelayer [triggerdelayer_default]
+Compiling architecture behavior of entity xil_defaultlib.triggerdelayer_test
+Waiting for 2 sub-compilation(s) to finish...
+Built simulation snapshot TriggerDelayer_test_behav
+
+****** Webtalk v2014.3.1 (64-bit)
+  **** SW Build 1056140 on Thu Oct 30 17:03:40 MDT 2014
+  **** IP Build 1028902 on Fri Sep 26 17:35:13 MDT 2014
+    ** Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav/xsim.dir/TriggerDelayer_test_behav/webtalk/xsim_webtalk.tcl -notrace
+
+    while executing
+"webtalk_transmit -clientid 554363866 -regid "210979440_0_0_834" -xml C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project...."
+    (file "C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav/xsim.dir/TriggerDelayer_test_behav/webtalk/xsim_webta..." line 41)
+INFO: [Common 17-206] Exiting Webtalk at Mon May 23 00:26:28 2016...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:14 . Memory (MB): peak = 810.441 ; gain = 0.000
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "TriggerDelayer_test_behav -key {Behavioral:sim_1:Functional:TriggerDelayer_test} -tclbatch {TriggerDelayer_test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2014.3
+Time resolution is 1 ps
+source TriggerDelayer_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'TriggerDelayer_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:23 . Memory (MB): peak = 810.441 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 810.441 ; gain = 0.000
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'TriggerDelayer_test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in 'C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav'
+"xvhdl -m64 -prj TriggerDelayer_test_vhdl.prj"
+Determining compilation order of HDL files.
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/rtl/TriggerDelayer.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TriggerDelayer
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/sim/TriggerDelayer_test.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TriggerDelayer_test
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav'
+Vivado Simulator 2014.3
+Copyright 1986-1999, 2001-2014 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2014.3.1/bin/unwrapped/win64.o/xelab.exe -wto 68c8138172e247eb9165dcd9af948f46 --debug typical --relax -L xil_defaultlib -L secureip --snapshot TriggerDelayer_test_behav xil_defaultlib.TriggerDelayer_test -log elaborate.log 
+Multi-threading is on. Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling architecture rtl of entity xil_defaultlib.TriggerDelayer [triggerdelayer_default]
+Compiling architecture behavior of entity xil_defaultlib.triggerdelayer_test
+Waiting for 3 sub-compilation(s) to finish...
+Built simulation snapshot TriggerDelayer_test_behav
+
+****** Webtalk v2014.3.1 (64-bit)
+  **** SW Build 1056140 on Thu Oct 30 17:03:40 MDT 2014
+  **** IP Build 1028902 on Fri Sep 26 17:35:13 MDT 2014
+    ** Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav/xsim.dir/TriggerDelayer_test_behav/webtalk/xsim_webtalk.tcl -notrace
+
+    while executing
+"webtalk_transmit -clientid 3673954342 -regid "210979440_0_0_834" -xml C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project..."
+    (file "C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav/xsim.dir/TriggerDelayer_test_behav/webtalk/xsim_webta..." line 41)
+INFO: [Common 17-206] Exiting Webtalk at Mon May 23 00:28:15 2016...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:13 . Memory (MB): peak = 810.441 ; gain = 0.000
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "TriggerDelayer_test_behav -key {Behavioral:sim_1:Functional:TriggerDelayer_test} -tclbatch {TriggerDelayer_test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2014.3
+Time resolution is 1 ps
+source TriggerDelayer_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+xsim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 810.441 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'TriggerDelayer_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:23 . Memory (MB): peak = 810.441 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 810.441 ; gain = 0.000
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'TriggerDelayer_test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in 'C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav'
+"xvhdl -m64 -prj TriggerDelayer_test_vhdl.prj"
+Determining compilation order of HDL files.
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/rtl/TriggerDelayer.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TriggerDelayer
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/sim/TriggerDelayer_test.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TriggerDelayer_test
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav'
+Vivado Simulator 2014.3
+Copyright 1986-1999, 2001-2014 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2014.3.1/bin/unwrapped/win64.o/xelab.exe -wto 68c8138172e247eb9165dcd9af948f46 --debug typical --relax -L xil_defaultlib -L secureip --snapshot TriggerDelayer_test_behav xil_defaultlib.TriggerDelayer_test -log elaborate.log 
+Multi-threading is on. Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling architecture rtl of entity xil_defaultlib.TriggerDelayer [triggerdelayer_default]
+Compiling architecture behavior of entity xil_defaultlib.triggerdelayer_test
+Waiting for 2 sub-compilation(s) to finish...
+Built simulation snapshot TriggerDelayer_test_behav
+
+****** Webtalk v2014.3.1 (64-bit)
+  **** SW Build 1056140 on Thu Oct 30 17:03:40 MDT 2014
+  **** IP Build 1028902 on Fri Sep 26 17:35:13 MDT 2014
+    ** Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav/xsim.dir/TriggerDelayer_test_behav/webtalk/xsim_webtalk.tcl -notrace
+
+    while executing
+"webtalk_transmit -clientid 3029415701 -regid "210979440_0_0_834" -xml C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project..."
+    (file "C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav/xsim.dir/TriggerDelayer_test_behav/webtalk/xsim_webta..." line 41)
+INFO: [Common 17-206] Exiting Webtalk at Mon May 23 00:32:18 2016...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:14 . Memory (MB): peak = 810.441 ; gain = 0.000
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "TriggerDelayer_test_behav -key {Behavioral:sim_1:Functional:TriggerDelayer_test} -tclbatch {TriggerDelayer_test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2014.3
+Time resolution is 1 ps
+source TriggerDelayer_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'TriggerDelayer_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:23 . Memory (MB): peak = 810.441 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 810.441 ; gain = 0.000
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'TriggerDelayer_test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in 'C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav'
+"xvhdl -m64 -prj TriggerDelayer_test_vhdl.prj"
+Determining compilation order of HDL files.
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/rtl/TriggerDelayer.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TriggerDelayer
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/sim/TriggerDelayer_test.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TriggerDelayer_test
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav'
+Vivado Simulator 2014.3
+Copyright 1986-1999, 2001-2014 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2014.3.1/bin/unwrapped/win64.o/xelab.exe -wto 68c8138172e247eb9165dcd9af948f46 --debug typical --relax -L xil_defaultlib -L secureip --snapshot TriggerDelayer_test_behav xil_defaultlib.TriggerDelayer_test -log elaborate.log 
+Multi-threading is on. Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling architecture rtl of entity xil_defaultlib.TriggerDelayer [triggerdelayer_default]
+Compiling architecture behavior of entity xil_defaultlib.triggerdelayer_test
+Waiting for 3 sub-compilation(s) to finish...
+Built simulation snapshot TriggerDelayer_test_behav
+
+****** Webtalk v2014.3.1 (64-bit)
+  **** SW Build 1056140 on Thu Oct 30 17:03:40 MDT 2014
+  **** IP Build 1028902 on Fri Sep 26 17:35:13 MDT 2014
+    ** Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav/xsim.dir/TriggerDelayer_test_behav/webtalk/xsim_webtalk.tcl -notrace
+
+    while executing
+"webtalk_transmit -clientid 2121875230 -regid "210979440_0_0_834" -xml C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project..."
+    (file "C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav/xsim.dir/TriggerDelayer_test_behav/webtalk/xsim_webta..." line 41)
+INFO: [Common 17-206] Exiting Webtalk at Mon May 23 00:36:59 2016...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:13 . Memory (MB): peak = 810.441 ; gain = 0.000
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "TriggerDelayer_test_behav -key {Behavioral:sim_1:Functional:TriggerDelayer_test} -tclbatch {TriggerDelayer_test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2014.3
+Time resolution is 1 ps
+source TriggerDelayer_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'TriggerDelayer_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:23 . Memory (MB): peak = 810.441 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 810.441 ; gain = 0.000
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'TriggerDelayer_test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in 'C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav'
+"xvhdl -m64 -prj TriggerDelayer_test_vhdl.prj"
+Determining compilation order of HDL files.
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/rtl/TriggerDelayer.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TriggerDelayer
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/sim/TriggerDelayer_test.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TriggerDelayer_test
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav'
+Vivado Simulator 2014.3
+Copyright 1986-1999, 2001-2014 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2014.3.1/bin/unwrapped/win64.o/xelab.exe -wto 68c8138172e247eb9165dcd9af948f46 --debug typical --relax -L xil_defaultlib -L secureip --snapshot TriggerDelayer_test_behav xil_defaultlib.TriggerDelayer_test -log elaborate.log 
+Multi-threading is on. Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling architecture rtl of entity xil_defaultlib.TriggerDelayer [triggerdelayer_default]
+Compiling architecture behavior of entity xil_defaultlib.triggerdelayer_test
+Waiting for 2 sub-compilation(s) to finish...
+Built simulation snapshot TriggerDelayer_test_behav
+
+****** Webtalk v2014.3.1 (64-bit)
+  **** SW Build 1056140 on Thu Oct 30 17:03:40 MDT 2014
+  **** IP Build 1028902 on Fri Sep 26 17:35:13 MDT 2014
+    ** Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav/xsim.dir/TriggerDelayer_test_behav/webtalk/xsim_webtalk.tcl -notrace
+
+    while executing
+"webtalk_transmit -clientid 2013230182 -regid "210979440_0_0_834" -xml C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project..."
+    (file "C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav/xsim.dir/TriggerDelayer_test_behav/webtalk/xsim_webta..." line 41)
+INFO: [Common 17-206] Exiting Webtalk at Mon May 23 00:39:17 2016...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:14 . Memory (MB): peak = 810.441 ; gain = 0.000
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "TriggerDelayer_test_behav -key {Behavioral:sim_1:Functional:TriggerDelayer_test} -tclbatch {TriggerDelayer_test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2014.3
+Time resolution is 1 ps
+source TriggerDelayer_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'TriggerDelayer_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:23 . Memory (MB): peak = 810.441 ; gain = 0.000
+run 1 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 810.441 ; gain = 0.000
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+INFO: [Common 17-344] 'launch_runs' was cancelled
+reset_run synth_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Mon May 23 00:50:41 2016] Launched synth_1...
+Run output will be captured here: C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.runs/synth_1/runme.log
+[Mon May 23 00:50:41 2016] Launched impl_1...
+Run output will be captured here: C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 2021 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2014.3.1
+Loading clock regions from C:/Xilinx/Vivado/2014.3.1/data\parts/xilinx/artix7/artix7/xc7a100t/ClockRegion.xml
+Loading clock buffers from C:/Xilinx/Vivado/2014.3.1/data\parts/xilinx/artix7/artix7/xc7a100t/ClockBuffers.xml
+Loading clock placement rules from C:/Xilinx/Vivado/2014.3.1/data/parts/xilinx/artix7/ClockPlacerRules.xml
+Loading package pin functions from C:/Xilinx/Vivado/2014.3.1/data\parts/xilinx/artix7/PinFunctions.xml...
+Loading package from C:/Xilinx/Vivado/2014.3.1/data\parts/xilinx/artix7/artix7/xc7a100t/fgg676/Package.xml
+Loading io standards from C:/Xilinx/Vivado/2014.3.1/data\./parts/xilinx/artix7/IOStandards.xml
+Loading device configuration modes from C:/Xilinx/Vivado/2014.3.1/data\parts/xilinx/artix7/ConfigModes.xml
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav/.Xil/Vivado-6580-nchikuma-VAIO/dcp/TopLevel_early.xdc]
+Finished Parsing XDC File [C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav/.Xil/Vivado-6580-nchikuma-VAIO/dcp/TopLevel_early.xdc]
+Parsing XDC File [C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav/.Xil/Vivado-6580-nchikuma-VAIO/dcp/TopLevel.xdc]
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'vclk_6M' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/constraint/timing.xdc:9]
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'vclk_66M' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/constraint/timing.xdc:10]
+INFO: [Timing 38-35] Done setting XDC timing constraints. [C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/constraint/timing.xdc:13]
+INFO: [Timing 38-2] Deriving generated clocks [C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/constraint/timing.xdc:13]
+create_generated_clock: Time (s): cpu = 00:00:17 ; elapsed = 00:00:16 . Memory (MB): peak = 1667.063 ; gain = 521.801
+Finished Parsing XDC File [C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.sim/sim_1/behav/.Xil/Vivado-6580-nchikuma-VAIO/dcp/TopLevel.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1720.895 ; gain = 52.926
+Restored from archive | CPU: 14.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1720.895 ; gain = 52.926
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1051 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 1 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 1036 instances
+  RAM32X1S => RAM32X1S (RAMS32): 8 instances
+  RAM64M => RAM64M (RAMD64E, RAMD64E, RAMD64E, RAMD64E): 6 instances
+
+open_run: Time (s): cpu = 00:01:17 ; elapsed = 00:00:57 . Memory (MB): peak = 1844.340 ; gain = 1033.898
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:0.9 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/kintex7/kc705/0.9/board_part.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.0 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/kintex7/kc705/1.0/board_part.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.1 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/kintex7/kc705/1.1/board_part.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:0.9 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/zynq/zc706/0.9/board_part.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.0 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/zynq/zc706/1.0/board_part.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.1 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/zynq/zc706/1.1/board_part.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:0.9 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/kintex7/kc705/0.9/board_part.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.0 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/kintex7/kc705/1.0/board_part.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.1 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/kintex7/kc705/1.1/board_part.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:0.9 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/zynq/zc706/0.9/board_part.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.0 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/zynq/zc706/1.0/board_part.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.1 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/zynq/zc706/1.1/board_part.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:0.9 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/kintex7/kc705/0.9/board_part.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.0 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/kintex7/kc705/1.0/board_part.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.1 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/kintex7/kc705/1.1/board_part.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:0.9 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/zynq/zc706/0.9/board_part.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.0 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/zynq/zc706/1.0/board_part.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.1 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/zynq/zc706/1.1/board_part.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:0.9 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/kintex7/kc705/0.9/board_part.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.0 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/kintex7/kc705/1.0/board_part.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.1 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/kintex7/kc705/1.1/board_part.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:0.9 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/zynq/zc706/0.9/board_part.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.0 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/zynq/zc706/1.0/board_part.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.1 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/zynq/zc706/1.1/board_part.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:0.9 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/kintex7/kc705/0.9/board_part.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.0 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/kintex7/kc705/1.0/board_part.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.1 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/kintex7/kc705/1.1/board_part.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:0.9 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/zynq/zc706/0.9/board_part.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.0 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/zynq/zc706/1.0/board_part.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.1 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/zynq/zc706/1.1/board_part.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:0.9 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/kintex7/kc705/0.9/board_part.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.0 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/kintex7/kc705/1.0/board_part.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.1 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/kintex7/kc705/1.1/board_part.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:0.9 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/zynq/zc706/0.9/board_part.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.0 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/zynq/zc706/1.0/board_part.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.1 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/zynq/zc706/1.1/board_part.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:0.9 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/kintex7/kc705/0.9/board_part.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.0 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/kintex7/kc705/1.0/board_part.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.1 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/kintex7/kc705/1.1/board_part.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:0.9 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/zynq/zc706/0.9/board_part.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.0 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/zynq/zc706/1.0/board_part.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.1 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/zynq/zc706/1.1/board_part.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:0.9 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/kintex7/kc705/0.9/board_part.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.0 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/kintex7/kc705/1.0/board_part.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.1 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/kintex7/kc705/1.1/board_part.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:0.9 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/zynq/zc706/0.9/board_part.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.0 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/zynq/zc706/1.0/board_part.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.1 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/zynq/zc706/1.1/board_part.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:0.9 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/kintex7/kc705/0.9/board_part.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.0 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/kintex7/kc705/1.0/board_part.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.1 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/kintex7/kc705/1.1/board_part.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:0.9 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/zynq/zc706/0.9/board_part.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.0 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/zynq/zc706/1.0/board_part.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.1 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/zynq/zc706/1.1/board_part.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:0.9 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/kintex7/kc705/0.9/board_part.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.0 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/kintex7/kc705/1.0/board_part.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.1 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/kintex7/kc705/1.1/board_part.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:0.9 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/zynq/zc706/0.9/board_part.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.0 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/zynq/zc706/1.0/board_part.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.1 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/zynq/zc706/1.1/board_part.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:0.9 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/kintex7/kc705/0.9/board_part.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.0 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/kintex7/kc705/1.0/board_part.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.1 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/kintex7/kc705/1.1/board_part.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:0.9 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/zynq/zc706/0.9/board_part.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.0 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/zynq/zc706/1.0/board_part.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.1 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/zynq/zc706/1.1/board_part.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.1 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/kintex7/kc705/1.1/board_part.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.1 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/zynq/zc706/1.1/board_part.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:0.9 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/kintex7/kc705/0.9/board_part.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.0 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/kintex7/kc705/1.0/board_part.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.1 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/kintex7/kc705/1.1/board_part.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:0.9 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/zynq/zc706/0.9/board_part.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.0 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/zynq/zc706/1.0/board_part.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.1 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/zynq/zc706/1.1/board_part.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:0.9 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/kintex7/kc705/0.9/board_part.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.0 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/kintex7/kc705/1.0/board_part.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.1 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/kintex7/kc705/1.1/board_part.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:0.9 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/zynq/zc706/0.9/board_part.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.0 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/zynq/zc706/1.0/board_part.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.1 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/zynq/zc706/1.1/board_part.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:0.9 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/kintex7/kc705/0.9/board_part.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.0 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/kintex7/kc705/1.0/board_part.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.1 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/kintex7/kc705/1.1/board_part.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:0.9 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/zynq/zc706/0.9/board_part.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.0 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/zynq/zc706/1.0/board_part.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.1 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/zynq/zc706/1.1/board_part.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:0.9 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/kintex7/kc705/0.9/board_part.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.0 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/kintex7/kc705/1.0/board_part.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.1 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/kintex7/kc705/1.1/board_part.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:0.9 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/zynq/zc706/0.9/board_part.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.0 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/zynq/zc706/1.0/board_part.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.1 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/zynq/zc706/1.1/board_part.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:0.9 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/kintex7/kc705/0.9/board_part.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.0 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/kintex7/kc705/1.0/board_part.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.1 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/kintex7/kc705/1.1/board_part.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:0.9 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/zynq/zc706/0.9/board_part.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.0 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/zynq/zc706/1.0/board_part.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.1 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/zynq/zc706/1.1/board_part.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:0.9 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/kintex7/kc705/0.9/board_part.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.0 available at C:/Xilinx/Vivado/2014.3.1/data/boards/board_parts/kintex7/kc705/1.0/board_part.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+INFO: [Common 17-14] Message 'Board 49-26' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+create_run impl_2 -parent_run synth_1 -flow {Vivado Implementation 2014} -strategy Performance_ExploreSLLs
+Run is defaulting to parent run srcset: sources_1
+Run is defaulting to parent run constrset: constrs_1
+Run is defaulting to parent run part: xc7a100tfgg676-2
+launch_runs impl_2
+[Mon May 23 01:17:18 2016] Launched impl_2...
+Run output will be captured here: C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.runs/impl_2/runme.log
+create_run impl_3 -parent_run synth_1 -flow {Vivado Implementation 2014} -strategy Performance_Explore
+Run is defaulting to parent run srcset: sources_1
+Run is defaulting to parent run constrset: constrs_1
+Run is defaulting to parent run part: xc7a100tfgg676-2
+launch_runs impl_3
+[Mon May 23 01:26:39 2016] Launched impl_3...
+Run output will be captured here: C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.runs/impl_3/runme.log
+create_run impl_4 -parent_run synth_1 -flow {Vivado Implementation 2014} -strategy Performance_Retiming
+Run is defaulting to parent run srcset: sources_1
+Run is defaulting to parent run constrset: constrs_1
+Run is defaulting to parent run part: xc7a100tfgg676-2
+launch_runs impl_4
+[Mon May 23 01:39:05 2016] Launched impl_4...
+Run output will be captured here: C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.runs/impl_4/runme.log
+current_run [get_runs impl_4]
+launch_runs impl_4 -to_step write_bitstream
+[Mon May 23 01:51:02 2016] Launched impl_4...
+Run output will be captured here: C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.runs/impl_4/runme.log
+write_cfgmem -force -format MCS -size 32 -interface SPIx1 -loadbit "up 0x0 C:/Users/nchikuma/Documents/NaruhiroChikuma/easiroc/New_Firmware/project/project.runs/impl_1/TopLevel.bit" C:/Users/nchikuma/Documents/NaruhiroChikuma/easiroc/New_Firmware/project/TopLevel.mcs
+Creating config memory files...
+Creating bitstream load up from address 0x00000000
+Loading bitfile C:/Users/nchikuma/Documents/NaruhiroChikuma/easiroc/New_Firmware/project/project.runs/impl_1/TopLevel.bit
+Writing file C:/Users/nchikuma/Documents/NaruhiroChikuma/easiroc/New_Firmware/project/TopLevel.mcs
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon May 23 01:57:37 2016...

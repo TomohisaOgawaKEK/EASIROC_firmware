@@ -19,6 +19,10 @@ entity Scaler is
         -- Data input
         -- EASIROC TRIGGER 64CH
         -- OR32U, OR32L, OR64, 1kHz, 1MHz
+
+        -- ScalerTimer1Khz & ScalerTimer1Mhz & Or64 & Or32u & Or32d & 
+        -- EASIROC2_TRIGGER & EASIROC1_TRIGGER
+        -- => Each signal is a rectangular pulse
         DIN : in std_logic_vector(68 downto 0);  
                                                 
         -- Control Interface
@@ -94,8 +98,7 @@ architecture RTL of Scaler is
 
     signal SelectedDout : std_logic_vector(20 downto 0);
 
-    type State is (IDLE, CAPTURE, RESET_SCALER, 
-                  TRANSMIT, WAIT_FULL,
+    type State is (IDLE, CAPTURE, RESET_SCALER, TRANSMIT, WAIT_FULL,
                   WRITE_WCOMP, CLEAR_STATE);
     signal CurrentState : State;
     signal NextState : State;
@@ -103,18 +106,21 @@ architecture RTL of Scaler is
 begin
 
     SINGLE_SCALER_GENERATE: for i in 0 to 68 generate
-        SingleScaler_0: SingleScaler
-        generic map(
+    SingleScaler_0: SingleScaler
+    generic map(
             G_BITS => 13
-        )
-        port map(
-            CLK   => SCALER_CLK,
-            RESET => SingleScalerReset,
-            DIN   => DIN(i),
-            DOUT  => SingleScalerDout(i),
-            OVERFLOW => SingleScalerOverflow(i)
-        );
+    )
+    port map(
+            CLK   => SCALER_CLK,          -- 8 nsec
+            RESET => SingleScalerReset,   -- this is input after CaptureSingleScaler is done and RESET_SCALER is issued 
+            DIN   => DIN(i),              -- put bit array : ScalerTimer1Khz & ScalerTimer1Mhz & Or64 & Or32u & Or32d & EASIROC2_TRIGGER & EASIROC1_TRIGGER;
+            DOUT  => SingleScalerDout(i), -- Din の間カウント 13 bit : to max 8192
+            OVERFLOW => SingleScalerOverflow(i) -- 
+    );
     end generate SINGLE_SCALER_GENERATE;
+
+    -- 1M: 8192 * 1usec = 8.2 msec is muximum
+    -- 1K: 8192 * 1msec = 8.2  sec is muximum
 
     DoubleBuffer_0: DoubleBuffer
     generic map(
@@ -124,8 +130,8 @@ begin
     port map(
         RESET => RESET,
         WCLK  => SCALER_CLK,
-        DIN   => SelectedDout,
-        WADDR => Channel,
+        DIN   => SelectedDout, -- input Dout and Channel below
+        WADDR => Channel,      -- input Channel and above Dout
         WE    => DoubleBufferWe,
         WCOMP => DoubleBufferWcomp,
         DEC_WPTR => DoubleBufferDecWptr,
@@ -137,14 +143,14 @@ begin
         EMPTY => EMPTY
     );
 
-    process(SCALER_CLK) begin
-    if(SCALER_CLK'event and SCALER_CLK = '1') then
-        if(RESET = '1') then
+    process (SCALER_CLK) begin
+    if ( SCALER_CLK'event and SCALER_CLK = '1' ) then
+        if ( RESET = '1' ) then
             Channel <= (others => '0');
         else
-            if(ChannelCountClear = '1') then
+            if ( ChannelCountClear = '1' ) then
                 Channel <= (others => '0');
-            elsif(ChannelCountUp = '1') then
+            elsif (ChannelCountUp = '1' ) then
                 if(Channel >= 68) then
                     Channel <= (others => '0');
                 else
@@ -165,44 +171,46 @@ begin
     end if;
     end process;
 
-    process(SCALER_CLK) begin
-    if(SCALER_CLK'event and SCALER_CLK = '1') then
-        if(CaptureSingleScaler = '1') then
-            CapturedScalerCount    <= SingleScalerDout;
+    process (SCALER_CLK) begin
+    if ( SCALER_CLK'event and SCALER_CLK = '1' ) then
+        if ( CaptureSingleScaler = '1' ) then
+            CapturedScalerCount    <= SingleScalerDout;     -- Din の間カウント 13 bit : to max 8192
             CapturedScalerOverFlow <= SingleScalerOverflow;
         end if;
     end if;
     end process;
 
-    process(CurrentState, L1_TRIGGER, FAST_CLEAR, 
-           Channel, DoubleBufferFull) 
+    process(CurrentState, L1_TRIGGER, FAST_CLEAR, Channel, DoubleBufferFull) 
     begin
         case CurrentState is
             when IDLE =>
-                if(FAST_CLEAR = '1') then
+                if   ( FAST_CLEAR = '1' ) then
                     NextState <= CLEAR_STATE;
-                elsif(L1_TRIGGER = '1') then
-                    NextState <= CAPTURE;
+                elsif( L1_TRIGGER = '1' ) then -- tstop is given, then give CAPTURE
+                    NextState <= CAPTURE; -- capture scaler values
                 else
                     NextState <= CurrentState;
                 end if;
+
             when CAPTURE =>
-                if(FAST_CLEAR = '1') then
+                if ( FAST_CLEAR = '1' ) then
                     NextState <= IDLE;
                 else
-                    NextState <= RESET_SCALER;
+                    NextState <= RESET_SCALER; -- if CAPTURE is given, do RESET_SCALER
                 end if;
+
             when RESET_SCALER =>
-                if(FAST_CLEAR = '1') then
+                if ( FAST_CLEAR = '1' ) then
                     NextState <= IDLE;
                 else
                     NextState <= TRANSMIT;
                 end if;
+
             when TRANSMIT =>
-                if(FAST_CLEAR = '1') then
+                if ( FAST_CLEAR = '1' ) then
                     NextState <= IDLE;
-                elsif(Channel = 68) then
-                    if(DoubleBufferFull = '1') then
+                elsif ( Channel = 68 ) then
+                    if ( DoubleBufferFull = '1' ) then
                         NextState <= WAIT_FULL;
                     else
                         NextState <= WRITE_WCOMP;
@@ -230,20 +238,25 @@ begin
     end process;
 
 
-    CaptureSingleScaler <= '1' when(CurrentState = CAPTURE) else '0';
-    SingleScalerReset   <= '1' when(RESET = '1' or CurrentState = RESET_SCALER) else '0';
+    CaptureSingleScaler <= '1' when (CurrentState = CAPTURE) else '0';
+    SingleScalerReset   <= '1' when (RESET = '1' or CurrentState = RESET_SCALER) else '0';
 
     ChannelCountUp    <= '1' when(CurrentState = TRANSMIT) else  '0';
     ChannelCountClear <= '1' when(CurrentState = IDLE or
-                                 CurrentState = CLEAR_STATE) else '0';
+                                  CurrentState = CLEAR_STATE) else '0';
 
     DoubleBufferWe    <= '1' when(CurrentState = TRANSMIT) else '0';
     DoubleBufferWcomp <= '1' when(CurrentState = WRITE_WCOMP) else '0';
     DoubleBufferDecWptr <= '1' when(CurrentState = CLEAR_STATE) else '0';
 
+    -- std_logic_vector(20 downto 0);
     SelectedDout <= Channel &
-                    CapturedScalerOverFlow(conv_integer(Channel)) &
-                    CapturedScalerCount(conv_integer(Channel));
+                    CapturedScalerCount   (conv_integer(Channel)) &
+                    CapturedScalerOverFlow(conv_integer(Channel));
+                    -- (6 downto 0) 7bit : to 128
+                    -- overflow 1 
+                    -- Din の間カウント 13 bit : to max 8192
+
     BUSY <= '0' when(CurrentState = IDLE or 
                     CurrentState = CLEAR_STATE) else '1';
 

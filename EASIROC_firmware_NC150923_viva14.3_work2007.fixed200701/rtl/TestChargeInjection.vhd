@@ -108,7 +108,9 @@ begin
 --        end if;
     end if;
     end process;   
-    
+   
+    --  16bit = 65536 * 8nsec = 524,288 nsec = 524 usec
+ 
     -- hexadecimal X"8000" -> decimal num 32768 : 
     -- TdcClk: 125MHz -> 8 nsec * 32768 = 260 usec 
     --                          * 49152 = 390 usec

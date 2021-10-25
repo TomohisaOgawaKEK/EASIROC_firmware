@@ -1,0 +1,5 @@
+Running: xsim.dir/TestChargeInjection_test_behav/xsimk.exe -simmode gui -wdb TestChargeInjection_test_behav.wdb -simrunnum 0 -socket 52699
+Design successfully loaded
+Design Loading CPU Usage: 655 ms
+Simulation completed
+Simulation CPU Usage: 671 ms

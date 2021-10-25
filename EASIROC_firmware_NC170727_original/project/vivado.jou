@@ -1,0 +1,119 @@
+#-----------------------------------------------------------
+# Vivado v2014.3.1 (64-bit)
+# SW Build 1056140 on Thu Oct 30 17:03:40 MDT 2014
+# IP Build 1028902 on Fri Sep 26 17:35:13 MDT 2014
+# Start of session at: Sun May 22 21:54:04 2016
+# Process ID: 6580
+# Log file: C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/vivado.log
+# Journal file: C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/project/project.xpr
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/sim/TriggerDelayer_test.vhd
+update_compile_order -fileset sim_1
+launch_simulation
+set_property top TriggerDelayer_test [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+launch_simulation
+set_property simulator_language VHDL [current_project]
+launch_simulation
+launch_simulation
+source TriggerDelayer_test.tcl
+restart
+run 1 us
+add_bp C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/rtl/TriggerDelayer.vhd 45
+remove_bps -file C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/rtl/TriggerDelayer.vhd -line 45
+add_bp C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/rtl/TriggerDelayer.vhd 67
+remove_bps -file C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/rtl/TriggerDelayer.vhd -line 67
+add_bp C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/rtl/TriggerDelayer.vhd 67
+remove_bps -file C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/rtl/TriggerDelayer.vhd -line 67
+add_bp C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/rtl/TriggerDelayer.vhd 68
+remove_bps -file C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/rtl/TriggerDelayer.vhd -line 68
+add_bp C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/rtl/TriggerDelayer.vhd 68
+add_bp C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/rtl/TriggerDelayer.vhd 76
+add_bp C:/Users/nchikuma/Documents/NaruhiroChikuma/EASIROC/New_Firmware/rtl/TriggerDelayer.vhd 87
+close_sim
+launch_simulation
+source TriggerDelayer_test.tcl
+restart
+run 1 us
+restart
+run 110 ns
+close_sim
+launch_simulation
+launch_simulation
+launch_simulation
+source TriggerDelayer_test.tcl
+restart
+run 1 us
+close_sim
+launch_simulation
+source TriggerDelayer_test.tcl
+restart
+run 1 us
+close_sim
+launch_simulation
+source TriggerDelayer_test.tcl
+close_sim
+launch_simulation
+source TriggerDelayer_test.tcl
+close_sim
+launch_simulation
+source TriggerDelayer_test.tcl
+close_sim
+launch_simulation
+launch_simulation
+launch_simulation
+source TriggerDelayer_test.tcl
+close_sim
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+source TriggerDelayer_test.tcl
+close_sim
+launch_simulation
+source TriggerDelayer_test.tcl
+run 1 us
+restart
+run 1 us
+close_sim
+launch_simulation
+source TriggerDelayer_test.tcl
+close_sim
+launch_simulation
+source TriggerDelayer_test.tcl
+close_sim
+launch_simulation
+source TriggerDelayer_test.tcl
+close_sim
+launch_simulation
+source TriggerDelayer_test.tcl
+close_sim
+launch_simulation
+source TriggerDelayer_test.tcl
+run 1 us
+close_sim
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+reset_run synth_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+open_run impl_1
+create_run impl_2 -parent_run synth_1 -flow {Vivado Implementation 2014} -strategy Performance_ExploreSLLs
+launch_runs impl_2
+wait_on_run impl_2
+create_run impl_3 -parent_run synth_1 -flow {Vivado Implementation 2014} -strategy Performance_Explore
+launch_runs impl_3
+wait_on_run impl_3
+create_run impl_4 -parent_run synth_1 -flow {Vivado Implementation 2014} -strategy Performance_Retiming
+launch_runs impl_4
+wait_on_run impl_4
+current_run [get_runs impl_4]
+launch_runs impl_4 -to_step write_bitstream
+wait_on_run impl_4
+write_cfgmem -force -format MCS -size 32 -interface SPIx1 -loadbit "up 0x0 C:/Users/nchikuma/Documents/NaruhiroChikuma/easiroc/New_Firmware/project/project.runs/impl_1/TopLevel.bit" C:/Users/nchikuma/Documents/NaruhiroChikuma/easiroc/New_Firmware/project/TopLevel.mcs
