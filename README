@@ -19,6 +19,16 @@ if you remove .git
 git pull origin master
 
 
+written @ 21/10/20
+need to generate tokens to git push, commit, etc 
+https://docs.github.com/ja/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
+
+git status
+git add .
+git commit -m "commit 21/09/01 document"
+git remote add origin https://github.com/TomohisaOgawa/EASIROC_firmware.git
+git push -u origin master
+
 ========== EASIROC_firmware_NC150923_viva14.3_work2009.Fixed200901 
 written @ 21/10/20
 
